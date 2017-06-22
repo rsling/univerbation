@@ -1,0 +1,465 @@
+
+
+=======================================================================
+
+
+PREFERENCE FOR UNIVERBATION  IN:  NP with D 
+
+        Noun Linking      Verb np.det.assocs FLogPerMillion
+485      Rad       0    fahren    0.19114612     1.83784511
+222   Zucker       0 schlecken    0.17573221    -0.76821007
+487      Ski       0    fahren    0.13506498     0.95260638
+265  Fußball       0   spielen    0.10222683     0.96116861
+134   Rätsel       0     raten    0.10213443    -1.03837784
+384     Blut       0 vergießen    0.10210846    -0.45942630
+486     Auto       0    fahren    0.09745143     1.67127733
+178    Bogen       0  schießen    0.09101611     0.01190985
+115     Teil       0    nehmen    0.08311878     3.56181134
+490     Zeit       0    fahren    0.08206570    -0.57083218
+652     Zahn      ~e    putzen    0.08188958     0.28815835
+772   Fliege       n   fischen    0.08001318    -0.86126657
+803    Karte       n     legen    0.07390091    -0.42309918
+179    Vogel       0  schießen    0.06911248    -1.65796676
+489 Motorrad       0    fahren    0.06713934    -0.06277583
+146  Western       0    reiten    0.06654744    -0.99673820
+291     Berg       0   steigen    0.06613183    -0.18281297
+263 Computer       0   spielen    0.06434856     1.01667475
+564    Segel       0   fliegen    0.06419635    -1.32154827
+126     Kopf       0    nicken    0.06361848    -1.09331156
+
+
+PREFERENCE AGAINST UNIVERBATION  IN:  NP with D 
+
+         Noun Linking      Verb np.det.assocs FLogPerMillion
+782      Kind      er     haben   -0.13075303     0.77014656
+824   Gedanke       n    machen   -0.11982371     1.68170736
+121      Zeit       0    nehmen   -0.10329843     0.66258981
+579      Hand       0     geben   -0.10023011    -0.47705698
+97     Fehler       0    machen   -0.09276584     0.54188791
+600      Spaß       0     haben   -0.08976467     1.08749858
+311      Geld       0  ausgeben   -0.08532230     0.31073867
+383      Geld       0 verdienen   -0.08368952     1.88516031
+599     Recht       0     haben   -0.07933781     0.99713868
+577       Rat       0     geben   -0.07670327    -0.80520177
+749      Kind      er  bekommen   -0.06364132     0.09863196
+49       Zeit       0    lassen   -0.06221653     0.24061941
+102      Foto       0    machen   -0.06168167    -1.22211770
+827      Auge       n    öffnen   -0.05752171    -0.99615574
+95      Angst       0    machen   -0.05171096    -0.09583028
+326      Haus       0     bauen   -0.05082746    -1.25325438
+630      Auto       0    kaufen   -0.04873308    -1.61380948
+124 Rücksicht       0    nehmen   -0.04822035     0.10954832
+816      Bild      er    machen   -0.04806280    -0.13303977
+87       Geld       0    machen   -0.04586216     0.12218814
+
+
+NO PREFERENCE FOR/AGAINST UNIVERBATION  IN:  NP with D 
+
+          Noun Linking      Verb np.det.assocs FLogPerMillion
+232       Maus       0  schubsen -8.986291e-15    -5.46575856
+535   Anhänger       0    fahren  8.528366e-15    -3.47951079
+466   Däumchen       0    drehen -5.738021e-15    -2.49404116
+61        Seil       0    laufen -5.722207e-15    -4.56656226
+821       Lied      er    machen -5.272775e-15    -3.69109352
+39   Marmelade       0    kochen -3.390238e-15    -3.37159541
+743       Haar       e    ziehen -2.489320e-15    -4.13612423
+702      Pferd       e   stehlen -1.871702e-15    -2.61671897
+159    Schritt       0    reiten  1.649018e-15    -2.82066621
+28        Kopf       0  auflegen  9.521679e-16    -5.36890873
+373     Punsch       0   trinken  9.521679e-16    -4.64545620
+608 Willkommen       0    heißen  4.151952e-16     0.07177587
+809    Gedanke       n     lesen -1.265957e-16    -0.69679906
+784  Zigarette       n     holen -5.949653e-17    -2.95712435
+109       Korn       0    mahlen  4.571969e-17    -3.76255249
+299      Couch       0    surfen -2.901741e-17    -4.24999118
+75       Haken       0     lösen -1.385110e-17    -4.62331508
+58        Watt       0    laufen  8.348105e-18    -4.25502897
+227       Luft       0 schnappen  4.459423e-18    -1.69046819
+582   Pfötchen       0     geben  1.623679e-18    -3.26665251
+
+
+=======================================================================
+
+
+PREFERENCE FOR UNIVERBATION  IN:  NP with P-clitic 
+
+          Noun Linking     Verb np.clt.assocs FLogPerMillion
+485        Rad       0   fahren    0.11702447     1.83784511
+486       Auto       0   fahren    0.10825639     1.67127733
+487        Ski       0   fahren    0.09696935     0.95260638
+645      Sonne       n    baden    0.07371384    -0.42946653
+178      Bogen       0 schießen    0.06240805     0.01190985
+652       Zahn      ~e   putzen    0.06223304     0.28815835
+291       Berg       0  steigen    0.05623067    -0.18281297
+490       Zeit       0   fahren    0.05333160    -0.57083218
+772     Fliege       n  fischen    0.05035962    -0.86126657
+295       Wind       0   surfen    0.04903750    -0.16828901
+601      Kreuz       0    heben    0.04841602    -0.41449112
+146    Western       0   reiten    0.04669475    -0.99673820
+602    Gewicht       0    heben    0.04306563    -1.31859644
+268        Ski       0 springen    0.04239277    -1.14578765
+46      Wasser       0   lassen    0.04029332    -0.29961757
+703     Treppe       n  steigen    0.03862704    -0.46866081
+269 Fallschirm       0 springen    0.03688568    -1.06297429
+50         Eis       0   laufen    0.03533139    -0.84194960
+622      Probe       0    hören    0.03464638    -0.65192199
+482         Ei       0  erlegen    0.03451464    -2.14023491
+
+
+PREFERENCE AGAINST UNIVERBATION  IN:  NP with P-clitic 
+
+         Noun Linking      Verb np.clt.assocs FLogPerMillion
+296  Internet       0    surfen   -0.33901375     -0.6081823
+66      Feuer       0     legen   -0.17753206     -1.7777269
+529     Kreis       0    fahren   -0.10636524     -2.7070367
+273    Wasser       0  springen   -0.10518398     -1.9942133
+583     Essen       0     gehen   -0.10091828      0.3198382
+99     Urlaub       0    machen   -0.08769301      0.4356236
+623     Radio       0     hören   -0.08397064     -0.8231620
+598      Teil       0     haben   -0.08342269      1.6844775
+600      Spaß       0     haben   -0.08254289      1.0874986
+191       Tor       0  schießen   -0.07990113     -1.8348853
+297       Web       0    surfen   -0.07690625     -2.7794111
+383      Geld       0 verdienen   -0.06985292      1.8851603
+656      Haar       e    raufen   -0.06813647     -1.8747349
+516   Gelände       0    fahren   -0.06084487     -2.4507223
+121      Zeit       0    nehmen   -0.05619914      0.6625898
+85      Party       0    machen   -0.05452482     -0.8239786
+151   Gelände       0    reiten   -0.05388070     -2.2869988
+584 Schwimmen       0     gehen   -0.05368439     -0.7577565
+479      Zeit       0   erleben   -0.05268131     -2.6567644
+86       Pipi       0    machen   -0.04804680     -1.9055796
+
+
+NO PREFERENCE FOR/AGAINST UNIVERBATION  IN:  NP with P-clitic 
+
+            Noun Linking        Verb np.clt.assocs FLogPerMillion
+521 Schlittschuh       0      fahren -1.738404e-15     -2.9393522
+837         Tour      en      fahren  1.631287e-15     -3.0991647
+360          Tee       0     trinken  1.339225e-15     -0.1249663
+435         Zahn       0      ziehen -4.972258e-17     -2.6889415
+32        Kaffee       0      kochen  4.798086e-17     -1.1836927
+737        Karte       n    zeichnen -4.214874e-17     -4.1271956
+760         Kind      er    erziehen -4.214874e-17     -1.6371172
+101         Käse       0      machen -7.757094e-18     -3.6163700
+401         Ball       0 wegschlagen -3.303037e-18     -3.5174300
+415        Anker       0      werfen -3.303037e-18     -3.2704190
+438         Geld       0      ziehen -3.303037e-18     -3.5797167
+20         Probe       0    anziehen -1.773559e-18     -6.1420986
+72          Kalk       0     löschen -1.773559e-18     -5.6514757
+203         Dorf       0    schießen -1.773559e-18     -5.5002447
+390   Beschwerde       0  vorbringen -1.773559e-18     -3.0959901
+433       Zucker       0      ziehen -1.773559e-18     -6.0169355
+481       Kultur       0     erleben -1.773559e-18     -2.8737979
+605     Schulter       0       heben -1.773559e-18     -4.2202860
+688       Brücke       n    schlagen -1.773559e-18     -2.6435729
+734        Silbe       n      zählen -1.773559e-18     -4.9789478
+
+
+=======================================================================
+
+
+PREFERENCE FOR UNIVERBATION  IN:  bare N 
+
+          Noun Linking      Verb np.ndt.assocs FLogPerMillion
+115       Teil       0    nehmen    0.47758419     3.56181134
+598       Teil       0     haben    0.21194778     1.68447752
+485        Rad       0    fahren    0.18029458     1.83784511
+263   Computer       0   spielen    0.12014917     1.01667475
+487        Ski       0    fahren    0.09996876     0.95260638
+295       Wind       0    surfen    0.08851506    -0.16828901
+291       Berg       0   steigen    0.08404077    -0.18281297
+178      Bogen       0  schießen    0.08370684     0.01190985
+145       Zeit       0    reisen    0.08310812     0.70735642
+601      Kreuz       0     heben    0.07851842    -0.41449112
+645      Sonne       n     baden    0.06109829    -0.42946653
+147       Pony       0    reiten    0.05739668    -0.88321532
+50         Eis       0    laufen    0.05532514    -0.84194960
+384       Blut       0 vergießen    0.05464524    -0.45942630
+27        Hand       0  auflegen    0.05462996    -0.94747649
+803      Karte       n     legen    0.05108417    -0.42309918
+269 Fallschirm       0  springen    0.04896079    -1.06297429
+622      Probe       0     hören    0.04827034    -0.65192199
+772     Fliege       n   fischen    0.04822919    -0.86126657
+268        Ski       0  springen    0.04651520    -1.14578765
+
+
+PREFERENCE AGAINST UNIVERBATION  IN:  bare N 
+
+          Noun Linking      Verb np.ndt.assocs FLogPerMillion
+578      Recht       0     geben   -0.15587128     1.42870539
+383       Geld       0 verdienen   -0.15079193     1.88516031
+824    Gedanke       n    machen   -0.14599630     1.68170736
+600       Spaß       0     haben   -0.12695500     1.08749858
+599      Recht       0     haben   -0.12216010     0.99713868
+782       Kind      er     haben   -0.09678584     0.77014656
+99      Urlaub       0    machen   -0.08774432     0.43562364
+121       Zeit       0    nehmen   -0.07939176     0.66258981
+583      Essen       0     gehen   -0.07787259     0.31983819
+116   Abschied       0    nehmen   -0.07624300     0.49555252
+49        Zeit       0    lassen   -0.07209737     0.24061941
+81         Mut       0    machen   -0.07042187     0.29959193
+621      Musik       0     hören   -0.06946233     0.78937318
+123   Stellung       0    nehmen   -0.06739377     1.29457757
+87        Geld       0    machen   -0.06481212     0.12218814
+574        Gas       0     geben   -0.06456636     0.67057645
+608 Willkommen       0    heißen   -0.06149780     0.07177587
+97      Fehler       0    machen   -0.06097044     0.54188791
+79       Musik       0    machen   -0.06061151     0.41671365
+15        Hand       0   anlegen   -0.06012504    -0.27799407
+
+
+NO PREFERENCE FOR/AGAINST UNIVERBATION  IN:  bare N 
+
+        Noun Linking      Verb np.ndt.assocs FLogPerMillion
+13     Arsch       0 abwischen  4.096427e-04      -4.260092
+777   Glocke       n    gießen  3.475303e-04      -4.675762
+532   Hänger       0    fahren -3.474374e-04      -2.928570
+761    Kurve       n    fahren  3.390969e-04      -1.219930
+246     Aura       0     sehen -3.289848e-04      -3.619040
+771       Ei      er    färben -3.068105e-04      -3.429614
+78   Schwanz       0  lutschen -2.251787e-04      -4.172658
+604     Hand       0     heben  1.869605e-04      -2.454887
+561     Laub       0     fegen -1.392739e-04      -4.017843
+725    Münze       n    werfen -5.962597e-05      -4.668099
+394     Auto       0   waschen -6.868775e-06      -1.806989
+218    Feuer       0  schlagen  2.472698e-06      -4.401632
+643     Haar       e ausraufen -1.343819e-14      -4.220286
+687 Medaille       n  schießen  1.327409e-14      -6.016935
+538     Lift       0    fahren  7.581288e-15      -3.577149
+63     Bogen       0    laufen  5.719639e-15      -4.249991
+244 Fähnchen       0 schwenken -4.637204e-15      -4.455700
+547   Gondel       0    fahren -3.279752e-15      -3.154735
+748   Krippe       n     bauen -2.572309e-15      -5.294801
+317   Trikot       0 ausziehen -5.347475e-17      -3.930168
+
+
+=======================================================================
+
+
+PREFERENCE FOR UNIVERBATION  IN:  Participle 
+
+         Noun Linking         Verb particip.assocs FLogPerMillion
+115      Teil       0       nehmen     0.917991977      3.5618113
+331    Pulver       0  beschichten     0.119819027     -0.9469220
+494     Probe       0       fahren     0.082513965      0.7544946
+388     Feuer       0    verzinken     0.078853749     -1.7104885
+836     Zwang       s     ernähren     0.061109468     -2.3533738
+40       Raub       0     kopieren     0.054273428     -1.6349088
+627     Grund       0 immunisieren     0.047735679     -2.9922157
+622     Probe       0        hören     0.043379037     -0.6519220
+598      Teil       0        haben     0.027702366      1.6844775
+399      Hand       0        weben     0.024435118     -4.3842407
+236     Punkt       0    schweißen     0.023308821     -3.6270939
+152     Probe       0       reiten     0.021539991     -2.3047992
+520      Test       0       fahren     0.018997510     -1.1127506
+382 Hochglanz       0   verdichten     0.015697029     -3.7594708
+683    Büchse       n     schießen     0.012797654     -4.4016324
+432      Hand       0     zeichnen     0.011434727     -3.0450139
+235     Laser       0    schweißen     0.011120938     -2.9165783
+470      Plan       0       drehen     0.010571500     -4.3338099
+645     Sonne       n        baden     0.010381170     -0.4294665
+618      Kiel       0        holen     0.009650732     -3.0241487
+
+
+PREFERENCE AGAINST UNIVERBATION  IN:  Participle 
+
+           Noun Linking      Verb particip.assocs FLogPerMillion
+581     Auftrag       0     geben     -0.16194057     0.59731690
+824     Gedanke       n    machen     -0.15087164     1.68170736
+383        Geld       0 verdienen     -0.10267169     1.88516031
+97       Fehler       0    machen     -0.09712953     0.54188791
+123    Stellung       0    nehmen     -0.09163339     1.29457757
+692      Grenze       n    setzen     -0.09048200    -0.30397952
+84      Schluss       0    machen     -0.07418482    -0.02348761
+608  Willkommen       0    heißen     -0.07127355     0.07177587
+265     Fußball       0   spielen     -0.07111630     0.96116861
+749        Kind      er  bekommen     -0.07111251     0.09863196
+121        Zeit       0    nehmen     -0.07012099     0.66258981
+118       Platz       0    nehmen     -0.06964633     0.05353051
+599       Recht       0     haben     -0.06792837     0.99713868
+120     Abstand       0    nehmen     -0.06694300    -0.16650942
+124   Rücksicht       0    nehmen     -0.06444601     0.10954832
+81          Mut       0    machen     -0.06317342     0.29959193
+816        Bild      er    machen     -0.06268984    -0.13303977
+49         Zeit       0    lassen     -0.05779651     0.24061941
+574         Gas       0     geben     -0.05759174     0.67057645
+823 Hausaufgabe       n    machen     -0.05741959    -0.53740011
+
+
+NO PREFERENCE FOR/AGAINST UNIVERBATION  IN:  Participle 
+
+         Noun Linking        Verb particip.assocs FLogPerMillion
+529     Kreis       0      fahren   -7.353263e-04      -2.707037
+602   Gewicht       0       heben   -7.353263e-04      -1.318596
+681      Gans      ~e    schießen   -7.353263e-04      -6.547564
+721    Büchse       n      werfen   -7.353263e-04      -3.534483
+501      Schi       0      fahren   -6.315332e-04      -1.947406
+68      Spiel       0      leiten    4.123478e-04      -3.355032
+398 Brettchen       0       weben    4.123478e-04      -3.790723
+734     Silbe       n      zählen   -3.916485e-04      -4.978948
+542   Dreirad       0      fahren   -1.474127e-04      -4.058499
+828      Dose       n      öffnen   -1.203351e-05      -4.519415
+112      Gift       0     mischen    1.997335e-14      -4.425302
+169      Koma       0      saufen    1.997335e-14      -1.740269
+170     Frust       0      saufen    1.069015e-14      -3.659974
+195    Gewehr       0    schießen    9.696674e-15      -4.306854
+355    Wasser       0      treten   -7.185201e-15      -2.060052
+563       Bau       0 finanzieren   -7.185201e-15      -5.112479
+42      Arsch       0    kriechen    6.856196e-15      -3.067863
+217       Rad       0    schlagen   -2.184842e-17      -3.559360
+631      Maus       0     klicken   -2.184842e-17      -3.467950
+126      Kopf       0      nicken   -1.777046e-18      -1.093312
+
+
+=======================================================================
+
+
+PREFERENCE FOR UNIVERBATION  IN:  'am' Progressive 
+
+        Noun Linking      Verb prog.assocs FLogPerMillion
+485      Rad       0    fahren  0.12299482     1.83784511
+487      Ski       0    fahren  0.09391973     0.95260638
+264  Theater       0   spielen  0.06854039    -0.71450892
+486     Auto       0    fahren  0.06348459     1.67127733
+450     Brot       0   brechen  0.06158541    -2.51598149
+489 Motorrad       0    fahren  0.06130887    -0.06277583
+178    Bogen       0  schießen  0.06083703     0.01190985
+814     Film       e    machen  0.05539657    -0.90406219
+180    Preis       0  schießen  0.05195305    -2.22674783
+146  Western       0    reiten  0.04835302    -0.99673820
+772   Fliege       n   fischen  0.04448958    -0.86126657
+183    Pokal       0  schießen  0.04243949    -2.46242811
+384     Blut       0 vergießen  0.04029677    -0.45942630
+564    Segel       0   fliegen  0.04029677    -1.32154827
+182    Sport       0  schießen  0.03918666    -1.93244321
+803    Karte       n     legen  0.03687923    -0.42309918
+50       Eis       0    laufen  0.03642924    -0.84194960
+490     Zeit       0    fahren  0.03567728    -0.57083218
+652     Zahn      ~e    putzen  0.03518443     0.28815835
+565  Drachen       0   fliegen  0.03316296    -1.24450761
+
+
+PREFERENCE AGAINST UNIVERBATION  IN:  'am' Progressive 
+
+           Noun Linking    Verb prog.assocs FLogPerMillion
+266     Klavier       0 spielen -0.08697819     -0.5461489
+326        Haus       0   bauen -0.07476915     -1.2532544
+85        Party       0  machen -0.06999535     -0.8239786
+54          Fuß       0  laufen -0.06866238     -2.3685717
+376     Klavier       0    üben -0.06866238     -3.6571920
+816        Bild      er  machen -0.06557102     -0.1330398
+351      Wasser       0  testen -0.06362241     -3.8838138
+623       Radio       0   hören -0.05599518     -0.8231620
+360         Tee       0 trinken -0.05475554     -0.1249663
+46       Wasser       0  lassen -0.05115918     -0.2996176
+359      Kaffee       0 trinken -0.04854090      0.6126997
+823 Hausaufgabe       n  machen -0.04724720     -0.5374001
+824     Gedanke       n  machen -0.04724720      1.6817074
+574         Gas       0   geben -0.04297236      0.6705765
+592     Fußball       0  gucken -0.04190266     -1.8959872
+361        Bier       0 trinken -0.04170399     -0.1986870
+629    Kaugummi       0   kauen -0.04141950     -2.2591612
+362      Wasser       0 trinken -0.04137186     -0.6754459
+393      Wäsche       0 waschen -0.03859533     -0.6985272
+656        Haar       e  raufen -0.03623776     -1.8747349
+
+
+NO PREFERENCE FOR/AGAINST UNIVERBATION  IN:  'am' Progressive 
+
+          Noun Linking     Verb   prog.assocs FLogPerMillion
+466   Däumchen       0   drehen -5.290533e-03     -2.4940412
+621      Musik       0    hören -5.284356e-03      0.7893732
+492        Bus       0   fahren  3.026839e-03      0.2757224
+82       Radio       0   machen  2.983789e-03     -2.3778025
+759 Geschichte       n erzählen -2.569992e-03     -0.1436585
+491       Kanu       0   fahren  1.805205e-03     -0.6088409
+175  Kartoffel       0  schälen  1.689290e-03     -2.7254654
+703     Treppe       n  steigen  1.689290e-03     -0.4686608
+87        Geld       0   machen -1.578904e-03      0.1221881
+116   Abschied       0   nehmen -1.578904e-03      0.4955525
+598       Teil       0    haben -1.578904e-03      1.6844775
+670        Tor       e schießen -1.051580e-03     -0.2621245
+90     Theater       0   machen  2.406473e-15     -2.0799330
+157    Turnier       0   reiten  2.406473e-15     -3.5518315
+507     Einrad       0   fahren  2.406473e-15     -2.1251152
+599      Recht       0    haben  2.406473e-15      0.9971387
+318       Brot       0   backen  1.726047e-15     -1.0373660
+288   Schlange       0   stehen  2.068026e-17     -1.0627668
+498  Schlitten       0   fahren  2.068026e-17     -1.0379730
+815     Schuld      en   machen -4.643655e-18     -1.1607777
+
+
+=======================================================================
+
+
+PREFERENCE FOR UNIVERBATION  IN:  'zu' Infinitive 
+
+     Noun Linking     Verb infzu.assocs FLogPerMillion
+115  Teil       0   nehmen 9.206995e-01      3.5618113
+598  Teil       0    haben 1.917915e-01      1.6844775
+270  Seil       0 springen 2.794172e-02     -1.4646078
+40   Raub       0 kopieren 9.228056e-03     -1.6349088
+622 Probe       0    hören 7.986358e-03     -0.6519220
+836 Zwang       s ernähren 7.547072e-03     -2.3533738
+645 Sonne       n    baden 5.940956e-03     -0.4294665
+15   Hand       0  anlegen 5.234619e-03     -0.2779941
+470  Plan       0   drehen 3.550908e-03     -4.3338099
+520  Test       0   fahren 2.443893e-03     -1.1127506
+291  Berg       0  steigen 1.423612e-03     -0.1828130
+50    Eis       0   laufen 3.313314e-04     -0.8419496
+138  Kopf       0  rechnen 7.264296e-05     -1.4615118
+309  Seil       0   tanzen 1.806003e-14     -3.5900527
+
+
+PREFERENCE AGAINST UNIVERBATION  IN:  'zu' Infinitive 
+
+          Noun Linking      Verb infzu.assocs FLogPerMillion
+383       Geld       0 verdienen  -0.18584665     1.88516031
+824    Gedanke       n    machen  -0.14979266     1.68170736
+551        Fuß       0    fassen  -0.12196322    -0.08079711
+600       Spaß       0     haben  -0.11589640     1.08749858
+123   Stellung       0    nehmen  -0.11319770     1.29457757
+79       Musik       0    machen  -0.09804644     0.41671365
+125   Einfluss       0    nehmen  -0.09245858    -0.14018882
+124  Rücksicht       0    nehmen  -0.09172877     0.10954832
+116   Abschied       0    nehmen  -0.09000429     0.49555252
+838    Kontakt       e   knüpfen  -0.08879181    -0.51339895
+120    Abstand       0    nehmen  -0.08211793    -0.16650942
+87        Geld       0    machen  -0.08099433     0.12218814
+99      Urlaub       0    machen  -0.07986578     0.43562364
+98       Platz       0    machen  -0.07883408    -0.42397503
+265    Fußball       0   spielen  -0.07697277     0.96116861
+621      Musik       0     hören  -0.07541413     0.78937318
+118      Platz       0    nehmen  -0.07456177     0.05353051
+81         Mut       0    machen  -0.07455115     0.29959193
+608 Willkommen       0    heißen  -0.07227205     0.07177587
+583      Essen       0     gehen  -0.06721426     0.31983819
+
+
+NO PREFERENCE FOR/AGAINST UNIVERBATION  IN:  'zu' Infinitive 
+
+         Noun Linking      Verb  infzu.assocs FLogPerMillion
+224       Eis       0 schlecken -1.648016e-03     -3.9156749
+514 Motorboot       0    fahren -1.648016e-03     -2.9112942
+561      Laub       0     fegen -1.648016e-03     -4.0178431
+569    Schnee       0   fressen -1.648016e-03     -4.2806058
+586      Blei       0    gießen -1.648016e-03     -2.4540528
+659     Waffe       n  reinigen -1.648016e-03     -3.7625525
+710      Hand      ~e  trocknen -1.648016e-03     -4.6991089
+712      Auge       n verdrehen -1.648016e-03     -2.6639402
+735     Karte       n    zählen -1.648016e-03     -4.4313082
+781     Stern       e    gucken -1.455621e-03     -3.5694864
+291      Berg       0   steigen  1.423612e-03     -0.1828130
+404      Ball       0    werfen -1.272190e-03     -2.4785370
+501      Schi       0    fahren -9.374650e-04     -1.9474061
+186     Probe       0  schießen -4.972037e-04     -3.3167593
+217       Rad       0  schlagen -4.971743e-04     -3.5593597
+494     Probe       0    fahren -4.712636e-04      0.7544946
+50        Eis       0    laufen  3.313314e-04     -0.8419496
+138      Kopf       0   rechnen  7.264296e-05     -1.4615118
+42      Arsch       0  kriechen -1.600420e-05     -3.0678633
+309      Seil       0    tanzen  1.806003e-14     -3.5900527
+
+
+=======================================================================

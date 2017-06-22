@@ -1,0 +1,674 @@
+Index	Noun	Verb	Linking	Prefix	Particle	Freq
+574	Zelt	abbauen	0		ab	5
+274	Hand	abhacken	0		ab	14
+53	Geld	abheben	0		ab	96
+228	Dampf	ablassen	0		ab	17
+480	Frust	ablassen	0		ab	7
+554	Druck	ablassen	0		ab	6
+62	Blut	abnehmen	0		ab	82
+584	Tisch	abräumen	0		ab	5
+59	Fett	absaugen	0		ab	85
+180	Auto	abschaffen	0		ab	22
+632	Kopf	abschlagen	0		ab	5
+531	Kot	absetzen	0		ab	6
+572	Arsch	abwischen	0		ab	6
+450	Telefon	anfragen	0		an	7
+164	Hand	anlegen	0		an	24
+217	Geld	anlegen	0		an	18
+350	Zeit	ansagen	0		an	10
+477	Gefährder	anschreiben	0		an	7
+511	Schuss	antäuschen	0		an	6
+312	Probe	anziehen	0		an	12
+501	Wasser	atmen	0			6
+518	Plasma	ätzen	0			6
+304	Zelt	aufbauen	0		auf	12
+578	Wasser	auffüllen	0		auf	5
+220	Wäsche	aufhängen	0		auf	17
+474	Hand	aufheben	0		auf	7
+27	Hand	auflegen	0		auf	210
+631	Kopf	auflegen	0		auf	5
+302	Zimmer	aufräumen	0		auf	12
+290	Milch	aufschäumen	0		auf	13
+51	Geld	ausgeben	0		aus	110
+593	Stall	ausmisten	0		aus	5
+633	Koffer	auspacken	0		aus	5
+529	Licht	ausschalten	0		aus	6
+575	Zeitung	austragen	0		aus	5
+351	Winter	austreiben	0		aus	10
+352	Trikot	ausziehen	0		aus	10
+378	Brot	backen	0			10
+86	Sauna	baden	0			55
+240	Eis	baden	0			16
+388	Sand	baden	0			9
+497	Winter	baden	0			6
+507	Staub	baden	0			6
+612	Probe	baden	0			5
+561	Body	bangen	0			6
+193	Haus	bauen	0			20
+417	Nest	bauen	0			8
+523	Modell	bauen	0			6
+636	Häusle	bauen	0			5
+198	Asyl	begehren	0	be		20
+310	Schadenersatz	begehren	0	be		12
+565	Beweis	begehren	0	be		6
+660	Dauer	bellen	0			5
+653	Gehäuse	berechnen	0	be		5
+91	Pulver	beschichten	0	be		49
+467	Laser	beschriften	0	be		7
+229	Band	bestehen	0	be		17
+646	Hand	biken	0			5
+490	Buch	binden	0			7
+475	Glas	blasen	0			7
+478	Gast	bloggen	0			7
+236	Sand	boarden	0			16
+481	Finger	boarden	0			7
+491	Body	boarden	0			7
+202	Nase	bohren	0			19
+403	Brunnen	bohren	0			9
+566	Beton	bohren	0			6
+604	Schlag	bohren	0			5
+514	Schatten	boxen	0			6
+141	Bier	brauen	0			30
+241	Brot	brechen	0			16
+177	Kalk	brennen	0			22
+192	Helium	brennen	0			20
+295	Fohlen	brennen	0			13
+309	Schnaps	brennen	0			12
+471	Kohlenstoff	brennen	0			7
+665	Branntwein	brennen	0			5
+232	Wild	campen	0			16
+174	Schlamm	catchen	0			22
+524	Model	checken	0			6
+267	Musik	denken	0			14
+363	Kästchen	denken	0			10
+592	Standort	denken	0			5
+583	Traum	deuten	0			5
+559	Chor	dirigieren	0			6
+619	Orchester	dirigieren	0			5
+206	Däumchen	drehen	0			19
+453	Schlüssel	drehen	0			7
+470	Kopf	drehen	0			7
+483	Film	drehen	0			7
+586	Teller	drehen	0			5
+613	Plan	drehen	0			5
+623	Los	drehen	0			5
+342	Film	einlegen	0		ein	11
+371	Gang	einlegen	0		ein	10
+409	Ventil	einstellen	0		ein	8
+508	Spur	einstellen	0		ein	6
+543	Geld	eintreiben	0		ein	6
+314	Moral	empfinden	0			12
+313	Natur	erkennen	0	er		12
+122	Ei	erlaufen	0	er		35
+144	Körper	erleben	0	er		29
+147	Zeit	erleben	0	er		28
+335	Raum	erleben	0	er		11
+423	Kultur	erleben	0	er		8
+58	Ei	erlegen	0	er		86
+319	Draht	erodieren	0			12
+360	Märchen	erzählen	0	er		10
+1	Rad	fahren	0			3433
+2	Auto	fahren	0			2338
+3	Ski	fahren	0			1775
+6	Fahrrad	fahren	0			798
+8	Motorrad	fahren	0			553
+12	Zeit	fahren	0			444
+24	Kanu	fahren	0			245
+32	Bus	fahren	0			160
+34	Bahn	fahren	0			157
+39	Probe	fahren	0			133
+40	Boot	fahren	0			133
+47	Ballon	fahren	0			116
+49	Zug	fahren	0			113
+50	Schlitten	fahren	0			111
+56	Taxi	fahren	0			90
+61	Enduro	fahren	0			83
+64	Schi	fahren	0			77
+67	Kajak	fahren	0			72
+74	Moped	fahren	0			65
+82	Roller	fahren	0			58
+83	Velo	fahren	0			57
+84	Hindernis	fahren	0			57
+96	Einrad	fahren	0			48
+106	Gespann	fahren	0			44
+107	Snowboard	fahren	0			42
+131	Buggy	fahren	0			33
+137	Cabrio	fahren	0			31
+140	Kegel	fahren	0			30
+145	Bob	fahren	0			29
+153	Motorboot	fahren	0			26
+160	Traktor	fahren	0			24
+172	Gelände	fahren	0			23
+181	Skateboard	fahren	0			21
+184	Achterbahn	fahren	0			21
+197	Bagger	fahren	0			20
+211	Test	fahren	0			18
+213	Schlittschuh	fahren	0			18
+214	Kunst	fahren	0			18
+244	Zweirad	fahren	0			15
+284	Tandem	fahren	0			13
+285	Straßenbahn	fahren	0			13
+286	Slalom	fahren	0			13
+289	Panzer	fahren	0			13
+297	Berg	fahren	0			13
+337	Kreuz	fahren	0			11
+364	Kutsche	fahren	0			10
+394	Kreis	fahren	0			9
+396	Karussell	fahren	0			9
+398	Inliner	fahren	0			9
+399	Hänger	fahren	0			9
+420	Mountainbike	fahren	0			8
+438	Aufzug	fahren	0			8
+440	Anhänger	fahren	0			8
+458	Rallye	fahren	0			7
+461	Nacht	fahren	0			7
+465	Lift	fahren	0			7
+512	Schiff	fahren	0			6
+550	Eisenbahn	fahren	0			6
+552	Einspänner	fahren	0			6
+555	Dreirad	fahren	0			6
+567	Autobahn	fahren	0			6
+591	Stapler	fahren	0			5
+597	Show	fahren	0			5
+634	Kahn	fahren	0			5
+648	Gondel	fahren	0			5
+661	Cross	fahren	0			5
+188	Wasser	fassen	0			20
+345	Essen	fassen	0			11
+374	Fuß	fassen	0			10
+654	Futter	fassen	0			5
+252	Saft	fasten	0			15
+451	Tee	fasten	0			7
+522	Obst	fasten	0			6
+222	Säbel	fechten	0			17
+264	Stock	fechten	0			14
+326	Sport	fechten	0			11
+329	Schwert	fechten	0			11
+308	Schnee	fegen	0			12
+627	Laub	fegen	0			5
+571	Arsch	ficken	0			6
+671	Bau	finanzieren	0			5
+411	Segel	fliegen	0			8
+488	Drachen	fliegen	0			7
+215	Gras	fressen	0			18
+237	Kilometer	fressen	0			16
+273	Kot	fressen	0			14
+330	Schnee	fressen	0			11
+368	Heu	fressen	0			10
+433	Frust	fressen	0			8
+486	Feder	fressen	0			7
+519	Pickel	fressen	0			6
+16	Gas	geben	0			327
+138	Almosen	geben	0			31
+300	Arbeit	geben	0			13
+358	Rat	geben	0			10
+414	Recht	geben	0			8
+429	Hand	geben	0			8
+441	Zeugnis	geben	0			7
+493	Auftrag	geben	0			7
+614	Pfötchen	geben	0			5
+78	Essen	gehen	0			62
+533	Klo	gehen	0			6
+600	Schwimmen	gehen	0			5
+603	Schritt	gehen	0			5
+70	Blei	gießen	0			69
+445	Vakuum	gießen	0			7
+487	Druck	gießen	0			7
+628	Kugel	gießen	0			5
+80	Para	gleiten	0			60
+126	Wirbel	gleiten	0			34
+179	Ballon	glühen	0			22
+669	Beute	greifen	0			5
+95	Fußball	gucken	0			48
+155	Rudel	gucken	0			25
+247	Video	gucken	0			15
+482	Film	gucken	0			7
+516	Probe	gucken	0			6
+590	Stern	gucken	0			5
+66	Teil	haben	0			72
+115	Recht	haben	0			38
+166	Spaß	haben	0			23
+9	Kreuz	heben	0			481
+26	Gewicht	heben	0			219
+124	Bein	heben	0			35
+194	Hand	heben	0			20
+201	Schulter	heben	0			19
+506	Stein	heben	0			6
+136	Geist	heilen	0			31
+324	Willkommen	heißen	0			11
+469	Kopf	hochreißen	0		hoch	7
+355	Stab	hochspringen	0		hoch	10
+35	Luft	holen	0			151
+60	Atem	holen	0			85
+97	Wasser	holen	0			47
+128	Brötchen	holen	0			34
+196	Bier	holen	0			20
+328	Schwung	holen	0			11
+439	Appetit	holen	0			8
+472	Kiel	holen	0			7
+525	Milch	holen	0			6
+638	Holz	holen	0			5
+14	Musik	hören	0			398
+31	Probe	hören	0			163
+68	Radio	hören	0			71
+282	Test	hören	0			13
+366	Kopf	hören	0			10
+133	Insel	hüpfen	0			32
+647	Grund	immunisieren	0			5
+148	Unkraut	jäten	0			28
+105	Kaugummi	kauen	0			44
+673	Auto	kaufen	0			5
+253	Maus	klicken	0			15
+41	Schulter	klopfen	0			131
+235	Schenkel	klopfen	0			16
+421	Monster	kloppen	0			8
+538	Hoden	kneifen	0			6
+283	Teig	kneten	0			13
+449	Teppich	knüpfen	0			7
+532	Knoten	knüpfen	0			6
+69	Kaffee	kochen	0			69
+167	Show	kochen	0			23
+187	Wasser	kochen	0			20
+218	Essen	kochen	0			18
+245	Würze	kochen	0			15
+248	Tee	kochen	0			15
+413	Reis	kochen	0			8
+527	Marmelade	kochen	0			6
+77	Raub	kopieren	0			63
+455	Rücken	kraulen	0			7
+670	Bauch	kraulen	0			5
+299	Arsch	kriechen	0			13
+353	Traum	landen	0			10
+354	Stamm	landen	0			10
+658	Feuer	landen	0			5
+15	Wasser	lassen	0			380
+255	Harn	lassen	0			15
+301	Ader	lassen	0			13
+576	Zeit	lassen	0			5
+20	Eis	laufen	0			264
+151	Amok	laufen	0			28
+203	Marathon	laufen	0			19
+227	Feuer	laufen	0			17
+259	Berg	laufen	0			15
+327	Slalom	laufen	0			11
+373	Fuß	laufen	0			10
+377	Cross	laufen	0			10
+391	Paar	laufen	0			9
+452	Show	laufen	0			7
+498	Watt	laufen	0			6
+500	Wasser	laufen	0			6
+513	Schi	laufen	0			6
+568	Ausdauer	laufen	0			6
+598	Seil	laufen	0			5
+626	Leine	laufen	0			5
+666	Bogen	laufen	0			5
+298	Arsch	lecken	0			13
+361	Mast	legen	0			10
+369	Grab	legen	0			10
+434	Feuer	legen	0			8
+562	Boden	legen	0			6
+635	Kabel	legen	0			5
+234	Spiel	leiten	0			16
+100	Feder	lesen	0			47
+630	Korrektur	lesen	0			5
+675	Anker	lichten	0			5
+427	Kalk	löschen	0			8
+334	Rätsel	lösen	0			11
+387	Schleim	lösen	0			9
+430	Haken	lösen	0			8
+443	Wasser	lösen	0			7
+152	Daumen	lutschen	0			27
+602	Schwanz	lutschen	0			5
+29	Musik	machen	0			187
+71	Feuer	machen	0			68
+79	Mut	machen	0			61
+112	Radio	machen	0			40
+150	Beute	machen	0			28
+161	Schluss	machen	0			24
+163	Party	machen	0			24
+171	Pipi	machen	0			23
+226	Geld	machen	0			17
+254	Liebe	machen	0			15
+257	Glas	machen	0			15
+262	Theater	machen	0			14
+275	Grab	machen	0			14
+288	Politik	machen	0			13
+305	Wein	machen	0			12
+316	Heu	machen	0			12
+322	Angst	machen	0			12
+338	Kopf	machen	0			11
+344	Fehler	machen	0			11
+389	Platz	machen	0			9
+400	Holz	machen	0			9
+446	Urlaub	machen	0			7
+459	Profit	machen	0			7
+530	Käse	machen	0			6
+547	Foto	machen	0			6
+585	Tempo	machen	0			5
+621	Lust	machen	0			5
+629	Kreuzchen	machen	0			5
+655	Frühstück	machen	0			5
+28	Rasen	mähen	0			200
+395	Kiefer	mahlen	0			9
+468	Korn	mahlen	0			7
+650	Getreide	mahlen	0			5
+393	Kuh	melken	0			9
+216	Gift	mischen	0			18
+380	Ballon	modellieren	0			10
+379	Bett	nässen	0			10
+4	Teil	nehmen	0			848
+21	Abschied	nehmen	0			259
+109	Maß	nehmen	0			41
+170	Platz	nehmen	0			23
+381	Anteil	nehmen	0			10
+405	Abstand	nehmen	0			9
+495	Zeit	nehmen	0			6
+499	Wasser	nehmen	0			6
+505	Stellung	nehmen	0			6
+607	Rücksicht	nehmen	0			5
+659	Einfluss	nehmen	0			5
+23	Kopf	nicken	0			251
+134	Tür	öffnen	0			31
+435	Blümchen	pflücken	0			8
+239	Feder	picken	0			16
+620	Moral	predigen	0			5
+644	Hass	predigen	0			5
+424	Kreis	punzen	0			8
+118	Kunst	radfahren	0			36
+608	Rätsel	raten	0			5
+94	Tabak	rauchen	0			48
+520	Pfeife	rauchen	0			6
+539	Haschisch	rauchen	0			6
+43	Kopf	rechnen	0			129
+113	Bruch	rechnen	0			39
+169	Prozent	rechnen	0			23
+205	Fach	rechnen	0			19
+667	Blitz	rechnen	0			5
+456	Revier	reinigen	0			7
+502	Ultraschall	reinigen	0			6
+349	Zeit	reisen	0			10
+18	Western	reiten	0			315
+19	Pony	reiten	0			274
+42	Dressur	reiten	0			131
+81	Distanz	reiten	0			59
+103	Kamel	reiten	0			45
+116	Gelände	reiten	0			38
+127	Probe	reiten	0			34
+154	Freizeit	reiten	0			26
+159	Esel	reiten	0			25
+175	Ring	reiten	0			22
+183	Jagd	reiten	0			21
+221	Turnier	reiten	0			17
+294	Hof	reiten	0			13
+307	Schritt	reiten	0			12
+402	Busch	reiten	0			9
+419	Musik	reiten	0			8
+473	Hindernis	reiten	0			7
+509	Sport	reiten	0			6
+545	Gang	reiten	0			6
+656	Fron	reiten	0			5
+311	Ring	richten	0			12
+209	Wald	roden	0			18
+618	Panorama	röntgen	0			5
+45	Koma	saufen	0			124
+432	Frust	saufen	0			8
+535	Kampf	saufen	0			6
+553	Eimer	saufen	0			6
+564	Bier	saufen	0			6
+657	Flatrate	saufen	0			5
+132	Kartoffel	schälen	0			32
+265	Schnee	schieben	0			14
+408	Wache	schieben	0			8
+5	Bogen	schießen	0			812
+33	Vogel	schießen	0			157
+36	Preis	schießen	0			146
+37	Penalty	schießen	0			139
+52	Sport	schießen	0			96
+54	Pokal	schießen	0			92
+92	Gau	schießen	0			49
+119	Eis	schießen	0			36
+135	Probe	schießen	0			31
+139	Meter	schießen	0			30
+165	Ziel	schießen	0			23
+199	Stock	schießen	0			19
+223	Strafstoß	schießen	0			17
+233	Tor	schießen	0			16
+278	Böller	schießen	0			14
+325	Vorderlader	schießen	0			11
+332	Schluss	schießen	0			11
+340	Gewehr	schießen	0			11
+348	Adler	schießen	0			11
+357	Salut	schießen	0			10
+367	Kloot	schießen	0			10
+382	Western	schießen	0			9
+397	Kaiser	schießen	0			9
+418	Nacht	schießen	0			8
+447	Test	schießen	0			7
+489	Dorf	schießen	0			7
+577	Wettkampf	schießen	0			5
+594	Spaß	schießen	0			5
+617	Panzer	schießen	0			5
+637	Hubertus	schießen	0			5
+641	Herbst	schießen	0			5
+663	Bürger	schießen	0			5
+323	Zeit	schinden	0			11
+611	Probe	schlafen	0			5
+87	Topf	schlagen	0			52
+117	Flügel	schlagen	0			38
+158	Lenker	schlagen	0			25
+204	Kopf	schlagen	0			19
+256	Haken	schlagen	0			15
+287	Rad	schlagen	0			13
+343	Feuer	schlagen	0			11
+537	Holz	schlagen	0			6
+601	Schweif	schlagen	0			5
+605	Schaum	schlagen	0			5
+17	Zucker	schlecken	0			324
+178	Honig	schlecken	0			22
+551	Eis	schlecken	0			6
+410	Streit	schlichten	0			8
+662	Cocktail	schlürfen	0			5
+157	Luft	schnappen	0			25
+496	Wurst	schnappen	0			6
+291	Kürbis	schnitzen	0			13
+293	Holz	schnitzen	0			13
+541	Gemüse	schnitzen	0			6
+573	Apfel	schnitzen	0			6
+556	Deck	schrubben	0			6
+454	Saft	schubsen	0			7
+526	Maus	schubsen	0			6
+339	Gold	schürfen	0			11
+168	Rücken	schweben	0			23
+110	Laser	schweißen	0			41
+162	Punkt	schweißen	0			24
+210	Ultraschall	schweißen	0			18
+225	Kunststoff	schweißen	0			17
+336	Plasma	schweißen	0			11
+346	Elektro	schweißen	0			11
+347	Bolzen	schweißen	0			11
+569	Auftrag	schweißen	0			6
+609	Roboter	schweißen	0			5
+479	Fähnchen	schwenken	0			7
+437	Bach	schwinden	0			8
+207	Aura	sehen	0			19
+200	Segel	setzen	0			19
+485	Feuer	setzen	0			7
+625	Licht	setzen	0			5
+599	Seife	sieden	0			5
+606	Salz	sieden	0			5
+93	Ei	singen	0			49
+104	Dreikönigs	singen	0			45
+270	Mantra	singen	0			14
+272	Kritik	singen	0			14
+362	Mai	singen	0			10
+404	Blatt	singen	0			9
+426	Karaoke	singen	0			8
+515	Probe	singen	0			6
+517	Preis	singen	0			6
+596	Sommer	singen	0			5
+156	Nacht	skaten	0			25
+484	Feuer	speien	0			7
+258	Computer	spielen	0			15
+261	Theater	spielen	0			14
+372	Fußball	spielen	0			10
+425	Klavier	spielen	0			8
+649	Golf	spielen	0			5
+22	Ski	springen	0			253
+25	Fallschirm	springen	0			237
+38	Seil	springen	0			138
+65	Trampolin	springen	0			75
+76	Stil	springen	0			64
+102	Wasser	springen	0			45
+146	Zeit	springen	0			28
+176	Kunst	springen	0			22
+251	Seilchen	springen	0			15
+263	Tandem	springen	0			14
+281	Weltcup	springen	0			13
+303	Ziel	springen	0			12
+306	Team	springen	0			12
+315	Insel	springen	0			12
+320	Bock	springen	0			12
+415	Parcours	springen	0			8
+536	Jagd	springen	0			6
+570	Auftakt	springen	0			6
+643	Haupt	springen	0			5
+672	Barriere	springen	0			5
+63	Schlange	stehen	0			79
+422	Modell	stehen	0			8
+580	Wache	stehen	0			5
+120	Berg	steigen	0			36
+321	Bein	stellen	0			12
+189	Stein	stoßen	0			20
+624	Lid	straffen	0			5
+10	Wind	surfen	0			477
+55	Internet	surfen	0			91
+186	Web	surfen	0			20
+548	Fluss	surfen	0			6
+557	Couch	surfen	0			6
+560	Body	surfen	0			6
+365	Kraft	tanken	0			10
+549	Energie	tanken	0			6
+588	Strom	tanken	0			5
+595	Sonne	tanken	0			5
+190	Salsa	tanzen	0			20
+242	Bauch	tanzen	0			16
+249	Tango	tanzen	0			15
+260	Turnier	tanzen	0			14
+356	Seil	tanzen	0			10
+386	Standard	tanzen	0			9
+407	Walzer	tanzen	0			8
+546	Fuß	tapsen	0			6
+85	Sport	tauchen	0			55
+143	Wrack	tauchen	0			29
+191	Nacht	tauchen	0			20
+276	Eis	tauchen	0			14
+406	Zeit	tauchen	0			8
+494	Apfel	tauchen	0			7
+640	Hobby	tauchen	0			5
+401	Handy	telefonieren	0			9
+444	Video	telefonieren	0			7
+442	Wasser	testen	0			7
+375	Finger	tippen	0			10
+376	Drachen	töten	0			10
+266	Müll	trennen	0			14
+57	Wasser	treten	0			86
+463	Milch	treten	0			7
+503	Tau	treten	0			6
+616	Pflaster	treten	0			5
+7	Kaffee	trinken	0			767
+44	Tee	trinken	0			127
+46	Bier	trinken	0			121
+75	Wasser	trinken	0			64
+111	Rausch	trinken	0			40
+114	Wein	trinken	0			38
+149	Kampf	trinken	0			28
+182	Koma	trinken	0			21
+195	Glühwein	trinken	0			20
+208	Alkohol	trinken	0			19
+268	Milch	trinken	0			14
+331	Schnaps	trinken	0			11
+558	Cocktail	trinken	0			6
+563	Blut	trinken	0			6
+610	Punsch	trinken	0			5
+651	Genuss	trinken	0			5
+219	Wäsche	trocknen	0			17
+534	Klavier	üben	0			6
+224	Literatur	übersetzen	0			17
+318	Fach	übersetzen	0			12
+544	Garten	umgraben	0			6
+504	Strom	verbrauchen	0	ver		6
+370	Geld	verbrennen	0	ver		10
+238	Hochglanz	verdichten	0	ver		16
+11	Geld	verdienen	0	ver		459
+13	Blut	vergießen	0	ver		435
+292	Kabel	verlegen	0	ver		13
+448	Teppich	verlegen	0	ver		7
+90	Text	verstehen	0	ver		50
+436	Bild	verstehen	0	ver		8
+462	Musik	verstehen	0	ver		7
+542	Geld	verteilen	0	ver		6
+88	Feuer	verzinken	0	ver		52
+385	Stück	verzinken	0	ver		9
+108	Beschwerde	vorbringen	0		vor	42
+416	Orgasmus	vortäuschen	0		vor	8
+30	Gold	waschen	0			180
+48	Wäsche	waschen	0			114
+73	Auto	waschen	0			66
+431	Haar	waschen	0			8
+579	Wagen	waschen	0			5
+582	Trikot	waschen	0			5
+101	Brettchen	weben	0			46
+540	Hand	weben	0			6
+72	Gas	wegnehmen	0		weg	66
+142	Ball	wegschlagen	0		weg	30
+279	Burg	werben	0			14
+125	Ziel	werfen	0			34
+129	Ball	werfen	0			34
+130	Hufeisen	werfen	0			33
+243	Axt	werfen	0			16
+269	Messer	werfen	0			14
+271	Lasso	werfen	0			14
+333	Schein	werfen	0			11
+390	Pfeil	werfen	0			9
+457	Reis	werfen	0			7
+476	Gewicht	werfen	0			7
+587	Stöckchen	werfen	0			5
+622	Los	werfen	0			5
+664	Bällchen	werfen	0			5
+674	Anker	werfen	0			5
+280	Wunder	wirken	0			13
+98	Probe	wohnen	0			47
+212	Service	wohnen	0			18
+464	Luxus	wohnen	0			7
+521	Paar	wohnen	0			6
+615	Pflege	wohnen	0			5
+341	Geld	zählen	0			11
+412	Schäfchen	zählen	0			8
+123	Drachen	zähmen	0			35
+89	Akt	zeichnen	0			51
+277	Comic	zeichnen	0			14
+296	Fach	zeichnen	0			13
+359	Portrait	zeichnen	0			10
+392	Mode	zeichnen	0			9
+492	Bau	zeichnen	0			7
+528	Manga	zeichnen	0			6
+645	Hand	zeichnen	0			5
+581	Trikot	zerren	0			5
+121	Seil	ziehen	0			35
+173	Trikot	ziehen	0			22
+185	Zucker	ziehen	0			20
+230	Öl	ziehen	0			16
+231	Zahn	ziehen	0			16
+246	Wurzel	ziehen	0			15
+250	Stecker	ziehen	0			15
+428	Kabel	ziehen	0			8
+460	Nacken	ziehen	0			7
+466	Leine	ziehen	0			7
+510	Schwert	ziehen	0			6
+589	Streifen	ziehen	0			5
+652	Geld	ziehen	0			5
+668	Bilanz	ziehen	0			5
+642	Helm	zieren	0			5
+99	Muskel	zucken	0			47
+383	Unkraut	zupfen	0			9
+384	Trikot	zupfen	0			9

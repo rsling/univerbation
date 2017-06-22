@@ -1,0 +1,21 @@
+
+Prp+Klitikon
+
+291  Berg          0  steigen    0.05623067   -0.18281297
+600  Spaß          0  haben     -0.08254289    1.0874986
+
+Partizip
+
+622  Probe         0  hören      0.043379037  -0.6519220
+81   Mut           0  machen    -0.06317342    0.29959193
+
+Progressiv
+
+178  Bogen         0  schießen   0.06083703     0.01190985
+360  Tee           0  trinken   -0.05475554    -0.1249663
+
+zu-Infinitiv
+
+270  Seil          0   springen  0.02794172   -1.4646078
+98   Platz         0   machen   -0.07883408   -0.42397503
+
