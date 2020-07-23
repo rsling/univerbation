@@ -13,6 +13,18 @@ assoc <- function(f1, f2, cs1, cs2, min.count=5, smooth=1) {
   }
 }
 
+
+# Get overall univerbation strength.
+all$sep    <- apply(all[,grep("_sep_", colnames(all))], 1, sum)
+all$joint  <- apply(all[,grep("_joint_", colnames(all))], 1, sum)
+all.assocs <- apply(all[, c("joint", "sep")], 1, function(row) {assoc(row[1], row[2], sum(all$joint), sum(all$sep), min.count)})
+all        <- cbind(all, all.assocs)
+if (save.persistent) pdf(paste0(out.dir, 'all.pdf'))
+plot(all.assocs, pch=20,
+     main="Associations in all contexts", xlab="", ylab="Association")
+if (save.persistent) dev.off()
+
+
 np.det.joint     <- all$q_np_det_joint_cap + all$q_np_det_joint_nocap
 np.det.joint.sum <- sum(np.det.joint)
 np.det.sep       <- all$q_np_det_sep_cap + all$q_np_det_sep_nocap
@@ -82,6 +94,7 @@ infzu.sep.sum   <- sum(infzu.sep)
 infzu           <- cbind(infzu.joint, infzu.sep)
 infzu.assocs    <- apply(infzu, 1, function(row) {assoc(row[1], row[2], infzu.joint.sum, infzu.sep.sum, min.count)})
 
+
 if (save.persistent) pdf(paste0(out.dir, 'infzu.pdf'))
 plot(infzu.assocs, pch=20, ylim = c(-0.1,0.05),
      main="Associations for 'zu' infinitive", xlab="", ylab="Association")
@@ -123,27 +136,52 @@ plot(prog.assocs, infzu.assocs, pch=20, xlim=c(-0.1,0.1), ylim=c(-0.15,0.15),
 if (save.persistent) dev.off()
 
 
-print.prefs <- function(df, col, show.cols, show.results, num, cx, effect) {
+print.prefs <- function(df, col, show.cols, show.results, num, cx, effect, freq.cutoff = -1) {
+
+  if (freq.cutoff > 0) {
+    .fc <- round(nrow(df)*freq.cutoff, 0)
+    df <- df[order(df$FLogPerMillion, decreasing = T)[1:.fc],]
+  }
+
+  .result <- NULL
+
   if (show.results %in% c('extreme', 'for', 'all')) {
     univ.sel <- df[which(df[, col] > 0),]
     univ.sel.order <- order(abs(univ.sel[, col]), decreasing = T)
     cat('\n\nPREFERENCE FOR', effect, ' IN: ', cx, '\n\n')
-    print(head(univ.sel[univ.sel.order, show.cols], n = num))
+    .tmp <- head(univ.sel[univ.sel.order, show.cols], n = num)
+    print(.tmp)
+    .result <- .tmp
   }
+
+    if (show.results %in% c('zero', 'all')) {
+    univ.sel <- df[which(!is.nan(df[, col])),]
+    cat('\n\nNO PREFERENCE FOR/AGAINST', effect, ' IN: ', cx, '\n\n')
+    .tmp <- univ.sel[tail(order(abs(univ.sel[, col]), decreasing = T), n = num), show.cols,]
+    .tmp <- .tmp[order(.tmp[, col], decreasing = T),]
+    print(.tmp)
+    if (is.null(.result)) .result <- .tmp
+    else .result <- rbind(.result, .tmp)
+  }
+
   if (show.results %in% c('extreme', 'against', 'all')) {
     univ.sel <- df[which(df[, col] < 0),]
     univ.sel.order <- order(abs(univ.sel[, col]), decreasing = T)
     cat('\n\nPREFERENCE AGAINST', effect, ' IN: ', cx, '\n\n')
-    print(head(univ.sel[univ.sel.order, show.cols], n = num))
+    .tmp <- head(univ.sel[univ.sel.order, show.cols], n = num)
+    .tmp <- .tmp[order(.tmp[, col], decreasing = T),]
+    print(.tmp)
+    if (is.null(.result)) .result <- .tmp
+    else .result <- rbind(.result, .tmp)
   }
-  if (show.results %in% c('zero', 'all')) {
-    univ.sel <- df[which(!is.nan(df[, col])),]
-    cat('\n\nNO PREFERENCE FOR/AGAINST', effect, ' IN: ', cx, '\n\n')
-    print(univ.sel[tail(order(abs(univ.sel[, col]), decreasing = T), n = num), show.cols,])
-  }
+  .result
 }
 
 if (save.persistent) sink(paste0(out.dir, 'results.txt'))
+cat('\n\n=======================================================================\n')
+tmp <- print.prefs(df = all, col = 'all.assocs', show.results = "all",
+                   show.cols = c("Noun", "Linking", "Verb", "all.assocs", "FLogPerMillion"),
+                   num = num, cx = "All contexts", effect = "UNIVERBATION", freq.cutoff = 0.2)
 cat('\n\n=======================================================================\n')
 print.prefs(df = all, col = 'np.det.assocs', show.results = show.results,
             show.cols = c("Noun", "Linking", "Verb", "np.det.assocs", "FLogPerMillion"),
