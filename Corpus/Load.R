@@ -25,4 +25,4 @@ ignore.am <- c(
 
 all$FLogPerMillion <- apply(all[,12:46], 1, function(n) { log(sum(n)/corpus.size*10^6) })
 
-source('Assoc.R')
+

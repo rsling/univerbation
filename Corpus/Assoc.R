@@ -19,11 +19,9 @@ all$sep    <- apply(all[,grep("_sep_", colnames(all))], 1, sum)
 all$joint  <- apply(all[,grep("_joint_", colnames(all))], 1, sum)
 all.assocs <- apply(all[, c("joint", "sep")], 1, function(row) {assoc(row[1], row[2], sum(all$joint), sum(all$sep), min.count)})
 all        <- cbind(all, all.assocs)
-if (save.persistent) pdf(paste0(out.dir, 'all.pdf'))
-plot(all.assocs, pch=20,
-     main="Associations in all contexts", xlab="", ylab="Association")
-if (save.persistent) dev.off()
 
+# Purge thise which have no defined overall assoc strength.
+all <- all[-which(is.na(all$all.assocs)),]
 
 np.det.joint     <- all$q_np_det_joint_cap + all$q_np_det_joint_nocap
 np.det.joint.sum <- sum(np.det.joint)
@@ -31,11 +29,6 @@ np.det.sep       <- all$q_np_det_sep_cap + all$q_np_det_sep_nocap
 np.det.sep.sum   <- sum(np.det.sep)
 np.det           <- cbind(np.det.joint, np.det.sep)
 np.det.assocs    <- apply(np.det, 1, function(row) {assoc(row[1], row[2], np.det.joint.sum, np.det.sep.sum, min.count)})
-
-if (save.persistent) pdf(paste0(out.dir, 'det.pdf'))
-plot(np.det.assocs, pch=20,
-     main="Associations for NPs with D", xlab="", ylab="Association")
-if (save.persistent) dev.off()
 
 np.clt.joint     <- all$q_np_apprart_joint_cap + all$q_np_apprart_joint_nocap
 np.clt.joint.sum <- sum(np.clt.joint)
@@ -45,11 +38,6 @@ np.clt           <- cbind(np.clt.joint, np.clt.sep)
 np.clt.assocs    <- apply(np.clt, 1, function(row) {assoc(row[1], row[2], np.clt.joint.sum, np.clt.sep.sum, min.count)})
 np.clt.assocs[ignore.am] <- NaN
 
-if (save.persistent) pdf(paste0(out.dir, 'clt.pdf'))
-plot(np.clt.assocs, pch=20, ylim = c(-0.1,0.1),
-     main="Associations for NPs with P-clitic", xlab="", ylab="Association")
-if (save.persistent) dev.off()
-
 np.ndt.joint     <- all$q_np_nodet_joint_cap + all$q_np_nodet_joint_nocap
 np.ndt.joint.sum <- sum(np.ndt.joint)
 np.ndt.sep       <- all$q_np_nodet_sep_cap + all$q_np_nodet_sep_nocap
@@ -57,22 +45,12 @@ np.ndt.sep.sum   <- sum(np.ndt.sep)
 np.ndt           <- cbind(np.ndt.joint, np.ndt.sep)
 np.ndt.assocs    <- apply(np.ndt, 1, function(row) {assoc(row[1], row[2], np.ndt.joint.sum, np.ndt.sep.sum, min.count)})
 
-if (save.persistent) pdf(paste0(out.dir, 'ndt.pdf'))
-plot(np.ndt.assocs, pch=20, ylim = c(-0.1, 0.1),
-     main="Associations for bare Ns", xlab="", ylab="Association")
-if (save.persistent) dev.off()
-
 particip.joint     <- all$q_particip_joint_cap + all$q_particip_joint_nocap
 particip.joint.sum <- sum(particip.joint)
 particip.sep       <- all$q_particip_sep_cap + all$q_particip_sep_nocap
 particip.sep.sum   <- sum(particip.sep)
 particip           <- cbind(particip.joint, particip.sep)
 particip.assocs    <- apply(particip, 1, function(row) {assoc(row[1], row[2], particip.joint.sum, particip.sep.sum, min.count)})
-
-if (save.persistent) pdf(paste0(out.dir, 'particip.pdf'))
-plot(particip.assocs, pch=20, ylim = c(-0.1, 0.1),
-     main="Associations for participle", xlab="", ylab="Association")
-if (save.persistent) dev.off()
 
 prog.joint     <- all$q_prog_joint_cap + all$q_prog_joint_nocap
 prog.joint.sum <- sum(prog.joint)
@@ -82,11 +60,6 @@ prog           <- cbind(prog.joint, prog.sep)
 prog.assocs    <- apply(prog, 1, function(row) {assoc(row[1], row[2], prog.joint.sum, prog.sep.sum, min.count)})
 prog.assocs[ignore.am] <- NaN
 
-if (save.persistent) pdf(paste0(out.dir, 'prog.pdf'))
-plot(prog.assocs, pch=20, ylim = c(-0.1, 0.1),
-     main="Associations for 'am' progressive", xlab="", ylab="Association")
-if (save.persistent) dev.off()
-
 infzu.joint     <- all$q_infzu_joint_cap + all$q_infzu_joint_nocap
 infzu.joint.sum <- sum(infzu.joint)
 infzu.sep       <- all$q_infzu_sep_cap + all$q_infzu_sep_nocap
@@ -95,116 +68,87 @@ infzu           <- cbind(infzu.joint, infzu.sep)
 infzu.assocs    <- apply(infzu, 1, function(row) {assoc(row[1], row[2], infzu.joint.sum, infzu.sep.sum, min.count)})
 
 
-if (save.persistent) pdf(paste0(out.dir, 'infzu.pdf'))
-plot(infzu.assocs, pch=20, ylim = c(-0.1,0.05),
-     main="Associations for 'zu' infinitive", xlab="", ylab="Association")
-if (save.persistent) dev.off()
-
+# Put all data in one frame.
 all <- data.frame(all, np.det.assocs, np.clt.assocs, np.ndt.assocs, particip.assocs, prog.assocs, infzu.assocs)
 
-if (save.persistent) pdf(paste0(out.dir, 'clt.det.pdf'))
-plot(np.clt.assocs, np.det.assocs, pch=20, xlim=c(-0.1,0.1), ylim=c(-0.15,0.15),
-     main="Correlation between NP with P-clitic and D",
-     xlab="P-clitic", ylab="D")
-if (save.persistent) dev.off()
-
-if (save.persistent) pdf(paste0(out.dir, 'clt.ndt.pdf'))
-plot(np.clt.assocs, np.ndt.assocs, pch=20, xlim=c(-0.1,0.1), ylim=c(-0.15,0.15),
-     main="Correlation between NP with P-clitic and bare N",
-     xlab="P-clitic", ylab="bare N")
-if (save.persistent) dev.off()
+# Sort frame by overall assoc strength.
+all <- all[order(all$all.assocs),]
 
 
-if (save.persistent) pdf(paste0(out.dir, 'clt.prog.pdf'))
-plot(np.clt.assocs, prog.assocs, pch=20, xlim=c(-0.1,0.1), ylim=c(-0.15,0.15),
-     main="Correlation between NP with P-clitic and 'am' progressive",
-     xlab="P-clitic", ylab="'am' progressive")
-if (save.persistent) dev.off()
+plot(all$all.assocs, pch=20, ylim = c(-0.3, 0.3), col="darkgreen",
+     main="Associations in all contexts", xlab="", ylab="Association")
 
-
-if (save.persistent) pdf(paste0(out.dir, 'clt.infzu.pdf'))
-plot(np.clt.assocs, infzu.assocs, pch=20, xlim=c(-0.1,0.1), ylim=c(-0.15,0.15),
-     main="Correlation between NP with P-clitic and 'zu' infinitive",
-     xlab="P-clitic", ylab="'zu' infinitive")
-if (save.persistent) dev.off()
-
-
-if (save.persistent) pdf(paste0(out.dir, 'prog.infzu.pdf'))
-plot(prog.assocs, infzu.assocs, pch=20, xlim=c(-0.1,0.1), ylim=c(-0.15,0.15),
-     main="Correlation between 'am' progressive and 'zu' infinitive",
-     xlab="'am' progressive", ylab="'zu' infinitive")
-if (save.persistent) dev.off()
-
-
-print.prefs <- function(df, col, show.cols, show.results, num, cx, effect, freq.cutoff = -1) {
-
-  if (freq.cutoff > 0) {
-    .fc <- round(nrow(df)*freq.cutoff, 0)
-    df <- df[order(df$FLogPerMillion, decreasing = T)[1:.fc],]
-  }
-
-  .result <- NULL
-
-  if (show.results %in% c('extreme', 'for', 'all')) {
-    univ.sel <- df[which(df[, col] > 0),]
-    univ.sel.order <- order(abs(univ.sel[, col]), decreasing = T)
-    cat('\n\nPREFERENCE FOR', effect, ' IN: ', cx, '\n\n')
-    .tmp <- head(univ.sel[univ.sel.order, show.cols], n = num)
-    print(.tmp)
-    .result <- .tmp
-  }
-
-    if (show.results %in% c('zero', 'all')) {
-    univ.sel <- df[which(!is.nan(df[, col])),]
-    cat('\n\nNO PREFERENCE FOR/AGAINST', effect, ' IN: ', cx, '\n\n')
-    .tmp <- univ.sel[tail(order(abs(univ.sel[, col]), decreasing = T), n = num), show.cols,]
-    .tmp <- .tmp[order(.tmp[, col], decreasing = T),]
-    print(.tmp)
-    if (is.null(.result)) .result <- .tmp
-    else .result <- rbind(.result, .tmp)
-  }
-
-  if (show.results %in% c('extreme', 'against', 'all')) {
-    univ.sel <- df[which(df[, col] < 0),]
-    univ.sel.order <- order(abs(univ.sel[, col]), decreasing = T)
-    cat('\n\nPREFERENCE AGAINST', effect, ' IN: ', cx, '\n\n')
-    .tmp <- head(univ.sel[univ.sel.order, show.cols], n = num)
-    .tmp <- .tmp[order(.tmp[, col], decreasing = T),]
-    print(.tmp)
-    if (is.null(.result)) .result <- .tmp
-    else .result <- rbind(.result, .tmp)
-  }
-  .result
+z.score <- function(v1, v2) {
+  .v1 <- v1[which(!is.na(v1) & !is.na(v2))]
+  .v2 <- v2[which(!is.na(v1) & !is.na(v2))]
+  list(mean = round(mean(.v1-.v2), 3), sd = round(sd(.v1-.v2), 3))
 }
 
-if (save.persistent) sink(paste0(out.dir, 'results.txt'))
-cat('\n\n=======================================================================\n')
-tmp <- print.prefs(df = all, col = 'all.assocs', show.results = "all",
-                   show.cols = c("Noun", "Linking", "Verb", "all.assocs", "FLogPerMillion"),
-                   num = num, cx = "All contexts", effect = "UNIVERBATION", freq.cutoff = 0.2)
-cat('\n\n=======================================================================\n')
-print.prefs(df = all, col = 'np.det.assocs', show.results = show.results,
-            show.cols = c("Noun", "Linking", "Verb", "np.det.assocs", "FLogPerMillion"),
-            num = num, cx = "NP with D", effect = "UNIVERBATION")
-cat('\n\n=======================================================================\n')
-print.prefs(df = all, col = 'np.clt.assocs', show.results = show.results,
-            show.cols = c("Noun", "Linking", "Verb", "np.clt.assocs", "FLogPerMillion"),
-            num = num, cx = "NP with P-clitic", effect = "UNIVERBATION")
-cat('\n\n=======================================================================\n')
-print.prefs(df = all, col = 'np.ndt.assocs', show.results = show.results,
-            show.cols = c("Noun", "Linking", "Verb", "np.ndt.assocs", "FLogPerMillion"),
-            num = num, cx = "bare N", effect = "UNIVERBATION")
-cat('\n\n=======================================================================\n')
-print.prefs(df = all, col = 'particip.assocs', show.results = show.results,
-            show.cols = c("Noun", "Linking", "Verb", "particip.assocs", "FLogPerMillion"),
-            num = num, cx = "Participle", effect = "UNIVERBATION")
-cat('\n\n=======================================================================\n')
-print.prefs(df = all, col = 'prog.assocs', show.results = show.results,
-            show.cols = c("Noun", "Linking", "Verb", "prog.assocs", "FLogPerMillion"),
-            num = num, cx = "'am' Progressive", effect = "UNIVERBATION")
-cat('\n\n=======================================================================\n')
-print.prefs(df = all, col = 'infzu.assocs', show.results = show.results,
-            show.cols = c("Noun", "Linking", "Verb", "infzu.assocs", "FLogPerMillion"),
-            num = num, cx = "'zu' Infinitive", effect = "UNIVERBATION")
-cat('\n\n=======================================================================\n')
-if (save.persistent) sink()
+
+z.np.det <- z.score(all$all.assocs, all$np.det.assocs)
+plot(all$np.det.assocs, pch=20, ylim = c(-0.3, 0.3), col="darkgreen",
+     main="Associations in NPs with determiner", xlab="", ylab="Association",
+     sub = paste0("µ=", z.np.det$mean, ", sd=", z.np.det$sd))
+points(
+  0:(nrow(all)-1),
+  ifelse(is.na(all$np.det.assocs), -1, all$all.assocs),
+  pch=20, cex=0.5, col = ifelse(is.na(all$np.det.assocs), "white", "darkorange"))
+
+
+z.np.clt <- z.score(all$all.assocs, all$np.clt.assocs)
+plot(all$np.clt.assocs, pch=20, ylim = c(-0.3, 0.3), col="darkgreen",
+     main="Associations in NPs with prepositional determiner", xlab="", ylab="Association",
+     sub = paste0("µ=", z.np.clt$mean, ", sd=", z.np.clt$sd))
+points(
+  0:(nrow(all)-1),
+  ifelse(is.na(all$np.clt.assocs), -1, all$all.assocs),
+  pch=20, cex=0.5, col = ifelse(is.na(all$np.clt.assocs), "white", "darkorange"))
+
+
+z.np.ndt <- z.score(all$all.assocs, all$np.ndt.assocs)
+plot(all$np.ndt.assocs, pch=20, ylim = c(-0.3, 0.3), col="darkgreen",
+     main="Associations in NPs without a determiner", xlab="", ylab="Association",
+     sub = paste0("µ=", z.np.ndt$mean, ", sd=", z.np.ndt$sd))
+points(
+  0:(nrow(all)-1),
+  ifelse(is.na(all$np.ndt.assocs), -1, all$all.assocs),
+  pch=20, cex=0.5, col = ifelse(is.na(all$np.ndt.assocs), "white", "darkorange"))
+
+
+z.particip <- z.score(all$all.assocs, all$particip.assocs)
+plot(all$particip.assocs, pch=20, ylim = c(-0.3, 0.3), col="darkgreen",
+     main="Associations of participles", xlab="", ylab="Association",
+     sub = paste0("µ=", z.particip$mean, ", sd=", z.particip$sd))
+points(
+  0:(nrow(all)-1),
+  ifelse(is.na(all$particip.assocs), -1, all$all.assocs),
+  pch=20, cex=0.5, col = ifelse(is.na(all$particip.assocs), "white", "darkorange"))
+
+
+z.prog <- z.score(all$all.assocs, all$prog.assocs)
+plot(all$prog.assocs, pch=20, ylim = c(-0.3, 0.3), col="darkgreen",
+     main="Associations of progressives", xlab="", ylab="Association",
+     sub = paste0("µ=", z.prog$mean, ", sd=", z.prog$sd))
+points(
+  0:(nrow(all)-1),
+  ifelse(is.na(all$prog.assocs), -1, all$all.assocs),
+  pch=20, cex=0.5, col = ifelse(is.na(all$prog.assocs), "white", "darkorange"))
+
+
+
+# plot(np.det.assocs[order(np.det.assocs)], pch=20,
+#     main="Associations for NPs with D", xlab="", ylab="Association")
+# plot(np.clt.assocs[order(np.clt.assocs)], pch=20,
+#      main="Associations for NPs with P-clitic", xlab="", ylab="Association")
+# plot(np.ndt.assocs[order(np.ndt.assocs)], pch=20, ylim = c(-0.1, 0.1),
+#      main="Associations for bare Ns", xlab="", ylab="Association")
+# plot(particip.assocs[order(particip.assocs)], pch=20, ylim = c(-0.1, 0.1),
+#      main="Associations for participle", xlab="", ylab="Association")
+# plot(prog.assocs[order(prog.assocs)], pch=20, ylim = c(-0.1, 0.1),
+#      main="Associations for 'am' progressive", xlab="", ylab="Association")
+# plot(infzu.assocs[order(infzu.assocs)], pch=20, ylim = c(-0.1,0.05),
+#      main="Associations for 'zu' infinitive", xlab="", ylab="Association")
+
+
+
+
