@@ -23,6 +23,6 @@ ignore.am <- c(
   which(all$Noun=="Kopf" & all$Verb=="drehen")
 )
 
-all$FLogPerMillion <- apply(all[,12:46], 1, function(n) { log(sum(n)/corpus.size*10^6) })
+all$FLogPerMillion <- apply(all[,14:48], 1, function(n) { log(sum(n)/corpus.size*10^6) })
 
 
