@@ -5,14 +5,15 @@ require(beanplot)
 
 
 # Get overall univerbation strength.
-all$sep    <- apply(all[,grep("_sep_", colnames(all))], 1, sum)
-all$joint  <- apply(all[,grep("_joint_", colnames(all))], 1, sum)
 all.assocs <- apply(all[, c("joint", "sep")], 1, function(row) {assoc(row[1], row[2], sum(all$joint), sum(all$sep), min.count)})
 all        <- cbind(all, all.assocs)
 
-# Purge thise which have no defined overall assoc strength.
+
+# Purge those which have no defined overall assoc strength.
 all <- all[-which(is.na(all$all.assocs)),]
 
+
+# Caclulate per-Cx associtations.
 np.det.joint     <- all$q_np_det_joint_cap + all$q_np_det_joint_nocap
 np.det.joint.sum <- sum(np.det.joint)
 np.det.sep       <- all$q_np_det_sep_cap + all$q_np_det_sep_nocap
@@ -166,13 +167,10 @@ beanplot(
                     c("darkgreen", "darkgray", "black", "black")))
 
 
-all.redux <- all[which((!is.na(all$np.det.assocs) | !is.na(all$np.clt.assocs) | !is.na(all$np.ndt.assocs))
-                       & !is.na(all$particip.assocs)
-                       & !is.na(all$infzu.assocs)
-                       & !is.na(all$prog.assocs)
-                       ),]
 
-if (save.persistent) pdf("densititties_contest_cramer.pdf")
+### Plot distributions of association measures.
+
+if (save.persistent) pdf("densities_cramer.pdf")
 density.opts <- list(lwd = 2)
 plot(density(all$all.assocs[which(all$all.assocs > -(cut.off.point) & all$all.assocs < cut.off.point)]),
   ylim = c(0, 60), axes = F, xlab = "",
@@ -208,7 +206,15 @@ if (save.persistent) dev.off()
 
 
 
-if (save.persistent) pdf("densititties_contest.pdf")
+### The same, but with per-group NA removal.
+
+all.redux <- all[which((!is.na(all$np.det.assocs) | !is.na(all$np.clt.assocs) | !is.na(all$np.ndt.assocs))
+                       & !is.na(all$particip.assocs)
+                       & !is.na(all$infzu.assocs)
+                       & !is.na(all$prog.assocs)
+),]
+
+if (save.persistent) pdf("densities_reduced.pdf")
 density.opts <- list(lwd = 2)
 plot(density(all.redux$all.assocs[which(all.redux$all.assocs > -(cut.off.point) & all.redux$all.assocs < cut.off.point)]),
      ylim = c(0, 60), axes = F, xlab = "",
@@ -240,32 +246,3 @@ legend("topright", bty = "n", lwd = 2, col = c("black", "darkblue", "darkgreen",
 )
 if (save.persistent) dev.off()
 
-
-
-if (save.persistent) pdf("denisitity.pdf")
-plot(density(c(all$np.det.assocs,
-               all$np.clt.assocs,
-               all$np.ndt.assocs),
-             na.rm=T),
-     xlim = c(-0.15, 0.15),
-     main = "Attraction to univerbation for different N+V units",
-     sub = "Cramer's v from Chi-Square")
-if (save.persistent) dev.off()
-
-if (save.persistent) pdf("qq.pdf")
-qqnorm(c(all$np.det.assocs,
-         all$np.clt.assocs,
-         all$np.ndt.assocs),
-       main = "QQ: Attraction to univerbation for different N+V units",
-       sub = "Cramer's v from Chi-Square")
-qqline(c(all$np.det.assocs,
-         all$np.clt.assocs,
-         all$np.ndt.assocs))
-if (save.persistent) dev.off()
-
-plot(density(all$np.det.assocs, na.rm=T))
-plot(density(all$np.clt.assocs, na.rm=T))
-plot(density(all$np.ndt.assocs, na.rm=T))
-plot(density(all$prog.assocs, na.rm=T))
-plot(density(all$particip.assocs, na.rm=T))
-plot(density(all$infzu.assocs, na.rm=T))

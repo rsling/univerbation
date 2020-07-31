@@ -11,6 +11,9 @@ corpus.size     <- 13950853989  # Subcorpus size 'Sätze' in DECOW16A.
 
 all <- read.csv2(file = "Frequencies/decow16a/all.csv", sep = '\t', header = T)
 
+# Remove ones with "Erroneous" annotation.
+all <- all[-which(all$Relation=="Erroneous"),]
+
 # Indices for the ones to exclude from 'am' progressive and P-clitic counts.
 ignore.am <- c(
   which(all$Noun=="Computer" & all$Verb=="spielen"),
@@ -23,6 +26,10 @@ ignore.am <- c(
   which(all$Noun=="Kopf" & all$Verb=="drehen")
 )
 
-all$FLogPerMillion <- apply(all[,14:48], 1, function(n) { log(sum(n)/corpus.size*10^6) })
+# Get relative frequency.
+all$FLogPerMillion <- apply(all[,16:50], 1, function(n) { log(sum(n)/corpus.size*10^6) })
 
+# Get total sums for separate and joint spelling.
+all$sep    <- apply(all[,grep("_sep_", colnames(all))], 1, sum)
+all$joint  <- apply(all[,grep("_joint_", colnames(all))], 1, sum)
 
