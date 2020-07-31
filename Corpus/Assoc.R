@@ -1,20 +1,7 @@
 require(vioplot)
 source('./vioplot2.R')
+source('./lingassoc.R')
 require(beanplot)
-
-assoc <- function(f1, f2, cs1, cs2, min.count=5, smooth=1) {
-  if (f1+f2 < min.count) r <- NaN
-  else {
-    r <- 0
-    f1  <- f1 + smooth
-    f2  <- f2 + smooth
-    cs1 <- cs1 + smooth
-    cs2 <- cs2 + smooth
-    x2 <- chisq.test(matrix(c(f1,f2,cs1-f1,cs2-f2), nrow = 2), correct = T)
-    r <- as.numeric(sqrt(x2$statistic/(cs1+cs2))) * -sign(x2$expected-x2$observed)[1,1]
-    r
-  }
-}
 
 
 # Get overall univerbation strength.
@@ -77,6 +64,11 @@ all <- data.frame(all, np.det.assocs, np.clt.assocs, np.ndt.assocs, particip.ass
 # Sort frame by overall assoc strength.
 all <- all[order(all$all.assocs),]
 
+
+
+
+### Plot the association scores.
+### Also comparative plots between overall and Cx-specific score.
 
 plot(all$all.assocs, pch=20, ylim = c(-0.3, 0.3), col="darkgreen",
      main="Associations in all contexts", xlab="", ylab="Association")
@@ -151,29 +143,9 @@ points(
 
 puppies.and.kittens <- rbind(z.np.det, z.np.clt, z.np.ndt, z.particip, z.prog, z.infzu)
 
-the.cex <- 0.7
-vio.opts <- list(frame = F, add = T)
-plot(x=NULL, y=NULL,
-     xlim = c(0.5, 6.5),
-     ylim=c(-0.5, 0.6),
-     type="n", ann=FALSE, axes=F
-)
-axis(1, at=c(0.85, 1.15), tick = F,
-     labels=c("external pl.", "internal pl."),
-     cex.axis = the.cex)
-axis(2, cex.axis = the.cex)
-abline(h = 0, lwd = 2, lty = 2, col = "darkgray")
-#ioplot(, all$np.ndt.assocs, all$particip.assocs, all$prog.assocs, all$infzu.assocs)
-do.call(vioplot2, c(list(x = all$np.clt.assocs[which(!is.na(all$np.clt.assocs))]), at = 1, col = "lightyellow", vio.opts))
-do.call(vioplot2, c(list(x = all$prog.assocs[which(!is.na(all$prog.assocs))]), at = 2, col = "lightgreen", vio.opts))
-do.call(vioplot2, c(list(x = all$particip.assocs[which(!is.na(all$particip.assocs))]), at = 3, col = "yellow", vio.opts))
 
-# title(cex.lab = 0.7,
-#       xlab = "Sub-study")
-# legend("bottomright", fill = c("white", "darkorange"),
-#        legend = c("lax annotation", "strict annotation"),
-#        box.lty=0,
-#        cex = the.cex)
+
+### Make beanplots of the distributions of association measures.
 
 cut.off.point <- 0.15
 
@@ -194,14 +166,13 @@ beanplot(
                     c("darkgreen", "darkgray", "black", "black")))
 
 
-
 all.redux <- all[which((!is.na(all$np.det.assocs) | !is.na(all$np.clt.assocs) | !is.na(all$np.ndt.assocs))
                        & !is.na(all$particip.assocs)
                        & !is.na(all$infzu.assocs)
                        & !is.na(all$prog.assocs)
                        ),]
 
-pdf("densititties_contest.pdf")
+if (save.persistent) pdf("densititties_contest_cramer.pdf")
 density.opts <- list(lwd = 2)
 plot(density(all$all.assocs[which(all$all.assocs > -(cut.off.point) & all$all.assocs < cut.off.point)]),
   ylim = c(0, 60), axes = F, xlab = "",
@@ -233,14 +204,14 @@ legend("topright", bty = "n", lwd = 2, col = c("black", "darkblue", "darkgreen",
                   paste0("Part. (n=", length(which(!is.na(all$particip.assocs))), ")"),
                   paste0("Inf. (n=", length(which(!is.na(all$infzu.assocs))), ")"))
 )
-dev.off()
+if (save.persistent) dev.off()
 
 
 
-pdf("densititties_contest.pdf")
+if (save.persistent) pdf("densititties_contest.pdf")
 density.opts <- list(lwd = 2)
 plot(density(all.redux$all.assocs[which(all.redux$all.assocs > -(cut.off.point) & all.redux$all.assocs < cut.off.point)]),
-     ylim = c(0, 35), axes = F, xlab = "",
+     ylim = c(0, 60), axes = F, xlab = "",
      lwd = density.opts$lwd,
      col = "black", lty = 1,
      main = "Distribution of association measures",
@@ -267,11 +238,11 @@ legend("topright", bty = "n", lwd = 2, col = c("black", "darkblue", "darkgreen",
                   paste0("Part. (n=", length(which(!is.na(all.redux$particip.assocs))), ")"),
                   paste0("Inf. (n=", length(which(!is.na(all.redux$infzu.assocs))), ")"))
 )
-dev.off()
+if (save.persistent) dev.off()
 
 
 
-pdf("denisitity.pdf")
+if (save.persistent) pdf("denisitity.pdf")
 plot(density(c(all$np.det.assocs,
                all$np.clt.assocs,
                all$np.ndt.assocs),
@@ -279,9 +250,9 @@ plot(density(c(all$np.det.assocs,
      xlim = c(-0.15, 0.15),
      main = "Attraction to univerbation for different N+V units",
      sub = "Cramer's v from Chi-Square")
-dev.off()
+if (save.persistent) dev.off()
 
-pdf("qq.pdf")
+if (save.persistent) pdf("qq.pdf")
 qqnorm(c(all$np.det.assocs,
          all$np.clt.assocs,
          all$np.ndt.assocs),
@@ -290,7 +261,7 @@ qqnorm(c(all$np.det.assocs,
 qqline(c(all$np.det.assocs,
          all$np.clt.assocs,
          all$np.ndt.assocs))
-dev.off()
+if (save.persistent) dev.off()
 
 plot(density(all$np.det.assocs, na.rm=T))
 plot(density(all$np.clt.assocs, na.rm=T))
