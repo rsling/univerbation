@@ -5,7 +5,7 @@ require(beanplot)
 
 
 # Get overall univerbation strength.
-all.assocs <- apply(all[, c("joint", "sep")], 1, function(row) {assoc(row[1], row[2], sum(all$joint), sum(all$sep), min.count)})
+all.assocs <- apply(all[, c("Joint", "Separate")], 1, function(row) {assoc(row[1], row[2], sum(all$Joint), sum(all$Separate), min.count)})
 all        <- cbind(all, all.assocs)
 
 

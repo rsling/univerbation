@@ -30,6 +30,8 @@ ignore.am <- c(
 all$FLogPerMillion <- apply(all[,16:50], 1, function(n) { log(sum(n)/corpus.size*10^6) })
 
 # Get total sums for separate and joint spelling.
-all$sep    <- apply(all[,grep("_sep_", colnames(all))], 1, sum)
-all$joint  <- apply(all[,grep("_joint_", colnames(all))], 1, sum)
+all$Separate <- apply(all[,grep("_sep_", colnames(all))], 1, sum)
+all$Joint    <- apply(all[,grep("_joint_", colnames(all))], 1, sum)
 
+# Get a binary linking element vartiable.
+all$Linkbinary <- ifelse(all$Linking=="0", "No", "Yes")

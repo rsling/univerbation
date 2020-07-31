@@ -44,32 +44,32 @@ print.prefs <- function(df, col, show.cols, show.results, num, cx, effect, freq.
 
 if (save.persistent) sink(paste0(out.dir, 'results.txt'))
 cat('\n\n=======================================================================\n')
-tmp <- print.prefs(df = all, col = 'all.assocs', show.results = "all",
-                   show.cols = c("Noun", "Linking", "Verb", "all.assocs", "FLogPerMillion"),
-                   num = num, cx = "All contexts", effect = "UNIVERBATION", freq.cutoff = 0.2)
-cat('\n\n=======================================================================\n')
 print.prefs(df = all, col = 'np.det.assocs', show.results = show.results,
-            show.cols = c("Noun", "Linking", "Verb", "np.det.assocs", "FLogPerMillion"),
+            show.cols = c("Compound", "np.det.assocs", "FLogPerMillion", "Relation", "Valency"),
             num = num, cx = "NP with D", effect = "UNIVERBATION")
 cat('\n\n=======================================================================\n')
 print.prefs(df = all, col = 'np.clt.assocs', show.results = show.results,
-            show.cols = c("Noun", "Linking", "Verb", "np.clt.assocs", "FLogPerMillion"),
+            show.cols = c("Compound", "np.clt.assocs", "FLogPerMillion", "Relation", "Valency"),
             num = num, cx = "NP with P-clitic", effect = "UNIVERBATION")
 cat('\n\n=======================================================================\n')
 print.prefs(df = all, col = 'np.ndt.assocs', show.results = show.results,
-            show.cols = c("Noun", "Linking", "Verb", "np.ndt.assocs", "FLogPerMillion"),
+            show.cols = c("Compound", "np.ndt.assocs", "FLogPerMillion", "Relation", "Valency"),
             num = num, cx = "bare N", effect = "UNIVERBATION")
 cat('\n\n=======================================================================\n')
 print.prefs(df = all, col = 'particip.assocs', show.results = show.results,
-            show.cols = c("Noun", "Linking", "Verb", "particip.assocs", "FLogPerMillion"),
+            show.cols = c("Compound", "particip.assocs", "FLogPerMillion", "Relation", "Valency"),
             num = num, cx = "Participle", effect = "UNIVERBATION")
 cat('\n\n=======================================================================\n')
 print.prefs(df = all, col = 'prog.assocs', show.results = show.results,
-            show.cols = c("Noun", "Linking", "Verb", "prog.assocs", "FLogPerMillion"),
+            show.cols = c("Compound", "prog.assocs", "FLogPerMillion", "Relation", "Valency"),
             num = num, cx = "'am' Progressive", effect = "UNIVERBATION")
 cat('\n\n=======================================================================\n')
 print.prefs(df = all, col = 'infzu.assocs', show.results = show.results,
-            show.cols = c("Noun", "Linking", "Verb", "infzu.assocs", "FLogPerMillion"),
+            show.cols = c("Compound", "infzu.assocs", "FLogPerMillion", "Relation", "Valency"),
             num = num, cx = "'zu' Infinitive", effect = "UNIVERBATION")
+cat('\n\n=======================================================================\n')
+tmp <- print.prefs(df = all, col = 'all.assocs', show.results = "all",
+                   show.cols = c("Compound", "all.assocs", "FLogPerMillion", "Relation", "Valency"),
+                   num = num, cx = "All contexts", effect = "UNIVERBATION", freq.cutoff = 0.2)
 cat('\n\n=======================================================================\n')
 if (save.persistent) sink()
