@@ -1,2 +1,18 @@
+% !Rnw root = ../nvuniverbation.Rnw
+<<setupcorpus, cache=FALSE, include=FALSE, results='asis'>>=
+opts_knit$set(self.contained=FALSE)
+@
+
 \section{Corpus-based usage analysis}
 \label{sec:corpusbasedusageanalysis}
+
+<<results="asis">>=
+require(lme4)
+require(fmsb)
+require(MuMIn)
+
+### Oh yeah, swamp me in your dirty random effects!
+Glmm <- glmer(cbind(Joint, Separate)~Valency+Relation+Linkbinary+(1|Verb)+(1|Noun), data=Concordance, family=binomial)
+print(summary(Glmm))
+print(r.squaredGLMM(Glmm))
+@

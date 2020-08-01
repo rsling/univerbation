@@ -110,22 +110,18 @@ render_listings()
 @
 
 <<rinitialisation>>=
-# source('../Data/R/functions.R')
-
 path.base       <- '~/Workingcopies/Univerbation/'
 path.knitr      <- paste0(path.base, 'Latex/')
-path.corpus     <- paste0(path.base, "Corpus/Frequencies/decow16a/")
+path.corpus     <- paste0(path.base, "Corpus/Data/")
 path.experiment <- paste0(path.base, "Experiment/Data/")
 
-decow.tokens <- 19835843151
-decow.words  <- 15687969372
-decow.docs   <- 17116160
+corpus.size     <- 13950853989
 @
 
-<<loaddata>>=
-# load(paste0(my.root, path.rdata, "n1.frequencies.RData"))
-# % stims.freqs <- read.csv2(paste0(my.root, '../Data/Split100/stimuli_freqs.csv'), header = T, sep = "\t", row.names = NULL)
+
+<<child="load.Rnw">>=
 @
+
 
 \sffamily
 \maketitle
