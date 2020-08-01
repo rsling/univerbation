@@ -4,18 +4,19 @@ library(vcd)
 library(effects)
 library(lattice)
 library(MuMIn)
+library(plyr)
 
 rm(list=ls())
 cat("\014")
 graphics.off()
 
 setwd("~/Workingcopies/Univerbation/Experiment/RExperiment")
-out.dir <- "/Users/user/Workingcopies/Univerbation/Experiment/RExperiment/Results/"
+out.dir <- "~/Workingcopies/Univerbation/Experiment/RExperiment/Results/"
 
 source("glmtools.R")
 source("highstat.R")
 
-save.persistent <- F
+save.persistent <- T
 
 conditions <- rep(c("Prepart", "Inf", "Part", "Prog"), 2)
 lexicals <- c("Bergsteigen", "Platzmachen", "Probehören", "Teetrinken",
@@ -23,15 +24,15 @@ lexicals <- c("Bergsteigen", "Platzmachen", "Probehören", "Teetrinken",
 
 
 # Pull attraction from corpus results.
-load(file = "../../Corpus/Results/corpus.Rdata")
+load(file = "../../Corpus/RCorpus/Results/corpus.Rdata")
 lexicals.df <- data.frame(Compound = lexicals)
 attracts <- join(lexicals.df, all)[, "all.assocs"]
 attracts.f <- c("Hi", "Lo", "Hi", "Lo",
                 "Lo", "Hi", "Lo", "Hi")
 
-results.w1 <- read.csv(file = "Ergebnisse_Woche1.csv", sep = "\t",
+results.w1 <- read.csv(file = "../Data/Ergebnisse_Woche1.csv", sep = "\t",
                     colClasses = c("factor"))
-results.w2 <- read.csv(file = "Ergebnisse_woche2.csv", sep = "\t",
+results.w2 <- read.csv(file = "../Data/Ergebnisse_woche2.csv", sep = "\t",
                     colClasses = c("factor"))
 results <- rbind(results.w1, results.w2[,colnames(results.w1)])
 
@@ -74,7 +75,7 @@ the.table <- as.table(the.table)
 # lab <-ifelse(the.table < 5, NA, paste0(round(the.table/32*100, 0), "%"))
 lab <-ifelse(the.table <= 5, NA, the.table)
 
-if (save.persistent) pdf(file = paste0(out.dir, "responses.pdf"))
+if (save.persistent) pdf(file = paste0(out.dir, "Responses.pdf"))
 the.plot <- mosaic(the.table, pop = F, direction = c("h", "v", "h"),
                    labeling = T, colorize = T,
                    shade = T,
