@@ -1,0 +1,33 @@
+ID	Woche	Alter	Gender	DeutschL1	Legasthenie	Univerb1	Univerb1F	Parenth1	Parenth2	Univerb2	Univerb2F	Univerb3	Univerb3F	Parenth3	Univerb4	Univerb4F	Parenth4	Parenth5	Univerb5	Univerb5F	Univerb6	Univerb6F	Univerb7	Univerb7F	Parenth6	Univerb8	Univerb8F	Anmerkungen
+6205	1	25	w	1	0	Bergsteigen	1	Null	Null	Platz zu machen	0	Probe gehört	0	Null	Teetrinken	1	Null	Null	Spaßhaben	1	Seilzuspringen	1	Mut gemacht	0	Null	Bogenschießen	1	
+6206	1	29	w	1	0	Bergsteigen	1	Null	Null	Platz zu machen	0	Probe gehört	0	Null	Tee trinken	0	Komma	Null	Spaßhaben	1	Seil zu springen	0	Mut gemacht	0	Null	Bogenschießen	1	
+6207	1	20	w	1	0	Bergsteigen	1	Komma	Null	Platz zu machen	0	Probe gehört	0	Null	Tee trinken	0	Komma	Null	Spaß haben	0	Seil zu springen	0	Mut gemacht	0	Komma	Bogenschießen	1	
+6208	1	18	w	1	0	Bergsteigen	1	Komma	Null	Platz zu machen	0	probegehört	1	Null	Teetrinken	1	Null	Null	Spaß haben	0	Seil zu springen	0	Mut gemacht	0	Null	Bogenschießen	1	
+6209	1	21	w	1	0	Bergsteigen	1	Komma	Null	Platz zu machen	0	probegehört	1	Null	Teetrinken	1	Komma	Null	Spaß haben	0	Seilzuspringen	1	Mut gemacht	0	Null	Bogenschießen	1	U5: Korrektur von ZSS ; P6: Korrektur von Komma
+6210	1	20	w	1	0	Bergsteigen	1	Komma	Null	Platz zu machen	0	probegehört	1	Null	Teetrinken	1	Komma	Null	Spaß haben	0	Seil zu springen	0	Mut gemacht	0	Null	Bogenschießen	1	
+6211	1	20	w	1	0	Bergsteigen	1	Komma	Null	Platz zu machen	0	probe-gehört	1	Null	teetrinken	1	Komma	Null	Spaßhaben	1	Seil zu springen	0	Mut gemacht	0	Komma	Bogenschießen	1	
+6212	1	44	w	1	0	Bergsteigen	1	Strich	Strich	Platz zu machen	0	probegehört	1	Null	Teetrinken	1	Strich	Null	Spaß haben	0	Seil zu springen	0	Mut gemacht	0	Strich	Bogenschießen	1	
+6213	1	21	w	1	0	Bergsteigen	1	Null	Null	platz zu machen	0	probe gehört	0	Null	Tee trinken	0	Komma	Null	Spaßhaben	1	Seil zu springen	0	Mut gemacht	0	Null	Bogenschießen	1	
+6214	1	18	w	1	0	Berg steigen	1	Null	Null	Platz zu machen	0	probe gehört	0	Null	Tee trinken	0	Null	Null	Spaß haben	0	Seil zu springen	0	Mut gemacht	0	Null	Bogen schießen	1	
+6215	1	27	m	1	0	Bergsteigen	1	Komma	Null	Platz zu machen	0	probegehört	1	Null	Teetrinken	1	Null	Null	Spaßhaben	1	Seil zu springen	0	Mut gemacht	0	Komma	Bogenschießen	1	
+6216	1	27	m	1	0	Bergsteigen	1	Null	Null	Platz zu machen	0	Probe gehört	1	Null	Teetrinken	1	Null	Null	Spaß haben	0	Seil zu springen	0	Mut gemacht	0	Null	Bogenschießen	1	
+6217	1	33	w	1	0	Bergsteigen	1	Komma	Komma	platz zu machen	0	Probe gehört	0	Null	Teetrinken	1	Komma	Null	Spaßhaben	1	Seil zu springen	0	Mut gemacht	0	Komma	Bogenschießen	1	
+6219	1	20	w	1	0	Bergsteigen	1	Komma	Null	Platz zu machen	0	probegehört	1	Null	Teetrinken	1	Komma	Null	Spaßhaben	1	Seil zu springen	0	Mut gemacht	0	Komma	Bogenschießen	1	
+6220	1	20	w	1	0	Bergsteigen	1	Komma	Null	Platz zu machen	0	Probe gehört	0	Null	Teetrinken	1	Komma	Null	Spaß haben	0	Seil zu springen	0	Mut gemacht	0	Komma	Bogenschießen	1	
+6221	1	20	w	1	0	Bergsteigen	1	Komma	Null	Platz zu machen	0	Probe gehört	0	Null	Teetrinken	1	Komma	Null	Spaßhaben	1	Seil zu springen	0	Mut gemacht	0	Komma	Bogenschießen	1	
+6222	1	21	w	1	0	Bergsteigen	1	Komma	Besonders	Platz zu machen	0	probegehört	1	Null	Teetrinken	1	Komma	Null	Spaßhaben	1	Seil zu springen	0	Mut gemacht	0	Komma	Bogenschießen	1	P2: ganze NP kommatiert
+6223	1	29	m	1	0	Bergsteigen	1	Komma	Besonders	Platz zu machen	0	probegehört	1	Null	Teetrinken	1	Komma	Null	Spaßhaben	1	Seilzuspringen	1	Mutgemacht	0	Komma	Bogenschießen	1	P2: Komma vor diese
+6224	1	27	w	1	0	Bergsteigen	1	NA	Null	Platz zu machen	0	probegehört	1	Null	Tee Trinken	0	Besonders	Null	Spaß haben	0	Seil zu springen	0	Mut gemacht	0	Besonders	Bogenschießen	1	
+6225	1	20	w	1	0	Bergsteigen	1	Komma	Null	Platz zu machen	0	probegehört	1	Null	Teetrinken	1	Null	Null	Spaß haben	0	Seil zu springen	0	Mut gemacht	0	Null	Bogenschießen	1	
+6226	1	21	w	1	0	Bergsteigen	1	Null	Null	Platz zu machen	0	Probe gehört	0	Null	Tee Trinken	0	Null	Null	Spaß haben	0	Seil zu springen	0	Mut gemacht	0	Null	Bogenschießen	1	U5: Korrektur von ZSS
+6227	1	30	w	1	0	Bergsteigen	1	Komma	Null	Platz zu machen	0	Probe gehört	0	Null	Teetrinken	1	Strich	Null	Spaß haben	0	Seil zu springen	0	Mut gemacht	0	Strich	Bogenschießen	1	
+6228	1	26	m	1	0	Bergsteigen	1	Komma	Null	Platz zu machen	0	probegehört	1	Null	Tee Trinken	0	Komma	Null	Spaß haben	0	Seil zu springen	0	Mut gemacht	0	Komma	Bogenschießen	1	
+6229	1	19	w	1	0	Bergsteigen	1	Komma	Besonders	Platz zu machen	0	Probe gehört	0	Null	Tee trinken	0	Besonders	Null	Spaß haben	0	Seil zu springen	0	Mut gemacht	0	Null	Bogenschießen	1	P2: Komma zwischen Adv und Adj ; P4: Komma zwischen Adv und Adj
+6230	1	24	m	1	0	Bergsteigen	1	Komma	Null	Platz zu machen	0	probegehört	1	Null	Teetrinken	1	Null	Null	Spaßhaben	1	Seil zu springen	0	Mut gemacht	0	Null	Bogenschießen	1	
+7200	1	21	w	1	0	Bergsteigen	1	KommaNull	Besonders	Platz zu machen	0	probegehört	1	Null	Teetrinken	1	Komma	Null	Spaß haben	0	Seil zu springen	0	Mut gemacht	0	Null	Bogenschießen	1	P2: Komma zwischen Adv und Adj
+7201	1	19	w	1	0	Bergsteigen	1	Komma	Null	Platz zu machen	0	probegehört	1	Null	Tee trinken	0	Komma	Null	Spaß haben	0	Seil zu springen	0	Mut gemacht	0	Null	Bogenschießen	1	
+7202	1	21	w	1	0	Bergsteigen	1	Komma	Null	Platz zu machen	0	probegehört	1	Null	Teetrinken	1	Komma	Null	Spaßhaben	1	Seil zu springen	0	Mut gemacht	0	Komma	Bogenschießen	1	
+7203	1	20	w	1	0	Bergsteigen	1	Komma	Komma	Platz zu machen	0	Probe gehört	0	Null	Tee trinken	0	Komma	Null	Spaß haben	0	Seil zu springen	0	Mut gemacht	0	Komma	Bogenschießen	1	
+7204	1	21	m	1	0	Bergsteigen	1	Komma	Null	Platz zu machen	0	probegehört	1	Null	Teetrinken	1	Komma	Null	Spaß haben	0	Seil zu springen	0	Mut gemacht	0	Komma	Bogenschießen	1	
+7205	1	19	w	1	0	Bergsteigen	1	Komma	Null	Platz zu machen	0	probegehört	1	Null	Teetrinken	1	Komma	Null	Spaß haben	0	Seil zu springen	0	Mut gemacht	0	Komma	Bogenschießen	1	
+9218	1	29	w	1	0	Bergsteigen	1	Komma	Null	Platz zu machen	0	Probe gehört	0	Null	Tee Trinken	0	Komma	Null	Spaß haben	0	Seil zu springen	0	Mut gemacht	0	Komma	Bogenschießen	1	

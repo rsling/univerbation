@@ -112,12 +112,14 @@ render_listings()
 <<rinitialisation>>=
 # source('../Data/R/functions.R')
 
-# my.root = '~/Workingcopies/Linkingelements/Paper/'
-# path.rdata <- "../Data/R/RData/"
+path.base       <- '~/Workingcopies/Univerbation/'
+path.knitr      <- paste0(path.base, 'Latex/')
+path.corpus     <- paste0(path.base, "Corpus/Frequencies/decow16a/")
+path.experiment <- paste0(path.base, "Experiment/Data/")
 
-# decow.tokens <- 19835843151
-# decow.words  <- 15687969372
-# decow.docs   <- 17116160
+decow.tokens <- 19835843151
+decow.words  <- 15687969372
+decow.docs   <- 17116160
 @
 
 <<loaddata>>=
