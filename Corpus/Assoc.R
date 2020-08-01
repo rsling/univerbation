@@ -246,3 +246,5 @@ legend("topright", bty = "n", lwd = 2, col = c("black", "darkblue", "darkgreen",
 )
 if (save.persistent) dev.off()
 
+save(all, file="Results/corpus.Rdata")
+
