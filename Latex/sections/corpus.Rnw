@@ -6,13 +6,103 @@ opts_knit$set(self.contained=FALSE)
 \section{Corpus-based usage analysis}
 \label{sec:corpusbasedusageanalysis}
 
-<<results="asis">>=
-require(lme4)
-require(fmsb)
-require(MuMIn)
+<<corpusglmm, results="asis">>=
+
+concordance$Relation <- factor(concordance$Relation, levels = c("Object", "Undetermined", "Adjunct"))
 
 ### Oh yeah, swamp me in your dirty random effects!
-Glmm <- glmer(cbind(Joint, Separate)~Valency+Relation+Linkbinary+(1|Verb)+(1|Noun), data=Concordance, family=binomial)
-print(summary(Glmm))
-print(r.squaredGLMM(Glmm))
+corpus.glmm <- glmer(cbind(Joint, Separate)~Relation+Linkbinary+(1|Verb)+(1|Noun),
+                     data=concordance, family=binomial,
+                     na.action = na.fail, control=glmerControl(optimizer="nloptwrap2", optCtrl=list(maxfun=2e5))
+                     )
+corpus.fixefs <- fixef(corpus.glmm)
+corpus.confints <- confint(corpus.glmm)
+corpus.glmm.r2 <- r.squaredGLMM(corpus.glmm)
+@
+
+
+<<corpusglmmreport, results="asis", fig.showtext = TRUE>>=
+
+# Helper function.
+format.ranef <- function(glmm, ranef) {
+  require(lme4)
+  .vcov   <- as.data.frame(VarCorr(glmm))
+  list(Name = ranef, Intercept = .vcov[which(.vcov$grp == ranef), "vcov"], sd = .vcov[which(.vcov$grp == ranef), "sdcor"])
+}
+
+# Build the table.
+corpus.ct <- nice.float(cbind(corpus.fixefs, corpus.confints[3:6,]))
+colnames(corpus.ct) <- c("Estimate", "CI low", "CI high")
+ranef.v <- format.ranef(corpus.glmm, "Verb")
+ranef.n <- format.ranef(corpus.glmm, "Noun")
+corpus.r2.txt <- paste0("Nakagawa \\& Schielzeth's $R^2_m=", nice.float(corpus.glmm.r2[1,1]), "$ and $R^2_c=", nice.float(corpus.glmm.r2[1,2]), "$. ")
+ranef.txt <- paste0("Random effects for lemmas: ",
+                    ranef.v$Name, " with Intercept=", nice.float(ranef.v$Intercept), ", sd=", nice.float(ranef.v$sd),
+                    " and ", ranef.n$Name, " with Intercept=", nice.float(ranef.n$Intercept), ", sd=", nice.float(ranef.n$sd))
+corpus.ctx <- xtable(corpus.ct,
+                    caption = paste0("Coefficient table for the corpus GLMM. ", corpus.r2.txt, ranef.txt),
+                    label = "tab:corpusglmm")
+
+
+# Print the table.
+print(corpus.ctx,
+      include.rownames=T,
+      floating = T,
+      table.placement = 'h!',
+      booktabs = T,
+      scalebox = 1,
+      #hline.after = c(),
+      sanitize.text.function = function(x){x},
+)
+@
+
+<<effectrelation, results="asis", fig.showtext = TRUE>>=
+op <- par(family = "Fira Sans")
+plot(effect("Relation", corpus.glmm, KR = T), rug=F, colors = c("black", "darkorange"), family="Fira Sans",
+          main="",
+          ylab="Probability of univerbation",
+          xlab="Regressor value"
+)
+@
+
+
+
+<<associations, results="asis", fig.showtext = TRUE>>=
+cut.off.point <- 0.12
+
+### Plot distributions of association measures.
+density.opts <- list(lwd = 2)
+op <- par(family = "Fira Sans")
+plot(density(concordance$all.assocs[which(concordance$all.assocs > -(cut.off.point) & concordance$all.assocs < cut.off.point)]),
+  ylim = c(0, 60), axes = F, xlab = "",
+  lwd = density.opts$lwd,
+  col = "black", lty = 1,
+  main = ""
+  )
+
+lines(density(c(concordance$np.det.assocs[which(concordance$np.det.assocs > -(cut.off.point) & concordance$np.det.assocs < cut.off.point)],
+                concordance$np.clt.assocs[which(concordance$np.clt.assocs > -(cut.off.point) & concordance$np.clt.assocs < cut.off.point)],
+                concordance$np.ndt.assocs[which(concordance$np.ndt.assocs > -(cut.off.point) & concordance$np.ndt.assocs < cut.off.point)])),
+      lwd = density.opts$lwd,
+      col = "darkblue", lty = 2)
+lines(density(concordance$prog.assocs[which(concordance$prog.assocs > -(cut.off.point) & concordance$prog.assocs < cut.off.point)]),
+      lwd = density.opts$lwd,
+      col = "darkgreen", lty = 3)
+lines(density(concordance$particip.assocs[which(concordance$particip.assocs > -(cut.off.point) & concordance$particip.assocs < cut.off.point)]),
+      lwd = density.opts$lwd,
+      col = "darkred", lty = 4)
+lines(density(concordance$infzu.assocs[which(concordance$infzu.assocs > -(cut.off.point) & concordance$infzu.assocs < cut.off.point)]),
+      lwd = density.opts$lwd,
+      col = "darkorange", lty = 5)
+axis(1)
+axis(2)
+legend("topright", bty = "n", lwd = 2, col = c("black", "darkblue", "darkgreen", "darkred", "darkorange"), lty = 1:5,
+       legend = c(paste0("All (n=", length(which(!is.na(concordance$all.assocs))), ")"),
+                  paste0("NPs (n=", length(which(!is.na(c(concordance$np.det.assocs, concordance$np.clt.assocs, concordance$np.ndt.assocs)))), ")"),
+                  paste0("Progressives (n=", length(which(!is.na(concordance$prog.assocs))), ")"),
+                  paste0("Participles (n=", length(which(!is.na(concordance$particip.assocs))), ")"),
+                  paste0("Infinitives (n=", length(which(!is.na(concordance$infzu.assocs))), ")"))
+)
+
+
 @
