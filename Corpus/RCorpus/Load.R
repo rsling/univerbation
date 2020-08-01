@@ -1,7 +1,7 @@
 rm(list = ls(all=T))
 
 setwd("~/Workingcopies/Univerbation/Corpus/RCorpus")
-save.persistent <- F
+save.persistent <- T
 min.count       <- 10
 num             <- 20
 show.results    <- 'all'

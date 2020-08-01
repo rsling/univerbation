@@ -2,6 +2,8 @@ library(lme4)
 library(fmsb)
 library(MuMIn)
 
+if (save.persistent) sink("Results/glmm.txt")
+
 # One of those weird binomial GLMs on proportions.
 Glm <- glm(cbind(Joint, Separate)~Valency+Relation+Linkbinary, data=all, family=binomial)
 print(summary(Glm))
@@ -11,3 +13,5 @@ print(NagelkerkeR2(Glm))
 Glmm <- glmer(cbind(Joint, Separate)~Valency+Relation+Linkbinary+(1|Verb)+(1|Noun), data=all, family=binomial)
 print(summary(Glmm))
 print(r.squaredGLMM(Glmm))
+
+if (save.persistent) sink()

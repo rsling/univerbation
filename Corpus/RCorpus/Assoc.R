@@ -170,7 +170,7 @@ beanplot(
 
 ### Plot distributions of association measures.
 
-if (save.persistent) pdf("densities_cramer.pdf")
+if (save.persistent) pdf("Results/densities_cramer.pdf")
 density.opts <- list(lwd = 2)
 plot(density(all$all.assocs[which(all$all.assocs > -(cut.off.point) & all$all.assocs < cut.off.point)]),
   ylim = c(0, 60), axes = F, xlab = "",
@@ -214,7 +214,7 @@ all.redux <- all[which((!is.na(all$np.det.assocs) | !is.na(all$np.clt.assocs) | 
                        & !is.na(all$prog.assocs)
 ),]
 
-if (save.persistent) pdf("densities_reduced.pdf")
+if (save.persistent) pdf("Results/densities_reduced.pdf")
 density.opts <- list(lwd = 2)
 plot(density(all.redux$all.assocs[which(all.redux$all.assocs > -(cut.off.point) & all.redux$all.assocs < cut.off.point)]),
      ylim = c(0, 60), axes = F, xlab = "",
