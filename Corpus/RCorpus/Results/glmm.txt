@@ -1,28 +1,26 @@
 
 Call:
-glm(formula = cbind(Joint, Separate) ~ Valency + Relation + Linkbinary, 
+glm(formula = cbind(Joint, Separate) ~ Relation + Linkbinary, 
     family = binomial, data = all)
 
 Deviance Residuals: 
     Min       1Q   Median       3Q      Max  
--260.43   -13.38     0.19     8.55   808.18  
+-243.95   -13.13    -0.14     7.51   808.10  
 
 Coefficients:
                       Estimate Std. Error z value Pr(>|z|)    
-(Intercept)           1.478270   0.006018   245.6   <2e-16 ***
-ValencyOptional       1.173301   0.007726   151.9   <2e-16 ***
-ValencyTransitive     1.240800   0.007490   165.7   <2e-16 ***
-RelationObject       -2.897666   0.004964  -583.7   <2e-16 ***
-RelationUndetermined -1.266777   0.006375  -198.7   <2e-16 ***
-LinkbinaryYes        -0.816347   0.003790  -215.4   <2e-16 ***
+(Intercept)           2.363079   0.003724   634.6   <2e-16 ***
+RelationObject       -2.541398   0.004009  -634.0   <2e-16 ***
+RelationUndetermined -1.000872   0.005345  -187.3   <2e-16 ***
+LinkbinaryYes        -0.899015   0.003813  -235.8   <2e-16 ***
 ---
 Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
 
 (Dispersion parameter for binomial family taken to be 1)
 
     Null deviance: 2753683  on 825  degrees of freedom
-Residual deviance: 1916334  on 820  degrees of freedom
-AIC: 1921007
+Residual deviance: 1942437  on 822  degrees of freedom
+AIC: 1947105
 
 Number of Fisher Scoring iterations: 5
 
@@ -34,40 +32,36 @@ $R2
 
 Generalized linear mixed model fit by maximum likelihood (Laplace Approximation) ['glmerMod']
  Family: binomial  ( logit )
-Formula: cbind(Joint, Separate) ~ Valency + Relation + Linkbinary + (1 |      Verb) + (1 | Noun)
+Formula: cbind(Joint, Separate) ~ Relation + Linkbinary + (1 | Verb) +      (1 | Noun)
    Data: all
 
      AIC      BIC   logLik deviance df.resid 
- 40583.2  40620.9 -20283.6  40567.2      818 
+ 40697.0  40725.3 -20342.5  40685.0      820 
 
 Scaled residuals: 
     Min      1Q  Median      3Q     Max 
--75.094  -0.057  -0.001   0.205  50.101 
+-74.731  -0.057  -0.001   0.195  50.470 
 
 Random effects:
  Groups Name        Variance Std.Dev.
- Noun   (Intercept) 5.197    2.280   
- Verb   (Intercept) 6.717    2.592   
+ Noun   (Intercept) 5.162    2.272   
+ Verb   (Intercept) 5.684    2.384   
 Number of obs: 826, groups:  Noun, 540; Verb, 240
 
 Fixed effects:
                      Estimate Std. Error z value Pr(>|z|)    
-(Intercept)           0.84563    0.27450   3.081  0.00207 ** 
-ValencyOptional       1.15332    0.39014   2.956  0.00312 ** 
-ValencyTransitive     2.09086    0.20509  10.195  < 2e-16 ***
-RelationObject       -2.05852    0.03487 -59.035  < 2e-16 ***
-RelationUndetermined -1.60443    0.04469 -35.904  < 2e-16 ***
-LinkbinaryYes         0.78677    0.02546  30.896  < 2e-16 ***
+(Intercept)           2.33406    0.18999   12.29   <2e-16 ***
+RelationObject       -2.00974    0.03446  -58.31   <2e-16 ***
+RelationUndetermined -1.58413    0.04456  -35.55   <2e-16 ***
+LinkbinaryYes         0.80315    0.02545   31.56   <2e-16 ***
 ---
 Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
 
 Correlation of Fixed Effects:
-            (Intr) VlncyO VlncyT RltnOb RltnUn
-ValncyOptnl -0.561                            
-VlncyTrnstv -0.585  0.428                     
-RelatnObjct -0.002 -0.081 -0.120              
-RltnUndtrmn -0.010 -0.033 -0.041  0.405       
-LinkbinryYs  0.030 -0.031 -0.056 -0.117 -0.216
+            (Intr) RltnOb RltnUn
+RelatnObjct -0.121              
+RltnUndtrmn -0.058  0.404       
+LinkbinryYs -0.008 -0.126 -0.219
                    R2m       R2c
-theoretical 0.05210342 0.9999333
-delta       0.05210266 0.9999187
+theoretical 0.07719315 0.9999286
+delta       0.07719195 0.9999130

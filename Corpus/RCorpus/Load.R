@@ -9,7 +9,7 @@ out.dir         <- 'Results/'
 
 corpus.size     <- 13950853989  # Subcorpus size 'Sätze' in DECOW16A.
 
-all <- read.csv2(file = "../Data/all.csv", sep = '\t', header = T)
+all <- read.csv2(file = "../Data/concordance.csv", sep = '\t', header = T)
 
 # Remove ones with "Erroneous" annotation.
 all <- all[-which(all$Relation=="Erroneous"),]

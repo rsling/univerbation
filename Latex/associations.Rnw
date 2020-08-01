@@ -1,0 +1,63 @@
+<<caculateassociation>>=
+
+# Get overall univerbation strength.
+all.assocs <- apply(concordance[, c("Joint", "Separate")], 1, function(row) {assoc(row[1], row[2], sum(concordance$Joint), sum(concordance$Separate), min.count)})
+concordance        <- cbind(concordance, all.assocs)
+
+
+# Purge those which have no defined overall assoc strength.
+concordance <- concordance[-which(is.na(concordance$all.assocs)),]
+
+
+# Caclulate per-Cx associtations.
+np.det.joint     <- concordance$q_np_det_joint_cap + concordance$q_np_det_joint_nocap
+np.det.joint.sum <- sum(np.det.joint)
+np.det.sep       <- concordance$q_np_det_sep_cap + concordance$q_np_det_sep_nocap
+np.det.sep.sum   <- sum(np.det.sep)
+np.det           <- cbind(np.det.joint, np.det.sep)
+np.det.assocs    <- apply(np.det, 1, function(row) {assoc(row[1], row[2], np.det.joint.sum, np.det.sep.sum, min.count)})
+
+np.clt.joint     <- concordance$q_np_apprart_joint_cap + concordance$q_np_apprart_joint_nocap
+np.clt.joint.sum <- sum(np.clt.joint)
+np.clt.sep       <- concordance$q_np_apprart_sep_cap + concordance$q_np_apprart_sep_nocap
+np.clt.sep.sum   <- sum(np.clt.sep)
+np.clt           <- cbind(np.clt.joint, np.clt.sep)
+np.clt.assocs    <- apply(np.clt, 1, function(row) {assoc(row[1], row[2], np.clt.joint.sum, np.clt.sep.sum, min.count)})
+np.clt.assocs[ignore.am] <- NaN
+
+np.ndt.joint     <- concordance$q_np_nodet_joint_cap + concordance$q_np_nodet_joint_nocap
+np.ndt.joint.sum <- sum(np.ndt.joint)
+np.ndt.sep       <- concordance$q_np_nodet_sep_cap + concordance$q_np_nodet_sep_nocap
+np.ndt.sep.sum   <- sum(np.ndt.sep)
+np.ndt           <- cbind(np.ndt.joint, np.ndt.sep)
+np.ndt.assocs    <- apply(np.ndt, 1, function(row) {assoc(row[1], row[2], np.ndt.joint.sum, np.ndt.sep.sum, min.count)})
+
+particip.joint     <- concordance$q_particip_joint_cap + concordance$q_particip_joint_nocap
+particip.joint.sum <- sum(particip.joint)
+particip.sep       <- concordance$q_particip_sep_cap + concordance$q_particip_sep_nocap
+particip.sep.sum   <- sum(particip.sep)
+particip           <- cbind(particip.joint, particip.sep)
+particip.assocs    <- apply(particip, 1, function(row) {assoc(row[1], row[2], particip.joint.sum, particip.sep.sum, min.count)})
+
+prog.joint     <- concordance$q_prog_joint_cap + concordance$q_prog_joint_nocap
+prog.joint.sum <- sum(prog.joint)
+prog.sep       <- concordance$q_prog_sep_cap + concordance$q_prog_sep_nocap
+prog.sep.sum   <- sum(prog.sep)
+prog           <- cbind(prog.joint, prog.sep)
+prog.assocs    <- apply(prog, 1, function(row) {assoc(row[1], row[2], prog.joint.sum, prog.sep.sum, min.count)})
+prog.assocs[ignore.am] <- NaN
+
+infzu.joint     <- concordance$q_infzu_joint_cap + concordance$q_infzu_joint_nocap
+infzu.joint.sum <- sum(infzu.joint)
+infzu.sep       <- concordance$q_infzu_sep_cap + concordance$q_infzu_sep_nocap
+infzu.sep.sum   <- sum(infzu.sep)
+infzu           <- cbind(infzu.joint, infzu.sep)
+infzu.assocs    <- apply(infzu, 1, function(row) {assoc(row[1], row[2], infzu.joint.sum, infzu.sep.sum, min.count)})
+
+
+# Put all data in one frame.
+concordance <- data.frame(concordance, np.det.assocs, np.clt.assocs, np.ndt.assocs, particip.assocs, prog.assocs, infzu.assocs)
+
+# Sort frame by overall assoc strength.
+concordance <- concordance[order(concordance$all.assocs),]
+@

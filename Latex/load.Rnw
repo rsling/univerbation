@@ -1,0 +1,34 @@
+<<loaddata>>=
+
+min.count       <- 10
+num             <- 20
+
+# Load "concordance".
+concordance <- read.csv2(file = paste0(path.corpus, "Concordance.csv"), sep = '\t', header = T)
+
+# Remove ones with "Erroneous" annotation.
+concordance <- concordance[-which(concordance$Relation=="Erroneous"),]
+
+# Indices for the ones to exclude from 'am' progressive and P-clitic counts.
+ignore.am <- c(
+  which(concordance$Noun=="Computer" & concordance$Verb=="spielen"),
+  which(concordance$Noun=="Daumen" & concordance$Verb=="lutschen"),
+  which(concordance$Noun=="Schluss" & concordance$Verb=="machen"),
+  which(concordance$Noun=="Kopf" & concordance$Verb=="machen"),
+  which(concordance$Noun=="Platz" & concordance$Verb=="machen"),
+  which(concordance$Noun=="Handy" & concordance$Verb=="telefonieren"),
+  which(concordance$Noun=="Eis" & concordance$Verb=="schlecken"),
+  which(concordance$Noun=="Kopf" & concordance$Verb=="drehen")
+)
+
+# Get relative frequency.
+concordance$FLogPerMillion <- apply(concordance[,16:50], 1, function(n) { log(sum(n)/corpus.size*10^6) })
+
+# Get total sums for separate and joint spelling.
+concordance$Separate <- apply(concordance[,grep("_sep_", colnames(concordance))], 1, sum)
+concordance$Joint    <- apply(concordance[,grep("_joint_", colnames(concordance))], 1, sum)
+
+# Get a binary linking element vartiable.
+concordance$Linkbinary <- ifelse(concordance$Linking=="0", "No", "Yes")
+
+@
