@@ -3,15 +3,15 @@
 opts_knit$set(self.contained=FALSE)
 @
 
-\section{Corpus-based usage analysis}
-\label{sec:corpusbasedusageanalysis}
+\section{Corpus-based analysis of the usage of verb-noun units}
+\label{sec:corpusbasedanalysisoftheusageofvnunits}
 
-<<corpusglmm, results="asis">>=
+In this section, we do $1+1=2$ and $\alpha\ and\ \omega$.
+
+<<corpusglmm, results="hide">>=
 
 concordance$Relation <- factor(concordance$Relation, levels = c("Object", "Undetermined", "Adjunct"))
-
-### Oh yeah, swamp me in your dirty random effects!
-corpus.glmm <- glmer(cbind(Joint, Separate)~Relation+Linkbinary+(1|Verb)+(1|Noun),
+corpus.glmm <- glmer(cbind(Joint, Separate)~Relation+Linkbinary+(1|Compound),
                      data=concordance, family=binomial,
                      na.action = na.fail, control=glmerControl(optimizer="nloptwrap2", optCtrl=list(maxfun=2e5))
                      )
@@ -21,7 +21,7 @@ corpus.glmm.r2 <- r.squaredGLMM(corpus.glmm)
 @
 
 
-<<corpusglmmreport, results="asis", fig.showtext = TRUE>>=
+<<corpusglmmreport, results="asis">>=
 
 # Helper function.
 format.ranef <- function(glmm, ranef) {
@@ -31,14 +31,12 @@ format.ranef <- function(glmm, ranef) {
 }
 
 # Build the table.
-corpus.ct <- nice.float(cbind(corpus.fixefs, corpus.confints[3:6,]))
+corpus.ct <- nice.float(cbind(corpus.fixefs, corpus.confints[2:5,]))
 colnames(corpus.ct) <- c("Estimate", "CI low", "CI high")
-ranef.v <- format.ranef(corpus.glmm, "Verb")
-ranef.n <- format.ranef(corpus.glmm, "Noun")
-corpus.r2.txt <- paste0("Nakagawa \\& Schielzeth's $R^2_m=", nice.float(corpus.glmm.r2[1,1]), "$ and $R^2_c=", nice.float(corpus.glmm.r2[1,2]), "$. ")
-ranef.txt <- paste0("Random effects for lemmas: ",
-                    ranef.v$Name, " with Intercept=", nice.float(ranef.v$Intercept), ", sd=", nice.float(ranef.v$sd),
-                    " and ", ranef.n$Name, " with Intercept=", nice.float(ranef.n$Intercept), ", sd=", nice.float(ranef.n$sd))
+ranef.nv <- format.ranef(corpus.glmm, "Compound")
+corpus.r2.txt <- paste0("Nakagawa \\& Schielzeth's \\CM{R^2_m=", nice.float(corpus.glmm.r2[1,1]), "} and \\CM{R^2_c=", nice.float(corpus.glmm.r2[1,2]), "}. ")
+ranef.txt <- paste0("Random effect for V+N lemma: \\CM{Intercept=", nice.float(ranef.nv$Intercept), "}, \\CM{sd=", nice.float(ranef.nv$sd),
+                    "}")
 corpus.ctx <- xtable(corpus.ct,
                     caption = paste0("Coefficient table for the corpus GLMM. ", corpus.r2.txt, ranef.txt),
                     label = "tab:corpusglmm")
@@ -56,8 +54,8 @@ print(corpus.ctx,
 )
 @
 
-<<effectrelation, results="asis", fig.showtext = TRUE>>=
-op <- par(family = "Fira Sans")
+<<effectrelation, results="asis", fig.showtext=TRUE>>=
+par(family = "Fira Sans")
 plot(effect("Relation", corpus.glmm, KR = T), rug=F, colors = c("black", "darkorange"), family="Fira Sans",
           main="",
           ylab="Probability of univerbation",
@@ -66,43 +64,128 @@ plot(effect("Relation", corpus.glmm, KR = T), rug=F, colors = c("black", "darkor
 @
 
 
+<<corpusranefs, results="asis", fig.showtext=TRUE>>=
+set.seed(3478)
+par(family = "Fira Sans")
+corpus.ranef.selection <- ranef.plot(corpus.glmm, effect = "Compound", number = 20)
+@
 
-<<associations, results="asis", fig.showtext = TRUE>>=
+<<associationsall, results="asis", fig.showtext = TRUE, fig.width="0.5\\linewidth">>=
 cut.off.point <- 0.12
 
 ### Plot distributions of association measures.
 density.opts <- list(lwd = 2)
-op <- par(family = "Fira Sans")
+par(family = "Fira Sans")
+
 plot(density(concordance$all.assocs[which(concordance$all.assocs > -(cut.off.point) & concordance$all.assocs < cut.off.point)]),
-  ylim = c(0, 60), axes = F, xlab = "",
+  axes = F, xlab = "", xlim = c(-0.15, 0.15),
   lwd = density.opts$lwd,
   col = "black", lty = 1,
-  main = ""
+  main = paste0("All (n=", length(which(!is.na(concordance$all.assocs))), ")"),
   )
-
-lines(density(c(concordance$np.det.assocs[which(concordance$np.det.assocs > -(cut.off.point) & concordance$np.det.assocs < cut.off.point)],
-                concordance$np.clt.assocs[which(concordance$np.clt.assocs > -(cut.off.point) & concordance$np.clt.assocs < cut.off.point)],
-                concordance$np.ndt.assocs[which(concordance$np.ndt.assocs > -(cut.off.point) & concordance$np.ndt.assocs < cut.off.point)])),
-      lwd = density.opts$lwd,
-      col = "darkblue", lty = 2)
-lines(density(concordance$prog.assocs[which(concordance$prog.assocs > -(cut.off.point) & concordance$prog.assocs < cut.off.point)]),
-      lwd = density.opts$lwd,
-      col = "darkgreen", lty = 3)
-lines(density(concordance$particip.assocs[which(concordance$particip.assocs > -(cut.off.point) & concordance$particip.assocs < cut.off.point)]),
-      lwd = density.opts$lwd,
-      col = "darkred", lty = 4)
-lines(density(concordance$infzu.assocs[which(concordance$infzu.assocs > -(cut.off.point) & concordance$infzu.assocs < cut.off.point)]),
-      lwd = density.opts$lwd,
-      col = "darkorange", lty = 5)
 axis(1)
 axis(2)
-legend("topright", bty = "n", lwd = 2, col = c("black", "darkblue", "darkgreen", "darkred", "darkorange"), lty = 1:5,
-       legend = c(paste0("All (n=", length(which(!is.na(concordance$all.assocs))), ")"),
-                  paste0("NPs (n=", length(which(!is.na(c(concordance$np.det.assocs, concordance$np.clt.assocs, concordance$np.ndt.assocs)))), ")"),
-                  paste0("Progressives (n=", length(which(!is.na(concordance$prog.assocs))), ")"),
-                  paste0("Participles (n=", length(which(!is.na(concordance$particip.assocs))), ")"),
-                  paste0("Infinitives (n=", length(which(!is.na(concordance$infzu.assocs))), ")"))
+@
+
+
+<<associationssingle, results="asis", fig.showtext = TRUE>>=
+cut.off.point <- 0.12
+
+### Plot distributions of association measures.
+density.opts <- list(lwd = 2)
+par(mfrow=c(2,2), family = "Fira Sans")
+
+plot(density(c(concordance$np.det.assocs[which(concordance$np.det.assocs > -(cut.off.point) & concordance$np.det.assocs < cut.off.point)],
+               concordance$np.clt.assocs[which(concordance$np.clt.assocs > -(cut.off.point) & concordance$np.clt.assocs < cut.off.point)],
+               concordance$np.ndt.assocs[which(concordance$np.ndt.assocs > -(cut.off.point) & concordance$np.ndt.assocs < cut.off.point)])),
+  axes = F, xlab = "", xlim = c(-0.15, 0.15),
+  lwd = density.opts$lwd,
+  col = "black", lty = 1,
+  main = paste0("NPs (n=", length(which(!is.na(c(concordance$np.det.assocs, concordance$np.clt.assocs, concordance$np.ndt.assocs)))), ")")
+  )
+axis(1)
+axis(2)
+
+plot(density(concordance$prog.assocs[which(concordance$prog.assocs > -(cut.off.point) & concordance$prog.assocs < cut.off.point)]),
+  axes = F, xlab = "", xlim = c(-0.15, 0.15),
+  lwd = density.opts$lwd,
+  col = "black", lty = 1,
+  main = paste0("Progressives (n=", length(which(!is.na(concordance$prog.assocs))), ")")
+  )
+axis(1)
+axis(2)
+
+plot(density(concordance$particip.assocs[which(concordance$particip.assocs > -(cut.off.point) & concordance$particip.assocs < cut.off.point)]),
+  axes = F, xlab = "", xlim = c(-0.15, 0.15),
+  lwd = density.opts$lwd,
+  col = "black", lty = 1,
+  main = paste0("Participles (n=", length(which(!is.na(concordance$particip.assocs))), ")")
+  )
+axis(1)
+axis(2)
+
+plot(density(concordance$infzu.assocs[which(concordance$infzu.assocs > -(cut.off.point) & concordance$infzu.assocs < cut.off.point)]),
+  axes = F, xlab = "", xlim = c(-0.15, 0.15),
+  lwd = density.opts$lwd,
+  col = "black", lty = 1,
+  main = paste0("Infinitives (n=", length(which(!is.na(concordance$infzu.assocs))), ")")
+  )
+axis(1)
+axis(2)
+@
+
+
+<<corpusassoctablehi, results="asis">>=
+corpus.assoc.sel <- format.assocs(df = concordance, col = 'all.assocs', show.results = "all",
+                               show.cols = c("Compound", "all.assocs", "Relation"),
+                               num = 10, cx = "All contexts", effect = "UNIVERBATION", freq.cutoff = 0.2)
+colnames(corpus.assoc.sel) <- c("V+N Unit", "Association", "Relation")
+corpus.assoc.sel$Association <- nice.float(corpus.assoc.sel$Association)
+
+corpus.assoc.hi <- xtable(corpus.assoc.sel[1:10,],
+                   caption = paste0("Top ten V+N units with a strong tendency for univerbation"),
+                   label = "tab:assochi")
+# Print the table.
+print(corpus.assoc.hi,
+      include.rownames=F,
+      floating = T,
+      table.placement = 'h!',
+      booktabs = T,
+      scalebox = 1,
+      #hline.after = c(),
+      sanitize.text.function = function(x){x},
 )
+@
 
 
+<<corpusassoctablenull, results="asis">>=
+corpus.assoc.null <- xtable(corpus.assoc.sel[11:20,],
+                            caption = paste0("Top ten V+N units with no tendency for or against univerbation"),
+                            label = "tab:assocnull")
+# Print the table.
+print(corpus.assoc.null,
+      include.rownames=F,
+      floating = T,
+      table.placement = 'h!',
+      booktabs = T,
+      scalebox = 1,
+      #hline.after = c(),
+      sanitize.text.function = function(x){x},
+)
+@
+
+<<corpusassoctablelo, results="asis">>=
+corpus.assoc.lo <- xtable(corpus.assoc.sel[30:21,],
+                          caption = paste0("Top ten V+N units with a strong tendency against univerbation"),
+                          label = "tab:assoclo")
+# Print the table.
+print(corpus.assoc.lo,
+      include.rownames=F,
+      floating = T,
+      table.placement = 'h!',
+      booktabs = T,
+      scalebox = 1,
+      #hline.after = c(),
+      sanitize.text.function = function(x){x},
+)
 @

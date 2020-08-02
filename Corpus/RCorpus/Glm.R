@@ -2,6 +2,8 @@ library(lme4)
 library(fmsb)
 library(MuMIn)
 
+source('../../Latex/glmtools.R')
+
 # Format numbers for use in running text.
 nice.float <- function(x, d = 3) formatC(x, format="f", big.mark=",", digits = d)
 nice.int <- function(n) formatC(n, format="d", big.mark=",")
@@ -14,7 +16,8 @@ print(summary(Glm))
 print(NagelkerkeR2(Glm))
 
 ### Oh yeah, swamp me in your dirty random effects!
-Glmm <- glmer(cbind(Joint, Separate)~Relation+Linkbinary+(1|Verb)+(1|Noun), data=all, family=binomial)
+Glmm <- glmer(cbind(Joint, Separate)~Relation+Linkbinary+(1|Compound), data=all, family=binomial,
+              na.action = na.fail, control=glmerControl(optimizer="nloptwrap2", optCtrl=list(maxfun=2e5)))
 print(summary(Glmm))
 print(r.squaredGLMM(Glmm))
 
@@ -33,7 +36,7 @@ format.ranef <- function(glmm, ranef) {
 
 Glmm.fixefs <- fixef(Glmm)
 Glmm.confints <- confint(Glmm)
-corpus.ct <- nice.float(cbind(Glmm.fixefs, Glmm.confints[3:6,]))
+corpus.ct <- nice.float(cbind(Glmm.fixefs, Glmm.confints[2:5,]))
 colnames(corpus.ct) <- c("Estimate", "CI low", "CI high")
 rownames(corpus.ct)
 corpus.ctx <- xtable(corpus.ct,
@@ -54,3 +57,7 @@ print(corpus.ctx,
       hline.after = c(-1,1,4),
       sanitize.text.function = function(x){x},
 )
+
+
+set.seed(3478)
+ranef.plot(Glmm, effect = "Compound", number = 20)

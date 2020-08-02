@@ -30,10 +30,830 @@ $N
 $R2
 [1] 1
 
+% latex table generated in R 4.0.2 by xtable 1.8-4 package
+% Sun Aug  2 14:45:20 2020
+\begin{table}[h!]
+\centering
+\scalebox{1}{
+\begin{tabular}{rlll}
+  \toprule
+ & Estimate & CI low & CI high \\ 
+ (Intercept) & 2.334 & 1.961 & 2.708 \\ 
+   \midrule
+RelationObject & -2.010 & -2.077 & -1.942 \\ 
+  RelationUndetermined & -1.584 & -1.671 & -1.497 \\ 
+  LinkbinaryYes & 0.803 & 0.753 & 0.853 \\ 
+   \bottomrule
+\end{tabular}
+}
+\caption{Coefficient table for the corpus GLMM} 
+\label{tab:corpusglmm}
+\end{table}
+                  [,1]          [,2]         [,3]
+finanzieren -5.1923709 -6.4368211569 -3.947920599
+auffüllen   -3.8638144 -4.1768652511 -3.550763474
+haben       -2.6295699 -2.8271636775 -2.431976124
+kochen      -2.6190967 -2.8188800359 -2.419313383
+verdrehen   -1.1026618 -1.5622053578 -0.643118213
+übersetzen  -0.8536411 -1.6084174977 -0.098864632
+zucken      -0.8367718 -1.3320692280 -0.341474330
+mischen     -0.8006820 -2.8369869220  1.235622968
+abräumen    -0.5027043 -3.7297106843  2.724301990
+jäten       -0.2878341 -2.9432533809  2.367585095
+bauen       -0.2566287 -0.5174255394  0.004168061
+treten      -0.2509017 -0.4994102193 -0.002393158
+rauchen      0.1068323 -0.1718573536  0.385521977
+mähen        0.1672736 -3.0564353534  3.390982498
+aufschäumen  0.3538997 -0.0007151113  0.708514452
+sieden       0.5631266 -2.0562657903  3.182518922
+beschichten  0.9380710 -2.2874454907  4.163587436
+kneifen      1.2295647 -2.5010644025  4.960193869
+weihen       3.9291167  1.5227121267  6.335521330
+kalken       7.2068557  5.5528336081  8.860877770
+                [,1]         [,2]       [,3]
+auffüllen -3.8638144 -4.176865251 -3.5507635
+schnappen -2.7947525 -3.026998134 -2.5625068
+haben     -2.6295699 -2.827163677 -2.4319761
+zubinden  -2.5108045 -2.980821056 -2.0407880
+saufen    -1.7661023 -2.039256831 -1.4929478
+bohren    -1.4916141 -3.327131179  0.3439029
+kleben    -1.4688835 -4.694645895  1.7568790
+erziehen  -1.3257606 -1.626432613 -1.0250887
+werfen    -1.2793819 -1.493084602 -1.0656793
+schälen   -1.0977234 -4.321617340  2.1261706
+reden     -0.9570798 -4.181112067  2.2669524
+färben    -0.5260541 -0.747529729 -0.3045784
+tauchen    0.0785955 -0.162157435  0.3193484
+räumen     0.3843443  0.007048806  0.7616399
+leiten     0.3954713 -2.262719746  3.0536624
+schinden   0.4296919  0.193336334  0.6660475
+fahren     0.6455759  0.455856067  0.8352957
+greifen    0.6549280  0.153735088  1.1561210
+baden      1.0824242  0.480846069  1.6840024
+verzinken  4.0748513  3.382666399  4.7670363
+                   [,1]       [,2]        [,3]
+ziehen       -3.2443971 -3.4906255 -2.99816869
+lösen        -2.8225347 -3.0672583 -2.57781121
+bekommen     -2.0786335 -2.3261056 -1.83116148
+anlegen      -1.6786261 -1.8865003 -1.47075184
+fressen      -1.6240874 -1.8815825 -1.36659240
+kneten       -1.0775061 -4.3024582  2.14744594
+übersetzen   -0.8536411 -1.6084175 -0.09886463
+grölen       -0.6948660 -2.7027130  1.31298099
+ausgeben     -0.5008600 -0.7029972 -0.29872276
+telefonieren -0.3242031 -0.8273964  0.17899008
+raufen        0.1647243 -0.0557738  0.38522247
+ficken        0.3908426 -1.9221649  2.70385011
+schinden      0.4296919  0.1933363  0.66604752
+richten       0.6781635 -0.4607882  1.81711516
+surfen        0.7912080 -0.5640308  2.14644674
+predigen      0.8464390 -1.7663151  3.45919300
+eintreiben    1.0493168  0.7769536  1.32168006
+kriegen       2.4105989  2.1948745  2.62632339
+raten         2.5960453  2.2764437  2.91564700
+reisen        3.3566811  3.1506062  3.56275595
+                   [,1]       [,2]        [,3]
+Lust         -4.1135430 -4.6728074 -3.55427860
+Mountainbike -2.1446770 -2.3920480 -1.89730603
+Stelze       -2.0989779 -2.3887724 -1.80918333
+Panzer       -1.6019475 -1.8312469 -1.37264802
+Dreirad      -1.4158381 -1.7309953 -1.10068084
+Pipi         -0.7321600 -0.9498747 -0.51444535
+Geist        -0.3775759 -3.6038057  2.84865387
+Spruch       -0.3684037 -0.6750971 -0.06171031
+Schlitten    -0.3456009 -0.5456674 -0.14553447
+Klavier      -0.2842872 -0.5016050 -0.06696936
+Heu          -0.1947430 -0.4364549  0.04696893
+Kanu         -0.1492195 -0.3464522  0.04801313
+Fliese        0.4342409  0.1817841  0.68669759
+Rad           0.7317123  0.5408808  0.92254369
+Apfel         0.8547969 -0.4618259  2.17141974
+Kahn          1.0218107  0.7028462  1.34077518
+Linie         1.1633790  0.8038198  1.52293816
+Schnee        1.4407643  1.1036253  1.77790336
+Pony          1.4793399  1.2310669  1.72761292
+Strafstoß     3.0954026  2.4770597  3.71374549
+                 [,1]       [,2]       [,3]
+absetzen  -3.39866567 -3.7727045 -3.0246269
+saufen    -1.76610234 -2.0392568 -1.4929478
+kleben    -1.46888346 -4.6946459  1.7568790
+pflücken  -1.07955482 -3.0923385  0.9332288
+färben    -0.52605406 -0.7475297 -0.3045784
+kloppen   -0.51506960 -3.7438038  2.7136646
+zupfen    -0.45701716 -3.1144082  2.2003739
+kauen     -0.16775621 -3.3917946  3.0562822
+laufen    -0.10825939 -0.3323511  0.1158324
+lutschen   0.05435525 -2.5592534  2.6679639
+klicken    0.07888482 -0.7451996  0.9029692
+löschen    0.19184541 -0.5925867  0.9762775
+sieden     0.56312657 -2.0562658  3.1825189
+brechen    1.06123626 -1.5947072  3.7171797
+abhacken   1.09090827  0.8298113  1.3520052
+vergießen  1.48301091  1.2252647  1.7407571
+töten      2.15022965  1.4077668  2.8926925
+erodieren  2.26027692 -1.0289777  5.5495316
+schubsen   2.27032588  1.2565040  3.2841478
+kalken     7.20685569  5.5528336  8.8608778
+                     [,1]         [,2]       [,3]
+zusammenbeißen -5.7272529 -6.106302895 -5.3482030
+testen         -2.6460922 -3.047365933 -2.2448184
+kochen         -2.6190967 -2.818880036 -2.4193134
+tippen         -1.7099605 -4.228106117  0.8081852
+fangen         -1.6184492 -2.415056139 -0.8218422
+schälen        -1.0977234 -4.321617340  2.1261706
+schlichten     -0.9794766 -4.204744092  2.2457908
+färben         -0.5260541 -0.747529729 -0.3045784
+schrubben      -0.1818935 -3.409322975  3.0455360
+laufen         -0.1082594 -0.332351149  0.1158324
+rauchen         0.1068323 -0.171857354  0.3855220
+knutschen       0.1722185 -4.194463875  4.5389010
+räumen          0.3843443  0.007048806  0.7616399
+ficken          0.3908426 -1.922164861  2.7038501
+dirigieren      1.0231813 -1.594298683  3.6406612
+eintreiben      1.0493168  0.776953608  1.3216801
+reiten          1.0947229  0.875038691  1.3144071
+austreiben      2.4689340  1.659622105  3.2782459
+raten           2.5960453  2.276443684  2.9156470
+nässen          5.6913512  4.873100240  6.5096021
+                 [,1]       [,2]       [,3]
+Korrektur -4.73726684 -4.9667773 -4.5077564
+Geschenk  -3.47348590 -3.8993130 -3.0476588
+Karaoke   -2.95414822 -3.4604676 -2.4478288
+Autobahn  -2.72879307 -2.9299982 -2.5275879
+Laser     -2.56886217 -3.2803694 -1.8573549
+Aufzug    -1.64329950 -1.9101015 -1.3764975
+Zigarre   -1.55294575 -1.9130152 -1.1928763
+Bombe     -1.15041857 -1.3978392 -0.9029979
+Koffer    -0.87027935 -4.0955131  2.3549544
+Schuh     -0.61541727 -0.9310826 -0.2997519
+Probe     -0.49245414 -0.6836745 -0.3012338
+Einfluss  -0.42532317 -0.6329834 -0.2176630
+Standort  -0.31653309 -1.2575099  0.6244438
+Getreide  -0.20013924 -2.4659397  2.0656612
+Rätsel     0.04790346 -0.2306718  0.3264787
+Reis       0.73842771  0.4699755  1.0068799
+Zeitung    1.72814110  0.3443904  3.1118918
+Glocke     2.34086008  1.8395453  2.8421748
+Honig      3.57704278  3.0492498  4.1048357
+Wurst      5.64397287  4.5205482  6.7673976
+                  [,1]       [,2]       [,3]
+ausbeißen   -6.4558100 -6.9762537 -5.9353664
+zubinden    -2.5108045 -2.9808211 -2.0407880
+trinken     -2.1665168 -2.3630187 -1.9700150
+wegschlagen -1.5878413 -1.9121915 -1.2634911
+ablesen     -1.4553404 -4.6809975  1.7703166
+mahlen      -1.4228193 -3.6819103  0.8362717
+abnehmen    -0.7091717 -0.9660220 -0.4523214
+ausgeben    -0.5008600 -0.7029972 -0.2987228
+aufhängen    0.4985558  0.2597640  0.7373475
+greifen      0.6549280  0.1537351  1.1561210
+beschichten  0.9380710 -2.2874455  4.1635874
+straffen     0.9471542 -2.4175079  4.3118164
+kneifen      1.2295647 -2.5010644  4.9601939
+töten        2.1502297  1.4077668  2.8926925
+beschriften  2.2987146  1.4636152  3.1338140
+knüpfen      2.6190478  1.9800272  3.2580683
+auflegen     2.6383604  2.4304253  2.8462955
+schweißen    4.1267729  3.6113557  4.6421902
+fliegen      5.1928453  4.4987654  5.8869251
+binden       6.3014715  5.0230524  7.5798907
+                     [,1]       [,2]       [,3]
+Buch         -4.990606948 -6.2591955 -3.7220184
+Lust         -4.113543013 -4.6728074 -3.5542786
+Bild         -3.750221934 -3.9658060 -3.5346379
+Roboter      -3.728782610 -4.8031377 -2.6544275
+Salut        -1.343321286 -1.6788463 -1.0077962
+Kiefer       -0.938316760 -3.2319892  1.3553557
+Schuh        -0.615417270 -0.9310826 -0.2997519
+Golf         -0.612049696 -0.8315255 -0.3925739
+Finger       -0.202207965 -2.7144784  2.3100625
+Orchester    -0.007680924 -2.6303603  2.6149985
+Show          0.694327553  0.4195057  0.9691494
+Lid           0.860186529 -2.4801889  4.2005620
+Gemeinschaft  0.867888679 -2.3982651  4.1340424
+Ventil        0.963844870  0.4116991  1.5159906
+Stern         1.051395721  0.7750506  1.3277409
+Stamm         1.108964792 -0.6604235  2.8783531
+Schatten      1.122617981 -2.1111880  4.3564239
+Hypothese     1.264210882  0.6611028  1.8673189
+Schenkel      1.372231508  1.0474420  1.6970210
+Flasche       2.863719619  2.6018640  3.1255753
+                    [,1]       [,2]       [,3]
+auffüllen   -3.863814363 -4.1768653 -3.5507635
+ziehen      -3.244397112 -3.4906255 -2.9981687
+drehen      -2.302269461 -2.5175604 -2.0869785
+anlegen     -1.678626080 -1.8865003 -1.4707518
+aufräumen   -1.505398697 -4.7308184  1.7200210
+holen       -1.401596118 -1.6038687 -1.1993235
+abschlagen  -1.083394940 -1.4217635 -0.7450263
+mischen     -0.800681977 -2.8369869  1.2356230
+schlagen    -0.744231403 -0.9571406 -0.5313222
+wegnehmen   -0.402261961 -0.6284842 -0.1760397
+ausschalten  0.003900815 -0.5171790  0.5249806
+melken       0.068604220 -0.7451384  0.8823468
+rauchen      0.106832312 -0.1718574  0.3855220
+schinden     0.429691925  0.1933363  0.6660475
+kneifen      1.229564733 -2.5010644  4.9601939
+beschriften  2.298714580  1.4636152  3.1338140
+austreiben   2.468933982  1.6596221  3.2782459
+lesen        3.340375282  3.1177397  3.5630109
+weihen       3.929116728  1.5227121  6.3355213
+ansagen      4.355557065  3.9790813  4.7320329
+               [,1]        [,2]        [,3]
+Drachen  -3.5644207 -4.26568770 -2.86315378
+Kind     -3.2185285 -3.42990241 -3.00715463
+Zeit     -1.9948844 -2.18657540 -1.80319344
+Lanze    -1.2232947 -2.25274593 -0.19384353
+Zelt     -1.1880618 -3.84404692  1.46792330
+Couch    -1.1281315 -2.53700567  0.28074258
+Teig     -0.9785695 -4.20328283  2.24614382
+Gehäuse  -0.9601923 -4.19789777  2.27751316
+Ausdauer -0.7871383 -1.42866856 -0.14560812
+Pistole  -0.6206623 -1.03568856 -0.20563598
+Nase     -0.4653280 -2.30400751  1.37335156
+Gast     -0.4280813 -1.02927530  0.17311260
+Spruch   -0.3684037 -0.67509712 -0.06171031
+Esel     -0.2715624 -0.59615481  0.05303002
+Heu      -0.1947430 -0.43645494  0.04696893
+Schnaps   0.2336227 -0.06133794  0.52858324
+Daumen    0.7349197 -1.88069805  3.35053752
+Stamm     1.1089648 -0.66042355  2.87835313
+Ball      2.0257471  1.77522874  2.27626552
+Leistung  3.2331257  1.03735448  5.42889690
+
+
+=======================================================================
+
+
+PREFERENCE FOR UNIVERBATION  IN:  NP with D 
+
+           Compound np.det.assocs FLogPerMillion     Relation      Valency
+485       Radfahren    0.19185318     1.83784511 Undetermined     Optional
+222 Zuckerschlecken    0.17633609    -0.76821007       Object   Transitive
+487       Skifahren    0.13553723     0.95260638      Adjunct     Optional
+265  Fußballspielen    0.10264749     0.96116861       Object     Optional
+134     Rätselraten    0.10248538    -1.03837784 Undetermined     Optional
+384   Blutvergießen    0.10246348    -0.45942630       Object   Transitive
+486      Autofahren    0.09797579     1.67127733 Undetermined     Optional
+178   Bogenschießen    0.09133391     0.01190985 Undetermined     Optional
+115      Teilnehmen    0.08341132     3.56181134      Adjunct   Transitive
+490      Zeitfahren    0.08237140    -0.57083218      Adjunct     Optional
+652     Zähneputzen    0.08225545     0.28815835       Object     Optional
+772  Fliegenfischen    0.08028610    -0.86126657 Undetermined     Optional
+803     Kartenlegen    0.07419807    -0.42309918       Object   Transitive
+179   Vogelschießen    0.06935808    -1.65796676       Object     Optional
+489  Motorradfahren    0.06741707    -0.06277583 Undetermined     Optional
+146   Westernreiten    0.06677468    -0.99673820      Adjunct     Optional
+291     Bergsteigen    0.06637348    -0.18281297      Adjunct Intransitive
+263 Computerspielen    0.06459788     1.01667475      Adjunct     Optional
+564    Segelfliegen    0.06441503    -1.32154827      Adjunct     Optional
+126      Kopfnicken    0.06387581    -1.09331156      Adjunct Intransitive
+
+
+NO PREFERENCE FOR/AGAINST UNIVERBATION  IN:  NP with D 
+
+           Compound np.det.assocs FLogPerMillion     Relation      Valency
+648  Beerenpflücken  2.487705e-05     -3.9523090       Object   Transitive
+542   Dreiradfahren  2.487705e-05     -4.0584991 Undetermined     Optional
+109      Kornmahlen  7.086722e-15     -3.7625525       Object   Transitive
+58       Wattlaufen  5.029807e-15     -4.2550290      Adjunct Intransitive
+227   Luftschnappen  4.009773e-15     -1.6904682 Undetermined   Transitive
+299     Couchsurfen  3.419860e-15     -4.2499912      Adjunct Intransitive
+373   Punschtrinken  3.414956e-15     -4.6454562       Object     Optional
+28     Kopfauflegen  3.414956e-15     -5.3689087       Object   Transitive
+535  Anhängerfahren  2.701576e-15     -3.4795108      Adjunct     Optional
+582   Pfötchengeben  5.718938e-17     -3.2666525       Object   Transitive
+159   Schrittreiten  5.018521e-17     -2.8206662      Adjunct     Optional
+61       Seillaufen -2.108750e-17     -4.5665623      Adjunct Intransitive
+75       Hakenlösen -4.950905e-17     -4.6233151       Object   Transitive
+809   Gedankenlesen -5.252362e-17     -0.6967991       Object     Optional
+784 Zigarettenholen -5.303321e-16     -2.9571243       Object   Transitive
+466  Däumchendrehen -9.143918e-16     -2.4940412 Undetermined   Transitive
+39  Marmeladekochen -1.800367e-15     -3.3715954       Object     Optional
+821    Liedermachen -6.301451e-15     -3.6910935       Object   Transitive
+743     Haareziehen -6.765802e-15     -4.1361242       Object   Transitive
+702   Pferdestehlen -1.057241e-14     -2.6167190       Object     Optional
+
+
+PREFERENCE AGAINST UNIVERBATION  IN:  NP with D 
+
+           Compound np.det.assocs FLogPerMillion Relation    Valency
+87       Geldmachen   -0.04584308     0.12218814   Object Transitive
+816    Bildermachen   -0.04803753    -0.13303977   Object Transitive
+124 Rücksichtnehmen   -0.04820902     0.10954832   Object Transitive
+630      Autokaufen   -0.04872251    -1.61380948   Object Transitive
+326       Hausbauen   -0.05081319    -1.25325438   Object   Optional
+95      Angstmachen   -0.05169810    -0.09583028   Object Transitive
+827     Augenöffnen   -0.05750728    -0.99615574   Object Transitive
+102      Fotomachen   -0.06166987    -1.22211770   Object Transitive
+49       Zeitlassen   -0.06220471     0.24061941   Object Transitive
+749  Kinderbekommen   -0.06362478     0.09863196   Object Transitive
+577        Ratgeben   -0.07668975    -0.80520177   Object Transitive
+599      Rechthaben   -0.07931415     0.99713868   Object Transitive
+383   Geldverdienen   -0.08358430     1.88516031   Object Transitive
+311    Geldausgeben   -0.08528744     0.31073867   Object Transitive
+600       Spaßhaben   -0.08975261     1.08749858   Object Transitive
+97     Fehlermachen   -0.09275112     0.54188791   Object Transitive
+579       Handgeben   -0.10021762    -0.47705698   Object Transitive
+121      Zeitnehmen   -0.10328535     0.66258981   Object Transitive
+824  Gedankenmachen   -0.11981257     1.68170736   Object Transitive
+782     Kinderhaben   -0.13073956     0.77014656   Object Transitive
+
+
+=======================================================================
+
+
+PREFERENCE FOR UNIVERBATION  IN:  NP with P-clitic 
+
+              Compound np.clt.assocs FLogPerMillion     Relation      Valency
+485          Radfahren    0.11563919     1.83784511 Undetermined     Optional
+486         Autofahren    0.10656890     1.67127733 Undetermined     Optional
+487          Skifahren    0.09578753     0.95260638      Adjunct     Optional
+645        Sonnenbaden    0.07320775    -0.42946653      Adjunct Intransitive
+178      Bogenschießen    0.06194515     0.01190985 Undetermined     Optional
+652        Zähneputzen    0.06137117     0.28815835       Object     Optional
+291        Bergsteigen    0.05582780    -0.18281297      Adjunct Intransitive
+490         Zeitfahren    0.05271432    -0.57083218      Adjunct     Optional
+772     Fliegenfischen    0.05000866    -0.86126657 Undetermined     Optional
+295         Windsurfen    0.04869517    -0.16828901      Adjunct Intransitive
+601         Kreuzheben    0.04808173    -0.41449112      Adjunct   Transitive
+146      Westernreiten    0.04631371    -0.99673820      Adjunct     Optional
+602       Gewichtheben    0.04276659    -1.31859644       Object   Transitive
+268        Skispringen    0.04209817    -1.14578765      Adjunct Intransitive
+46        Wasserlassen    0.03920725    -0.29961757       Object   Transitive
+703     Treppensteigen    0.03805104    -0.46866081 Undetermined Intransitive
+269 Fallschirmspringen    0.03658341    -1.06297429      Adjunct Intransitive
+50           Eislaufen    0.03498073    -0.84194960      Adjunct Intransitive
+482          Eierlegen    0.03427170    -2.14023491       Object   Transitive
+622         Probehören    0.03418619    -0.65192199      Adjunct   Transitive
+
+
+NO PREFERENCE FOR/AGAINST UNIVERBATION  IN:  NP with P-clitic 
+
+             Compound np.clt.assocs FLogPerMillion     Relation      Valency
+758    Spieleerfinden  4.145209e-15      -4.449546       Object   Transitive
+727      Bombenwerfen  3.803209e-15      -3.287546 Undetermined   Transitive
+525 Straßenbahnfahren  3.803209e-15      -2.763374 Undetermined     Optional
+428  Portraitzeichnen  3.803209e-15      -4.367146       Object     Optional
+742      Linienziehen  3.682889e-15      -3.922895       Object   Transitive
+446       Betonbohren  3.682889e-15      -4.186710      Adjunct     Optional
+89         Glasmachen  3.293826e-15      -3.967347       Object   Transitive
+185       Eisschießen  3.293826e-15      -4.566562      Adjunct     Optional
+227     Luftschnappen  8.131421e-16      -1.690468 Undetermined   Transitive
+51         Amoklaufen  2.354866e-17      -1.334532      Adjunct Intransitive
+415       Ankerwerfen -3.839692e-17      -3.270419       Object   Transitive
+438        Geldziehen -3.839692e-17      -3.579717       Object   Transitive
+401   Ballwegschlagen -3.839692e-17      -3.517430       Object   Transitive
+760    Kindererziehen -4.939605e-17      -1.637117       Object   Transitive
+737    Kartenzeichnen -4.939605e-17      -4.127196       Object     Optional
+756   Phrasendreschen -6.585261e-17      -3.510210       Object   Transitive
+63        Bogenlaufen -6.585261e-17      -4.249991       Object Intransitive
+471      Filmeinlegen -2.150032e-15      -3.956047       Object   Transitive
+101        Käsemachen -2.339857e-15      -3.616370       Object   Transitive
+720      Steinewerfen -3.616124e-15      -2.173695 Undetermined   Transitive
+
+
+PREFERENCE AGAINST UNIVERBATION  IN:  NP with P-clitic 
+
+          Compound np.clt.assocs FLogPerMillion     Relation      Valency
+65       Grablegen   -0.04272972     -2.0171171       Object   Transitive
+76     Wasserlösen   -0.04551558     -2.1245151       Object   Transitive
+86      Pipimachen   -0.04912600     -1.9055796       Object   Transitive
+479    Zeiterleben   -0.05361901     -2.6567644       Object   Transitive
+151  Geländereiten   -0.05494756     -2.2869988      Adjunct     Optional
+85     Partymachen   -0.05565825     -0.8239786       Object   Transitive
+121     Zeitnehmen   -0.05719458      0.6625898       Object   Transitive
+516  Geländefahren   -0.06201846     -2.4507223      Adjunct     Optional
+656    Haareraufen   -0.06975154     -1.8747349       Object   Transitive
+383  Geldverdienen   -0.07230853      1.8851603       Object   Transitive
+297      Websurfen   -0.07838530     -2.7794111      Adjunct Intransitive
+191    Torschießen   -0.08132162     -1.8348853       Object     Optional
+600      Spaßhaben   -0.08407643      1.0874986       Object   Transitive
+598      Teilhaben   -0.08496045      1.6844775       Object   Transitive
+623     Radiohören   -0.08574290     -0.8231620 Undetermined   Transitive
+99    Urlaubmachen   -0.08930916      0.4356236       Object   Transitive
+273 Wasserspringen   -0.10718970     -1.9942133      Adjunct Intransitive
+529    Kreisfahren   -0.10823065     -2.7070367      Adjunct     Optional
+66      Feuerlegen   -0.18057226     -1.7777269       Object   Transitive
+296 Internetsurfen   -0.34498367     -0.6081823      Adjunct Intransitive
+
+
+=======================================================================
+
+
+PREFERENCE FOR UNIVERBATION  IN:  bare N 
+
+              Compound np.ndt.assocs FLogPerMillion     Relation      Valency
+115         Teilnehmen    0.47679574     3.56181134      Adjunct   Transitive
+598          Teilhaben    0.21111705     1.68447752       Object   Transitive
+485          Radfahren    0.17903634     1.83784511 Undetermined     Optional
+263    Computerspielen    0.11964432     1.01667475      Adjunct     Optional
+487          Skifahren    0.09917729     0.95260638      Adjunct     Optional
+295         Windsurfen    0.08822557    -0.16828901      Adjunct Intransitive
+291        Bergsteigen    0.08375826    -0.18281297      Adjunct Intransitive
+178      Bogenschießen    0.08335079     0.01190985 Undetermined     Optional
+145         Zeitreisen    0.08281284     0.70735642      Adjunct Intransitive
+601         Kreuzheben    0.07826352    -0.41449112      Adjunct   Transitive
+645        Sonnenbaden    0.06089034    -0.42946653      Adjunct Intransitive
+147         Ponyreiten    0.05713361    -0.88321532       Object     Optional
+50           Eislaufen    0.05507016    -0.84194960      Adjunct Intransitive
+384      Blutvergießen    0.05436463    -0.45942630       Object   Transitive
+27        Handauflegen    0.05434228    -0.94747649       Object   Transitive
+803        Kartenlegen    0.05073044    -0.42309918       Object   Transitive
+269 Fallschirmspringen    0.04873015    -1.06297429      Adjunct Intransitive
+772     Fliegenfischen    0.04806353    -0.86126657 Undetermined     Optional
+622         Probehören    0.04795537    -0.65192199      Adjunct   Transitive
+268        Skispringen    0.04635417    -1.14578765      Adjunct Intransitive
+
+
+NO PREFERENCE FOR/AGAINST UNIVERBATION  IN:  bare N 
+
+             Compound np.ndt.assocs FLogPerMillion     Relation      Valency
+167         Waldroden  3.545072e-04      -3.816448       Object   Transitive
+629     Kaugummikauen  3.517632e-04      -2.259161       Object     Optional
+375    Wäschetrocknen  3.317897e-04      -2.936646       Object   Transitive
+13     Arschabwischen  3.256810e-04      -4.260092       Object     Optional
+777     Glockengießen  2.786056e-04      -4.675762       Object   Transitive
+504      Rollerfahren  1.773312e-04      -1.996322 Undetermined     Optional
+218     Feuerschlagen  1.492307e-14      -4.401632      Adjunct   Transitive
+604         Handheben -5.158992e-17      -2.454887       Object   Transitive
+538        Liftfahren -3.563466e-16      -3.577149 Undetermined     Optional
+63        Bogenlaufen -6.640961e-15      -4.249991       Object Intransitive
+748      Krippenbauen -1.340508e-14      -5.294801       Object     Optional
+547      Gondelfahren -1.708817e-14      -3.154735 Undetermined     Optional
+761      Kurvenfahren -1.026833e-05      -1.219930 Undetermined     Optional
+244 Fähnchenschwenken -2.385022e-05      -4.455700       Object   Transitive
+317   Trikotausziehen -7.581526e-05      -3.930168       Object   Transitive
+725      Münzenwerfen -1.705062e-04      -4.668099 Undetermined   Transitive
+561         Laubfegen -2.890945e-04      -4.017843       Object     Optional
+78    Schwanzlutschen -3.671381e-04      -4.172658       Object     Optional
+394       Autowaschen -4.558309e-04      -1.806989       Object     Optional
+771        Eierfärben -4.559421e-04      -3.429614       Object     Optional
+
+
+PREFERENCE AGAINST UNIVERBATION  IN:  bare N 
+
+           Compound np.ndt.assocs FLogPerMillion Relation    Valency
+124 Rücksichtnehmen   -0.06035954      0.1095483   Object Transitive
+311    Geldausgeben   -0.06106771      0.3107387   Object Transitive
+15      Handanlegen   -0.06186953     -0.2779941   Object Transitive
+79      Musikmachen   -0.06248802      0.4167136   Object Transitive
+97     Fehlermachen   -0.06264015      0.5418879   Object Transitive
+87       Geldmachen   -0.06660668      0.1221881   Object Transitive
+574        Gasgeben   -0.06677269      0.6705765   Object Transitive
+123  Stellungnehmen   -0.06923968      1.2945776   Object Transitive
+621      Musikhören   -0.07187722      0.7893732   Object Transitive
+81        Mutmachen   -0.07245149      0.2995919   Object Transitive
+49       Zeitlassen   -0.07409754      0.2406194   Object Transitive
+116  Abschiednehmen   -0.07862377      0.4955525   Object Transitive
+121      Zeitnehmen   -0.08157699      0.6625898   Object Transitive
+99     Urlaubmachen   -0.09014054      0.4356236   Object Transitive
+782     Kinderhaben   -0.09944334      0.7701466   Object Transitive
+599      Rechthaben   -0.12558986      0.9971387   Object Transitive
+600       Spaßhaben   -0.13047031      1.0874986   Object Transitive
+824  Gedankenmachen   -0.15001407      1.6817074   Object Transitive
+383   Geldverdienen   -0.15525601      1.8851603   Object Transitive
+578      Rechtgeben   -0.16054241      1.4287054   Object Transitive
+
+
+=======================================================================
+
+
+PREFERENCE FOR UNIVERBATION  IN:  Participle 
+
+               Compound particip.assocs FLogPerMillion     Relation      Valency
+115          Teilnehmen      0.91771409      3.5618113      Adjunct   Transitive
+331   Pulverbeschichten      0.11934376     -0.9469220      Adjunct   Transitive
+494         Probefahren      0.08140299      0.7544946      Adjunct     Optional
+388      Feuerverzinken      0.07854704     -1.7104885      Adjunct   Transitive
+836      Zwangsernähren      0.06087150     -2.3533738      Adjunct Intransitive
+40         Raubkopieren      0.05406284     -1.6349088      Adjunct     Optional
+627   Grundimmunisieren      0.04754729     -2.9922157      Adjunct   Transitive
+622          Probehören      0.04299224     -0.6519220      Adjunct   Transitive
+598           Teilhaben      0.02749324      1.6844775       Object   Transitive
+399           Handweben      0.02428644     -4.3842407      Adjunct     Optional
+236      Punktschweißen      0.02320008     -3.6270939      Adjunct     Optional
+152         Probereiten      0.02126626     -2.3047992      Adjunct     Optional
+520          Testfahren      0.01886071     -1.1127506      Adjunct     Optional
+382 Hochglanzverdichten      0.01562114     -3.7594708      Adjunct   Transitive
+683     Büchsenschießen      0.01271838     -4.4016324 Undetermined     Optional
+235      Laserschweißen      0.01102495     -2.9165783      Adjunct     Optional
+432        Handzeichnen      0.01094888     -3.0450139      Adjunct     Optional
+470          Plandrehen      0.01042805     -4.3338099      Adjunct   Transitive
+645         Sonnenbaden      0.01032760     -0.4294665      Adjunct Intransitive
+618           Kielholen      0.00942336     -3.0241487       Object   Transitive
+
+
+NO PREFERENCE FOR/AGAINST UNIVERBATION  IN:  Participle 
+
+              Compound particip.assocs FLogPerMillion     Relation      Valency
+70      Korrekturlesen    1.965027e-03     -0.8307005      Adjunct     Optional
+632    Schulterklopfen    9.614344e-04     -1.3002765      Adjunct Intransitive
+195     Gewehrschießen    3.525463e-15     -4.3068540      Adjunct     Optional
+126         Kopfnicken   -9.115519e-16     -1.0933116      Adjunct Intransitive
+542      Dreiradfahren   -2.403712e-04     -4.0584991 Undetermined     Optional
+501         Schifahren   -7.648577e-04     -1.9474061      Adjunct     Optional
+671   Pistolenschießen   -1.145043e-03     -3.6711782      Adjunct     Optional
+151      Geländereiten   -1.396577e-03     -2.2869988      Adjunct     Optional
+130      Moralpredigen   -1.406677e-03     -2.4204293       Object     Optional
+128   Blümchenpflücken   -1.442177e-03     -4.3615125       Object   Transitive
+513          Bobfahren   -1.442177e-03     -2.9808519 Undetermined     Optional
+269 Fallschirmspringen   -2.215965e-03     -1.0629743      Adjunct Intransitive
+296     Internetsurfen   -2.224941e-03     -0.6081823      Adjunct Intransitive
+446        Betonbohren   -2.395920e-03     -4.1867097      Adjunct     Optional
+538         Liftfahren   -2.395920e-03     -3.5771493 Undetermined     Optional
+607        Geistheilen   -2.395920e-03     -3.6825098      Adjunct     Optional
+659     Waffenreinigen   -2.395920e-03     -3.7625525       Object     Optional
+661    Elefantenreiten   -2.395920e-03     -2.9245570 Undetermined     Optional
+77      Daumenlutschen   -2.395920e-03     -2.8814413 Undetermined     Optional
+147         Ponyreiten   -2.395920e-03     -0.8832153       Object     Optional
+
+
+PREFERENCE AGAINST UNIVERBATION  IN:  Participle 
+
+              Compound particip.assocs FLogPerMillion Relation    Valency
+578         Rechtgeben     -0.05833419     1.42870539   Object Transitive
+823 Hausaufgabenmachen     -0.05890467    -0.53740011   Object Transitive
+574           Gasgeben     -0.05918016     0.67057645   Object Transitive
+49          Zeitlassen     -0.05935217     0.24061941   Object Transitive
+816       Bildermachen     -0.06431865    -0.13303977   Object Transitive
+81           Mutmachen     -0.06480766     0.29959193   Object Transitive
+124    Rücksichtnehmen     -0.06611330     0.10954832   Object Transitive
+120      Abstandnehmen     -0.06867688    -0.16650942   Object Transitive
+599         Rechthaben     -0.06970746     0.99713868   Object Transitive
+118        Platznehmen     -0.07162501     0.05353051   Object Transitive
+121         Zeitnehmen     -0.07198127     0.66258981   Object Transitive
+265     Fußballspielen     -0.07297910     0.96116861   Object   Optional
+749     Kinderbekommen     -0.07305902     0.09863196   Object Transitive
+84       Schlussmachen     -0.07624784    -0.02348761   Object Transitive
+692      Grenzensetzen     -0.09283047    -0.30397952   Object Transitive
+123     Stellungnehmen     -0.09401221     1.29457757   Object Transitive
+97        Fehlermachen     -0.09967251     0.54188791   Object Transitive
+383      Geldverdienen     -0.10535292     1.88516031   Object Transitive
+824     Gedankenmachen     -0.15485030     1.68170736   Object Transitive
+581       Auftraggeben     -0.16622600     0.59731690   Object Transitive
+
+
+=======================================================================
+
+
+PREFERENCE FOR UNIVERBATION  IN:  'am' Progressive 
+
+          Compound prog.assocs FLogPerMillion     Relation      Valency
+485      Radfahren  0.12297237     1.83784511 Undetermined     Optional
+487      Skifahren  0.09393793     0.95260638      Adjunct     Optional
+486     Autofahren  0.06339714     1.67127733 Undetermined     Optional
+450    Brotbrechen  0.06161055    -2.51598149       Object   Transitive
+489 Motorradfahren  0.06123379    -0.06277583 Undetermined     Optional
+178  Bogenschießen  0.06086164     0.01190985 Undetermined     Optional
+814    Filmemachen  0.05540182    -0.90406219       Object   Transitive
+180  Preisschießen  0.05197125    -2.22674783      Adjunct     Optional
+146  Westernreiten  0.04836856    -0.99673820      Adjunct     Optional
+772 Fliegenfischen  0.04450221    -0.86126657 Undetermined     Optional
+183  Pokalschießen  0.04245055    -2.46242811      Adjunct     Optional
+384  Blutvergießen  0.04030617    -0.45942630       Object   Transitive
+564   Segelfliegen  0.04030617    -1.32154827      Adjunct     Optional
+182  Sportschießen  0.03919519    -1.93244321      Adjunct     Optional
+803    Kartenlegen  0.03688593    -0.42309918       Object   Transitive
+50       Eislaufen  0.03642871    -0.84194960      Adjunct Intransitive
+490     Zeitfahren  0.03568302    -0.57083218      Adjunct     Optional
+652    Zähneputzen  0.03517677     0.28815835       Object     Optional
+565 Drachenfliegen  0.03316665    -1.24450761 Undetermined     Optional
+482      Eierlegen  0.03184636    -2.14023491       Object   Transitive
+
+
+NO PREFERENCE FOR/AGAINST UNIVERBATION  IN:  'am' Progressive 
+
+               Compound   prog.assocs FLogPerMillion     Relation      Valency
+505          Velofahren  1.408068e-02    -2.39102715 Undetermined     Optional
+796       Kinderkriegen  1.388085e-02    -0.50172938       Object   Transitive
+497           Zugfahren  1.379171e-02    -0.06552729 Undetermined     Optional
+645         Sonnenbaden  9.696195e-03    -0.42946653      Adjunct Intransitive
+267         Golfspielen  9.108521e-03    -0.93061083       Object     Optional
+504        Rollerfahren  9.108521e-03    -1.99632189 Undetermined     Optional
+70       Korrekturlesen  7.709124e-03    -0.83070052      Adjunct     Optional
+311        Geldausgeben  7.512345e-03     0.31073867       Object   Transitive
+492           Busfahren  2.985322e-03     0.27572239 Undetermined     Optional
+82          Radiomachen  2.912814e-03    -2.37780253       Object   Transitive
+491          Kanufahren  1.756142e-03    -0.60884089 Undetermined     Optional
+318          Brotbacken  1.303330e-15    -1.03736600       Object     Optional
+670        Toreschießen -1.173432e-03    -0.26212445       Object     Optional
+759 Geschichtenerzählen -2.651694e-03    -0.14365846       Object     Optional
+621          Musikhören -5.401082e-03     0.78937318       Object   Transitive
+503         Mopedfahren -7.324416e-03    -1.94589968 Undetermined     Optional
+327           Nestbauen -8.991792e-03    -2.83521192       Object     Optional
+83          Beutemachen -1.174607e-02    -2.13355405       Object   Transitive
+422          Geldzählen -1.187755e-02    -2.91923078       Object     Optional
+270        Seilspringen -1.391536e-02    -1.46460777      Adjunct Intransitive
+
+
+PREFERENCE AGAINST UNIVERBATION  IN:  'am' Progressive 
+
+           Compound prog.assocs FLogPerMillion     Relation      Valency
+488   Fahrradfahren -0.02402243      0.5450100 Undetermined     Optional
+611       Luftholen -0.02767978     -0.4373166       Object   Transitive
+32     Kaffeekochen -0.02767978     -1.1836927       Object     Optional
+80      Feuermachen -0.02918303     -1.2958140       Object   Transitive
+383   Geldverdienen -0.03075889      1.8851603       Object   Transitive
+79      Musikmachen -0.03468383      0.4167136       Object   Transitive
+393   Wäschewaschen -0.03872217     -0.6985272       Object     Optional
+361     Biertrinken -0.04185530     -0.1986870       Object     Optional
+574        Gasgeben -0.04310927      0.6705765       Object   Transitive
+359   Kaffeetrinken -0.04870785      0.6126997       Object     Optional
+360      Teetrinken -0.05491350     -0.1249663       Object     Optional
+623      Radiohören -0.05617023     -0.8231620 Undetermined   Transitive
+351    Wassertesten -0.06379400     -3.8838138       Object   Transitive
+816    Bildermachen -0.06576584     -0.1330398       Object   Transitive
+54        Fußlaufen -0.06884185     -2.3685717      Adjunct Intransitive
+376     Klavierüben -0.06884185     -3.6571920      Adjunct     Optional
+85      Partymachen -0.07018590     -0.8239786       Object   Transitive
+326       Hausbauen -0.07499030     -1.2532544       Object     Optional
+266  Klavierspielen -0.08725861     -0.5461489       Object     Optional
+263 Computerspielen -0.30368274      1.0166747      Adjunct     Optional
+
+
+=======================================================================
+
+
+PREFERENCE FOR UNIVERBATION  IN:  'zu' Infinitive 
+
+          Compound infzu.assocs FLogPerMillion Relation      Valency
+115     Teilnehmen 0.9198564789      3.5618113  Adjunct   Transitive
+598      Teilhaben 0.1903013687      1.6844775   Object   Transitive
+270   Seilspringen 0.0277606548     -1.4646078  Adjunct Intransitive
+40    Raubkopieren 0.0091482697     -1.6349088  Adjunct     Optional
+622     Probehören 0.0074518311     -0.6519220  Adjunct   Transitive
+836 Zwangsernähren 0.0074214922     -2.3533738  Adjunct Intransitive
+520     Testfahren 0.0023260134     -1.1127506  Adjunct     Optional
+50       Eislaufen 0.0001447533     -0.8419496  Adjunct Intransitive
+
+
+NO PREFERENCE FOR/AGAINST UNIVERBATION  IN:  'zu' Infinitive 
+
+            Compound  infzu.assocs FLogPerMillion     Relation      Valency
+520       Testfahren  0.0023260134     -1.1127506      Adjunct     Optional
+50         Eislaufen  0.0001447533     -0.8419496      Adjunct Intransitive
+501       Schifahren -0.0010716065     -1.9474061      Adjunct     Optional
+494      Probefahren -0.0013336411      0.7544946      Adjunct     Optional
+404       Ballwerfen -0.0014282913     -2.4785370       Object   Transitive
+417      Probewohnen -0.0018717322     -2.6315487      Adjunct Intransitive
+211    Probeschlafen -0.0023941515     -4.3958015      Adjunct Intransitive
+152      Probereiten -0.0024812842     -2.3047992      Adjunct     Optional
+595       Filmgucken -0.0037166965     -2.5539607       Object     Optional
+435       Zahnziehen -0.0037166965     -2.6889415       Object   Transitive
+806     Plattenlegen -0.0037166965     -4.4681222       Object   Transitive
+128 Blümchenpflücken -0.0037166965     -4.3615125       Object   Transitive
+221   Schaumschlagen -0.0037166965     -4.4193320       Object   Transitive
+510      Buggyfahren -0.0037166965     -2.9738146 Undetermined     Optional
+496     Ballonfahren -0.0037166965     -1.1412892 Undetermined     Optional
+134      Rätselraten -0.0037166965     -1.0383778 Undetermined     Optional
+526     Slalomfahren -0.0040273026     -2.9766236 Undetermined     Optional
+508    Gespannfahren -0.0040273026     -2.7509516 Undetermined     Optional
+672 Scheibenschießen -0.0040273026     -2.6069533      Adjunct     Optional
+146    Westernreiten -0.0040273026     -0.9967382      Adjunct     Optional
+
+
+PREFERENCE AGAINST UNIVERBATION  IN:  'zu' Infinitive 
+
+           Compound infzu.assocs FLogPerMillion Relation    Valency
+97     Fehlermachen  -0.06650774     0.54188791   Object Transitive
+581    Auftraggeben  -0.06733004     0.59731690   Object Transitive
+81        Mutmachen  -0.07676803     0.29959193   Object Transitive
+118     Platznehmen  -0.07678807     0.05353051   Object Transitive
+621      Musikhören  -0.07765444     0.78937318   Object Transitive
+265  Fußballspielen  -0.07927062     0.96116861   Object   Optional
+98      Platzmachen  -0.08117642    -0.42397503   Object Transitive
+99     Urlaubmachen  -0.08223677     0.43562364   Object Transitive
+87       Geldmachen  -0.08340117     0.12218814   Object Transitive
+120   Abstandnehmen  -0.08455836    -0.16650942   Object Transitive
+838 Kontakteknüpfen  -0.09143006    -0.51339895   Object Transitive
+116  Abschiednehmen  -0.09268084     0.49555252   Object Transitive
+124 Rücksichtnehmen  -0.09445706     0.10954832   Object Transitive
+125  Einflussnehmen  -0.09520878    -0.14018882   Object Transitive
+79      Musikmachen  -0.10096462     0.41671365   Object Transitive
+123  Stellungnehmen  -0.11657825     1.29457757   Object Transitive
+600       Spaßhaben  -0.11935417     1.08749858   Object Transitive
+551       Fußfassen  -0.12563865    -0.08079711  Adjunct Transitive
+824  Gedankenmachen  -0.15428838     1.68170736   Object Transitive
+383   Geldverdienen  -0.19147952     1.88516031   Object Transitive
+
+
+=======================================================================
+
+
+PREFERENCE FOR UNIVERBATION  IN:  All contexts 
+
+             Compound all.assocs FLogPerMillion     Relation      Valency
+115        Teilnehmen 0.33915790     3.56181134      Adjunct   Transitive
+117         Maßnehmen 0.31588596     3.41882350       Object   Transitive
+598         Teilhaben 0.10879247     1.68447752       Object   Transitive
+485         Radfahren 0.10007946     1.83784511 Undetermined     Optional
+263   Computerspielen 0.08226168     1.01667475      Adjunct     Optional
+145        Zeitreisen 0.07210684     0.70735642      Adjunct Intransitive
+487         Skifahren 0.06540674     0.95260638      Adjunct     Optional
+494       Probefahren 0.05955923     0.75449459      Adjunct     Optional
+178     Bogenschießen 0.04964203     0.01190985 Undetermined     Optional
+295        Windsurfen 0.04910701    -0.16828901      Adjunct Intransitive
+539      Schifffahren 0.04807657    -0.01087213 Undetermined     Optional
+291       Bergsteigen 0.04735521    -0.18281297      Adjunct Intransitive
+601        Kreuzheben 0.04358693    -0.41449112      Adjunct   Transitive
+486        Autofahren 0.04353932     1.67127733 Undetermined     Optional
+645       Sonnenbaden 0.04302132    -0.42946653      Adjunct Intransitive
+768       Bootsfahren 0.04164951    -0.50540607 Undetermined     Optional
+222   Zuckerschlecken 0.03561553    -0.76821007       Object   Transitive
+772    Fliegenfischen 0.03445068    -0.86126657 Undetermined     Optional
+331 Pulverbeschichten 0.03210091    -0.94692201      Adjunct   Transitive
+490        Zeitfahren 0.03176103    -0.57083218      Adjunct     Optional
+
+
+NO PREFERENCE FOR/AGAINST UNIVERBATION  IN:  All contexts 
+
+           Compound    all.assocs FLogPerMillion     Relation      Valency
+488   Fahrradfahren  0.0089748634      0.5450100 Undetermined     Optional
+499      Taxifahren  0.0080584644     -1.0086559 Undetermined     Optional
+716    Händewaschen  0.0054220081     -0.5320165       Object     Optional
+46     Wasserlassen  0.0052749151     -0.2996176       Object   Transitive
+107      Rasenmähen  0.0049498651     -0.8344912       Object   Transitive
+502     Kajakfahren  0.0048207904     -1.7866727 Undetermined     Optional
+449      Bierbrauen  0.0019903176     -1.4805481       Object   Transitive
+495      Bootfahren -0.0003611479     -1.1066623 Undetermined     Optional
+123  Stellungnehmen -0.0005255267      1.2945776       Object   Transitive
+796   Kinderkriegen -0.0020951604     -0.5017294       Object   Transitive
+270    Seilspringen -0.0021504428     -1.4646078      Adjunct Intransitive
+394     Autowaschen -0.0021623321     -1.8069889       Object     Optional
+543  Autobahnfahren -0.0024733465     -1.3934055      Adjunct     Optional
+632 Schulterklopfen -0.0026845813     -1.3002765      Adjunct Intransitive
+318      Brotbacken -0.0041306204     -1.0373660       Object     Optional
+812      Notenlesen -0.0065917820     -1.7798496       Object     Optional
+814     Filmemachen -0.0066207122     -0.9040622       Object   Transitive
+264  Theaterspielen -0.0073783673     -0.7145089 Undetermined     Optional
+266  Klavierspielen -0.0085320717     -0.5461489       Object     Optional
+717    Haarewaschen -0.0099902830     -1.0309144       Object     Optional
+
+
+PREFERENCE AGAINST UNIVERBATION  IN:  All contexts 
+
+           Compound  all.assocs FLogPerMillion Relation    Valency
+621      Musikhören -0.07428746     0.78937318   Object Transitive
+118     Platznehmen -0.07441046     0.05353051   Object Transitive
+551       Fußfassen -0.07475092    -0.08079711  Adjunct Transitive
+79      Musikmachen -0.07477636     0.41671365   Object Transitive
+311    Geldausgeben -0.07550185     0.31073867   Object Transitive
+87       Geldmachen -0.07555883     0.12218814   Object Transitive
+124 Rücksichtnehmen -0.08017391     0.10954832   Object Transitive
+749  Kinderbekommen -0.08237546     0.09863196   Object Transitive
+81        Mutmachen -0.08487630     0.29959193   Object Transitive
+49       Zeitlassen -0.08855235     0.24061941   Object Transitive
+99     Urlaubmachen -0.09852493     0.43562364   Object Transitive
+97     Fehlermachen -0.10412635     0.54188791   Object Transitive
+581    Auftraggeben -0.10813854     0.59731690   Object Transitive
+121      Zeitnehmen -0.11024454     0.66258981   Object Transitive
+782     Kinderhaben -0.11712718     0.77014656   Object Transitive
+599      Rechthaben -0.12633697     0.99713868   Object Transitive
+600       Spaßhaben -0.13657007     1.08749858   Object Transitive
+578      Rechtgeben -0.14833425     1.42870539   Object Transitive
+383   Geldverdienen -0.17744466     1.88516031   Object Transitive
+824  Gedankenmachen -0.18778253     1.68170736   Object Transitive
+
+
+=======================================================================
+
+Call:
+glm(formula = cbind(Joint, Separate) ~ Relation + Linkbinary, 
+    family = binomial, data = all)
+
+Deviance Residuals: 
+    Min       1Q   Median       3Q      Max  
+-243.95   -13.13    -0.14     7.51   808.10  
+
+Coefficients:
+                      Estimate Std. Error z value Pr(>|z|)    
+(Intercept)           2.363079   0.003724   634.6   <2e-16 ***
+RelationObject       -2.541398   0.004009  -634.0   <2e-16 ***
+RelationUndetermined -1.000872   0.005345  -187.3   <2e-16 ***
+LinkbinaryYes        -0.899015   0.003813  -235.8   <2e-16 ***
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+
+(Dispersion parameter for binomial family taken to be 1)
+
+    Null deviance: 2753683  on 825  degrees of freedom
+Residual deviance: 1942437  on 822  degrees of freedom
+AIC: 1947105
+
+Number of Fisher Scoring iterations: 5
+
+$N
+[1] 826
+
+$R2
+[1] 1
+
 Generalized linear mixed model fit by maximum likelihood (Laplace Approximation) ['glmerMod']
  Family: binomial  ( logit )
 Formula: cbind(Joint, Separate) ~ Relation + Linkbinary + (1 | Verb) +      (1 | Noun)
    Data: all
+Control: glmerControl(optimizer = "nloptwrap2", optCtrl = list(maxfun = 2e+05))
 
      AIC      BIC   logLik deviance df.resid 
  40697.0  40725.3 -20342.5  40685.0      820 
@@ -50,9 +870,9 @@ Number of obs: 826, groups:  Noun, 540; Verb, 240
 
 Fixed effects:
                      Estimate Std. Error z value Pr(>|z|)    
-(Intercept)           2.33406    0.18999   12.29   <2e-16 ***
+(Intercept)           2.33405    0.19002   12.28   <2e-16 ***
 RelationObject       -2.00974    0.03446  -58.31   <2e-16 ***
-RelationUndetermined -1.58413    0.04456  -35.55   <2e-16 ***
+RelationUndetermined -1.58413    0.04457  -35.55   <2e-16 ***
 LinkbinaryYes         0.80315    0.02545   31.56   <2e-16 ***
 ---
 Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
@@ -63,5 +883,1771 @@ RelatnObjct -0.121
 RltnUndtrmn -0.058  0.404       
 LinkbinryYs -0.008 -0.126 -0.219
                    R2m       R2c
-theoretical 0.07719315 0.9999286
-delta       0.07719195 0.9999130
+theoretical 0.07719269 0.9999286
+delta       0.07719149 0.9999130
+% latex table generated in R 4.0.2 by xtable 1.8-4 package
+% Sun Aug  2 15:24:51 2020
+\begin{table}[h!]
+\centering
+\scalebox{1}{
+\begin{tabular}{rlll}
+  \toprule
+ & Estimate & CI low & CI high \\ 
+ (Intercept) & 2.334 & 1.961 & 2.708 \\ 
+   \midrule
+RelationObject & -2.010 & -2.077 & -1.942 \\ 
+  RelationUndetermined & -1.584 & -1.671 & -1.497 \\ 
+  LinkbinaryYes & 0.803 & 0.753 & 0.853 \\ 
+   \bottomrule
+\end{tabular}
+}
+\caption{Coefficient table for the corpus GLMM} 
+\label{tab:corpusglmm}
+\end{table}
+
+
+=======================================================================
+
+
+PREFERENCE FOR UNIVERBATION  IN:  NP with D 
+
+           Compound np.det.assocs FLogPerMillion     Relation      Valency
+485       Radfahren    0.19185318     1.83784511 Undetermined     Optional
+222 Zuckerschlecken    0.17633609    -0.76821007       Object   Transitive
+487       Skifahren    0.13553723     0.95260638      Adjunct     Optional
+265  Fußballspielen    0.10264749     0.96116861       Object     Optional
+134     Rätselraten    0.10248538    -1.03837784 Undetermined     Optional
+384   Blutvergießen    0.10246348    -0.45942630       Object   Transitive
+486      Autofahren    0.09797579     1.67127733 Undetermined     Optional
+178   Bogenschießen    0.09133391     0.01190985 Undetermined     Optional
+115      Teilnehmen    0.08341132     3.56181134      Adjunct   Transitive
+490      Zeitfahren    0.08237140    -0.57083218      Adjunct     Optional
+652     Zähneputzen    0.08225545     0.28815835       Object     Optional
+772  Fliegenfischen    0.08028610    -0.86126657 Undetermined     Optional
+803     Kartenlegen    0.07419807    -0.42309918       Object   Transitive
+179   Vogelschießen    0.06935808    -1.65796676       Object     Optional
+489  Motorradfahren    0.06741707    -0.06277583 Undetermined     Optional
+146   Westernreiten    0.06677468    -0.99673820      Adjunct     Optional
+291     Bergsteigen    0.06637348    -0.18281297      Adjunct Intransitive
+263 Computerspielen    0.06459788     1.01667475      Adjunct     Optional
+564    Segelfliegen    0.06441503    -1.32154827      Adjunct     Optional
+126      Kopfnicken    0.06387581    -1.09331156      Adjunct Intransitive
+
+
+NO PREFERENCE FOR/AGAINST UNIVERBATION  IN:  NP with D 
+
+           Compound np.det.assocs FLogPerMillion     Relation      Valency
+648  Beerenpflücken  2.487705e-05     -3.9523090       Object   Transitive
+542   Dreiradfahren  2.487705e-05     -4.0584991 Undetermined     Optional
+109      Kornmahlen  7.086722e-15     -3.7625525       Object   Transitive
+58       Wattlaufen  5.029807e-15     -4.2550290      Adjunct Intransitive
+227   Luftschnappen  4.009773e-15     -1.6904682 Undetermined   Transitive
+299     Couchsurfen  3.419860e-15     -4.2499912      Adjunct Intransitive
+373   Punschtrinken  3.414956e-15     -4.6454562       Object     Optional
+28     Kopfauflegen  3.414956e-15     -5.3689087       Object   Transitive
+535  Anhängerfahren  2.701576e-15     -3.4795108      Adjunct     Optional
+582   Pfötchengeben  5.718938e-17     -3.2666525       Object   Transitive
+159   Schrittreiten  5.018521e-17     -2.8206662      Adjunct     Optional
+61       Seillaufen -2.108750e-17     -4.5665623      Adjunct Intransitive
+75       Hakenlösen -4.950905e-17     -4.6233151       Object   Transitive
+809   Gedankenlesen -5.252362e-17     -0.6967991       Object     Optional
+784 Zigarettenholen -5.303321e-16     -2.9571243       Object   Transitive
+466  Däumchendrehen -9.143918e-16     -2.4940412 Undetermined   Transitive
+39  Marmeladekochen -1.800367e-15     -3.3715954       Object     Optional
+821    Liedermachen -6.301451e-15     -3.6910935       Object   Transitive
+743     Haareziehen -6.765802e-15     -4.1361242       Object   Transitive
+702   Pferdestehlen -1.057241e-14     -2.6167190       Object     Optional
+
+
+PREFERENCE AGAINST UNIVERBATION  IN:  NP with D 
+
+           Compound np.det.assocs FLogPerMillion Relation    Valency
+87       Geldmachen   -0.04584308     0.12218814   Object Transitive
+816    Bildermachen   -0.04803753    -0.13303977   Object Transitive
+124 Rücksichtnehmen   -0.04820902     0.10954832   Object Transitive
+630      Autokaufen   -0.04872251    -1.61380948   Object Transitive
+326       Hausbauen   -0.05081319    -1.25325438   Object   Optional
+95      Angstmachen   -0.05169810    -0.09583028   Object Transitive
+827     Augenöffnen   -0.05750728    -0.99615574   Object Transitive
+102      Fotomachen   -0.06166987    -1.22211770   Object Transitive
+49       Zeitlassen   -0.06220471     0.24061941   Object Transitive
+749  Kinderbekommen   -0.06362478     0.09863196   Object Transitive
+577        Ratgeben   -0.07668975    -0.80520177   Object Transitive
+599      Rechthaben   -0.07931415     0.99713868   Object Transitive
+383   Geldverdienen   -0.08358430     1.88516031   Object Transitive
+311    Geldausgeben   -0.08528744     0.31073867   Object Transitive
+600       Spaßhaben   -0.08975261     1.08749858   Object Transitive
+97     Fehlermachen   -0.09275112     0.54188791   Object Transitive
+579       Handgeben   -0.10021762    -0.47705698   Object Transitive
+121      Zeitnehmen   -0.10328535     0.66258981   Object Transitive
+824  Gedankenmachen   -0.11981257     1.68170736   Object Transitive
+782     Kinderhaben   -0.13073956     0.77014656   Object Transitive
+
+
+=======================================================================
+
+
+PREFERENCE FOR UNIVERBATION  IN:  NP with P-clitic 
+
+              Compound np.clt.assocs FLogPerMillion     Relation      Valency
+485          Radfahren    0.11563919     1.83784511 Undetermined     Optional
+486         Autofahren    0.10656890     1.67127733 Undetermined     Optional
+487          Skifahren    0.09578753     0.95260638      Adjunct     Optional
+645        Sonnenbaden    0.07320775    -0.42946653      Adjunct Intransitive
+178      Bogenschießen    0.06194515     0.01190985 Undetermined     Optional
+652        Zähneputzen    0.06137117     0.28815835       Object     Optional
+291        Bergsteigen    0.05582780    -0.18281297      Adjunct Intransitive
+490         Zeitfahren    0.05271432    -0.57083218      Adjunct     Optional
+772     Fliegenfischen    0.05000866    -0.86126657 Undetermined     Optional
+295         Windsurfen    0.04869517    -0.16828901      Adjunct Intransitive
+601         Kreuzheben    0.04808173    -0.41449112      Adjunct   Transitive
+146      Westernreiten    0.04631371    -0.99673820      Adjunct     Optional
+602       Gewichtheben    0.04276659    -1.31859644       Object   Transitive
+268        Skispringen    0.04209817    -1.14578765      Adjunct Intransitive
+46        Wasserlassen    0.03920725    -0.29961757       Object   Transitive
+703     Treppensteigen    0.03805104    -0.46866081 Undetermined Intransitive
+269 Fallschirmspringen    0.03658341    -1.06297429      Adjunct Intransitive
+50           Eislaufen    0.03498073    -0.84194960      Adjunct Intransitive
+482          Eierlegen    0.03427170    -2.14023491       Object   Transitive
+622         Probehören    0.03418619    -0.65192199      Adjunct   Transitive
+
+
+NO PREFERENCE FOR/AGAINST UNIVERBATION  IN:  NP with P-clitic 
+
+             Compound np.clt.assocs FLogPerMillion     Relation      Valency
+758    Spieleerfinden  4.145209e-15      -4.449546       Object   Transitive
+727      Bombenwerfen  3.803209e-15      -3.287546 Undetermined   Transitive
+525 Straßenbahnfahren  3.803209e-15      -2.763374 Undetermined     Optional
+428  Portraitzeichnen  3.803209e-15      -4.367146       Object     Optional
+742      Linienziehen  3.682889e-15      -3.922895       Object   Transitive
+446       Betonbohren  3.682889e-15      -4.186710      Adjunct     Optional
+89         Glasmachen  3.293826e-15      -3.967347       Object   Transitive
+185       Eisschießen  3.293826e-15      -4.566562      Adjunct     Optional
+227     Luftschnappen  8.131421e-16      -1.690468 Undetermined   Transitive
+51         Amoklaufen  2.354866e-17      -1.334532      Adjunct Intransitive
+415       Ankerwerfen -3.839692e-17      -3.270419       Object   Transitive
+438        Geldziehen -3.839692e-17      -3.579717       Object   Transitive
+401   Ballwegschlagen -3.839692e-17      -3.517430       Object   Transitive
+760    Kindererziehen -4.939605e-17      -1.637117       Object   Transitive
+737    Kartenzeichnen -4.939605e-17      -4.127196       Object     Optional
+756   Phrasendreschen -6.585261e-17      -3.510210       Object   Transitive
+63        Bogenlaufen -6.585261e-17      -4.249991       Object Intransitive
+471      Filmeinlegen -2.150032e-15      -3.956047       Object   Transitive
+101        Käsemachen -2.339857e-15      -3.616370       Object   Transitive
+720      Steinewerfen -3.616124e-15      -2.173695 Undetermined   Transitive
+
+
+PREFERENCE AGAINST UNIVERBATION  IN:  NP with P-clitic 
+
+          Compound np.clt.assocs FLogPerMillion     Relation      Valency
+65       Grablegen   -0.04272972     -2.0171171       Object   Transitive
+76     Wasserlösen   -0.04551558     -2.1245151       Object   Transitive
+86      Pipimachen   -0.04912600     -1.9055796       Object   Transitive
+479    Zeiterleben   -0.05361901     -2.6567644       Object   Transitive
+151  Geländereiten   -0.05494756     -2.2869988      Adjunct     Optional
+85     Partymachen   -0.05565825     -0.8239786       Object   Transitive
+121     Zeitnehmen   -0.05719458      0.6625898       Object   Transitive
+516  Geländefahren   -0.06201846     -2.4507223      Adjunct     Optional
+656    Haareraufen   -0.06975154     -1.8747349       Object   Transitive
+383  Geldverdienen   -0.07230853      1.8851603       Object   Transitive
+297      Websurfen   -0.07838530     -2.7794111      Adjunct Intransitive
+191    Torschießen   -0.08132162     -1.8348853       Object     Optional
+600      Spaßhaben   -0.08407643      1.0874986       Object   Transitive
+598      Teilhaben   -0.08496045      1.6844775       Object   Transitive
+623     Radiohören   -0.08574290     -0.8231620 Undetermined   Transitive
+99    Urlaubmachen   -0.08930916      0.4356236       Object   Transitive
+273 Wasserspringen   -0.10718970     -1.9942133      Adjunct Intransitive
+529    Kreisfahren   -0.10823065     -2.7070367      Adjunct     Optional
+66      Feuerlegen   -0.18057226     -1.7777269       Object   Transitive
+296 Internetsurfen   -0.34498367     -0.6081823      Adjunct Intransitive
+
+
+=======================================================================
+
+
+PREFERENCE FOR UNIVERBATION  IN:  bare N 
+
+              Compound np.ndt.assocs FLogPerMillion     Relation      Valency
+115         Teilnehmen    0.47679574     3.56181134      Adjunct   Transitive
+598          Teilhaben    0.21111705     1.68447752       Object   Transitive
+485          Radfahren    0.17903634     1.83784511 Undetermined     Optional
+263    Computerspielen    0.11964432     1.01667475      Adjunct     Optional
+487          Skifahren    0.09917729     0.95260638      Adjunct     Optional
+295         Windsurfen    0.08822557    -0.16828901      Adjunct Intransitive
+291        Bergsteigen    0.08375826    -0.18281297      Adjunct Intransitive
+178      Bogenschießen    0.08335079     0.01190985 Undetermined     Optional
+145         Zeitreisen    0.08281284     0.70735642      Adjunct Intransitive
+601         Kreuzheben    0.07826352    -0.41449112      Adjunct   Transitive
+645        Sonnenbaden    0.06089034    -0.42946653      Adjunct Intransitive
+147         Ponyreiten    0.05713361    -0.88321532       Object     Optional
+50           Eislaufen    0.05507016    -0.84194960      Adjunct Intransitive
+384      Blutvergießen    0.05436463    -0.45942630       Object   Transitive
+27        Handauflegen    0.05434228    -0.94747649       Object   Transitive
+803        Kartenlegen    0.05073044    -0.42309918       Object   Transitive
+269 Fallschirmspringen    0.04873015    -1.06297429      Adjunct Intransitive
+772     Fliegenfischen    0.04806353    -0.86126657 Undetermined     Optional
+622         Probehören    0.04795537    -0.65192199      Adjunct   Transitive
+268        Skispringen    0.04635417    -1.14578765      Adjunct Intransitive
+
+
+NO PREFERENCE FOR/AGAINST UNIVERBATION  IN:  bare N 
+
+             Compound np.ndt.assocs FLogPerMillion     Relation      Valency
+167         Waldroden  3.545072e-04      -3.816448       Object   Transitive
+629     Kaugummikauen  3.517632e-04      -2.259161       Object     Optional
+375    Wäschetrocknen  3.317897e-04      -2.936646       Object   Transitive
+13     Arschabwischen  3.256810e-04      -4.260092       Object     Optional
+777     Glockengießen  2.786056e-04      -4.675762       Object   Transitive
+504      Rollerfahren  1.773312e-04      -1.996322 Undetermined     Optional
+218     Feuerschlagen  1.492307e-14      -4.401632      Adjunct   Transitive
+604         Handheben -5.158992e-17      -2.454887       Object   Transitive
+538        Liftfahren -3.563466e-16      -3.577149 Undetermined     Optional
+63        Bogenlaufen -6.640961e-15      -4.249991       Object Intransitive
+748      Krippenbauen -1.340508e-14      -5.294801       Object     Optional
+547      Gondelfahren -1.708817e-14      -3.154735 Undetermined     Optional
+761      Kurvenfahren -1.026833e-05      -1.219930 Undetermined     Optional
+244 Fähnchenschwenken -2.385022e-05      -4.455700       Object   Transitive
+317   Trikotausziehen -7.581526e-05      -3.930168       Object   Transitive
+725      Münzenwerfen -1.705062e-04      -4.668099 Undetermined   Transitive
+561         Laubfegen -2.890945e-04      -4.017843       Object     Optional
+78    Schwanzlutschen -3.671381e-04      -4.172658       Object     Optional
+394       Autowaschen -4.558309e-04      -1.806989       Object     Optional
+771        Eierfärben -4.559421e-04      -3.429614       Object     Optional
+
+
+PREFERENCE AGAINST UNIVERBATION  IN:  bare N 
+
+           Compound np.ndt.assocs FLogPerMillion Relation    Valency
+124 Rücksichtnehmen   -0.06035954      0.1095483   Object Transitive
+311    Geldausgeben   -0.06106771      0.3107387   Object Transitive
+15      Handanlegen   -0.06186953     -0.2779941   Object Transitive
+79      Musikmachen   -0.06248802      0.4167136   Object Transitive
+97     Fehlermachen   -0.06264015      0.5418879   Object Transitive
+87       Geldmachen   -0.06660668      0.1221881   Object Transitive
+574        Gasgeben   -0.06677269      0.6705765   Object Transitive
+123  Stellungnehmen   -0.06923968      1.2945776   Object Transitive
+621      Musikhören   -0.07187722      0.7893732   Object Transitive
+81        Mutmachen   -0.07245149      0.2995919   Object Transitive
+49       Zeitlassen   -0.07409754      0.2406194   Object Transitive
+116  Abschiednehmen   -0.07862377      0.4955525   Object Transitive
+121      Zeitnehmen   -0.08157699      0.6625898   Object Transitive
+99     Urlaubmachen   -0.09014054      0.4356236   Object Transitive
+782     Kinderhaben   -0.09944334      0.7701466   Object Transitive
+599      Rechthaben   -0.12558986      0.9971387   Object Transitive
+600       Spaßhaben   -0.13047031      1.0874986   Object Transitive
+824  Gedankenmachen   -0.15001407      1.6817074   Object Transitive
+383   Geldverdienen   -0.15525601      1.8851603   Object Transitive
+578      Rechtgeben   -0.16054241      1.4287054   Object Transitive
+
+
+=======================================================================
+
+
+PREFERENCE FOR UNIVERBATION  IN:  Participle 
+
+               Compound particip.assocs FLogPerMillion     Relation      Valency
+115          Teilnehmen      0.91771409      3.5618113      Adjunct   Transitive
+331   Pulverbeschichten      0.11934376     -0.9469220      Adjunct   Transitive
+494         Probefahren      0.08140299      0.7544946      Adjunct     Optional
+388      Feuerverzinken      0.07854704     -1.7104885      Adjunct   Transitive
+836      Zwangsernähren      0.06087150     -2.3533738      Adjunct Intransitive
+40         Raubkopieren      0.05406284     -1.6349088      Adjunct     Optional
+627   Grundimmunisieren      0.04754729     -2.9922157      Adjunct   Transitive
+622          Probehören      0.04299224     -0.6519220      Adjunct   Transitive
+598           Teilhaben      0.02749324      1.6844775       Object   Transitive
+399           Handweben      0.02428644     -4.3842407      Adjunct     Optional
+236      Punktschweißen      0.02320008     -3.6270939      Adjunct     Optional
+152         Probereiten      0.02126626     -2.3047992      Adjunct     Optional
+520          Testfahren      0.01886071     -1.1127506      Adjunct     Optional
+382 Hochglanzverdichten      0.01562114     -3.7594708      Adjunct   Transitive
+683     Büchsenschießen      0.01271838     -4.4016324 Undetermined     Optional
+235      Laserschweißen      0.01102495     -2.9165783      Adjunct     Optional
+432        Handzeichnen      0.01094888     -3.0450139      Adjunct     Optional
+470          Plandrehen      0.01042805     -4.3338099      Adjunct   Transitive
+645         Sonnenbaden      0.01032760     -0.4294665      Adjunct Intransitive
+618           Kielholen      0.00942336     -3.0241487       Object   Transitive
+
+
+NO PREFERENCE FOR/AGAINST UNIVERBATION  IN:  Participle 
+
+              Compound particip.assocs FLogPerMillion     Relation      Valency
+70      Korrekturlesen    1.965027e-03     -0.8307005      Adjunct     Optional
+632    Schulterklopfen    9.614344e-04     -1.3002765      Adjunct Intransitive
+195     Gewehrschießen    3.525463e-15     -4.3068540      Adjunct     Optional
+126         Kopfnicken   -9.115519e-16     -1.0933116      Adjunct Intransitive
+542      Dreiradfahren   -2.403712e-04     -4.0584991 Undetermined     Optional
+501         Schifahren   -7.648577e-04     -1.9474061      Adjunct     Optional
+671   Pistolenschießen   -1.145043e-03     -3.6711782      Adjunct     Optional
+151      Geländereiten   -1.396577e-03     -2.2869988      Adjunct     Optional
+130      Moralpredigen   -1.406677e-03     -2.4204293       Object     Optional
+128   Blümchenpflücken   -1.442177e-03     -4.3615125       Object   Transitive
+513          Bobfahren   -1.442177e-03     -2.9808519 Undetermined     Optional
+269 Fallschirmspringen   -2.215965e-03     -1.0629743      Adjunct Intransitive
+296     Internetsurfen   -2.224941e-03     -0.6081823      Adjunct Intransitive
+446        Betonbohren   -2.395920e-03     -4.1867097      Adjunct     Optional
+538         Liftfahren   -2.395920e-03     -3.5771493 Undetermined     Optional
+607        Geistheilen   -2.395920e-03     -3.6825098      Adjunct     Optional
+659     Waffenreinigen   -2.395920e-03     -3.7625525       Object     Optional
+661    Elefantenreiten   -2.395920e-03     -2.9245570 Undetermined     Optional
+77      Daumenlutschen   -2.395920e-03     -2.8814413 Undetermined     Optional
+147         Ponyreiten   -2.395920e-03     -0.8832153       Object     Optional
+
+
+PREFERENCE AGAINST UNIVERBATION  IN:  Participle 
+
+              Compound particip.assocs FLogPerMillion Relation    Valency
+578         Rechtgeben     -0.05833419     1.42870539   Object Transitive
+823 Hausaufgabenmachen     -0.05890467    -0.53740011   Object Transitive
+574           Gasgeben     -0.05918016     0.67057645   Object Transitive
+49          Zeitlassen     -0.05935217     0.24061941   Object Transitive
+816       Bildermachen     -0.06431865    -0.13303977   Object Transitive
+81           Mutmachen     -0.06480766     0.29959193   Object Transitive
+124    Rücksichtnehmen     -0.06611330     0.10954832   Object Transitive
+120      Abstandnehmen     -0.06867688    -0.16650942   Object Transitive
+599         Rechthaben     -0.06970746     0.99713868   Object Transitive
+118        Platznehmen     -0.07162501     0.05353051   Object Transitive
+121         Zeitnehmen     -0.07198127     0.66258981   Object Transitive
+265     Fußballspielen     -0.07297910     0.96116861   Object   Optional
+749     Kinderbekommen     -0.07305902     0.09863196   Object Transitive
+84       Schlussmachen     -0.07624784    -0.02348761   Object Transitive
+692      Grenzensetzen     -0.09283047    -0.30397952   Object Transitive
+123     Stellungnehmen     -0.09401221     1.29457757   Object Transitive
+97        Fehlermachen     -0.09967251     0.54188791   Object Transitive
+383      Geldverdienen     -0.10535292     1.88516031   Object Transitive
+824     Gedankenmachen     -0.15485030     1.68170736   Object Transitive
+581       Auftraggeben     -0.16622600     0.59731690   Object Transitive
+
+
+=======================================================================
+
+
+PREFERENCE FOR UNIVERBATION  IN:  'am' Progressive 
+
+          Compound prog.assocs FLogPerMillion     Relation      Valency
+485      Radfahren  0.12297237     1.83784511 Undetermined     Optional
+487      Skifahren  0.09393793     0.95260638      Adjunct     Optional
+486     Autofahren  0.06339714     1.67127733 Undetermined     Optional
+450    Brotbrechen  0.06161055    -2.51598149       Object   Transitive
+489 Motorradfahren  0.06123379    -0.06277583 Undetermined     Optional
+178  Bogenschießen  0.06086164     0.01190985 Undetermined     Optional
+814    Filmemachen  0.05540182    -0.90406219       Object   Transitive
+180  Preisschießen  0.05197125    -2.22674783      Adjunct     Optional
+146  Westernreiten  0.04836856    -0.99673820      Adjunct     Optional
+772 Fliegenfischen  0.04450221    -0.86126657 Undetermined     Optional
+183  Pokalschießen  0.04245055    -2.46242811      Adjunct     Optional
+384  Blutvergießen  0.04030617    -0.45942630       Object   Transitive
+564   Segelfliegen  0.04030617    -1.32154827      Adjunct     Optional
+182  Sportschießen  0.03919519    -1.93244321      Adjunct     Optional
+803    Kartenlegen  0.03688593    -0.42309918       Object   Transitive
+50       Eislaufen  0.03642871    -0.84194960      Adjunct Intransitive
+490     Zeitfahren  0.03568302    -0.57083218      Adjunct     Optional
+652    Zähneputzen  0.03517677     0.28815835       Object     Optional
+565 Drachenfliegen  0.03316665    -1.24450761 Undetermined     Optional
+482      Eierlegen  0.03184636    -2.14023491       Object   Transitive
+
+
+NO PREFERENCE FOR/AGAINST UNIVERBATION  IN:  'am' Progressive 
+
+               Compound   prog.assocs FLogPerMillion     Relation      Valency
+505          Velofahren  1.408068e-02    -2.39102715 Undetermined     Optional
+796       Kinderkriegen  1.388085e-02    -0.50172938       Object   Transitive
+497           Zugfahren  1.379171e-02    -0.06552729 Undetermined     Optional
+645         Sonnenbaden  9.696195e-03    -0.42946653      Adjunct Intransitive
+267         Golfspielen  9.108521e-03    -0.93061083       Object     Optional
+504        Rollerfahren  9.108521e-03    -1.99632189 Undetermined     Optional
+70       Korrekturlesen  7.709124e-03    -0.83070052      Adjunct     Optional
+311        Geldausgeben  7.512345e-03     0.31073867       Object   Transitive
+492           Busfahren  2.985322e-03     0.27572239 Undetermined     Optional
+82          Radiomachen  2.912814e-03    -2.37780253       Object   Transitive
+491          Kanufahren  1.756142e-03    -0.60884089 Undetermined     Optional
+318          Brotbacken  1.303330e-15    -1.03736600       Object     Optional
+670        Toreschießen -1.173432e-03    -0.26212445       Object     Optional
+759 Geschichtenerzählen -2.651694e-03    -0.14365846       Object     Optional
+621          Musikhören -5.401082e-03     0.78937318       Object   Transitive
+503         Mopedfahren -7.324416e-03    -1.94589968 Undetermined     Optional
+327           Nestbauen -8.991792e-03    -2.83521192       Object     Optional
+83          Beutemachen -1.174607e-02    -2.13355405       Object   Transitive
+422          Geldzählen -1.187755e-02    -2.91923078       Object     Optional
+270        Seilspringen -1.391536e-02    -1.46460777      Adjunct Intransitive
+
+
+PREFERENCE AGAINST UNIVERBATION  IN:  'am' Progressive 
+
+           Compound prog.assocs FLogPerMillion     Relation      Valency
+488   Fahrradfahren -0.02402243      0.5450100 Undetermined     Optional
+611       Luftholen -0.02767978     -0.4373166       Object   Transitive
+32     Kaffeekochen -0.02767978     -1.1836927       Object     Optional
+80      Feuermachen -0.02918303     -1.2958140       Object   Transitive
+383   Geldverdienen -0.03075889      1.8851603       Object   Transitive
+79      Musikmachen -0.03468383      0.4167136       Object   Transitive
+393   Wäschewaschen -0.03872217     -0.6985272       Object     Optional
+361     Biertrinken -0.04185530     -0.1986870       Object     Optional
+574        Gasgeben -0.04310927      0.6705765       Object   Transitive
+359   Kaffeetrinken -0.04870785      0.6126997       Object     Optional
+360      Teetrinken -0.05491350     -0.1249663       Object     Optional
+623      Radiohören -0.05617023     -0.8231620 Undetermined   Transitive
+351    Wassertesten -0.06379400     -3.8838138       Object   Transitive
+816    Bildermachen -0.06576584     -0.1330398       Object   Transitive
+54        Fußlaufen -0.06884185     -2.3685717      Adjunct Intransitive
+376     Klavierüben -0.06884185     -3.6571920      Adjunct     Optional
+85      Partymachen -0.07018590     -0.8239786       Object   Transitive
+326       Hausbauen -0.07499030     -1.2532544       Object     Optional
+266  Klavierspielen -0.08725861     -0.5461489       Object     Optional
+263 Computerspielen -0.30368274      1.0166747      Adjunct     Optional
+
+
+=======================================================================
+
+
+PREFERENCE FOR UNIVERBATION  IN:  'zu' Infinitive 
+
+          Compound infzu.assocs FLogPerMillion Relation      Valency
+115     Teilnehmen 0.9198564789      3.5618113  Adjunct   Transitive
+598      Teilhaben 0.1903013687      1.6844775   Object   Transitive
+270   Seilspringen 0.0277606548     -1.4646078  Adjunct Intransitive
+40    Raubkopieren 0.0091482697     -1.6349088  Adjunct     Optional
+622     Probehören 0.0074518311     -0.6519220  Adjunct   Transitive
+836 Zwangsernähren 0.0074214922     -2.3533738  Adjunct Intransitive
+520     Testfahren 0.0023260134     -1.1127506  Adjunct     Optional
+50       Eislaufen 0.0001447533     -0.8419496  Adjunct Intransitive
+
+
+NO PREFERENCE FOR/AGAINST UNIVERBATION  IN:  'zu' Infinitive 
+
+            Compound  infzu.assocs FLogPerMillion     Relation      Valency
+520       Testfahren  0.0023260134     -1.1127506      Adjunct     Optional
+50         Eislaufen  0.0001447533     -0.8419496      Adjunct Intransitive
+501       Schifahren -0.0010716065     -1.9474061      Adjunct     Optional
+494      Probefahren -0.0013336411      0.7544946      Adjunct     Optional
+404       Ballwerfen -0.0014282913     -2.4785370       Object   Transitive
+417      Probewohnen -0.0018717322     -2.6315487      Adjunct Intransitive
+211    Probeschlafen -0.0023941515     -4.3958015      Adjunct Intransitive
+152      Probereiten -0.0024812842     -2.3047992      Adjunct     Optional
+595       Filmgucken -0.0037166965     -2.5539607       Object     Optional
+435       Zahnziehen -0.0037166965     -2.6889415       Object   Transitive
+806     Plattenlegen -0.0037166965     -4.4681222       Object   Transitive
+128 Blümchenpflücken -0.0037166965     -4.3615125       Object   Transitive
+221   Schaumschlagen -0.0037166965     -4.4193320       Object   Transitive
+510      Buggyfahren -0.0037166965     -2.9738146 Undetermined     Optional
+496     Ballonfahren -0.0037166965     -1.1412892 Undetermined     Optional
+134      Rätselraten -0.0037166965     -1.0383778 Undetermined     Optional
+526     Slalomfahren -0.0040273026     -2.9766236 Undetermined     Optional
+508    Gespannfahren -0.0040273026     -2.7509516 Undetermined     Optional
+672 Scheibenschießen -0.0040273026     -2.6069533      Adjunct     Optional
+146    Westernreiten -0.0040273026     -0.9967382      Adjunct     Optional
+
+
+PREFERENCE AGAINST UNIVERBATION  IN:  'zu' Infinitive 
+
+           Compound infzu.assocs FLogPerMillion Relation    Valency
+97     Fehlermachen  -0.06650774     0.54188791   Object Transitive
+581    Auftraggeben  -0.06733004     0.59731690   Object Transitive
+81        Mutmachen  -0.07676803     0.29959193   Object Transitive
+118     Platznehmen  -0.07678807     0.05353051   Object Transitive
+621      Musikhören  -0.07765444     0.78937318   Object Transitive
+265  Fußballspielen  -0.07927062     0.96116861   Object   Optional
+98      Platzmachen  -0.08117642    -0.42397503   Object Transitive
+99     Urlaubmachen  -0.08223677     0.43562364   Object Transitive
+87       Geldmachen  -0.08340117     0.12218814   Object Transitive
+120   Abstandnehmen  -0.08455836    -0.16650942   Object Transitive
+838 Kontakteknüpfen  -0.09143006    -0.51339895   Object Transitive
+116  Abschiednehmen  -0.09268084     0.49555252   Object Transitive
+124 Rücksichtnehmen  -0.09445706     0.10954832   Object Transitive
+125  Einflussnehmen  -0.09520878    -0.14018882   Object Transitive
+79      Musikmachen  -0.10096462     0.41671365   Object Transitive
+123  Stellungnehmen  -0.11657825     1.29457757   Object Transitive
+600       Spaßhaben  -0.11935417     1.08749858   Object Transitive
+551       Fußfassen  -0.12563865    -0.08079711  Adjunct Transitive
+824  Gedankenmachen  -0.15428838     1.68170736   Object Transitive
+383   Geldverdienen  -0.19147952     1.88516031   Object Transitive
+
+
+=======================================================================
+
+
+PREFERENCE FOR UNIVERBATION  IN:  All contexts 
+
+             Compound all.assocs FLogPerMillion     Relation      Valency
+115        Teilnehmen 0.33915790     3.56181134      Adjunct   Transitive
+117         Maßnehmen 0.31588596     3.41882350       Object   Transitive
+598         Teilhaben 0.10879247     1.68447752       Object   Transitive
+485         Radfahren 0.10007946     1.83784511 Undetermined     Optional
+263   Computerspielen 0.08226168     1.01667475      Adjunct     Optional
+145        Zeitreisen 0.07210684     0.70735642      Adjunct Intransitive
+487         Skifahren 0.06540674     0.95260638      Adjunct     Optional
+494       Probefahren 0.05955923     0.75449459      Adjunct     Optional
+178     Bogenschießen 0.04964203     0.01190985 Undetermined     Optional
+295        Windsurfen 0.04910701    -0.16828901      Adjunct Intransitive
+539      Schifffahren 0.04807657    -0.01087213 Undetermined     Optional
+291       Bergsteigen 0.04735521    -0.18281297      Adjunct Intransitive
+601        Kreuzheben 0.04358693    -0.41449112      Adjunct   Transitive
+486        Autofahren 0.04353932     1.67127733 Undetermined     Optional
+645       Sonnenbaden 0.04302132    -0.42946653      Adjunct Intransitive
+768       Bootsfahren 0.04164951    -0.50540607 Undetermined     Optional
+222   Zuckerschlecken 0.03561553    -0.76821007       Object   Transitive
+772    Fliegenfischen 0.03445068    -0.86126657 Undetermined     Optional
+331 Pulverbeschichten 0.03210091    -0.94692201      Adjunct   Transitive
+490        Zeitfahren 0.03176103    -0.57083218      Adjunct     Optional
+
+
+NO PREFERENCE FOR/AGAINST UNIVERBATION  IN:  All contexts 
+
+           Compound    all.assocs FLogPerMillion     Relation      Valency
+488   Fahrradfahren  0.0089748634      0.5450100 Undetermined     Optional
+499      Taxifahren  0.0080584644     -1.0086559 Undetermined     Optional
+716    Händewaschen  0.0054220081     -0.5320165       Object     Optional
+46     Wasserlassen  0.0052749151     -0.2996176       Object   Transitive
+107      Rasenmähen  0.0049498651     -0.8344912       Object   Transitive
+502     Kajakfahren  0.0048207904     -1.7866727 Undetermined     Optional
+449      Bierbrauen  0.0019903176     -1.4805481       Object   Transitive
+495      Bootfahren -0.0003611479     -1.1066623 Undetermined     Optional
+123  Stellungnehmen -0.0005255267      1.2945776       Object   Transitive
+796   Kinderkriegen -0.0020951604     -0.5017294       Object   Transitive
+270    Seilspringen -0.0021504428     -1.4646078      Adjunct Intransitive
+394     Autowaschen -0.0021623321     -1.8069889       Object     Optional
+543  Autobahnfahren -0.0024733465     -1.3934055      Adjunct     Optional
+632 Schulterklopfen -0.0026845813     -1.3002765      Adjunct Intransitive
+318      Brotbacken -0.0041306204     -1.0373660       Object     Optional
+812      Notenlesen -0.0065917820     -1.7798496       Object     Optional
+814     Filmemachen -0.0066207122     -0.9040622       Object   Transitive
+264  Theaterspielen -0.0073783673     -0.7145089 Undetermined     Optional
+266  Klavierspielen -0.0085320717     -0.5461489       Object     Optional
+717    Haarewaschen -0.0099902830     -1.0309144       Object     Optional
+
+
+PREFERENCE AGAINST UNIVERBATION  IN:  All contexts 
+
+           Compound  all.assocs FLogPerMillion Relation    Valency
+621      Musikhören -0.07428746     0.78937318   Object Transitive
+118     Platznehmen -0.07441046     0.05353051   Object Transitive
+551       Fußfassen -0.07475092    -0.08079711  Adjunct Transitive
+79      Musikmachen -0.07477636     0.41671365   Object Transitive
+311    Geldausgeben -0.07550185     0.31073867   Object Transitive
+87       Geldmachen -0.07555883     0.12218814   Object Transitive
+124 Rücksichtnehmen -0.08017391     0.10954832   Object Transitive
+749  Kinderbekommen -0.08237546     0.09863196   Object Transitive
+81        Mutmachen -0.08487630     0.29959193   Object Transitive
+49       Zeitlassen -0.08855235     0.24061941   Object Transitive
+99     Urlaubmachen -0.09852493     0.43562364   Object Transitive
+97     Fehlermachen -0.10412635     0.54188791   Object Transitive
+581    Auftraggeben -0.10813854     0.59731690   Object Transitive
+121      Zeitnehmen -0.11024454     0.66258981   Object Transitive
+782     Kinderhaben -0.11712718     0.77014656   Object Transitive
+599      Rechthaben -0.12633697     0.99713868   Object Transitive
+600       Spaßhaben -0.13657007     1.08749858   Object Transitive
+578      Rechtgeben -0.14833425     1.42870539   Object Transitive
+383   Geldverdienen -0.17744466     1.88516031   Object Transitive
+824  Gedankenmachen -0.18778253     1.68170736   Object Transitive
+
+
+=======================================================================
+
+
+=======================================================================
+
+
+PREFERENCE FOR UNIVERBATION  IN:  NP with D 
+
+           Compound np.det.assocs FLogPerMillion     Relation      Valency
+485       Radfahren    0.19185318     1.83784511 Undetermined     Optional
+222 Zuckerschlecken    0.17633609    -0.76821007       Object   Transitive
+487       Skifahren    0.13553723     0.95260638      Adjunct     Optional
+265  Fußballspielen    0.10264749     0.96116861       Object     Optional
+134     Rätselraten    0.10248538    -1.03837784 Undetermined     Optional
+384   Blutvergießen    0.10246348    -0.45942630       Object   Transitive
+486      Autofahren    0.09797579     1.67127733 Undetermined     Optional
+178   Bogenschießen    0.09133391     0.01190985 Undetermined     Optional
+115      Teilnehmen    0.08341132     3.56181134      Adjunct   Transitive
+490      Zeitfahren    0.08237140    -0.57083218      Adjunct     Optional
+652     Zähneputzen    0.08225545     0.28815835       Object     Optional
+772  Fliegenfischen    0.08028610    -0.86126657 Undetermined     Optional
+803     Kartenlegen    0.07419807    -0.42309918       Object   Transitive
+179   Vogelschießen    0.06935808    -1.65796676       Object     Optional
+489  Motorradfahren    0.06741707    -0.06277583 Undetermined     Optional
+146   Westernreiten    0.06677468    -0.99673820      Adjunct     Optional
+291     Bergsteigen    0.06637348    -0.18281297      Adjunct Intransitive
+263 Computerspielen    0.06459788     1.01667475      Adjunct     Optional
+564    Segelfliegen    0.06441503    -1.32154827      Adjunct     Optional
+126      Kopfnicken    0.06387581    -1.09331156      Adjunct Intransitive
+
+
+NO PREFERENCE FOR/AGAINST UNIVERBATION  IN:  NP with D 
+
+           Compound np.det.assocs FLogPerMillion     Relation      Valency
+648  Beerenpflücken  2.487705e-05     -3.9523090       Object   Transitive
+542   Dreiradfahren  2.487705e-05     -4.0584991 Undetermined     Optional
+109      Kornmahlen  7.086722e-15     -3.7625525       Object   Transitive
+58       Wattlaufen  5.029807e-15     -4.2550290      Adjunct Intransitive
+227   Luftschnappen  4.009773e-15     -1.6904682 Undetermined   Transitive
+299     Couchsurfen  3.419860e-15     -4.2499912      Adjunct Intransitive
+373   Punschtrinken  3.414956e-15     -4.6454562       Object     Optional
+28     Kopfauflegen  3.414956e-15     -5.3689087       Object   Transitive
+535  Anhängerfahren  2.701576e-15     -3.4795108      Adjunct     Optional
+582   Pfötchengeben  5.718938e-17     -3.2666525       Object   Transitive
+159   Schrittreiten  5.018521e-17     -2.8206662      Adjunct     Optional
+61       Seillaufen -2.108750e-17     -4.5665623      Adjunct Intransitive
+75       Hakenlösen -4.950905e-17     -4.6233151       Object   Transitive
+809   Gedankenlesen -5.252362e-17     -0.6967991       Object     Optional
+784 Zigarettenholen -5.303321e-16     -2.9571243       Object   Transitive
+466  Däumchendrehen -9.143918e-16     -2.4940412 Undetermined   Transitive
+39  Marmeladekochen -1.800367e-15     -3.3715954       Object     Optional
+821    Liedermachen -6.301451e-15     -3.6910935       Object   Transitive
+743     Haareziehen -6.765802e-15     -4.1361242       Object   Transitive
+702   Pferdestehlen -1.057241e-14     -2.6167190       Object     Optional
+
+
+PREFERENCE AGAINST UNIVERBATION  IN:  NP with D 
+
+           Compound np.det.assocs FLogPerMillion Relation    Valency
+87       Geldmachen   -0.04584308     0.12218814   Object Transitive
+816    Bildermachen   -0.04803753    -0.13303977   Object Transitive
+124 Rücksichtnehmen   -0.04820902     0.10954832   Object Transitive
+630      Autokaufen   -0.04872251    -1.61380948   Object Transitive
+326       Hausbauen   -0.05081319    -1.25325438   Object   Optional
+95      Angstmachen   -0.05169810    -0.09583028   Object Transitive
+827     Augenöffnen   -0.05750728    -0.99615574   Object Transitive
+102      Fotomachen   -0.06166987    -1.22211770   Object Transitive
+49       Zeitlassen   -0.06220471     0.24061941   Object Transitive
+749  Kinderbekommen   -0.06362478     0.09863196   Object Transitive
+577        Ratgeben   -0.07668975    -0.80520177   Object Transitive
+599      Rechthaben   -0.07931415     0.99713868   Object Transitive
+383   Geldverdienen   -0.08358430     1.88516031   Object Transitive
+311    Geldausgeben   -0.08528744     0.31073867   Object Transitive
+600       Spaßhaben   -0.08975261     1.08749858   Object Transitive
+97     Fehlermachen   -0.09275112     0.54188791   Object Transitive
+579       Handgeben   -0.10021762    -0.47705698   Object Transitive
+121      Zeitnehmen   -0.10328535     0.66258981   Object Transitive
+824  Gedankenmachen   -0.11981257     1.68170736   Object Transitive
+782     Kinderhaben   -0.13073956     0.77014656   Object Transitive
+
+
+=======================================================================
+
+
+PREFERENCE FOR UNIVERBATION  IN:  NP with P-clitic 
+
+              Compound np.clt.assocs FLogPerMillion     Relation      Valency
+485          Radfahren    0.11563919     1.83784511 Undetermined     Optional
+486         Autofahren    0.10656890     1.67127733 Undetermined     Optional
+487          Skifahren    0.09578753     0.95260638      Adjunct     Optional
+645        Sonnenbaden    0.07320775    -0.42946653      Adjunct Intransitive
+178      Bogenschießen    0.06194515     0.01190985 Undetermined     Optional
+652        Zähneputzen    0.06137117     0.28815835       Object     Optional
+291        Bergsteigen    0.05582780    -0.18281297      Adjunct Intransitive
+490         Zeitfahren    0.05271432    -0.57083218      Adjunct     Optional
+772     Fliegenfischen    0.05000866    -0.86126657 Undetermined     Optional
+295         Windsurfen    0.04869517    -0.16828901      Adjunct Intransitive
+601         Kreuzheben    0.04808173    -0.41449112      Adjunct   Transitive
+146      Westernreiten    0.04631371    -0.99673820      Adjunct     Optional
+602       Gewichtheben    0.04276659    -1.31859644       Object   Transitive
+268        Skispringen    0.04209817    -1.14578765      Adjunct Intransitive
+46        Wasserlassen    0.03920725    -0.29961757       Object   Transitive
+703     Treppensteigen    0.03805104    -0.46866081 Undetermined Intransitive
+269 Fallschirmspringen    0.03658341    -1.06297429      Adjunct Intransitive
+50           Eislaufen    0.03498073    -0.84194960      Adjunct Intransitive
+482          Eierlegen    0.03427170    -2.14023491       Object   Transitive
+622         Probehören    0.03418619    -0.65192199      Adjunct   Transitive
+
+
+NO PREFERENCE FOR/AGAINST UNIVERBATION  IN:  NP with P-clitic 
+
+             Compound np.clt.assocs FLogPerMillion     Relation      Valency
+758    Spieleerfinden  4.145209e-15      -4.449546       Object   Transitive
+727      Bombenwerfen  3.803209e-15      -3.287546 Undetermined   Transitive
+525 Straßenbahnfahren  3.803209e-15      -2.763374 Undetermined     Optional
+428  Portraitzeichnen  3.803209e-15      -4.367146       Object     Optional
+742      Linienziehen  3.682889e-15      -3.922895       Object   Transitive
+446       Betonbohren  3.682889e-15      -4.186710      Adjunct     Optional
+89         Glasmachen  3.293826e-15      -3.967347       Object   Transitive
+185       Eisschießen  3.293826e-15      -4.566562      Adjunct     Optional
+227     Luftschnappen  8.131421e-16      -1.690468 Undetermined   Transitive
+51         Amoklaufen  2.354866e-17      -1.334532      Adjunct Intransitive
+415       Ankerwerfen -3.839692e-17      -3.270419       Object   Transitive
+438        Geldziehen -3.839692e-17      -3.579717       Object   Transitive
+401   Ballwegschlagen -3.839692e-17      -3.517430       Object   Transitive
+760    Kindererziehen -4.939605e-17      -1.637117       Object   Transitive
+737    Kartenzeichnen -4.939605e-17      -4.127196       Object     Optional
+756   Phrasendreschen -6.585261e-17      -3.510210       Object   Transitive
+63        Bogenlaufen -6.585261e-17      -4.249991       Object Intransitive
+471      Filmeinlegen -2.150032e-15      -3.956047       Object   Transitive
+101        Käsemachen -2.339857e-15      -3.616370       Object   Transitive
+720      Steinewerfen -3.616124e-15      -2.173695 Undetermined   Transitive
+
+
+PREFERENCE AGAINST UNIVERBATION  IN:  NP with P-clitic 
+
+          Compound np.clt.assocs FLogPerMillion     Relation      Valency
+65       Grablegen   -0.04272972     -2.0171171       Object   Transitive
+76     Wasserlösen   -0.04551558     -2.1245151       Object   Transitive
+86      Pipimachen   -0.04912600     -1.9055796       Object   Transitive
+479    Zeiterleben   -0.05361901     -2.6567644       Object   Transitive
+151  Geländereiten   -0.05494756     -2.2869988      Adjunct     Optional
+85     Partymachen   -0.05565825     -0.8239786       Object   Transitive
+121     Zeitnehmen   -0.05719458      0.6625898       Object   Transitive
+516  Geländefahren   -0.06201846     -2.4507223      Adjunct     Optional
+656    Haareraufen   -0.06975154     -1.8747349       Object   Transitive
+383  Geldverdienen   -0.07230853      1.8851603       Object   Transitive
+297      Websurfen   -0.07838530     -2.7794111      Adjunct Intransitive
+191    Torschießen   -0.08132162     -1.8348853       Object     Optional
+600      Spaßhaben   -0.08407643      1.0874986       Object   Transitive
+598      Teilhaben   -0.08496045      1.6844775       Object   Transitive
+623     Radiohören   -0.08574290     -0.8231620 Undetermined   Transitive
+99    Urlaubmachen   -0.08930916      0.4356236       Object   Transitive
+273 Wasserspringen   -0.10718970     -1.9942133      Adjunct Intransitive
+529    Kreisfahren   -0.10823065     -2.7070367      Adjunct     Optional
+66      Feuerlegen   -0.18057226     -1.7777269       Object   Transitive
+296 Internetsurfen   -0.34498367     -0.6081823      Adjunct Intransitive
+
+
+=======================================================================
+
+
+PREFERENCE FOR UNIVERBATION  IN:  bare N 
+
+              Compound np.ndt.assocs FLogPerMillion     Relation      Valency
+115         Teilnehmen    0.47679574     3.56181134      Adjunct   Transitive
+598          Teilhaben    0.21111705     1.68447752       Object   Transitive
+485          Radfahren    0.17903634     1.83784511 Undetermined     Optional
+263    Computerspielen    0.11964432     1.01667475      Adjunct     Optional
+487          Skifahren    0.09917729     0.95260638      Adjunct     Optional
+295         Windsurfen    0.08822557    -0.16828901      Adjunct Intransitive
+291        Bergsteigen    0.08375826    -0.18281297      Adjunct Intransitive
+178      Bogenschießen    0.08335079     0.01190985 Undetermined     Optional
+145         Zeitreisen    0.08281284     0.70735642      Adjunct Intransitive
+601         Kreuzheben    0.07826352    -0.41449112      Adjunct   Transitive
+645        Sonnenbaden    0.06089034    -0.42946653      Adjunct Intransitive
+147         Ponyreiten    0.05713361    -0.88321532       Object     Optional
+50           Eislaufen    0.05507016    -0.84194960      Adjunct Intransitive
+384      Blutvergießen    0.05436463    -0.45942630       Object   Transitive
+27        Handauflegen    0.05434228    -0.94747649       Object   Transitive
+803        Kartenlegen    0.05073044    -0.42309918       Object   Transitive
+269 Fallschirmspringen    0.04873015    -1.06297429      Adjunct Intransitive
+772     Fliegenfischen    0.04806353    -0.86126657 Undetermined     Optional
+622         Probehören    0.04795537    -0.65192199      Adjunct   Transitive
+268        Skispringen    0.04635417    -1.14578765      Adjunct Intransitive
+
+
+NO PREFERENCE FOR/AGAINST UNIVERBATION  IN:  bare N 
+
+             Compound np.ndt.assocs FLogPerMillion     Relation      Valency
+167         Waldroden  3.545072e-04      -3.816448       Object   Transitive
+629     Kaugummikauen  3.517632e-04      -2.259161       Object     Optional
+375    Wäschetrocknen  3.317897e-04      -2.936646       Object   Transitive
+13     Arschabwischen  3.256810e-04      -4.260092       Object     Optional
+777     Glockengießen  2.786056e-04      -4.675762       Object   Transitive
+504      Rollerfahren  1.773312e-04      -1.996322 Undetermined     Optional
+218     Feuerschlagen  1.492307e-14      -4.401632      Adjunct   Transitive
+604         Handheben -5.158992e-17      -2.454887       Object   Transitive
+538        Liftfahren -3.563466e-16      -3.577149 Undetermined     Optional
+63        Bogenlaufen -6.640961e-15      -4.249991       Object Intransitive
+748      Krippenbauen -1.340508e-14      -5.294801       Object     Optional
+547      Gondelfahren -1.708817e-14      -3.154735 Undetermined     Optional
+761      Kurvenfahren -1.026833e-05      -1.219930 Undetermined     Optional
+244 Fähnchenschwenken -2.385022e-05      -4.455700       Object   Transitive
+317   Trikotausziehen -7.581526e-05      -3.930168       Object   Transitive
+725      Münzenwerfen -1.705062e-04      -4.668099 Undetermined   Transitive
+561         Laubfegen -2.890945e-04      -4.017843       Object     Optional
+78    Schwanzlutschen -3.671381e-04      -4.172658       Object     Optional
+394       Autowaschen -4.558309e-04      -1.806989       Object     Optional
+771        Eierfärben -4.559421e-04      -3.429614       Object     Optional
+
+
+PREFERENCE AGAINST UNIVERBATION  IN:  bare N 
+
+           Compound np.ndt.assocs FLogPerMillion Relation    Valency
+124 Rücksichtnehmen   -0.06035954      0.1095483   Object Transitive
+311    Geldausgeben   -0.06106771      0.3107387   Object Transitive
+15      Handanlegen   -0.06186953     -0.2779941   Object Transitive
+79      Musikmachen   -0.06248802      0.4167136   Object Transitive
+97     Fehlermachen   -0.06264015      0.5418879   Object Transitive
+87       Geldmachen   -0.06660668      0.1221881   Object Transitive
+574        Gasgeben   -0.06677269      0.6705765   Object Transitive
+123  Stellungnehmen   -0.06923968      1.2945776   Object Transitive
+621      Musikhören   -0.07187722      0.7893732   Object Transitive
+81        Mutmachen   -0.07245149      0.2995919   Object Transitive
+49       Zeitlassen   -0.07409754      0.2406194   Object Transitive
+116  Abschiednehmen   -0.07862377      0.4955525   Object Transitive
+121      Zeitnehmen   -0.08157699      0.6625898   Object Transitive
+99     Urlaubmachen   -0.09014054      0.4356236   Object Transitive
+782     Kinderhaben   -0.09944334      0.7701466   Object Transitive
+599      Rechthaben   -0.12558986      0.9971387   Object Transitive
+600       Spaßhaben   -0.13047031      1.0874986   Object Transitive
+824  Gedankenmachen   -0.15001407      1.6817074   Object Transitive
+383   Geldverdienen   -0.15525601      1.8851603   Object Transitive
+578      Rechtgeben   -0.16054241      1.4287054   Object Transitive
+
+
+=======================================================================
+
+
+PREFERENCE FOR UNIVERBATION  IN:  Participle 
+
+               Compound particip.assocs FLogPerMillion     Relation      Valency
+115          Teilnehmen      0.91771409      3.5618113      Adjunct   Transitive
+331   Pulverbeschichten      0.11934376     -0.9469220      Adjunct   Transitive
+494         Probefahren      0.08140299      0.7544946      Adjunct     Optional
+388      Feuerverzinken      0.07854704     -1.7104885      Adjunct   Transitive
+836      Zwangsernähren      0.06087150     -2.3533738      Adjunct Intransitive
+40         Raubkopieren      0.05406284     -1.6349088      Adjunct     Optional
+627   Grundimmunisieren      0.04754729     -2.9922157      Adjunct   Transitive
+622          Probehören      0.04299224     -0.6519220      Adjunct   Transitive
+598           Teilhaben      0.02749324      1.6844775       Object   Transitive
+399           Handweben      0.02428644     -4.3842407      Adjunct     Optional
+236      Punktschweißen      0.02320008     -3.6270939      Adjunct     Optional
+152         Probereiten      0.02126626     -2.3047992      Adjunct     Optional
+520          Testfahren      0.01886071     -1.1127506      Adjunct     Optional
+382 Hochglanzverdichten      0.01562114     -3.7594708      Adjunct   Transitive
+683     Büchsenschießen      0.01271838     -4.4016324 Undetermined     Optional
+235      Laserschweißen      0.01102495     -2.9165783      Adjunct     Optional
+432        Handzeichnen      0.01094888     -3.0450139      Adjunct     Optional
+470          Plandrehen      0.01042805     -4.3338099      Adjunct   Transitive
+645         Sonnenbaden      0.01032760     -0.4294665      Adjunct Intransitive
+618           Kielholen      0.00942336     -3.0241487       Object   Transitive
+
+
+NO PREFERENCE FOR/AGAINST UNIVERBATION  IN:  Participle 
+
+              Compound particip.assocs FLogPerMillion     Relation      Valency
+70      Korrekturlesen    1.965027e-03     -0.8307005      Adjunct     Optional
+632    Schulterklopfen    9.614344e-04     -1.3002765      Adjunct Intransitive
+195     Gewehrschießen    3.525463e-15     -4.3068540      Adjunct     Optional
+126         Kopfnicken   -9.115519e-16     -1.0933116      Adjunct Intransitive
+542      Dreiradfahren   -2.403712e-04     -4.0584991 Undetermined     Optional
+501         Schifahren   -7.648577e-04     -1.9474061      Adjunct     Optional
+671   Pistolenschießen   -1.145043e-03     -3.6711782      Adjunct     Optional
+151      Geländereiten   -1.396577e-03     -2.2869988      Adjunct     Optional
+130      Moralpredigen   -1.406677e-03     -2.4204293       Object     Optional
+128   Blümchenpflücken   -1.442177e-03     -4.3615125       Object   Transitive
+513          Bobfahren   -1.442177e-03     -2.9808519 Undetermined     Optional
+269 Fallschirmspringen   -2.215965e-03     -1.0629743      Adjunct Intransitive
+296     Internetsurfen   -2.224941e-03     -0.6081823      Adjunct Intransitive
+446        Betonbohren   -2.395920e-03     -4.1867097      Adjunct     Optional
+538         Liftfahren   -2.395920e-03     -3.5771493 Undetermined     Optional
+607        Geistheilen   -2.395920e-03     -3.6825098      Adjunct     Optional
+659     Waffenreinigen   -2.395920e-03     -3.7625525       Object     Optional
+661    Elefantenreiten   -2.395920e-03     -2.9245570 Undetermined     Optional
+77      Daumenlutschen   -2.395920e-03     -2.8814413 Undetermined     Optional
+147         Ponyreiten   -2.395920e-03     -0.8832153       Object     Optional
+
+
+PREFERENCE AGAINST UNIVERBATION  IN:  Participle 
+
+              Compound particip.assocs FLogPerMillion Relation    Valency
+578         Rechtgeben     -0.05833419     1.42870539   Object Transitive
+823 Hausaufgabenmachen     -0.05890467    -0.53740011   Object Transitive
+574           Gasgeben     -0.05918016     0.67057645   Object Transitive
+49          Zeitlassen     -0.05935217     0.24061941   Object Transitive
+816       Bildermachen     -0.06431865    -0.13303977   Object Transitive
+81           Mutmachen     -0.06480766     0.29959193   Object Transitive
+124    Rücksichtnehmen     -0.06611330     0.10954832   Object Transitive
+120      Abstandnehmen     -0.06867688    -0.16650942   Object Transitive
+599         Rechthaben     -0.06970746     0.99713868   Object Transitive
+118        Platznehmen     -0.07162501     0.05353051   Object Transitive
+121         Zeitnehmen     -0.07198127     0.66258981   Object Transitive
+265     Fußballspielen     -0.07297910     0.96116861   Object   Optional
+749     Kinderbekommen     -0.07305902     0.09863196   Object Transitive
+84       Schlussmachen     -0.07624784    -0.02348761   Object Transitive
+692      Grenzensetzen     -0.09283047    -0.30397952   Object Transitive
+123     Stellungnehmen     -0.09401221     1.29457757   Object Transitive
+97        Fehlermachen     -0.09967251     0.54188791   Object Transitive
+383      Geldverdienen     -0.10535292     1.88516031   Object Transitive
+824     Gedankenmachen     -0.15485030     1.68170736   Object Transitive
+581       Auftraggeben     -0.16622600     0.59731690   Object Transitive
+
+
+=======================================================================
+
+
+PREFERENCE FOR UNIVERBATION  IN:  'am' Progressive 
+
+          Compound prog.assocs FLogPerMillion     Relation      Valency
+485      Radfahren  0.12297237     1.83784511 Undetermined     Optional
+487      Skifahren  0.09393793     0.95260638      Adjunct     Optional
+486     Autofahren  0.06339714     1.67127733 Undetermined     Optional
+450    Brotbrechen  0.06161055    -2.51598149       Object   Transitive
+489 Motorradfahren  0.06123379    -0.06277583 Undetermined     Optional
+178  Bogenschießen  0.06086164     0.01190985 Undetermined     Optional
+814    Filmemachen  0.05540182    -0.90406219       Object   Transitive
+180  Preisschießen  0.05197125    -2.22674783      Adjunct     Optional
+146  Westernreiten  0.04836856    -0.99673820      Adjunct     Optional
+772 Fliegenfischen  0.04450221    -0.86126657 Undetermined     Optional
+183  Pokalschießen  0.04245055    -2.46242811      Adjunct     Optional
+384  Blutvergießen  0.04030617    -0.45942630       Object   Transitive
+564   Segelfliegen  0.04030617    -1.32154827      Adjunct     Optional
+182  Sportschießen  0.03919519    -1.93244321      Adjunct     Optional
+803    Kartenlegen  0.03688593    -0.42309918       Object   Transitive
+50       Eislaufen  0.03642871    -0.84194960      Adjunct Intransitive
+490     Zeitfahren  0.03568302    -0.57083218      Adjunct     Optional
+652    Zähneputzen  0.03517677     0.28815835       Object     Optional
+565 Drachenfliegen  0.03316665    -1.24450761 Undetermined     Optional
+482      Eierlegen  0.03184636    -2.14023491       Object   Transitive
+
+
+NO PREFERENCE FOR/AGAINST UNIVERBATION  IN:  'am' Progressive 
+
+               Compound   prog.assocs FLogPerMillion     Relation      Valency
+505          Velofahren  1.408068e-02    -2.39102715 Undetermined     Optional
+796       Kinderkriegen  1.388085e-02    -0.50172938       Object   Transitive
+497           Zugfahren  1.379171e-02    -0.06552729 Undetermined     Optional
+645         Sonnenbaden  9.696195e-03    -0.42946653      Adjunct Intransitive
+267         Golfspielen  9.108521e-03    -0.93061083       Object     Optional
+504        Rollerfahren  9.108521e-03    -1.99632189 Undetermined     Optional
+70       Korrekturlesen  7.709124e-03    -0.83070052      Adjunct     Optional
+311        Geldausgeben  7.512345e-03     0.31073867       Object   Transitive
+492           Busfahren  2.985322e-03     0.27572239 Undetermined     Optional
+82          Radiomachen  2.912814e-03    -2.37780253       Object   Transitive
+491          Kanufahren  1.756142e-03    -0.60884089 Undetermined     Optional
+318          Brotbacken  1.303330e-15    -1.03736600       Object     Optional
+670        Toreschießen -1.173432e-03    -0.26212445       Object     Optional
+759 Geschichtenerzählen -2.651694e-03    -0.14365846       Object     Optional
+621          Musikhören -5.401082e-03     0.78937318       Object   Transitive
+503         Mopedfahren -7.324416e-03    -1.94589968 Undetermined     Optional
+327           Nestbauen -8.991792e-03    -2.83521192       Object     Optional
+83          Beutemachen -1.174607e-02    -2.13355405       Object   Transitive
+422          Geldzählen -1.187755e-02    -2.91923078       Object     Optional
+270        Seilspringen -1.391536e-02    -1.46460777      Adjunct Intransitive
+
+
+PREFERENCE AGAINST UNIVERBATION  IN:  'am' Progressive 
+
+           Compound prog.assocs FLogPerMillion     Relation      Valency
+488   Fahrradfahren -0.02402243      0.5450100 Undetermined     Optional
+611       Luftholen -0.02767978     -0.4373166       Object   Transitive
+32     Kaffeekochen -0.02767978     -1.1836927       Object     Optional
+80      Feuermachen -0.02918303     -1.2958140       Object   Transitive
+383   Geldverdienen -0.03075889      1.8851603       Object   Transitive
+79      Musikmachen -0.03468383      0.4167136       Object   Transitive
+393   Wäschewaschen -0.03872217     -0.6985272       Object     Optional
+361     Biertrinken -0.04185530     -0.1986870       Object     Optional
+574        Gasgeben -0.04310927      0.6705765       Object   Transitive
+359   Kaffeetrinken -0.04870785      0.6126997       Object     Optional
+360      Teetrinken -0.05491350     -0.1249663       Object     Optional
+623      Radiohören -0.05617023     -0.8231620 Undetermined   Transitive
+351    Wassertesten -0.06379400     -3.8838138       Object   Transitive
+816    Bildermachen -0.06576584     -0.1330398       Object   Transitive
+54        Fußlaufen -0.06884185     -2.3685717      Adjunct Intransitive
+376     Klavierüben -0.06884185     -3.6571920      Adjunct     Optional
+85      Partymachen -0.07018590     -0.8239786       Object   Transitive
+326       Hausbauen -0.07499030     -1.2532544       Object     Optional
+266  Klavierspielen -0.08725861     -0.5461489       Object     Optional
+263 Computerspielen -0.30368274      1.0166747      Adjunct     Optional
+
+
+=======================================================================
+
+
+PREFERENCE FOR UNIVERBATION  IN:  'zu' Infinitive 
+
+          Compound infzu.assocs FLogPerMillion Relation      Valency
+115     Teilnehmen 0.9198564789      3.5618113  Adjunct   Transitive
+598      Teilhaben 0.1903013687      1.6844775   Object   Transitive
+270   Seilspringen 0.0277606548     -1.4646078  Adjunct Intransitive
+40    Raubkopieren 0.0091482697     -1.6349088  Adjunct     Optional
+622     Probehören 0.0074518311     -0.6519220  Adjunct   Transitive
+836 Zwangsernähren 0.0074214922     -2.3533738  Adjunct Intransitive
+520     Testfahren 0.0023260134     -1.1127506  Adjunct     Optional
+50       Eislaufen 0.0001447533     -0.8419496  Adjunct Intransitive
+
+
+NO PREFERENCE FOR/AGAINST UNIVERBATION  IN:  'zu' Infinitive 
+
+            Compound  infzu.assocs FLogPerMillion     Relation      Valency
+520       Testfahren  0.0023260134     -1.1127506      Adjunct     Optional
+50         Eislaufen  0.0001447533     -0.8419496      Adjunct Intransitive
+501       Schifahren -0.0010716065     -1.9474061      Adjunct     Optional
+494      Probefahren -0.0013336411      0.7544946      Adjunct     Optional
+404       Ballwerfen -0.0014282913     -2.4785370       Object   Transitive
+417      Probewohnen -0.0018717322     -2.6315487      Adjunct Intransitive
+211    Probeschlafen -0.0023941515     -4.3958015      Adjunct Intransitive
+152      Probereiten -0.0024812842     -2.3047992      Adjunct     Optional
+595       Filmgucken -0.0037166965     -2.5539607       Object     Optional
+435       Zahnziehen -0.0037166965     -2.6889415       Object   Transitive
+806     Plattenlegen -0.0037166965     -4.4681222       Object   Transitive
+128 Blümchenpflücken -0.0037166965     -4.3615125       Object   Transitive
+221   Schaumschlagen -0.0037166965     -4.4193320       Object   Transitive
+510      Buggyfahren -0.0037166965     -2.9738146 Undetermined     Optional
+496     Ballonfahren -0.0037166965     -1.1412892 Undetermined     Optional
+134      Rätselraten -0.0037166965     -1.0383778 Undetermined     Optional
+526     Slalomfahren -0.0040273026     -2.9766236 Undetermined     Optional
+508    Gespannfahren -0.0040273026     -2.7509516 Undetermined     Optional
+672 Scheibenschießen -0.0040273026     -2.6069533      Adjunct     Optional
+146    Westernreiten -0.0040273026     -0.9967382      Adjunct     Optional
+
+
+PREFERENCE AGAINST UNIVERBATION  IN:  'zu' Infinitive 
+
+           Compound infzu.assocs FLogPerMillion Relation    Valency
+97     Fehlermachen  -0.06650774     0.54188791   Object Transitive
+581    Auftraggeben  -0.06733004     0.59731690   Object Transitive
+81        Mutmachen  -0.07676803     0.29959193   Object Transitive
+118     Platznehmen  -0.07678807     0.05353051   Object Transitive
+621      Musikhören  -0.07765444     0.78937318   Object Transitive
+265  Fußballspielen  -0.07927062     0.96116861   Object   Optional
+98      Platzmachen  -0.08117642    -0.42397503   Object Transitive
+99     Urlaubmachen  -0.08223677     0.43562364   Object Transitive
+87       Geldmachen  -0.08340117     0.12218814   Object Transitive
+120   Abstandnehmen  -0.08455836    -0.16650942   Object Transitive
+838 Kontakteknüpfen  -0.09143006    -0.51339895   Object Transitive
+116  Abschiednehmen  -0.09268084     0.49555252   Object Transitive
+124 Rücksichtnehmen  -0.09445706     0.10954832   Object Transitive
+125  Einflussnehmen  -0.09520878    -0.14018882   Object Transitive
+79      Musikmachen  -0.10096462     0.41671365   Object Transitive
+123  Stellungnehmen  -0.11657825     1.29457757   Object Transitive
+600       Spaßhaben  -0.11935417     1.08749858   Object Transitive
+551       Fußfassen  -0.12563865    -0.08079711  Adjunct Transitive
+824  Gedankenmachen  -0.15428838     1.68170736   Object Transitive
+383   Geldverdienen  -0.19147952     1.88516031   Object Transitive
+
+
+=======================================================================
+
+
+PREFERENCE FOR UNIVERBATION  IN:  All contexts 
+
+             Compound all.assocs FLogPerMillion     Relation      Valency
+115        Teilnehmen 0.33915790     3.56181134      Adjunct   Transitive
+117         Maßnehmen 0.31588596     3.41882350       Object   Transitive
+598         Teilhaben 0.10879247     1.68447752       Object   Transitive
+485         Radfahren 0.10007946     1.83784511 Undetermined     Optional
+263   Computerspielen 0.08226168     1.01667475      Adjunct     Optional
+145        Zeitreisen 0.07210684     0.70735642      Adjunct Intransitive
+487         Skifahren 0.06540674     0.95260638      Adjunct     Optional
+494       Probefahren 0.05955923     0.75449459      Adjunct     Optional
+178     Bogenschießen 0.04964203     0.01190985 Undetermined     Optional
+295        Windsurfen 0.04910701    -0.16828901      Adjunct Intransitive
+539      Schifffahren 0.04807657    -0.01087213 Undetermined     Optional
+291       Bergsteigen 0.04735521    -0.18281297      Adjunct Intransitive
+601        Kreuzheben 0.04358693    -0.41449112      Adjunct   Transitive
+486        Autofahren 0.04353932     1.67127733 Undetermined     Optional
+645       Sonnenbaden 0.04302132    -0.42946653      Adjunct Intransitive
+768       Bootsfahren 0.04164951    -0.50540607 Undetermined     Optional
+222   Zuckerschlecken 0.03561553    -0.76821007       Object   Transitive
+772    Fliegenfischen 0.03445068    -0.86126657 Undetermined     Optional
+331 Pulverbeschichten 0.03210091    -0.94692201      Adjunct   Transitive
+490        Zeitfahren 0.03176103    -0.57083218      Adjunct     Optional
+
+
+NO PREFERENCE FOR/AGAINST UNIVERBATION  IN:  All contexts 
+
+           Compound    all.assocs FLogPerMillion     Relation      Valency
+488   Fahrradfahren  0.0089748634      0.5450100 Undetermined     Optional
+499      Taxifahren  0.0080584644     -1.0086559 Undetermined     Optional
+716    Händewaschen  0.0054220081     -0.5320165       Object     Optional
+46     Wasserlassen  0.0052749151     -0.2996176       Object   Transitive
+107      Rasenmähen  0.0049498651     -0.8344912       Object   Transitive
+502     Kajakfahren  0.0048207904     -1.7866727 Undetermined     Optional
+449      Bierbrauen  0.0019903176     -1.4805481       Object   Transitive
+495      Bootfahren -0.0003611479     -1.1066623 Undetermined     Optional
+123  Stellungnehmen -0.0005255267      1.2945776       Object   Transitive
+796   Kinderkriegen -0.0020951604     -0.5017294       Object   Transitive
+270    Seilspringen -0.0021504428     -1.4646078      Adjunct Intransitive
+394     Autowaschen -0.0021623321     -1.8069889       Object     Optional
+543  Autobahnfahren -0.0024733465     -1.3934055      Adjunct     Optional
+632 Schulterklopfen -0.0026845813     -1.3002765      Adjunct Intransitive
+318      Brotbacken -0.0041306204     -1.0373660       Object     Optional
+812      Notenlesen -0.0065917820     -1.7798496       Object     Optional
+814     Filmemachen -0.0066207122     -0.9040622       Object   Transitive
+264  Theaterspielen -0.0073783673     -0.7145089 Undetermined     Optional
+266  Klavierspielen -0.0085320717     -0.5461489       Object     Optional
+717    Haarewaschen -0.0099902830     -1.0309144       Object     Optional
+
+
+PREFERENCE AGAINST UNIVERBATION  IN:  All contexts 
+
+           Compound  all.assocs FLogPerMillion Relation    Valency
+621      Musikhören -0.07428746     0.78937318   Object Transitive
+118     Platznehmen -0.07441046     0.05353051   Object Transitive
+551       Fußfassen -0.07475092    -0.08079711  Adjunct Transitive
+79      Musikmachen -0.07477636     0.41671365   Object Transitive
+311    Geldausgeben -0.07550185     0.31073867   Object Transitive
+87       Geldmachen -0.07555883     0.12218814   Object Transitive
+124 Rücksichtnehmen -0.08017391     0.10954832   Object Transitive
+749  Kinderbekommen -0.08237546     0.09863196   Object Transitive
+81        Mutmachen -0.08487630     0.29959193   Object Transitive
+49       Zeitlassen -0.08855235     0.24061941   Object Transitive
+99     Urlaubmachen -0.09852493     0.43562364   Object Transitive
+97     Fehlermachen -0.10412635     0.54188791   Object Transitive
+581    Auftraggeben -0.10813854     0.59731690   Object Transitive
+121      Zeitnehmen -0.11024454     0.66258981   Object Transitive
+782     Kinderhaben -0.11712718     0.77014656   Object Transitive
+599      Rechthaben -0.12633697     0.99713868   Object Transitive
+600       Spaßhaben -0.13657007     1.08749858   Object Transitive
+578      Rechtgeben -0.14833425     1.42870539   Object Transitive
+383   Geldverdienen -0.17744466     1.88516031   Object Transitive
+824  Gedankenmachen -0.18778253     1.68170736   Object Transitive
+
+
+=======================================================================
+
+
+=======================================================================
+
+
+PREFERENCE FOR UNIVERBATION  IN:  NP with D 
+
+           Compound np.det.assocs FLogPerMillion     Relation      Valency
+485       Radfahren    0.19185318     1.83784511 Undetermined     Optional
+222 Zuckerschlecken    0.17633609    -0.76821007       Object   Transitive
+487       Skifahren    0.13553723     0.95260638      Adjunct     Optional
+265  Fußballspielen    0.10264749     0.96116861       Object     Optional
+134     Rätselraten    0.10248538    -1.03837784 Undetermined     Optional
+384   Blutvergießen    0.10246348    -0.45942630       Object   Transitive
+486      Autofahren    0.09797579     1.67127733 Undetermined     Optional
+178   Bogenschießen    0.09133391     0.01190985 Undetermined     Optional
+115      Teilnehmen    0.08341132     3.56181134      Adjunct   Transitive
+490      Zeitfahren    0.08237140    -0.57083218      Adjunct     Optional
+652     Zähneputzen    0.08225545     0.28815835       Object     Optional
+772  Fliegenfischen    0.08028610    -0.86126657 Undetermined     Optional
+803     Kartenlegen    0.07419807    -0.42309918       Object   Transitive
+179   Vogelschießen    0.06935808    -1.65796676       Object     Optional
+489  Motorradfahren    0.06741707    -0.06277583 Undetermined     Optional
+146   Westernreiten    0.06677468    -0.99673820      Adjunct     Optional
+291     Bergsteigen    0.06637348    -0.18281297      Adjunct Intransitive
+263 Computerspielen    0.06459788     1.01667475      Adjunct     Optional
+564    Segelfliegen    0.06441503    -1.32154827      Adjunct     Optional
+126      Kopfnicken    0.06387581    -1.09331156      Adjunct Intransitive
+
+
+NO PREFERENCE FOR/AGAINST UNIVERBATION  IN:  NP with D 
+
+           Compound np.det.assocs FLogPerMillion     Relation      Valency
+648  Beerenpflücken  2.487705e-05     -3.9523090       Object   Transitive
+542   Dreiradfahren  2.487705e-05     -4.0584991 Undetermined     Optional
+109      Kornmahlen  7.086722e-15     -3.7625525       Object   Transitive
+58       Wattlaufen  5.029807e-15     -4.2550290      Adjunct Intransitive
+227   Luftschnappen  4.009773e-15     -1.6904682 Undetermined   Transitive
+299     Couchsurfen  3.419860e-15     -4.2499912      Adjunct Intransitive
+373   Punschtrinken  3.414956e-15     -4.6454562       Object     Optional
+28     Kopfauflegen  3.414956e-15     -5.3689087       Object   Transitive
+535  Anhängerfahren  2.701576e-15     -3.4795108      Adjunct     Optional
+582   Pfötchengeben  5.718938e-17     -3.2666525       Object   Transitive
+159   Schrittreiten  5.018521e-17     -2.8206662      Adjunct     Optional
+61       Seillaufen -2.108750e-17     -4.5665623      Adjunct Intransitive
+75       Hakenlösen -4.950905e-17     -4.6233151       Object   Transitive
+809   Gedankenlesen -5.252362e-17     -0.6967991       Object     Optional
+784 Zigarettenholen -5.303321e-16     -2.9571243       Object   Transitive
+466  Däumchendrehen -9.143918e-16     -2.4940412 Undetermined   Transitive
+39  Marmeladekochen -1.800367e-15     -3.3715954       Object     Optional
+821    Liedermachen -6.301451e-15     -3.6910935       Object   Transitive
+743     Haareziehen -6.765802e-15     -4.1361242       Object   Transitive
+702   Pferdestehlen -1.057241e-14     -2.6167190       Object     Optional
+
+
+PREFERENCE AGAINST UNIVERBATION  IN:  NP with D 
+
+           Compound np.det.assocs FLogPerMillion Relation    Valency
+87       Geldmachen   -0.04584308     0.12218814   Object Transitive
+816    Bildermachen   -0.04803753    -0.13303977   Object Transitive
+124 Rücksichtnehmen   -0.04820902     0.10954832   Object Transitive
+630      Autokaufen   -0.04872251    -1.61380948   Object Transitive
+326       Hausbauen   -0.05081319    -1.25325438   Object   Optional
+95      Angstmachen   -0.05169810    -0.09583028   Object Transitive
+827     Augenöffnen   -0.05750728    -0.99615574   Object Transitive
+102      Fotomachen   -0.06166987    -1.22211770   Object Transitive
+49       Zeitlassen   -0.06220471     0.24061941   Object Transitive
+749  Kinderbekommen   -0.06362478     0.09863196   Object Transitive
+577        Ratgeben   -0.07668975    -0.80520177   Object Transitive
+599      Rechthaben   -0.07931415     0.99713868   Object Transitive
+383   Geldverdienen   -0.08358430     1.88516031   Object Transitive
+311    Geldausgeben   -0.08528744     0.31073867   Object Transitive
+600       Spaßhaben   -0.08975261     1.08749858   Object Transitive
+97     Fehlermachen   -0.09275112     0.54188791   Object Transitive
+579       Handgeben   -0.10021762    -0.47705698   Object Transitive
+121      Zeitnehmen   -0.10328535     0.66258981   Object Transitive
+824  Gedankenmachen   -0.11981257     1.68170736   Object Transitive
+782     Kinderhaben   -0.13073956     0.77014656   Object Transitive
+
+
+=======================================================================
+
+
+PREFERENCE FOR UNIVERBATION  IN:  NP with P-clitic 
+
+              Compound np.clt.assocs FLogPerMillion     Relation      Valency
+485          Radfahren    0.11563919     1.83784511 Undetermined     Optional
+486         Autofahren    0.10656890     1.67127733 Undetermined     Optional
+487          Skifahren    0.09578753     0.95260638      Adjunct     Optional
+645        Sonnenbaden    0.07320775    -0.42946653      Adjunct Intransitive
+178      Bogenschießen    0.06194515     0.01190985 Undetermined     Optional
+652        Zähneputzen    0.06137117     0.28815835       Object     Optional
+291        Bergsteigen    0.05582780    -0.18281297      Adjunct Intransitive
+490         Zeitfahren    0.05271432    -0.57083218      Adjunct     Optional
+772     Fliegenfischen    0.05000866    -0.86126657 Undetermined     Optional
+295         Windsurfen    0.04869517    -0.16828901      Adjunct Intransitive
+601         Kreuzheben    0.04808173    -0.41449112      Adjunct   Transitive
+146      Westernreiten    0.04631371    -0.99673820      Adjunct     Optional
+602       Gewichtheben    0.04276659    -1.31859644       Object   Transitive
+268        Skispringen    0.04209817    -1.14578765      Adjunct Intransitive
+46        Wasserlassen    0.03920725    -0.29961757       Object   Transitive
+703     Treppensteigen    0.03805104    -0.46866081 Undetermined Intransitive
+269 Fallschirmspringen    0.03658341    -1.06297429      Adjunct Intransitive
+50           Eislaufen    0.03498073    -0.84194960      Adjunct Intransitive
+482          Eierlegen    0.03427170    -2.14023491       Object   Transitive
+622         Probehören    0.03418619    -0.65192199      Adjunct   Transitive
+
+
+NO PREFERENCE FOR/AGAINST UNIVERBATION  IN:  NP with P-clitic 
+
+             Compound np.clt.assocs FLogPerMillion     Relation      Valency
+758    Spieleerfinden  4.145209e-15      -4.449546       Object   Transitive
+727      Bombenwerfen  3.803209e-15      -3.287546 Undetermined   Transitive
+525 Straßenbahnfahren  3.803209e-15      -2.763374 Undetermined     Optional
+428  Portraitzeichnen  3.803209e-15      -4.367146       Object     Optional
+742      Linienziehen  3.682889e-15      -3.922895       Object   Transitive
+446       Betonbohren  3.682889e-15      -4.186710      Adjunct     Optional
+89         Glasmachen  3.293826e-15      -3.967347       Object   Transitive
+185       Eisschießen  3.293826e-15      -4.566562      Adjunct     Optional
+227     Luftschnappen  8.131421e-16      -1.690468 Undetermined   Transitive
+51         Amoklaufen  2.354866e-17      -1.334532      Adjunct Intransitive
+415       Ankerwerfen -3.839692e-17      -3.270419       Object   Transitive
+438        Geldziehen -3.839692e-17      -3.579717       Object   Transitive
+401   Ballwegschlagen -3.839692e-17      -3.517430       Object   Transitive
+760    Kindererziehen -4.939605e-17      -1.637117       Object   Transitive
+737    Kartenzeichnen -4.939605e-17      -4.127196       Object     Optional
+756   Phrasendreschen -6.585261e-17      -3.510210       Object   Transitive
+63        Bogenlaufen -6.585261e-17      -4.249991       Object Intransitive
+471      Filmeinlegen -2.150032e-15      -3.956047       Object   Transitive
+101        Käsemachen -2.339857e-15      -3.616370       Object   Transitive
+720      Steinewerfen -3.616124e-15      -2.173695 Undetermined   Transitive
+
+
+PREFERENCE AGAINST UNIVERBATION  IN:  NP with P-clitic 
+
+          Compound np.clt.assocs FLogPerMillion     Relation      Valency
+65       Grablegen   -0.04272972     -2.0171171       Object   Transitive
+76     Wasserlösen   -0.04551558     -2.1245151       Object   Transitive
+86      Pipimachen   -0.04912600     -1.9055796       Object   Transitive
+479    Zeiterleben   -0.05361901     -2.6567644       Object   Transitive
+151  Geländereiten   -0.05494756     -2.2869988      Adjunct     Optional
+85     Partymachen   -0.05565825     -0.8239786       Object   Transitive
+121     Zeitnehmen   -0.05719458      0.6625898       Object   Transitive
+516  Geländefahren   -0.06201846     -2.4507223      Adjunct     Optional
+656    Haareraufen   -0.06975154     -1.8747349       Object   Transitive
+383  Geldverdienen   -0.07230853      1.8851603       Object   Transitive
+297      Websurfen   -0.07838530     -2.7794111      Adjunct Intransitive
+191    Torschießen   -0.08132162     -1.8348853       Object     Optional
+600      Spaßhaben   -0.08407643      1.0874986       Object   Transitive
+598      Teilhaben   -0.08496045      1.6844775       Object   Transitive
+623     Radiohören   -0.08574290     -0.8231620 Undetermined   Transitive
+99    Urlaubmachen   -0.08930916      0.4356236       Object   Transitive
+273 Wasserspringen   -0.10718970     -1.9942133      Adjunct Intransitive
+529    Kreisfahren   -0.10823065     -2.7070367      Adjunct     Optional
+66      Feuerlegen   -0.18057226     -1.7777269       Object   Transitive
+296 Internetsurfen   -0.34498367     -0.6081823      Adjunct Intransitive
+
+
+=======================================================================
+
+
+PREFERENCE FOR UNIVERBATION  IN:  bare N 
+
+              Compound np.ndt.assocs FLogPerMillion     Relation      Valency
+115         Teilnehmen    0.47679574     3.56181134      Adjunct   Transitive
+598          Teilhaben    0.21111705     1.68447752       Object   Transitive
+485          Radfahren    0.17903634     1.83784511 Undetermined     Optional
+263    Computerspielen    0.11964432     1.01667475      Adjunct     Optional
+487          Skifahren    0.09917729     0.95260638      Adjunct     Optional
+295         Windsurfen    0.08822557    -0.16828901      Adjunct Intransitive
+291        Bergsteigen    0.08375826    -0.18281297      Adjunct Intransitive
+178      Bogenschießen    0.08335079     0.01190985 Undetermined     Optional
+145         Zeitreisen    0.08281284     0.70735642      Adjunct Intransitive
+601         Kreuzheben    0.07826352    -0.41449112      Adjunct   Transitive
+645        Sonnenbaden    0.06089034    -0.42946653      Adjunct Intransitive
+147         Ponyreiten    0.05713361    -0.88321532       Object     Optional
+50           Eislaufen    0.05507016    -0.84194960      Adjunct Intransitive
+384      Blutvergießen    0.05436463    -0.45942630       Object   Transitive
+27        Handauflegen    0.05434228    -0.94747649       Object   Transitive
+803        Kartenlegen    0.05073044    -0.42309918       Object   Transitive
+269 Fallschirmspringen    0.04873015    -1.06297429      Adjunct Intransitive
+772     Fliegenfischen    0.04806353    -0.86126657 Undetermined     Optional
+622         Probehören    0.04795537    -0.65192199      Adjunct   Transitive
+268        Skispringen    0.04635417    -1.14578765      Adjunct Intransitive
+
+
+NO PREFERENCE FOR/AGAINST UNIVERBATION  IN:  bare N 
+
+             Compound np.ndt.assocs FLogPerMillion     Relation      Valency
+167         Waldroden  3.545072e-04      -3.816448       Object   Transitive
+629     Kaugummikauen  3.517632e-04      -2.259161       Object     Optional
+375    Wäschetrocknen  3.317897e-04      -2.936646       Object   Transitive
+13     Arschabwischen  3.256810e-04      -4.260092       Object     Optional
+777     Glockengießen  2.786056e-04      -4.675762       Object   Transitive
+504      Rollerfahren  1.773312e-04      -1.996322 Undetermined     Optional
+218     Feuerschlagen  1.492307e-14      -4.401632      Adjunct   Transitive
+604         Handheben -5.158992e-17      -2.454887       Object   Transitive
+538        Liftfahren -3.563466e-16      -3.577149 Undetermined     Optional
+63        Bogenlaufen -6.640961e-15      -4.249991       Object Intransitive
+748      Krippenbauen -1.340508e-14      -5.294801       Object     Optional
+547      Gondelfahren -1.708817e-14      -3.154735 Undetermined     Optional
+761      Kurvenfahren -1.026833e-05      -1.219930 Undetermined     Optional
+244 Fähnchenschwenken -2.385022e-05      -4.455700       Object   Transitive
+317   Trikotausziehen -7.581526e-05      -3.930168       Object   Transitive
+725      Münzenwerfen -1.705062e-04      -4.668099 Undetermined   Transitive
+561         Laubfegen -2.890945e-04      -4.017843       Object     Optional
+78    Schwanzlutschen -3.671381e-04      -4.172658       Object     Optional
+394       Autowaschen -4.558309e-04      -1.806989       Object     Optional
+771        Eierfärben -4.559421e-04      -3.429614       Object     Optional
+
+
+PREFERENCE AGAINST UNIVERBATION  IN:  bare N 
+
+           Compound np.ndt.assocs FLogPerMillion Relation    Valency
+124 Rücksichtnehmen   -0.06035954      0.1095483   Object Transitive
+311    Geldausgeben   -0.06106771      0.3107387   Object Transitive
+15      Handanlegen   -0.06186953     -0.2779941   Object Transitive
+79      Musikmachen   -0.06248802      0.4167136   Object Transitive
+97     Fehlermachen   -0.06264015      0.5418879   Object Transitive
+87       Geldmachen   -0.06660668      0.1221881   Object Transitive
+574        Gasgeben   -0.06677269      0.6705765   Object Transitive
+123  Stellungnehmen   -0.06923968      1.2945776   Object Transitive
+621      Musikhören   -0.07187722      0.7893732   Object Transitive
+81        Mutmachen   -0.07245149      0.2995919   Object Transitive
+49       Zeitlassen   -0.07409754      0.2406194   Object Transitive
+116  Abschiednehmen   -0.07862377      0.4955525   Object Transitive
+121      Zeitnehmen   -0.08157699      0.6625898   Object Transitive
+99     Urlaubmachen   -0.09014054      0.4356236   Object Transitive
+782     Kinderhaben   -0.09944334      0.7701466   Object Transitive
+599      Rechthaben   -0.12558986      0.9971387   Object Transitive
+600       Spaßhaben   -0.13047031      1.0874986   Object Transitive
+824  Gedankenmachen   -0.15001407      1.6817074   Object Transitive
+383   Geldverdienen   -0.15525601      1.8851603   Object Transitive
+578      Rechtgeben   -0.16054241      1.4287054   Object Transitive
+
+
+=======================================================================
+
+
+PREFERENCE FOR UNIVERBATION  IN:  Participle 
+
+               Compound particip.assocs FLogPerMillion     Relation      Valency
+115          Teilnehmen      0.91771409      3.5618113      Adjunct   Transitive
+331   Pulverbeschichten      0.11934376     -0.9469220      Adjunct   Transitive
+494         Probefahren      0.08140299      0.7544946      Adjunct     Optional
+388      Feuerverzinken      0.07854704     -1.7104885      Adjunct   Transitive
+836      Zwangsernähren      0.06087150     -2.3533738      Adjunct Intransitive
+40         Raubkopieren      0.05406284     -1.6349088      Adjunct     Optional
+627   Grundimmunisieren      0.04754729     -2.9922157      Adjunct   Transitive
+622          Probehören      0.04299224     -0.6519220      Adjunct   Transitive
+598           Teilhaben      0.02749324      1.6844775       Object   Transitive
+399           Handweben      0.02428644     -4.3842407      Adjunct     Optional
+236      Punktschweißen      0.02320008     -3.6270939      Adjunct     Optional
+152         Probereiten      0.02126626     -2.3047992      Adjunct     Optional
+520          Testfahren      0.01886071     -1.1127506      Adjunct     Optional
+382 Hochglanzverdichten      0.01562114     -3.7594708      Adjunct   Transitive
+683     Büchsenschießen      0.01271838     -4.4016324 Undetermined     Optional
+235      Laserschweißen      0.01102495     -2.9165783      Adjunct     Optional
+432        Handzeichnen      0.01094888     -3.0450139      Adjunct     Optional
+470          Plandrehen      0.01042805     -4.3338099      Adjunct   Transitive
+645         Sonnenbaden      0.01032760     -0.4294665      Adjunct Intransitive
+618           Kielholen      0.00942336     -3.0241487       Object   Transitive
+
+
+NO PREFERENCE FOR/AGAINST UNIVERBATION  IN:  Participle 
+
+              Compound particip.assocs FLogPerMillion     Relation      Valency
+70      Korrekturlesen    1.965027e-03     -0.8307005      Adjunct     Optional
+632    Schulterklopfen    9.614344e-04     -1.3002765      Adjunct Intransitive
+195     Gewehrschießen    3.525463e-15     -4.3068540      Adjunct     Optional
+126         Kopfnicken   -9.115519e-16     -1.0933116      Adjunct Intransitive
+542      Dreiradfahren   -2.403712e-04     -4.0584991 Undetermined     Optional
+501         Schifahren   -7.648577e-04     -1.9474061      Adjunct     Optional
+671   Pistolenschießen   -1.145043e-03     -3.6711782      Adjunct     Optional
+151      Geländereiten   -1.396577e-03     -2.2869988      Adjunct     Optional
+130      Moralpredigen   -1.406677e-03     -2.4204293       Object     Optional
+128   Blümchenpflücken   -1.442177e-03     -4.3615125       Object   Transitive
+513          Bobfahren   -1.442177e-03     -2.9808519 Undetermined     Optional
+269 Fallschirmspringen   -2.215965e-03     -1.0629743      Adjunct Intransitive
+296     Internetsurfen   -2.224941e-03     -0.6081823      Adjunct Intransitive
+446        Betonbohren   -2.395920e-03     -4.1867097      Adjunct     Optional
+538         Liftfahren   -2.395920e-03     -3.5771493 Undetermined     Optional
+607        Geistheilen   -2.395920e-03     -3.6825098      Adjunct     Optional
+659     Waffenreinigen   -2.395920e-03     -3.7625525       Object     Optional
+661    Elefantenreiten   -2.395920e-03     -2.9245570 Undetermined     Optional
+77      Daumenlutschen   -2.395920e-03     -2.8814413 Undetermined     Optional
+147         Ponyreiten   -2.395920e-03     -0.8832153       Object     Optional
+
+
+PREFERENCE AGAINST UNIVERBATION  IN:  Participle 
+
+              Compound particip.assocs FLogPerMillion Relation    Valency
+578         Rechtgeben     -0.05833419     1.42870539   Object Transitive
+823 Hausaufgabenmachen     -0.05890467    -0.53740011   Object Transitive
+574           Gasgeben     -0.05918016     0.67057645   Object Transitive
+49          Zeitlassen     -0.05935217     0.24061941   Object Transitive
+816       Bildermachen     -0.06431865    -0.13303977   Object Transitive
+81           Mutmachen     -0.06480766     0.29959193   Object Transitive
+124    Rücksichtnehmen     -0.06611330     0.10954832   Object Transitive
+120      Abstandnehmen     -0.06867688    -0.16650942   Object Transitive
+599         Rechthaben     -0.06970746     0.99713868   Object Transitive
+118        Platznehmen     -0.07162501     0.05353051   Object Transitive
+121         Zeitnehmen     -0.07198127     0.66258981   Object Transitive
+265     Fußballspielen     -0.07297910     0.96116861   Object   Optional
+749     Kinderbekommen     -0.07305902     0.09863196   Object Transitive
+84       Schlussmachen     -0.07624784    -0.02348761   Object Transitive
+692      Grenzensetzen     -0.09283047    -0.30397952   Object Transitive
+123     Stellungnehmen     -0.09401221     1.29457757   Object Transitive
+97        Fehlermachen     -0.09967251     0.54188791   Object Transitive
+383      Geldverdienen     -0.10535292     1.88516031   Object Transitive
+824     Gedankenmachen     -0.15485030     1.68170736   Object Transitive
+581       Auftraggeben     -0.16622600     0.59731690   Object Transitive
+
+
+=======================================================================
+
+
+PREFERENCE FOR UNIVERBATION  IN:  'am' Progressive 
+
+          Compound prog.assocs FLogPerMillion     Relation      Valency
+485      Radfahren  0.12297237     1.83784511 Undetermined     Optional
+487      Skifahren  0.09393793     0.95260638      Adjunct     Optional
+486     Autofahren  0.06339714     1.67127733 Undetermined     Optional
+450    Brotbrechen  0.06161055    -2.51598149       Object   Transitive
+489 Motorradfahren  0.06123379    -0.06277583 Undetermined     Optional
+178  Bogenschießen  0.06086164     0.01190985 Undetermined     Optional
+814    Filmemachen  0.05540182    -0.90406219       Object   Transitive
+180  Preisschießen  0.05197125    -2.22674783      Adjunct     Optional
+146  Westernreiten  0.04836856    -0.99673820      Adjunct     Optional
+772 Fliegenfischen  0.04450221    -0.86126657 Undetermined     Optional
+183  Pokalschießen  0.04245055    -2.46242811      Adjunct     Optional
+384  Blutvergießen  0.04030617    -0.45942630       Object   Transitive
+564   Segelfliegen  0.04030617    -1.32154827      Adjunct     Optional
+182  Sportschießen  0.03919519    -1.93244321      Adjunct     Optional
+803    Kartenlegen  0.03688593    -0.42309918       Object   Transitive
+50       Eislaufen  0.03642871    -0.84194960      Adjunct Intransitive
+490     Zeitfahren  0.03568302    -0.57083218      Adjunct     Optional
+652    Zähneputzen  0.03517677     0.28815835       Object     Optional
+565 Drachenfliegen  0.03316665    -1.24450761 Undetermined     Optional
+482      Eierlegen  0.03184636    -2.14023491       Object   Transitive
+
+
+NO PREFERENCE FOR/AGAINST UNIVERBATION  IN:  'am' Progressive 
+
+               Compound   prog.assocs FLogPerMillion     Relation      Valency
+505          Velofahren  1.408068e-02    -2.39102715 Undetermined     Optional
+796       Kinderkriegen  1.388085e-02    -0.50172938       Object   Transitive
+497           Zugfahren  1.379171e-02    -0.06552729 Undetermined     Optional
+645         Sonnenbaden  9.696195e-03    -0.42946653      Adjunct Intransitive
+267         Golfspielen  9.108521e-03    -0.93061083       Object     Optional
+504        Rollerfahren  9.108521e-03    -1.99632189 Undetermined     Optional
+70       Korrekturlesen  7.709124e-03    -0.83070052      Adjunct     Optional
+311        Geldausgeben  7.512345e-03     0.31073867       Object   Transitive
+492           Busfahren  2.985322e-03     0.27572239 Undetermined     Optional
+82          Radiomachen  2.912814e-03    -2.37780253       Object   Transitive
+491          Kanufahren  1.756142e-03    -0.60884089 Undetermined     Optional
+318          Brotbacken  1.303330e-15    -1.03736600       Object     Optional
+670        Toreschießen -1.173432e-03    -0.26212445       Object     Optional
+759 Geschichtenerzählen -2.651694e-03    -0.14365846       Object     Optional
+621          Musikhören -5.401082e-03     0.78937318       Object   Transitive
+503         Mopedfahren -7.324416e-03    -1.94589968 Undetermined     Optional
+327           Nestbauen -8.991792e-03    -2.83521192       Object     Optional
+83          Beutemachen -1.174607e-02    -2.13355405       Object   Transitive
+422          Geldzählen -1.187755e-02    -2.91923078       Object     Optional
+270        Seilspringen -1.391536e-02    -1.46460777      Adjunct Intransitive
+
+
+PREFERENCE AGAINST UNIVERBATION  IN:  'am' Progressive 
+
+           Compound prog.assocs FLogPerMillion     Relation      Valency
+488   Fahrradfahren -0.02402243      0.5450100 Undetermined     Optional
+611       Luftholen -0.02767978     -0.4373166       Object   Transitive
+32     Kaffeekochen -0.02767978     -1.1836927       Object     Optional
+80      Feuermachen -0.02918303     -1.2958140       Object   Transitive
+383   Geldverdienen -0.03075889      1.8851603       Object   Transitive
+79      Musikmachen -0.03468383      0.4167136       Object   Transitive
+393   Wäschewaschen -0.03872217     -0.6985272       Object     Optional
+361     Biertrinken -0.04185530     -0.1986870       Object     Optional
+574        Gasgeben -0.04310927      0.6705765       Object   Transitive
+359   Kaffeetrinken -0.04870785      0.6126997       Object     Optional
+360      Teetrinken -0.05491350     -0.1249663       Object     Optional
+623      Radiohören -0.05617023     -0.8231620 Undetermined   Transitive
+351    Wassertesten -0.06379400     -3.8838138       Object   Transitive
+816    Bildermachen -0.06576584     -0.1330398       Object   Transitive
+54        Fußlaufen -0.06884185     -2.3685717      Adjunct Intransitive
+376     Klavierüben -0.06884185     -3.6571920      Adjunct     Optional
+85      Partymachen -0.07018590     -0.8239786       Object   Transitive
+326       Hausbauen -0.07499030     -1.2532544       Object     Optional
+266  Klavierspielen -0.08725861     -0.5461489       Object     Optional
+263 Computerspielen -0.30368274      1.0166747      Adjunct     Optional
+
+
+=======================================================================
+
+
+PREFERENCE FOR UNIVERBATION  IN:  'zu' Infinitive 
+
+          Compound infzu.assocs FLogPerMillion Relation      Valency
+115     Teilnehmen 0.9198564789      3.5618113  Adjunct   Transitive
+598      Teilhaben 0.1903013687      1.6844775   Object   Transitive
+270   Seilspringen 0.0277606548     -1.4646078  Adjunct Intransitive
+40    Raubkopieren 0.0091482697     -1.6349088  Adjunct     Optional
+622     Probehören 0.0074518311     -0.6519220  Adjunct   Transitive
+836 Zwangsernähren 0.0074214922     -2.3533738  Adjunct Intransitive
+520     Testfahren 0.0023260134     -1.1127506  Adjunct     Optional
+50       Eislaufen 0.0001447533     -0.8419496  Adjunct Intransitive
+
+
+NO PREFERENCE FOR/AGAINST UNIVERBATION  IN:  'zu' Infinitive 
+
+            Compound  infzu.assocs FLogPerMillion     Relation      Valency
+520       Testfahren  0.0023260134     -1.1127506      Adjunct     Optional
+50         Eislaufen  0.0001447533     -0.8419496      Adjunct Intransitive
+501       Schifahren -0.0010716065     -1.9474061      Adjunct     Optional
+494      Probefahren -0.0013336411      0.7544946      Adjunct     Optional
+404       Ballwerfen -0.0014282913     -2.4785370       Object   Transitive
+417      Probewohnen -0.0018717322     -2.6315487      Adjunct Intransitive
+211    Probeschlafen -0.0023941515     -4.3958015      Adjunct Intransitive
+152      Probereiten -0.0024812842     -2.3047992      Adjunct     Optional
+595       Filmgucken -0.0037166965     -2.5539607       Object     Optional
+435       Zahnziehen -0.0037166965     -2.6889415       Object   Transitive
+806     Plattenlegen -0.0037166965     -4.4681222       Object   Transitive
+128 Blümchenpflücken -0.0037166965     -4.3615125       Object   Transitive
+221   Schaumschlagen -0.0037166965     -4.4193320       Object   Transitive
+510      Buggyfahren -0.0037166965     -2.9738146 Undetermined     Optional
+496     Ballonfahren -0.0037166965     -1.1412892 Undetermined     Optional
+134      Rätselraten -0.0037166965     -1.0383778 Undetermined     Optional
+526     Slalomfahren -0.0040273026     -2.9766236 Undetermined     Optional
+508    Gespannfahren -0.0040273026     -2.7509516 Undetermined     Optional
+672 Scheibenschießen -0.0040273026     -2.6069533      Adjunct     Optional
+146    Westernreiten -0.0040273026     -0.9967382      Adjunct     Optional
+
+
+PREFERENCE AGAINST UNIVERBATION  IN:  'zu' Infinitive 
+
+           Compound infzu.assocs FLogPerMillion Relation    Valency
+97     Fehlermachen  -0.06650774     0.54188791   Object Transitive
+581    Auftraggeben  -0.06733004     0.59731690   Object Transitive
+81        Mutmachen  -0.07676803     0.29959193   Object Transitive
+118     Platznehmen  -0.07678807     0.05353051   Object Transitive
+621      Musikhören  -0.07765444     0.78937318   Object Transitive
+265  Fußballspielen  -0.07927062     0.96116861   Object   Optional
+98      Platzmachen  -0.08117642    -0.42397503   Object Transitive
+99     Urlaubmachen  -0.08223677     0.43562364   Object Transitive
+87       Geldmachen  -0.08340117     0.12218814   Object Transitive
+120   Abstandnehmen  -0.08455836    -0.16650942   Object Transitive
+838 Kontakteknüpfen  -0.09143006    -0.51339895   Object Transitive
+116  Abschiednehmen  -0.09268084     0.49555252   Object Transitive
+124 Rücksichtnehmen  -0.09445706     0.10954832   Object Transitive
+125  Einflussnehmen  -0.09520878    -0.14018882   Object Transitive
+79      Musikmachen  -0.10096462     0.41671365   Object Transitive
+123  Stellungnehmen  -0.11657825     1.29457757   Object Transitive
+600       Spaßhaben  -0.11935417     1.08749858   Object Transitive
+551       Fußfassen  -0.12563865    -0.08079711  Adjunct Transitive
+824  Gedankenmachen  -0.15428838     1.68170736   Object Transitive
+383   Geldverdienen  -0.19147952     1.88516031   Object Transitive
+
+
+=======================================================================
+
+
+PREFERENCE FOR UNIVERBATION  IN:  All contexts 
+
+             Compound all.assocs FLogPerMillion     Relation      Valency
+115        Teilnehmen 0.33915790     3.56181134      Adjunct   Transitive
+117         Maßnehmen 0.31588596     3.41882350       Object   Transitive
+598         Teilhaben 0.10879247     1.68447752       Object   Transitive
+485         Radfahren 0.10007946     1.83784511 Undetermined     Optional
+263   Computerspielen 0.08226168     1.01667475      Adjunct     Optional
+145        Zeitreisen 0.07210684     0.70735642      Adjunct Intransitive
+487         Skifahren 0.06540674     0.95260638      Adjunct     Optional
+494       Probefahren 0.05955923     0.75449459      Adjunct     Optional
+178     Bogenschießen 0.04964203     0.01190985 Undetermined     Optional
+295        Windsurfen 0.04910701    -0.16828901      Adjunct Intransitive
+539      Schifffahren 0.04807657    -0.01087213 Undetermined     Optional
+291       Bergsteigen 0.04735521    -0.18281297      Adjunct Intransitive
+601        Kreuzheben 0.04358693    -0.41449112      Adjunct   Transitive
+486        Autofahren 0.04353932     1.67127733 Undetermined     Optional
+645       Sonnenbaden 0.04302132    -0.42946653      Adjunct Intransitive
+768       Bootsfahren 0.04164951    -0.50540607 Undetermined     Optional
+222   Zuckerschlecken 0.03561553    -0.76821007       Object   Transitive
+772    Fliegenfischen 0.03445068    -0.86126657 Undetermined     Optional
+331 Pulverbeschichten 0.03210091    -0.94692201      Adjunct   Transitive
+490        Zeitfahren 0.03176103    -0.57083218      Adjunct     Optional
+
+
+NO PREFERENCE FOR/AGAINST UNIVERBATION  IN:  All contexts 
+
+           Compound    all.assocs FLogPerMillion     Relation      Valency
+488   Fahrradfahren  0.0089748634      0.5450100 Undetermined     Optional
+499      Taxifahren  0.0080584644     -1.0086559 Undetermined     Optional
+716    Händewaschen  0.0054220081     -0.5320165       Object     Optional
+46     Wasserlassen  0.0052749151     -0.2996176       Object   Transitive
+107      Rasenmähen  0.0049498651     -0.8344912       Object   Transitive
+502     Kajakfahren  0.0048207904     -1.7866727 Undetermined     Optional
+449      Bierbrauen  0.0019903176     -1.4805481       Object   Transitive
+495      Bootfahren -0.0003611479     -1.1066623 Undetermined     Optional
+123  Stellungnehmen -0.0005255267      1.2945776       Object   Transitive
+796   Kinderkriegen -0.0020951604     -0.5017294       Object   Transitive
+270    Seilspringen -0.0021504428     -1.4646078      Adjunct Intransitive
+394     Autowaschen -0.0021623321     -1.8069889       Object     Optional
+543  Autobahnfahren -0.0024733465     -1.3934055      Adjunct     Optional
+632 Schulterklopfen -0.0026845813     -1.3002765      Adjunct Intransitive
+318      Brotbacken -0.0041306204     -1.0373660       Object     Optional
+812      Notenlesen -0.0065917820     -1.7798496       Object     Optional
+814     Filmemachen -0.0066207122     -0.9040622       Object   Transitive
+264  Theaterspielen -0.0073783673     -0.7145089 Undetermined     Optional
+266  Klavierspielen -0.0085320717     -0.5461489       Object     Optional
+717    Haarewaschen -0.0099902830     -1.0309144       Object     Optional
+
+
+PREFERENCE AGAINST UNIVERBATION  IN:  All contexts 
+
+           Compound  all.assocs FLogPerMillion Relation    Valency
+621      Musikhören -0.07428746     0.78937318   Object Transitive
+118     Platznehmen -0.07441046     0.05353051   Object Transitive
+551       Fußfassen -0.07475092    -0.08079711  Adjunct Transitive
+79      Musikmachen -0.07477636     0.41671365   Object Transitive
+311    Geldausgeben -0.07550185     0.31073867   Object Transitive
+87       Geldmachen -0.07555883     0.12218814   Object Transitive
+124 Rücksichtnehmen -0.08017391     0.10954832   Object Transitive
+749  Kinderbekommen -0.08237546     0.09863196   Object Transitive
+81        Mutmachen -0.08487630     0.29959193   Object Transitive
+49       Zeitlassen -0.08855235     0.24061941   Object Transitive
+99     Urlaubmachen -0.09852493     0.43562364   Object Transitive
+97     Fehlermachen -0.10412635     0.54188791   Object Transitive
+581    Auftraggeben -0.10813854     0.59731690   Object Transitive
+121      Zeitnehmen -0.11024454     0.66258981   Object Transitive
+782     Kinderhaben -0.11712718     0.77014656   Object Transitive
+599      Rechthaben -0.12633697     0.99713868   Object Transitive
+600       Spaßhaben -0.13657007     1.08749858   Object Transitive
+578      Rechtgeben -0.14833425     1.42870539   Object Transitive
+383   Geldverdienen -0.17744466     1.88516031   Object Transitive
+824  Gedankenmachen -0.18778253     1.68170736   Object Transitive
+
+
+=======================================================================
+
+
+PREFERENCE FOR UNIVERBATION  IN:  NP with D 
+
+           Compound np.det.assocs FLogPerMillion     Relation      Valency
+485       Radfahren    0.19185318     1.83784511 Undetermined     Optional
+222 Zuckerschlecken    0.17633609    -0.76821007       Object   Transitive
+487       Skifahren    0.13553723     0.95260638      Adjunct     Optional
+265  Fußballspielen    0.10264749     0.96116861       Object     Optional
+134     Rätselraten    0.10248538    -1.03837784 Undetermined     Optional
+384   Blutvergießen    0.10246348    -0.45942630       Object   Transitive
+486      Autofahren    0.09797579     1.67127733 Undetermined     Optional
+178   Bogenschießen    0.09133391     0.01190985 Undetermined     Optional
+115      Teilnehmen    0.08341132     3.56181134      Adjunct   Transitive
+490      Zeitfahren    0.08237140    -0.57083218      Adjunct     Optional
+652     Zähneputzen    0.08225545     0.28815835       Object     Optional
+772  Fliegenfischen    0.08028610    -0.86126657 Undetermined     Optional
+803     Kartenlegen    0.07419807    -0.42309918       Object   Transitive
+179   Vogelschießen    0.06935808    -1.65796676       Object     Optional
+489  Motorradfahren    0.06741707    -0.06277583 Undetermined     Optional
+146   Westernreiten    0.06677468    -0.99673820      Adjunct     Optional
+291     Bergsteigen    0.06637348    -0.18281297      Adjunct Intransitive
+263 Computerspielen    0.06459788     1.01667475      Adjunct     Optional
+564    Segelfliegen    0.06441503    -1.32154827      Adjunct     Optional
+126      Kopfnicken    0.06387581    -1.09331156      Adjunct Intransitive
+
+
+NO PREFERENCE FOR/AGAINST UNIVERBATION  IN:  NP with D 
+
+           Compound np.det.assocs FLogPerMillion     Relation      Valency
+648  Beerenpflücken  2.487705e-05     -3.9523090       Object   Transitive
+542   Dreiradfahren  2.487705e-05     -4.0584991 Undetermined     Optional
+109      Kornmahlen  7.086722e-15     -3.7625525       Object   Transitive
+58       Wattlaufen  5.029807e-15     -4.2550290      Adjunct Intransitive
+227   Luftschnappen  4.009773e-15     -1.6904682 Undetermined   Transitive
+299     Couchsurfen  3.419860e-15     -4.2499912      Adjunct Intransitive
+373   Punschtrinken  3.414956e-15     -4.6454562       Object     Optional
+28     Kopfauflegen  3.414956e-15     -5.3689087       Object   Transitive
+535  Anhängerfahren  2.701576e-15     -3.4795108      Adjunct     Optional
+582   Pfötchengeben  5.718938e-17     -3.2666525       Object   Transitive
+159   Schrittreiten  5.018521e-17     -2.8206662      Adjunct     Optional
+61       Seillaufen -2.108750e-17     -4.5665623      Adjunct Intransitive
+75       Hakenlösen -4.950905e-17     -4.6233151       Object   Transitive
+809   Gedankenlesen -5.252362e-17     -0.6967991       Object     Optional
+784 Zigarettenholen -5.303321e-16     -2.9571243       Object   Transitive
+466  Däumchendrehen -9.143918e-16     -2.4940412 Undetermined   Transitive
+39  Marmeladekochen -1.800367e-15     -3.3715954       Object     Optional
+821    Liedermachen -6.301451e-15     -3.6910935       Object   Transitive
+743     Haareziehen -6.765802e-15     -4.1361242       Object   Transitive
+702   Pferdestehlen -1.057241e-14     -2.6167190       Object     Optional
+
+
+PREFERENCE AGAINST UNIVERBATION  IN:  NP with D 
+
+           Compound np.det.assocs FLogPerMillion Relation    Valency
+87       Geldmachen   -0.04584308     0.12218814   Object Transitive
+816    Bildermachen   -0.04803753    -0.13303977   Object Transitive
+124 Rücksichtnehmen   -0.04820902     0.10954832   Object Transitive
+630      Autokaufen   -0.04872251    -1.61380948   Object Transitive
+326       Hausbauen   -0.05081319    -1.25325438   Object   Optional
+95      Angstmachen   -0.05169810    -0.09583028   Object Transitive
+827     Augenöffnen   -0.05750728    -0.99615574   Object Transitive
+102      Fotomachen   -0.06166987    -1.22211770   Object Transitive
+49       Zeitlassen   -0.06220471     0.24061941   Object Transitive
+749  Kinderbekommen   -0.06362478     0.09863196   Object Transitive
+577        Ratgeben   -0.07668975    -0.80520177   Object Transitive
+599      Rechthaben   -0.07931415     0.99713868   Object Transitive
+383   Geldverdienen   -0.08358430     1.88516031   Object Transitive
+311    Geldausgeben   -0.08528744     0.31073867   Object Transitive
+600       Spaßhaben   -0.08975261     1.08749858   Object Transitive
+97     Fehlermachen   -0.09275112     0.54188791   Object Transitive
+579       Handgeben   -0.10021762    -0.47705698   Object Transitive
+121      Zeitnehmen   -0.10328535     0.66258981   Object Transitive
+824  Gedankenmachen   -0.11981257     1.68170736   Object Transitive
+782     Kinderhaben   -0.13073956     0.77014656   Object Transitive
+           Compound np.det.assocs FLogPerMillion     Relation      Valency
+485       Radfahren  1.918532e-01     1.83784511 Undetermined     Optional
+222 Zuckerschlecken  1.763361e-01    -0.76821007       Object   Transitive
+487       Skifahren  1.355372e-01     0.95260638      Adjunct     Optional
+265  Fußballspielen  1.026475e-01     0.96116861       Object     Optional
+134     Rätselraten  1.024854e-01    -1.03837784 Undetermined     Optional
+384   Blutvergießen  1.024635e-01    -0.45942630       Object   Transitive
+486      Autofahren  9.797579e-02     1.67127733 Undetermined     Optional
+178   Bogenschießen  9.133391e-02     0.01190985 Undetermined     Optional
+115      Teilnehmen  8.341132e-02     3.56181134      Adjunct   Transitive
+490      Zeitfahren  8.237140e-02    -0.57083218      Adjunct     Optional
+652     Zähneputzen  8.225545e-02     0.28815835       Object     Optional
+772  Fliegenfischen  8.028610e-02    -0.86126657 Undetermined     Optional
+803     Kartenlegen  7.419807e-02    -0.42309918       Object   Transitive
+179   Vogelschießen  6.935808e-02    -1.65796676       Object     Optional
+489  Motorradfahren  6.741707e-02    -0.06277583 Undetermined     Optional
+146   Westernreiten  6.677468e-02    -0.99673820      Adjunct     Optional
+291     Bergsteigen  6.637348e-02    -0.18281297      Adjunct Intransitive
+263 Computerspielen  6.459788e-02     1.01667475      Adjunct     Optional
+564    Segelfliegen  6.441503e-02    -1.32154827      Adjunct     Optional
+126      Kopfnicken  6.387581e-02    -1.09331156      Adjunct Intransitive
+648  Beerenpflücken  2.487705e-05    -3.95230902       Object   Transitive
+542   Dreiradfahren  2.487705e-05    -4.05849907 Undetermined     Optional
+109      Kornmahlen  7.086722e-15    -3.76255249       Object   Transitive
+58       Wattlaufen  5.029807e-15    -4.25502897      Adjunct Intransitive
+227   Luftschnappen  4.009773e-15    -1.69046819 Undetermined   Transitive
+299     Couchsurfen  3.419860e-15    -4.24999118      Adjunct Intransitive
+373   Punschtrinken  3.414956e-15    -4.64545620       Object     Optional
+28     Kopfauflegen  3.414956e-15    -5.36890873       Object   Transitive
+535  Anhängerfahren  2.701576e-15    -3.47951079      Adjunct     Optional
+582   Pfötchengeben  5.718938e-17    -3.26665251       Object   Transitive
+159   Schrittreiten  5.018521e-17    -2.82066621      Adjunct     Optional
+61       Seillaufen -2.108750e-17    -4.56656226      Adjunct Intransitive
+75       Hakenlösen -4.950905e-17    -4.62331508       Object   Transitive
+809   Gedankenlesen -5.252362e-17    -0.69679906       Object     Optional
+784 Zigarettenholen -5.303321e-16    -2.95712435       Object   Transitive
+466  Däumchendrehen -9.143918e-16    -2.49404116 Undetermined   Transitive
+39  Marmeladekochen -1.800367e-15    -3.37159541       Object     Optional
+821    Liedermachen -6.301451e-15    -3.69109352       Object   Transitive
+743     Haareziehen -6.765802e-15    -4.13612423       Object   Transitive
+702   Pferdestehlen -1.057241e-14    -2.61671897       Object     Optional
+87       Geldmachen -4.584308e-02     0.12218814       Object   Transitive
+816    Bildermachen -4.803753e-02    -0.13303977       Object   Transitive
+124 Rücksichtnehmen -4.820902e-02     0.10954832       Object   Transitive
+630      Autokaufen -4.872251e-02    -1.61380948       Object   Transitive
+326       Hausbauen -5.081319e-02    -1.25325438       Object     Optional
+95      Angstmachen -5.169810e-02    -0.09583028       Object   Transitive
+827     Augenöffnen -5.750728e-02    -0.99615574       Object   Transitive
+102      Fotomachen -6.166987e-02    -1.22211770       Object   Transitive
+49       Zeitlassen -6.220471e-02     0.24061941       Object   Transitive
+749  Kinderbekommen -6.362478e-02     0.09863196       Object   Transitive
+577        Ratgeben -7.668975e-02    -0.80520177       Object   Transitive
+599      Rechthaben -7.931415e-02     0.99713868       Object   Transitive
+383   Geldverdienen -8.358430e-02     1.88516031       Object   Transitive
+311    Geldausgeben -8.528744e-02     0.31073867       Object   Transitive
+600       Spaßhaben -8.975261e-02     1.08749858       Object   Transitive
+97     Fehlermachen -9.275112e-02     0.54188791       Object   Transitive
+579       Handgeben -1.002176e-01    -0.47705698       Object   Transitive
+121      Zeitnehmen -1.032854e-01     0.66258981       Object   Transitive
+824  Gedankenmachen -1.198126e-01     1.68170736       Object   Transitive
+782     Kinderhaben -1.307396e-01     0.77014656       Object   Transitive

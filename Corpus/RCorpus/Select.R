@@ -70,6 +70,9 @@ print.prefs(df = all, col = 'infzu.assocs', show.results = show.results,
 cat('\n\n=======================================================================\n')
 tmp <- print.prefs(df = all, col = 'all.assocs', show.results = "all",
                    show.cols = c("Compound", "all.assocs", "FLogPerMillion", "Relation", "Valency"),
-                   num = num, cx = "All contexts", effect = "UNIVERBATION", freq.cutoff = 0.2)
+                   num = 10, cx = "All contexts", effect = "UNIVERBATION")
+tmp
+
 cat('\n\n=======================================================================\n')
 if (save.persistent) sink()
+

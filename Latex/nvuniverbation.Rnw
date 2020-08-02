@@ -1,13 +1,12 @@
 \documentclass[biblatex, charis, linguex]{glossa}
 
-\bibliography{leglossa}
-
 \usepackage{sectsty}
 \allsectionsfont{\normalfont\sffamily\bfseries}
 \subsectionfont{\normalfont\sffamily\bfseries\itshape}
 \let\B\relax
 \let\T\relax
 \usepackage[linguistics]{forest}
+
 \usepackage{amsmath}
 
 \definecolor{lsLightBlue}{cmyk}{0.6,0.05,0.05,0}
@@ -66,6 +65,7 @@
 \newcommand{\egg}{e.\,g.,\ }
 \newcommand{\Sub}[1]{\ensuremath{\mathrm{_{#1}}}}
 \newcommand{\Sup}[1]{\ensuremath{\mathrm{^{#1}}}}
+\newcommand{\CM}[1]{\ensuremath{\mathsf{#1}}}
 
 \pdfauthor{Roland Schaefer and Ulrike Sayatz}
 \pdftitle{Prototypes in verb-noun univerbation in German}
@@ -130,15 +130,15 @@ showtext_auto()
 
 <<rinitialisation>>=
 
-source('./vioplot2.R')
-source('./lingassoc.R')
-source("./glmtools.R")
-source("./highstat.R")
-
 path.base       <- '~/Workingcopies/Univerbation/'
 path.knitr      <- paste0(path.base, 'Latex/')
 path.corpus     <- paste0(path.base, "Corpus/Data/")
 path.experiment <- paste0(path.base, "Experiment/Data/")
+
+source(paste0(path.knitr, './vioplot2.R'))
+source(paste0(path.knitr, './lingassoc.R'))
+source(paste0(path.knitr, "./glmtools.R"))
+source(paste0(path.knitr, "./highstat.R"))
 
 corpus.size     <- 13950853989
 

@@ -26,3 +26,46 @@ assoc <- function(f1, f2, cs1, cs2, min.count=5, smooth=1, method="Cramer") {
     .r
   }
 }
+
+
+
+format.assocs <- function(df, col, show.cols, show.results, num, cx, effect, freq.cutoff = -1, quiet = T) {
+
+  if (freq.cutoff > 0) {
+    .fc <- round(nrow(df)*freq.cutoff, 0)
+    df <- df[order(df$FLogPerMillion, decreasing = T)[1:.fc],]
+  }
+
+  .result <- NULL
+
+  if (show.results %in% c('extreme', 'for', 'all')) {
+    univ.sel <- df[which(df[, col] > 0),]
+    univ.sel.order <- order(abs(univ.sel[, col]), decreasing = T)
+    if (!quiet) cat('\n\nPREFERENCE FOR', effect, ' IN: ', cx, '\n\n')
+    .tmp <- head(univ.sel[univ.sel.order, show.cols], n = num)
+    if (!quiet) print(.tmp)
+    .result <- .tmp
+  }
+
+  if (show.results %in% c('zero', 'all')) {
+    univ.sel <- df[which(!is.nan(df[, col])),]
+    if (!quiet) cat('\n\nNO PREFERENCE FOR/AGAINST', effect, ' IN: ', cx, '\n\n')
+    .tmp <- univ.sel[tail(order(abs(univ.sel[, col]), decreasing = T), n = num), show.cols,]
+    .tmp <- .tmp[order(.tmp[, col], decreasing = T),]
+    if (!quiet) print(.tmp)
+    if (is.null(.result)) .result <- .tmp
+    else .result <- rbind(.result, .tmp)
+  }
+
+  if (show.results %in% c('extreme', 'against', 'all')) {
+    univ.sel <- df[which(df[, col] < 0),]
+    univ.sel.order <- order(abs(univ.sel[, col]), decreasing = T)
+    if (!quiet) cat('\n\nPREFERENCE AGAINST', effect, ' IN: ', cx, '\n\n')
+    .tmp <- head(univ.sel[univ.sel.order, show.cols], n = num)
+    .tmp <- .tmp[order(.tmp[, col], decreasing = T),]
+    if (!quiet) print(.tmp)
+    if (is.null(.result)) .result <- .tmp
+    else .result <- rbind(.result, .tmp)
+  }
+  .result
+}
