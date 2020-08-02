@@ -1,2 +1,75 @@
 \section{Elicited production of noun-verb units in written language}
 \label{sec:elicitedproductionofnounverbunitsinwrittenlanguage}
+
+<<experimentmosaic, results="asis", fig.showtext=TRUE, fig.pos="htbp", fig.height=5, fig.cap="Mosaic plot of the responses in the production experiment (vertical right) grouped by the morphosyntactic context (horizontal) and the binned N+V unit's attraction strength calculated from the corpus (vertical left)">>=
+exp.table <- structable(Univerbation ~ Attraction + Context, data = exp.cases)
+exp.table <- as.table(exp.table)
+lab <-ifelse(exp.table <= 5, NA, exp.table)
+
+exp.mosaic <- mosaic(exp.table, pop = F, direction = c("h", "v", "h"),
+                     labeling = T, colorize = T,
+                     shade = T,
+                     gp = gpar(fill=c("lightyellow", "lightgreen")),
+                     set_labels=list(Univerbation = c("No", "Yes"), Attraction = c("High", "Low"),
+                                     Context = rev(c("Progressive", "Clitic", "Participle", "Infinitive"))),
+                     labeling_args=my.largs
+                     )
+mosaic.array <- as.table(exp.table)
+labeling_cells(text = lab)(mosaic.array)
+@
+
+
+<<experimentglmm, results="asis">>=
+experiment.glmm <- glmer(Univerbation ~ AttractionNum + Context + (1 | Participant),
+                         data = exp.cases, family = binomial(link = "logit"),
+                         na.action = na.fail,
+                         control=glmerControl(optimizer="nloptwrap2", optCtrl=list(maxfun=2e5)))
+experiment.glmm.r2 <- r.squaredGLMM(experiment.glmm)
+experiment.fixefs <- fixef(experiment.glmm)
+experiment.confints <- confint(experiment.glmm)
+experiment.glmm.r2 <- r.squaredGLMM(experiment.glmm)
+@
+
+
+<<experimentglmmreport, results="asis">>=
+
+# Build the table.
+experiment.ct <- nice.float(cbind(experiment.fixefs, experiment.confints[2:6,]))
+colnames(experiment.ct) <- c("Estimate", "CI low", "CI high")
+ranef.participant <- format.ranef(experiment.glmm, "Participant")
+experiment.r2.txt <- paste0("Nakagawa \\& Schielzeth's \\CM{R^2_m=", nice.float(experiment.glmm.r2[1,1]), "} and \\CM{R^2_c=", nice.float(experiment.glmm.r2[1,2]), "}. ")
+exp.ranef.txt <- paste0("Random effect for participant: \\CM{Intercept=", nice.float(ranef.participant$Intercept), "}, \\CM{sd=", nice.float(ranef.participant$sd),
+                    "}")
+experiment.ctx <- xtable(experiment.ct,
+                         caption = paste0("Coefficient table for the experiment GLMM. ", experiment.r2.txt, exp.ranef.txt),
+                         label = "tab:experimentglmm")
+
+
+# Print the table.
+print(experiment.ctx,
+      include.rownames=T,
+      floating = T,
+      table.placement = 'h!',
+      booktabs = T,
+      scalebox = 1,
+      sanitize.text.function = function(x){x},
+)
+@
+
+
+<<experimentfxattraction, results="asis", fig.showtext=TRUE, fig.pos="htbp", fig.height=5, fig.cap="Effect plot for the regressor encoding the morphosyntactic context in the GLMM modelling the experimental data">>=
+plot(effect("Context", experiment.glmm, KR = T), rug=F, colors = c("black", "darkorange"),
+     main="",
+     ylab="Probability of univerbation",
+     xlab="Morphosyntactic context"
+)
+@
+
+
+<<experimentfxcontext, results="asis", fig.showtext=TRUE, fig.pos="htbp", fig.height=5, fig.cap="Effect plot for the regressor encoding the N+V unit's corpus-derived association with univerbation in the GLMM modelling the experimental data">>=
+plot(effect("AttractionNum", experiment.glmm, KR = T), rug=F, colors = c("black", "darkorange"),
+     main="",
+     ylab="Probability of univerbation",
+     xlab="Lexical attraction derived from corpus"
+)
+@

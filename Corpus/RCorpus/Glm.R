@@ -17,7 +17,7 @@ print(NagelkerkeR2(Glm))
 
 ### Oh yeah, swamp me in your dirty random effects!
 Glmm <- glmer(cbind(Joint, Separate)~Relation+Linkbinary+(1|Compound), data=all, family=binomial,
-              na.action = na.fail, control=glmerControl(optimizer="nloptwrap2", optCtrl=list(maxfun=2e5)))
+              na.action = na.fail)
 print(summary(Glmm))
 print(r.squaredGLMM(Glmm))
 

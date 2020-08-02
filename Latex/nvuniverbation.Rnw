@@ -93,6 +93,7 @@
 \begin{document}
 
 << setup, cache=FALSE, echo=FALSE, include=FALSE, results='asis'>>=
+require(lattice)
 require(lme4)
 require(fmsb)
 require(MuMIn)
@@ -101,6 +102,9 @@ require(vioplot)
 require(beanplot)
 require(showtext)
 require(xtable)
+require(plyr)
+require(vcd)
+require(thematic)
 
 opts_knit$set(self.contained=FALSE)
 
@@ -126,6 +130,22 @@ font_add("Fira Sans",
          italic     = "FiraSans-BookItalic.otf",
          bolditalic = "FiraSans-BoldItalic.otf")
 showtext_auto()
+
+font.settings <- list(
+         font = 1,
+         cex = 1,
+         fontfamily = "Fira Sans")
+my.theme <- list(
+         par.xlab.text = font.settings,
+         par.ylab.text = font.settings,
+         axis.text = font.settings)
+trellis.par.set(my.theme)
+
+
+my.largs <- list(
+     gp_labels = gpar(fontfamily = "Fira Sans"),
+     gp_varnames = gpar(fontfamily = "Fira Sans")
+     )
 @
 
 <<rinitialisation>>=
@@ -149,11 +169,15 @@ nice.int <- function(n) formatC(n, format="d", big.mark=",")
 @
 
 
-<<child="load.Rnw">>=
+<<child="loadcorpus.Rnw">>=
 @
 
 <<child="associations.Rnw">>=
 @
+
+<<child="loadexperiment.Rnw">>=
+@
+
 
 
 \sffamily

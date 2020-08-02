@@ -25,8 +25,9 @@ lexicals <- c("Bergsteigen", "Platzmachen", "Probehören", "Teetrinken",
 
 # Pull attraction from corpus results.
 load(file = "../../Corpus/RCorpus/Results/corpus.Rdata")
+concordance <- all
 lexicals.df <- data.frame(Compound = lexicals)
-attracts <- join(lexicals.df, all)[, "all.assocs"]
+attracts <- join(lexicals.df, concordance)[, "all.assocs"]
 attracts.f <- c("Hi", "Lo", "Hi", "Lo",
                 "Lo", "Hi", "Lo", "Hi")
 
@@ -55,7 +56,7 @@ for (r in 1:nrow(results)) {
 cases <- as.data.frame(cases)
 rownames(cases) <- c()
 cases <- cbind(cases, rep(conditions, nrow(results)), rep(lexicals, nrow(results)), rep(attracts.f, nrow(results)), rep(attracts, nrow(results)))
-colnames(cases) <- c("Univerbation", "Participant", "Age", "Gender", "Condition", "Item", "Attraction", "AttractionNum")
+colnames(cases) <- c("Univerbation", "Participant", "Gender", "Age", "Condition", "Item", "Attraction", "AttractionNum")
 cases$Univerbation <- as.factor(cases$Univerbation)
 
 
@@ -90,34 +91,30 @@ if (save.persistent) dev.off()
 
 ### GLMM ###
 
-univerbate.glmer <- glmer(Univerbation ~ AttractionNum + Condition + (1 | Participant) + (1 | Item),
-      data = cases, family = binomial(link = "logit"),
-      na.action = na.fail, nAGQ=0,
-      control=glmerControl(optimizer="nloptwrap2", optCtrl=list(maxfun=2e5)))
+univerbate.glmer <- glmer(Univerbation ~ AttractionNum + Condition + (1 | Participant),
+      data = cases, family = binomial(link = "logit")
+      , na.action = na.fail,
+      control=glmerControl(optimizer="nloptwrap2", optCtrl=list(maxfun=2e5))
+      )
 print(summary(univerbate.glmer))
 suppressWarnings(print(r.squaredGLMM(univerbate.glmer)))
 
 
 # Effect plots.
-fx <- c("Condition", "AttractionNum")
-fx.xlabs <- c("Context", "Lexical")
-fx.ylabs <- rep("Probability of univerbation", length(fx))
-fx.mains <- c("Context", "Lexical")
-
-for (i in 1:length(fx)) {
-  p <- plot(effect(fx[i], univerbate.glmer, KR = T), rug=F, colors = c("black", "darkorange"),
-            main=fx.mains[i],
-            ylab=fx.ylabs[i],
-            xlab=fx.xlabs[i]
-  )
-  
-  if (save.persistent) {
+p <- plot(effect("AttractionNum", univerbate.glmer, KR = T), rug=F, colors = c("black", "darkorange"),
+          main="",
+          ylab="P",
+          xlab="Attraction"
+)
+if (save.persistent) {
     trellis.device(device = "pdf", file = paste0(out.dir, fx[i], ".pdf"))
     trellis.par.set(list(axis.text = list(cex = 1.25)))
     trellis.par.set(list(par.ylab.text = list(cex = 1.25)))
     trellis.par.set(list(par.xlab.text = list(cex = 1.25)))
   }
   print(p)
-  if (save.persistent) dev.off()  
-}
+if (save.persistent) dev.off()  
+
+
+
 

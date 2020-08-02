@@ -1,0 +1,45 @@
+<<loadexperimentdata>>=
+
+exp.conditions <- rep(c("Prepart", "Inf", "Part", "Prog"), 2)
+exp.lexicals <- c("Bergsteigen", "Platzmachen", "Probehören", "Teetrinken",
+              "Spaßhaben", "Seilspringen", "Mutmachen", "Bogenschießen")
+
+# Pull attraction from corpus results.
+exp.lexicals.df <- data.frame(Compound = exp.lexicals)
+exp.attracts <- join(exp.lexicals.df, concordance)[, "all.assocs"]
+exp.attracts.f <- c("Hi", "Lo", "Hi", "Lo", "Lo", "Hi", "Lo", "Hi")
+
+exp.w1 <- read.csv(file = paste0(path.experiment, "Ergebnisse_Woche1.csv"), sep = "\t",
+                   colClasses = c("factor"))
+exp.w2 <- read.csv(file = paste0(path.experiment, "Ergebnisse_Woche2.csv"), sep = "\t",
+                   colClasses = c("factor"))
+experiment <- rbind(exp.w1, exp.w2[,colnames(exp.w1)])
+
+# Remove remarks and secondary experiment.
+exp.remover <- c("Anmerkungen", paste0("Parenth", 1:6))
+experiment <- experiment[, -which(names(experiment) %in% exp.remover)]
+
+
+# Turn into usable data frame.
+exp.cases <- NULL
+for (r in 1:nrow(experiment)) {
+  .result <- cbind(t(experiment[r, paste0("Univerb", 1:8, "F")]),
+                   as.character(experiment[r, 1]), as.character(experiment[r, 2]), as.character(experiment[r, 3]))
+  if (is.null(exp.cases))
+    exp.cases <- .result
+  else
+    exp.cases <- rbind(exp.cases, .result)
+}
+exp.cases <- as.data.frame(exp.cases)
+rownames(exp.cases) <- c()
+exp.cases <- cbind(exp.cases, rep(exp.conditions, nrow(experiment)), rep(exp.lexicals, nrow(experiment)), rep(exp.attracts.f, nrow(experiment)), rep(exp.attracts, nrow(experiment)))
+colnames(exp.cases) <- c("Univerbation", "Participant", "Age", "Gender", "Condition", "Item", "Attraction", "AttractionNum")
+exp.cases$Univerbation <- as.factor(exp.cases$Univerbation)
+
+# Reorder factor for nicer effect plot.
+exp.cases$Condition <- factor(exp.cases$Condition, levels = c("Inf", "Part", "Prog", "Prepart"))
+exp.cases$Condition <- revalue(exp.cases$Condition, c("Inf"="Infinitive", "Part"="Participle", "Prepart"="Clitic", "Prog"="Progressive"))
+
+# Rename Condition => Context.
+names(exp.cases)[names(exp.cases) == "Condition"] <- "Context"
+@

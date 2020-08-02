@@ -6,7 +6,6 @@ opts_knit$set(self.contained=FALSE)
 \section{Corpus-based analysis of the usage of verb-noun units}
 \label{sec:corpusbasedanalysisoftheusageofvnunits}
 
-In this section, we do $1+1=2$ and $\alpha\ and\ \omega$.
 
 <<corpusglmm, results="hide">>=
 
@@ -54,24 +53,23 @@ print(corpus.ctx,
 )
 @
 
-<<effectrelation, results="asis", fig.showtext=TRUE>>=
-par(family = "Fira Sans")
-plot(effect("Relation", corpus.glmm, KR = T), rug=F, colors = c("black", "darkorange"), family="Fira Sans",
+<<effectrelation, results="asis", fig.showtext=TRUE, fig.pos="htbp", fig.height=5, fig.cap="Effect plot for the regressor encoding the syntactic relation within the N+V unit in the GLMM modelling the corpus data">>=
+plot(effect("Relation", corpus.glmm, KR = T), rug=F, colors = c("black", "darkorange"),
           main="",
           ylab="Probability of univerbation",
-          xlab="Regressor value"
+          xlab="Relation"
 )
 @
 
 
-<<corpusranefs, results="asis", fig.showtext=TRUE>>=
+<<corpusranefs, results="asis", fig.showtext=TRUE, fig.pos="htbp", fig.cap="A random selection of conditional modes with 95\\% prediction intervals for the levels of the random effect in the GLMM modelling the corpus data">>=
 set.seed(3478)
 par(family = "Fira Sans")
 corpus.ranef.selection <- ranef.plot(corpus.glmm, effect = "Compound", number = 20)
 @
 
-<<associationsall, results="asis", fig.showtext = TRUE, fig.width="0.5\\linewidth">>=
-cut.off.point <- 0.12
+<<associationsall, results="asis", fig.showtext = TRUE, fig.pos="htbp", fig.height=4, fig.width=4, fig.cap=paste0("Distribution of the overall association scores (across all morphosyntactic conditions) with \\CM{n=", length(which(!is.na(concordance$all.assocs))), "}")>>=
+cut.off.point <- 1
 
 ### Plot distributions of association measures.
 density.opts <- list(lwd = 2)
@@ -81,15 +79,14 @@ plot(density(concordance$all.assocs[which(concordance$all.assocs > -(cut.off.poi
   axes = F, xlab = "", xlim = c(-0.15, 0.15),
   lwd = density.opts$lwd,
   col = "black", lty = 1,
-  main = paste0("All (n=", length(which(!is.na(concordance$all.assocs))), ")"),
+  main = ""
   )
 axis(1)
 axis(2)
 @
 
-
-<<associationssingle, results="asis", fig.showtext = TRUE>>=
-cut.off.point <- 0.12
+<<associationssingle, results="asis", fig.showtext = TRUE, fig.pos="htbp", fig.cap="Distribution of the association scores in the specific morphosyntactic conditions; because of some undefined scores the sample sizes \\CM{n} vary">>=
+cut.off.point <- 1
 
 ### Plot distributions of association measures.
 density.opts <- list(lwd = 2)
@@ -101,7 +98,9 @@ plot(density(c(concordance$np.det.assocs[which(concordance$np.det.assocs > -(cut
   axes = F, xlab = "", xlim = c(-0.15, 0.15),
   lwd = density.opts$lwd,
   col = "black", lty = 1,
-  main = paste0("NPs (n=", length(which(!is.na(c(concordance$np.det.assocs, concordance$np.clt.assocs, concordance$np.ndt.assocs)))), ")")
+  main = paste0("NPs (n=", length(c(concordance$np.det.assocs[which(concordance$np.det.assocs > -(cut.off.point) & concordance$np.det.assocs < cut.off.point)],
+               concordance$np.clt.assocs[which(concordance$np.clt.assocs > -(cut.off.point) & concordance$np.clt.assocs < cut.off.point)],
+               concordance$np.ndt.assocs[which(concordance$np.ndt.assocs > -(cut.off.point) & concordance$np.ndt.assocs < cut.off.point)])), ")")
   )
 axis(1)
 axis(2)
@@ -160,7 +159,7 @@ print(corpus.assoc.hi,
 
 <<corpusassoctablenull, results="asis">>=
 corpus.assoc.null <- xtable(corpus.assoc.sel[11:20,],
-                            caption = paste0("Top ten V+N units with no tendency for or against univerbation"),
+                            caption = paste0("Top ten V+N units without any tendency for or against univerbation"),
                             label = "tab:assocnull")
 # Print the table.
 print(corpus.assoc.null,
