@@ -1,4 +1,6 @@
 .DS_Store
+Latex/cache/
+Latex/figures/
 
 ## Core latex/pdflatex auxiliary files:
 *.aux
