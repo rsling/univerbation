@@ -8,18 +8,6 @@ concordance <- read.csv2(file = paste0(path.corpus, "Concordance.csv"), sep = '\
 # Remove ones with "Erroneous" annotation.
 concordance <- concordance[-which(concordance$Relation=="Erroneous"),]
 
-# Indices for the ones to exclude from 'am' progressive and P-clitic counts.
-ignore.am <- c(
-  which(concordance$Noun=="Computer" & concordance$Verb=="spielen"),
-  which(concordance$Noun=="Daumen" & concordance$Verb=="lutschen"),
-  which(concordance$Noun=="Schluss" & concordance$Verb=="machen"),
-  which(concordance$Noun=="Kopf" & concordance$Verb=="machen"),
-  which(concordance$Noun=="Platz" & concordance$Verb=="machen"),
-  which(concordance$Noun=="Handy" & concordance$Verb=="telefonieren"),
-  which(concordance$Noun=="Eis" & concordance$Verb=="schlecken"),
-  which(concordance$Noun=="Kopf" & concordance$Verb=="drehen")
-)
-
 # Get relative frequency.
 concordance$FLogPerMillion <- apply(concordance[,16:50], 1, function(n) { log(sum(n)/corpus.size*10^6) })
 
@@ -27,8 +15,44 @@ concordance$FLogPerMillion <- apply(concordance[,16:50], 1, function(n) { log(su
 concordance$Separate <- apply(concordance[,grep("_sep_", colnames(concordance))], 1, sum)
 concordance$Joint    <- apply(concordance[,grep("_joint_", colnames(concordance))], 1, sum)
 
+# Get overall score for NPs.
+concordance$q_np_sep_all <- apply(concordance[,grep("q_np.*_sep_", colnames(concordance))], 1, sum)
+concordance$q_np_joint_all <- apply(concordance[,grep("q_np.*_joint_", colnames(concordance))], 1, sum)
+
+concordance$q_particip_sep_all <- apply(concordance[,grep("q_particip.*_sep_", colnames(concordance))], 1, sum)
+concordance$q_particip_joint_all <- apply(concordance[,grep("q_particip.*_joint_", colnames(concordance))], 1, sum)
+concordance$q_prog_sep_all <- apply(concordance[,grep("q_prog.*_sep_", colnames(concordance))], 1, sum)
+concordance$q_prog_joint_all <- apply(concordance[,grep("q_prog.*_joint_", colnames(concordance))], 1, sum)
+concordance$q_infzu_sep_all <- apply(concordance[,grep("q_infzu.*_sep_", colnames(concordance))], 1, sum)
+concordance$q_infzu_joint_all <- apply(concordance[,grep("q_infzu.*_joint_", colnames(concordance))], 1, sum)
+
 # Get a binary linking element vartiable.
 concordance$Linkbinary <- ifelse(concordance$Linking=="0", "No", "Yes")
+
+# Create the blown-up concordance for the GLMM.
+
+save.cols <-c("Noun", "Verb", "Compound", "Relation", "Linkbinary")
+conditions <- list(
+  list(sep = "q_np_sep_all",       joint = "q_np_joint_all",       vari = "NP"),
+  list(sep = "q_particip_sep_all", joint = "q_particip_joint_all", vari = "Participle"),
+  list(sep = "q_prog_sep_all",     joint = "q_prog_joint_all",     vari = "Progressive"),
+  list(sep = "q_infzu_sep_all",    joint = "q_infzu_joint_all",    vari = "Infinitive")
+)
+
+concordance.glmm <- NULL
+
+for (cond in conditions) {
+  .adder <- cbind(
+    concordance[, save.cols],
+    data.frame(
+      Separate = concordance[, cond$sep],
+      Joint    = concordance[, cond$joint],
+      Context  = rep(cond$vari, nrow(concordance))
+    )
+  )
+  if (is.null(concordance.glmm)) concordance.glmm <- .adder
+  else concordance.glmm <- rbind(concordance.glmm, .adder)
+}
 
 @
 

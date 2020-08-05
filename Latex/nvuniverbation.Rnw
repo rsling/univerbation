@@ -39,6 +39,9 @@
 \usepackage{soul}
 \usepackage[mark]{gitinfo2}
 
+\newcommand{\stylepath}{./langsci/styles/}
+\usepackage{langsci/styles/langsci-gb4e}
+
 % Set listing style. knitr uses RStyle style. Which you have to know...
 \definecolor{listingbackground}{gray}{0.95}
 \lstdefinestyle{RStyle}{

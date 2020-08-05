@@ -16,7 +16,7 @@ out.dir <- "~/Workingcopies/Univerbation/Experiment/RExperiment/Results/"
 source("glmtools.R")
 source("highstat.R")
 
-save.persistent <- T
+save.persistent <- F
 
 conditions <- rep(c("Prepart", "Inf", "Part", "Prog"), 2)
 lexicals <- c("Bergsteigen", "Platzmachen", "Probehören", "Teetrinken",
@@ -28,8 +28,7 @@ load(file = "../../Corpus/RCorpus/Results/corpus.Rdata")
 concordance <- all
 lexicals.df <- data.frame(Compound = lexicals)
 attracts <- join(lexicals.df, concordance)[, "all.assocs"]
-attracts.f <- c("Hi", "Lo", "Hi", "Lo",
-                "Lo", "Hi", "Lo", "Hi")
+attracts.f <- ifelse(attracts < -0.003, "Lo", "Hi")
 
 results.w1 <- read.csv(file = "../Data/Ergebnisse_Woche1.csv", sep = "\t",
                     colClasses = c("factor"))
@@ -70,6 +69,9 @@ save(cases, file = paste0(out.dir, "experiment.Rdata"))
 
 
 ### Informative plot ###
+cases$Condition <- factor(cases$Condition, levels = c("Infinitive", "Participle", "Clitic", "Progressive"))
+cases$Attraction <- revalue(cases$Attraction, c("Hi"="High", "Lo"="Low"))
+cases$Univerbation <- revalue(cases$Univerbation, c("1"="Yes", "0"="No"))
 
 the.table <- structable(Univerbation ~ Attraction + Condition, data = cases)
 the.table <- as.table(the.table)
@@ -80,9 +82,10 @@ if (save.persistent) pdf(file = paste0(out.dir, "Responses.pdf"))
 the.plot <- mosaic(the.table, pop = F, direction = c("h", "v", "h"),
                    labeling = T, colorize = T,
                    shade = T,
-                   gp = gpar(fill=c("lightyellow", "lightgreen")),
-                   set_labels=list(Univerbation = c("No", "Yes"), Attraction = c("High", "Low"),
-                                   Condition = rev(c("Progressive", "Clitic", "Participle", "Infinitive"))))
+                   gp = gpar(fill=c("lightyellow", "lightgreen"))
+                   #set_labels=list(Univerbation = c("No", "Yes"), Attraction = c("High", "Low"),
+                  #                 Condition = rev(c("Progressive", "Clitic", "Participle", "Infinitive")))
+                  )
 tmparray <- as.table(the.table)
 labeling_cells(text = lab)(tmparray)
 if (save.persistent) dev.off()

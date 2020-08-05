@@ -2,6 +2,11 @@
 \label{sec:elicitedproductionofnounverbunitsinwrittenlanguage}
 
 <<experimentmosaic, results="asis", fig.showtext=TRUE, fig.pos="htbp", fig.height=5, fig.cap="Mosaic plot of the responses in the production experiment (vertical right) grouped by the morphosyntactic context (horizontal) and the binned N+V unit's attraction strength calculated from the corpus (vertical left)">>=
+exp.cases$Context <- factor(exp.cases$Context, levels = c("Infinitive", "Participle", "Clitic", "Progressive"))
+exp.cases$Attraction <- revalue(exp.cases$Attraction, c("Hi"="High", "Lo"="Low"))
+exp.cases$Univerbation <- revalue(exp.cases$Univerbation, c("1"="Yes", "0"="No"))
+
+
 exp.table <- structable(Univerbation ~ Attraction + Context, data = exp.cases)
 exp.table <- as.table(exp.table)
 lab <-ifelse(exp.table <= 5, NA, exp.table)
@@ -10,8 +15,6 @@ exp.mosaic <- mosaic(exp.table, pop = F, direction = c("h", "v", "h"),
                      labeling = T, colorize = T,
                      shade = T,
                      gp = gpar(fill=c("lightyellow", "lightgreen")),
-                     set_labels=list(Univerbation = c("No", "Yes"), Attraction = c("High", "Low"),
-                                     Context = rev(c("Progressive", "Clitic", "Participle", "Infinitive"))),
                      labeling_args=my.largs
                      )
 mosaic.array <- as.table(exp.table)
@@ -20,6 +23,8 @@ labeling_cells(text = lab)(mosaic.array)
 
 
 <<experimentglmm, results="asis">>=
+exp.cases$Context <- factor(exp.cases$Context, levels = c("Infinitive", "Participle", "Progressive", "Clitic"))
+
 experiment.glmm <- glmer(Univerbation ~ AttractionNum + Context + (1 | Participant),
                          data = exp.cases, family = binomial(link = "logit"),
                          na.action = na.fail,
@@ -41,7 +46,7 @@ experiment.r2.txt <- paste0("Nakagawa \\& Schielzeth's \\CM{R^2_m=", nice.float(
 exp.ranef.txt <- paste0("Random effect for participant: \\CM{Intercept=", nice.float(ranef.participant$Intercept), "}, \\CM{sd=", nice.float(ranef.participant$sd),
                     "}")
 experiment.ctx <- xtable(experiment.ct,
-                         caption = paste0("Coefficient table for the experiment GLMM. ", experiment.r2.txt, exp.ranef.txt),
+                         caption = paste0("Coefficient table for the GLMM  modelling the experiment data with 95\\% confidence intervals.", experiment.r2.txt, exp.ranef.txt),
                          label = "tab:experimentglmm")
 
 

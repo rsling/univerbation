@@ -7,7 +7,7 @@ exp.lexicals <- c("Bergsteigen", "Platzmachen", "Probehören", "Teetrinken",
 # Pull attraction from corpus results.
 exp.lexicals.df <- data.frame(Compound = exp.lexicals)
 exp.attracts <- join(exp.lexicals.df, concordance)[, "all.assocs"]
-exp.attracts.f <- c("Hi", "Lo", "Hi", "Lo", "Lo", "Hi", "Lo", "Hi")
+exp.attracts.f <- ifelse(exp.attracts < -0.003, "Lo", "Hi")
 
 exp.w1 <- read.csv(file = paste0(path.experiment, "Ergebnisse_Woche1.csv"), sep = "\t",
                    colClasses = c("factor"))
