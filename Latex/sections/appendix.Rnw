@@ -1,0 +1,47 @@
+% !Rnw root = ../nvuniverbation.Rnw
+<<setupappendix, cache=FALSE, include=FALSE, results='asis'>>=
+opts_knit$set(self.contained=FALSE)
+@
+
+\appendix
+
+\section{Full specification of the corpus GLMM}
+\label{sec:specifictionofthecorpusglmm}
+
+In Section~\ref{sub:modellingthecorpusdata}, the specification of the model was gicen in Equation~\ref{eq:corpusglmmr}, repeated here as Equation~\ref{eq:corpusglmmr2}.
+
+\begin{equation}
+  \mathtt{Proportion\sim Context+Relation+Link+(1|NV)} \label{eq:corpusglmmr2}
+\end{equation}
+
+This notation blurs the difference between first-level and second-level fixed effects.
+The model specification is the crucial step in statistical modelling since it encodes the researchers' commitment to a causal mechanism controlling the phenomenon to be modelled (in this case, writers' mental grammars with respect to the univerbation of N+V units).
+Model specification thus deserves more attention than \ref{eq:corpusglmmr2} has to offer.
+Mathematically and thus more transparently, the model is given in Equation~\ref{eq:corpusglmm}.
+The notation with angled brackets in $\alpha_{NV_j[i]}$ should be read as ``the value of the random effect $\alpha_{NV}$ for the factor level $j$, chosen appropriately for observation $i$.
+
+\begin{equation}
+  Prop_{Comp_i}=logit^{-1}[
+  \alpha_0
+  +\alpha_{NV_j[i]}
+  +\vec{\beta}_{Context}\cdot\vec{x}_{Context_i}
+  ] \label{eq:corpusglmm}
+\end{equation}
+
+The proportion of compound spellings $Prop_{Comp_i}$ is the logit-transformed sum of the overall intercept $\alpha_0$, the random intercept for the $j$-th N+V unit $\alpha_{NV_j[i]}$ (whichever is observed in observation $i$) and the dot product of the vector of dummy-coded binary value for the morphosyntactic context $\vec{x}_{Context_i}$ and the vector of their corresponding regressors $\vec{\beta}_{Context}$.
+Since it is a multilevel model, $\alpha_{NV}$ has its own linear model, which is given in Equation~\ref{eq:corpusglmm2}.
+
+\begin{equation}
+  \alpha_{NV_j}=\gamma_{j}
+  +\vec{\delta}_{Relation}\cdot\vec{x}_{Relation_j}
+  +\delta_{Link}\cdot x_{Link_j}
+  \label{eq:corpusglmm2}
+\end{equation}
+
+It is assumed that Equation~\ref{eq:corpusrandomnorm} holds.
+
+\begin{equation}
+  \alpha_{NV}\sim Norm \label{eq:corpusrandomnorm}
+\end{equation}
+
+The random effects are assumed to be a normally distributed variable $\alpha_{NV}$ which is for each N+V unit $j$ given as the sum of the conditional mode of unit $i$ (often wrongly called the \textit{random effect} per se), the dot product $\vec{\delta}_{Relation}\cdot\vec{x}_{Relation_j}$ of the vector of binary variables encoding the relation and the vector of their corresponding coefficients and finally the product $\delta_{Link}\cdot x_{Link}$ of the binary variable encoding the presence of a linking element and its coefficient.
