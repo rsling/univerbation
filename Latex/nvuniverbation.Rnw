@@ -108,8 +108,6 @@ require(showtext)
 require(xtable)
 require(plyr)
 require(vcd)
-require(thematic)
-require(gridExtra)
 
 opts_knit$set(self.contained=FALSE)
 

@@ -67,7 +67,7 @@ This class is illustrated by \textit{Daumenlutschen} (``thumb sucking''), which 
 \label{sub:modellingthecorpusdata}
 
 In this section, we present the parameter estimates (and predictions of conditional modes) for a multilevel generalised model (or generalised linear mixed model, GLMM) which models the -- in our view -- the relevant factors influencing speakers' choice of the compound and the separate spelling.%
-\footnote{See \parencite{Schaefer2020} for an overview of the method and our philosophy in modelling.}
+\footnote{See \parencite{Schaefer2020a} for an overview of the method and our philosophy in modelling.}
 Given the grand total of \Sexpr{nice.int(sum(concordance$Joint)+sum(concordance$Separate))} observations in the sample (see Section~\ref{sec:samplingandannotation}), we will completely refrain of using inferential statistics per se.
 For samples of such magnitude in data-driven approaches, frequentist significance tests are the wrong tool.
 Bayesian methods reliably converge with frequentist methods at this sample size.
@@ -106,8 +106,8 @@ corpus.glmm <- glmer(cbind(Joint, Separate)~Context+Relation+Link+(1|Compound),
                      )
 
 corpus.fixefs <- fixef(corpus.glmm)
-# corpus.confints <- confint(corpus.glmm)
-corpus.confints <- cbind(corpus.fixefs, corpus.fixefs) # Fake CIs for quick recompiles.
+corpus.confints <- confint(corpus.glmm)
+# corpus.confints <- cbind(corpus.fixefs, corpus.fixefs) # Fake CIs for quick recompiles.
 corpus.glmm.r2 <- r.squaredGLMM(corpus.glmm)
 @
 
@@ -153,8 +153,7 @@ Both the coefficients and the effect plot (right panel in Figure~\ref{fig:corpus
 The undetermined cases are in between the two clearcut cases (coefficient $\Sexpr{corpus.ct["RelationUndetermined","Estimate"]}$).
 The presence of a linking element in fully nominalised compounds favours compound spelling only slightly (coefficient $\Sexpr{corpus.ct["LinkYes","Estimate"]}$).
 
-<<corpuseffects, results="asis", fig.showtext=TRUE, fig.pos="!htbp", fig.height=4, fig.cap="Effect plot for the regressor encoding the morphosyntactic context of the N+V unit and the regressor encoding the syntactic relation within the N+V unit in the GLMM modelling the corpus data">>=
-par(mfrow=c(1,2))
+<<corpuseffects, results="asis", fig.showtext=TRUE, fig.pos="!htbp", fig.height=4, fig.cap="Effect plots for the regressor encoding the morphosyntactic context of the N+V unit and the regressor encoding the syntactic relation within the N+V unit in the GLMM modelling the corpus data">>=
 corpus.glmm.fx.context <- plot(effect("Context", corpus.glmm, KR = T),
                               rug=F, colors = c("black", "darkorange"),
                               main="",ylab="Probability of univerbation",
@@ -210,7 +209,7 @@ We were interested in a quantification of how strongly single N+V units tended t
 Thus, we need to compare the count of cases with univerbation of each N+V units versus the count of cases without univerbation with the same counts for all other N+V units.
 Such comparisons must be made relative to the overall number of the specific N+V units and all others, and the relevant counts are nicely summarised in a 2$\times$2 contingency table shown in Table~\ref{tab:associationsexplained}.
 
-\begin{table}
+\begin{table}[!htbp]
   \begin{tabular}{lcc}
   \toprule
   & Univerbation & No univerbation \\
@@ -270,7 +269,7 @@ plot(density(na.omit(concordance$np.all.assocs)),
   axes = F, xlab = "", xlim = c(-0.15, 0.15),
   lwd = density.opts$lwd,
   col = "black", lty = 1,
-  main = paste0("NPs (n=", length(which(!is.na(concordance$np.all.assocs))), ")")
+  main = substitute(NPs~OB*n[Unit]*EQ*NUNIT*CB, list(EQ="=", OB="(", CB=")", NUNIT=length(which(!is.na(concordance$np.all.assocs)))))
   )
 axis(1)
 axis(2)
@@ -279,8 +278,8 @@ plot(density(na.omit(concordance$prog.assocs)),
   axes = F, xlab = "", xlim = c(-0.15, 0.15),
   lwd = density.opts$lwd,
   col = "black", lty = 1,
-  main = paste0("Progressives (n=", length(which(!is.na(concordance$prog.assocs))), ")")
-  )
+  main = substitute(Progressives~OB*n[Unit]*EQ*NUNIT*CB, list(EQ="=", OB="(", CB=")", NUNIT=length(which(!is.na(concordance$prog.assocs)))))
+    )
 axis(1)
 axis(2)
 
@@ -288,7 +287,7 @@ plot(density(na.omit(concordance$particip.assocs)),
   axes = F, xlab = "", xlim = c(-0.15, 0.15),
   lwd = density.opts$lwd,
   col = "black", lty = 1,
-  main = paste0("Participles (n=", length(which(!is.na(concordance$particip.assocs))), ")")
+  main = substitute(Participles~OB*n[Unit]*EQ*NUNIT*CB, list(EQ="=", OB="(", CB=")", NUNIT=length(which(!is.na(concordance$particip.assocs)))))
   )
 axis(1)
 axis(2)
@@ -297,7 +296,7 @@ plot(density(na.omit(concordance$infzu.assocs)),
   axes = F, xlab = "", xlim = c(-0.15, 0.15),
   lwd = density.opts$lwd,
   col = "black", lty = 1,
-  main = paste0("Infinitives (n=", length(which(!is.na(concordance$infzu.assocs))), ")")
+  main = substitute(Infinitives~OB*n[Unit]*EQ*NUNIT*CB, list(EQ="=", OB="(", CB=")", NUNIT=length(which(!is.na(concordance$infzu.assocs)))))
   )
 axis(1)
 axis(2)
@@ -327,6 +326,7 @@ corpus.assoc.sel <- corpus.assoc.sel[, 1:3]
 @
 
 \begin{table}[!htbp]
+  \label{tab:corpusassocslohi}
   \begin{minipage}{.45\textwidth}
     \centering
     <<corpusassoctablehi, results="asis">>=
@@ -354,7 +354,6 @@ corpus.assoc.sel <- corpus.assoc.sel[, 1:3]
     )
     @
   \end{minipage}
-  \label{tab:corpusassocslohi}
   \caption{Top ten V+N units with a strong tendency for univerbation (left panel) and top ten V+N units with a strong tendency against univerbation (right panel)}
 \end{table}
 
@@ -366,7 +365,7 @@ They mostly have an internal object relation.
 <<corpusassoctablenull, results="asis", >>=
 corpus.assoc.null <- xtable(corpus.assoc.sel[11:20,],
                             caption = paste0("Top ten V+N units without any tendency for or against univerbation"),
-                            label = "tab:assocnull")
+                            label = "tab:corpusassoctablenull")
 # Print the table.
 print(corpus.assoc.null,
       include.rownames=F,

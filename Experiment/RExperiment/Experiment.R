@@ -119,5 +119,20 @@ if (save.persistent) {
 if (save.persistent) dev.off()  
 
 
+fx <- effect("Condition", univerbate.glmer, KR = T)
+
+fx$variables$Condition$levels <- c("Inf.", "Part.", "Clitic", "Prog.")
+levels(fx$x$Condition) <- c("Clitic", "Inf.", "Part.", "Prog.")
+
+plot(fx, rug=F, colors = c("black", "darkorange"),
+          main="",
+          ylab="P",
+          xlab="Condition"
+)
 
 
+
+
+plot(c(1:10),
+     main = substitute(NPs~OB*n[unit]=NUNIT*CB, list(OB="(", CB=")", NUNIT=length(which(!is.na(concordance$np.all.assocs)))))
+     )

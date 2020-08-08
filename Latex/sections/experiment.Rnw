@@ -6,7 +6,7 @@ opts_knit$set(self.contained=FALSE)
 \section{Elicited production of noun-verb units in written language}
 \label{sec:elicitedproductionofnounverbunitsinwrittenlanguage}
 
-<<experimentmosaic, results="asis", fig.showtext=TRUE, fig.pos="htbp", fig.height=5, fig.cap="Mosaic plot of the responses in the production experiment (vertical right) grouped by the morphosyntactic context (horizontal) and the binned N+V unit's attraction strength calculated from the corpus (vertical left)">>=
+<<experimentmosaic, results="asis", fig.showtext=TRUE, fig.pos="htbp", fig.height=4, fig.cap="Mosaic plot of the responses in the production experiment (vertical right) grouped by the morphosyntactic context (horizontal) and the binned N+V unit's attraction strength calculated from the corpus (vertical left)">>=
 exp.cases$Context <- factor(exp.cases$Context, levels = c("Infinitive", "Participle", "Clitic", "Progressive"))
 exp.cases$Attraction <- revalue(exp.cases$Attraction, c("Hi"="High", "Lo"="Low"))
 exp.cases$Univerbation <- revalue(exp.cases$Univerbation, c("1"="Yes", "0"="No"))
@@ -67,19 +67,22 @@ print(experiment.ctx,
 @
 
 
-<<experimentfxattraction, results="asis", fig.showtext=TRUE, fig.pos="htbp", fig.height=5, fig.cap="Effect plot for the regressor encoding the morphosyntactic context in the GLMM modelling the experimental data">>=
-plot(effect("Context", experiment.glmm, KR = T), rug=F, colors = c("black", "darkorange"),
+<<experimentfx, results="asis", fig.height=4, fig.showtext=TRUE, fig.pos="htbp", fig.height=4, fig.cap="Effect plots for the regressor encoding the morphosyntactic context and the attraction strength as calculated from the corpus in the GLMM modelling the experimental data">>=
+
+experiment.glmm.fx.context.fx <- effect("Context", experiment.glmm, KR = T)
+experiment.glmm.fx.context.fx$variables$Context$levels <- c("Inf.", "Part.", "Prog.", "Clitic")
+levels(experiment.glmm.fx.context.fx$x$Context) <-  c("Clitic", "Inf.", "Part.", "Prog.")
+experiment.glmm.fx.context <- plot(experiment.glmm.fx.context.fx, rug=F, colors = c("black", "darkorange"),
      main="",
      ylab="Probability of univerbation",
      xlab="Morphosyntactic context"
 )
-@
-
-
-<<experimentfxcontext, results="asis", fig.showtext=TRUE, fig.pos="htbp", fig.height=5, fig.cap="Effect plot for the regressor encoding the N+V unit's corpus-derived association with univerbation in the GLMM modelling the experimental data">>=
-plot(effect("AttractionNum", experiment.glmm, KR = T), rug=F, colors = c("black", "darkorange"),
+experiment.glmm.fx.attraction <- plot(effect("AttractionNum", experiment.glmm, KR = T), rug=F, colors = c("black", "darkorange"),
      main="",
      ylab="Probability of univerbation",
      xlab="Lexical attraction derived from corpus"
 )
+grid.arrange(experiment.glmm.fx.context, experiment.glmm.fx.attraction, ncol=2)
 @
+
+
