@@ -7,6 +7,12 @@ concordance <- cbind(concordance, all.assocs)
 
 
 # Purge those which have no defined overall assoc strength.
+# First, we have to do that also for the GLMM data frame.
+concordance.glmm <- concordance.glmm[
+  -which(concordance.glmm$Compound %in% concordance[
+    which(is.na(concordance$all.assocs)), "Compound"
+    ]),
+  ]
 concordance <- concordance[-which(is.na(concordance$all.assocs)),]
 
 
@@ -26,18 +32,20 @@ prog.sep.sum    <- sum(concordance$q_prog_sep_all)
 concordance$prog.assocs <- apply(concordance[, c("q_prog_joint_all", "q_prog_sep_all")], 1,
                                  function(row) {assoc(row[1], row[2], prog.joint.sum, prog.sep.sum, min.count)})
 
-# We need to remoce some erroneous cases only with am progs.
-# ignore.am <- c(
-#   which(concordance$Compound=="Computerspielen"),
-#   which(concordance$Compound=="Daumenlutschen"),
-#   which(concordance$Compound=="Schlussmachen"),
-#   which(concordance$Compound=="Kopfmachen"),
-#   which(concordance$Compound=="Platzmachen"),
-#   which(concordance$Compound=="Handytelefonieren"),
-#   which(concordance$Compound=="Eisschlecken"),
-#   which(concordance$Compound=="Kopfdrehen")
-# )
-# all$prog.assocs[ignore.am] <- NaN
+# We need to remove some erroneous cases only with am progs.
+# Since NaN will be ignored later, we set them to NaN,
+# but we will still be able to use the rows in the GLMM.
+ignore.am <- c(
+  which(concordance$Compound=="Computerspielen"),
+  which(concordance$Compound=="Daumenlutschen"),
+  which(concordance$Compound=="Schlussmachen"),
+  which(concordance$Compound=="Kopfmachen"),
+  which(concordance$Compound=="Platzmachen"),
+  which(concordance$Compound=="Handytelefonieren"),
+  which(concordance$Compound=="Eisschlecken"),
+  which(concordance$Compound=="Kopfdrehen")
+)
+concordance$prog.assocs[ignore.am] <- NaN
 
 infzu.joint.sum  <- sum(concordance$q_infzu_joint_all)
 infzu.sep.sum    <- sum(concordance$q_infzu_sep_all)

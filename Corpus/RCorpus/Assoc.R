@@ -49,7 +49,6 @@ all <- all[order(all$all.assocs),]
 
 
 
-
 ### Plot the association scores.
 
 if (save.persistent) pdf("Results/densities_cramer.pdf")
@@ -83,8 +82,6 @@ legend("topright", bty = "n", lwd = 2, col = c("black", "darkblue", "darkgreen",
                   paste0("Inf. (n=", length(which(!is.na(all$infzu.assocs))), ")"))
 )
 if (save.persistent) dev.off()
-
-
 
 
 

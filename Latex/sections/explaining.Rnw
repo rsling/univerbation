@@ -1,2 +1,7 @@
+% !Rnw root = ../nvuniverbation.Rnw
+<<setupexplaining, cache=FALSE, include=FALSE, results='asis'>>=
+opts_knit$set(self.contained=FALSE)
+@
+
 \section{Explaining the process of noun-verb univerbation}
 \label{sec:explainingtheprocessofnounverbuniverbation}

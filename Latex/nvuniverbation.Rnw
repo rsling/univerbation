@@ -39,6 +39,7 @@
 \usepackage{soul}
 \usepackage[mark]{gitinfo2}
 
+
 \newcommand{\stylepath}{./langsci/styles/}
 \usepackage{langsci/styles/langsci-gb4e}
 
@@ -108,6 +109,7 @@ require(xtable)
 require(plyr)
 require(vcd)
 require(thematic)
+require(gridExtra)
 
 opts_knit$set(self.contained=FALSE)
 
@@ -211,8 +213,12 @@ nice.int <- function(n) formatC(n, format="d", big.mark=",")
 <<child="sections/explaining.Rnw">>=
 @
 
+\newpage
 
 \section*{Acknowledgments}
+
+<<child="sections/appendix.Rnw">>=
+@
 
 \printbibliography
 

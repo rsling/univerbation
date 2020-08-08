@@ -35,3 +35,4 @@ all$Joint    <- apply(all[,grep("_joint_", colnames(all))], 1, sum)
 
 # Get a binary linking element vartiable.
 all$Linkbinary <- ifelse(all$Linking=="0", "No", "Yes")
+

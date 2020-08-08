@@ -30,7 +30,6 @@ concordance$q_infzu_joint_all <- apply(concordance[,grep("q_infzu.*_joint_", col
 concordance$Linkbinary <- ifelse(concordance$Linking=="0", "No", "Yes")
 
 # Create the blown-up concordance for the GLMM.
-
 save.cols <-c("Noun", "Verb", "Compound", "Relation", "Linkbinary")
 conditions <- list(
   list(sep = "q_np_sep_all",       joint = "q_np_joint_all",       vari = "NP"),

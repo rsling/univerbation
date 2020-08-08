@@ -1,2 +1,7 @@
+% !Rnw root = ../nvuniverbation.Rnw
+<<setuptheory, cache=FALSE, include=FALSE, results='asis'>>=
+opts_knit$set(self.contained=FALSE)
+@
+
 \section{The status of noun-verb units?}
 \label{sec:thestatusofounverbunits}
