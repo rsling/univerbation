@@ -56,10 +56,11 @@ clean:
 	*.glg *.glo *.gls *.wrd *.wdv *.xdv *.mw *.clr \
 	*.run.xml nvuniverbation.tex nvuniverbation.pgs nvuniverbation.bcf \
 	sections/*aux sections/*~ sections/*.bak sections/*.backup \
-	langsci/*/*aux langsci/*/*~ langsci/*/*.bak langsci/*/*.backup \
-	cache/* figures/* cache*.*
+	langsci/*/*aux langsci/*/*~ langsci/*/*.bak langsci/*/*.backup
 
 realclean: clean
-	rm -f *.dvi *.ps *.pdf
+	rm -f *.dvi *.ps *.pdf \
+	cache/* figures/* cache*.*
+
 
 FORCE:

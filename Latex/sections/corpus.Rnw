@@ -3,7 +3,7 @@
 opts_knit$set(self.contained=FALSE)
 @
 
-\section{Corpus-based analysis of the usage of verb-noun units}
+\section{Analysing the usage of verb-noun units}
 \label{sec:corpusbasedanalysisoftheusageofvnunits}
 
 \subsection{Design and choice of corpus}
@@ -106,8 +106,8 @@ corpus.glmm <- glmer(cbind(Joint, Separate)~Context+Relation+Link+(1|Compound),
                      )
 
 corpus.fixefs <- fixef(corpus.glmm)
-# corpus.confints <- confint(corpus.glmm)
-corpus.confints <- cbind(corpus.fixefs, corpus.fixefs) # Fake CIs for quick recompiles.
+corpus.confints <- confint(corpus.glmm)
+# corpus.confints <- cbind(corpus.fixefs, corpus.fixefs) # Fake CIs for quick recompiles.
 corpus.glmm.r2 <- r.squaredGLMM(corpus.glmm)
 @
 
@@ -155,12 +155,12 @@ The presence of a linking element in fully nominalised compounds favours compoun
 
 <<corpuseffects, results="asis", fig.showtext=TRUE, fig.pos="!htbp", fig.height=4, fig.cap="Effect plots for the regressor encoding the morphosyntactic context of the N+V unit and the regressor encoding the syntactic relation within the N+V unit in the GLMM modelling the corpus data">>=
 corpus.glmm.fx.context <- plot(effect("Context", corpus.glmm, KR = T),
-                              rug=F, colors = c("black", "darkorange"),
+                              rug=F, colors = c("black", "black"),
                               main="",ylab="Probability of univerbation",
                               xlab="Context"
 )
 corpus.glmm.fx.relation <- plot(effect("Relation", corpus.glmm, KR = T),
-                                rug=F, colors = c("black", "darkorange"),
+                                rug=F, colors = c("black", "black"),
                                 main="",
                                 ylab="Probability of univerbation",
                                 xlab="Relation"
@@ -233,19 +233,14 @@ In itself, $v$ does not tell us whether the deviation is negative (for a N+V uni
 The information about the direction of the deviation is added by multiplying $v$ with the sign of the upper left cell of the residual table of the $\chi^2$ test.
 The association scores are related to the second-level model (including the conditional modes), but they have a much more accessible interpretation.
 
-We calculated the signed $v$ for each of the $\Sexpr{length(concordance$all.assocs)}$ N+V units.
-Their distribution is plotted in the form of a density estimate in Figure~\ref{fig:associationsall}.%
-\footnote{It approximates a scaled symmetric $\chi^2$ distribution squashed between -1 and 1.}
-See also \parencite{SchaeferPankratz2018} for similar use of association measures.
-
-<<associationsall, results="asis", fig.showtext = TRUE, fig.pos="htbp", fig.height=3.5, fig.width=3.5, fig.cap=paste0("Density estimate of the distribution of the overall association scores (across all morphosyntactic conditions) with \\CM{n_{Unit}=", length(which(!is.na(concordance$all.assocs))), "}")>>=
+<<associationsall, results="asis", fig.showtext = TRUE, fig.pos="htbp", fig.height=3, fig.width=3, fig.cap=paste0("Density estimate of the distribution of the overall association scores (across all morphosyntactic conditions) with \\CM{n_{Unit}=", length(which(!is.na(concordance$all.assocs))), "}")>>=
 
 ### Plot distributions of association measures.
 density.opts <- list(lwd = 2)
-par(family = "Fira Sans")
+par(family = "Fira Sans", mar=c(2.5, 2.5, 0.5, 2.5))
 
 plot(density(na.omit(concordance$all.assocs)),
-  axes = F, xlab = "", xlim = c(-0.15, 0.15),
+  axes = F, xlab = "", xlim = c(-0.15, 0.15), ylim = c(0,42),
   lwd = density.opts$lwd,
   col = "black", lty = 1,
   main = ""
@@ -253,6 +248,11 @@ plot(density(na.omit(concordance$all.assocs)),
 axis(1)
 axis(2)
 @
+
+We calculated the signed $v$ for each of the $\Sexpr{length(concordance$all.assocs)}$ N+V units.
+Their distribution is plotted in the form of a density estimate in Figure~\ref{fig:associationsall}.%
+\footnote{It approximates a scaled symmetric $\chi^2$ distribution squashed between -1 and 1.}
+See also \parencite{SchaeferPankratz2018} for similar use of association measures.
 
 Based on the annotations in the corpus data set, we can also compare the association strengths for specific morphosyntactic contexts.
 The counts as shown in Table~\ref{tab:associationsexplained} are simply reduced to the counts in the four contexts.
@@ -263,10 +263,10 @@ The resulting distributions are shown in Figure~\ref{fig:associationssingle}.
 
 ### Plot distributions of association measures.
 density.opts <- list(lwd = 2)
-par(mfrow=c(2,2), family = "Fira Sans")
+par(mfrow=c(2,2), family = "Fira Sans", mar=rep(2.5, 4))
 
 plot(density(na.omit(concordance$np.all.assocs)),
-  axes = F, xlab = "", xlim = c(-0.15, 0.15),
+  axes = F, xlab = "", xlim = c(-0.15, 0.15), ylim = c(0, 35),
   lwd = density.opts$lwd,
   col = "black", lty = 1,
   main = substitute(NPs~OB*n[Unit]*EQ*NUNIT*CB, list(EQ="=", OB="(", CB=")", NUNIT=length(which(!is.na(concordance$np.all.assocs)))))
@@ -275,7 +275,7 @@ axis(1)
 axis(2)
 
 plot(density(na.omit(concordance$prog.assocs)),
-  axes = F, xlab = "", xlim = c(-0.15, 0.15),
+  axes = F, xlab = "", xlim = c(-0.15, 0.15), ylim = c(0, 11),
   lwd = density.opts$lwd,
   col = "black", lty = 1,
   main = substitute(Progressives~OB*n[Unit]*EQ*NUNIT*CB, list(EQ="=", OB="(", CB=")", NUNIT=length(which(!is.na(concordance$prog.assocs)))))
@@ -284,7 +284,7 @@ axis(1)
 axis(2)
 
 plot(density(na.omit(concordance$particip.assocs)),
-  axes = F, xlab = "", xlim = c(-0.15, 0.15),
+  axes = F, xlab = "", xlim = c(-0.15, 0.15), ylim = c(0, 165),
   lwd = density.opts$lwd,
   col = "black", lty = 1,
   main = substitute(Participles~OB*n[Unit]*EQ*NUNIT*CB, list(EQ="=", OB="(", CB=")", NUNIT=length(which(!is.na(concordance$particip.assocs)))))
@@ -293,7 +293,7 @@ axis(1)
 axis(2)
 
 plot(density(na.omit(concordance$infzu.assocs)),
-  axes = F, xlab = "", xlim = c(-0.15, 0.15),
+  axes = F, xlab = "", xlim = c(-0.15, 0.15), ylim = c(0, 165),
   lwd = density.opts$lwd,
   col = "black", lty = 1,
   main = substitute(Infinitives~OB*n[Unit]*EQ*NUNIT*CB, list(EQ="=", OB="(", CB=")", NUNIT=length(which(!is.na(concordance$infzu.assocs)))))

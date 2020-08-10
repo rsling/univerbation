@@ -1,3 +1,8 @@
+% !Rnw root = ../nvuniverbation.Rnw
+<<setuploadexperiment, cache=FALSE, include=FALSE, results='asis'>>=
+opts_knit$set(self.contained=FALSE)
+@
+
 <<loadexperimentdata>>=
 
 exp.conditions <- rep(c("Prepart", "Inf", "Part", "Prog"), 2)

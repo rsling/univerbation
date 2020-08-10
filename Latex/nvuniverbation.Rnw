@@ -102,7 +102,6 @@ require(lme4)
 require(fmsb)
 require(MuMIn)
 require(effects)
-require(vioplot)
 require(beanplot)
 require(showtext)
 require(xtable)
@@ -153,16 +152,14 @@ my.largs <- list(
 @
 
 <<rinitialisation>>=
-
 path.base       <- '~/Workingcopies/Univerbation/'
 path.knitr      <- paste0(path.base, 'Latex/')
 path.corpus     <- paste0(path.base, "Corpus/Data/")
 path.experiment <- paste0(path.base, "Experiment/Data/")
 
-source(paste0(path.knitr, './vioplot2.R'))
-source(paste0(path.knitr, './lingassoc.R'))
-source(paste0(path.knitr, "./glmtools.R"))
-source(paste0(path.knitr, "./highstat.R"))
+source(paste0(path.knitr, 'R/lingassoc.R'))
+source(paste0(path.knitr, "R/glmtools.R"))
+source(paste0(path.knitr, "R/highstat.R"))
 
 corpus.size     <- 13950853989
 
@@ -173,13 +170,13 @@ nice.int <- function(n) formatC(n, format="d", big.mark=",")
 @
 
 
-<<child="loadcorpus.Rnw">>=
+<<child="sections/loadcorpus.Rnw">>=
 @
 
-<<child="associations.Rnw">>=
+<<child="sections/associations.Rnw">>=
 @
 
-<<child="loadexperiment.Rnw">>=
+<<child="sections/loadexperiment.Rnw">>=
 @
 
 

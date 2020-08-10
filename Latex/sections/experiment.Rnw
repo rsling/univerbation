@@ -63,7 +63,7 @@ There were two separate groups (\Sexpr{nrow(exp.w1)} and \Sexpr{nrow(exp.w2)} pa
 The distribution of responses of the experiment is shown in the form of a mosaic plot in Figure~\ref{fig:experimentmosaic}.
 It shows the number of compound spellings (univerbation) and separate spellings in each of the four contexts and for N+V units with high and low attraction score.
 
-<<experimentmosaic, results="asis", fig.showtext=TRUE, fig.pos="htbp", fig.height=4, fig.cap="Mosaic plot of the responses in the production experiment (vertical right) grouped by the morphosyntactic context (horizontal) and the binned N+V unit's attraction strength calculated from the corpus (vertical left)">>=
+<<experimentmosaic, results="asis", fig.showtext=TRUE, fig.pos="htbp", fig.height=3.75, fig.cap="Mosaic plot of the responses in the production experiment (vertical right) grouped by the morphosyntactic context (horizontal) and the binned N+V unit's attraction strength calculated from the corpus (vertical left)">>=
 exp.cases$Attraction <- revalue(exp.cases$Attraction, c("Hi"="High", "Lo"="Low"))
 exp.cases$Univerbation <- revalue(exp.cases$Univerbation, c("1"="Yes", "0"="No"))
 
@@ -75,6 +75,7 @@ lab <-ifelse(exp.table <= 5, NA, exp.table)
 exp.mosaic <- mosaic(exp.table, pop = F, direction = c("h", "v", "h"),
                      labeling = T, colorize = T,
                      shade = T,
+                     margins = c(3, 3, 1, 3),
                      gp = gpar(fill=c(rep("lightyellow", 8), rep("lightgreen", 8))),
                      labeling_args=my.largs
                      )
@@ -82,7 +83,7 @@ mosaic.array <- as.table(exp.table)
 labeling_cells(text = lab)(mosaic.array)
 @
 
-The overall number of responses with univerbation rises across the four contexts.
+The overall number of positive responses (\ie, compound spellings) rises across the four contexts.
 It's \Sexpr{length(which(exp.cases$Context=="Infinitive" & exp.cases$Univerbation=="Yes"))} for the infinitive, \Sexpr{length(which(exp.cases$Context=="Participle" & exp.cases$Univerbation=="Yes"))} for the participle, \Sexpr{length(which(exp.cases$Context=="Clitic" & exp.cases$Univerbation=="Yes"))} for NPs with  cliticised article, and finally \Sexpr{length(which(exp.cases$Context=="Progressive" & exp.cases$Univerbation=="Yes"))} for the progressive (in each case out of \Sexpr{length(which(exp.cases$Context=="Infinitive"))}.
 For the N+V units with a high attraction score, participants (almost) always use compound spelling in NPs with a cliticised article (\Sexpr{length(which(exp.cases$Context=="Clitic" & exp.cases$Univerbation=="Yes" & exp.cases$Attraction=="High"))} out of \Sexpr{length(which(exp.cases$Context=="Clitic" & exp.cases$Attraction=="High"))}) and in the progressive (\Sexpr{length(which(exp.cases$Context=="Progressive" & exp.cases$Univerbation=="Yes" & exp.cases$Attraction=="High"))}).
 Between the infinitive (\Sexpr{length(which(exp.cases$Context=="Infinitive" & exp.cases$Univerbation=="Yes" & exp.cases$Attraction=="High"))}) and the participle (\Sexpr{length(which(exp.cases$Context=="Participle" & exp.cases$Univerbation=="Yes" & exp.cases$Attraction=="High"))}), there is a clear differentiation in positive responses, however.
@@ -154,12 +155,12 @@ For the further analysis of this apparent contradiction, we provide effect plots
 experiment.glmm.fx.context.fx <- effect("Context", experiment.glmm, KR = T)
 experiment.glmm.fx.context.fx$variables$Context$levels <- c("Inf.", "Part.", "Prog.", "Clitic")
 levels(experiment.glmm.fx.context.fx$x$Context) <-  c("Clitic", "Inf.", "Part.", "Prog.")
-experiment.glmm.fx.context <- plot(experiment.glmm.fx.context.fx, rug=F, colors = c("black", "darkorange"),
+experiment.glmm.fx.context <- plot(experiment.glmm.fx.context.fx, rug=F, colors = c("black", "black"),
      main="",
      ylab="Probability of univerbation",
      xlab="Morphosyntactic context"
 )
-experiment.glmm.fx.attraction <- plot(effect("AttractionNum", experiment.glmm, KR = T), rug=F, colors = c("black", "darkorange"),
+experiment.glmm.fx.attraction <- plot(effect("AttractionNum", experiment.glmm, KR = T), rug=F, colors = c("black", "black"),
      main="",
      ylab="Probability of univerbation",
      xlab="Lexical attraction derived from corpus"

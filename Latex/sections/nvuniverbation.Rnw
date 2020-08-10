@@ -1,3 +1,9 @@
+% !Rnw root = ../nvuniverbation.Rnw
+<<setupnvuniverbation, cache=FALSE, include=FALSE, results='asis'>>=
+opts_knit$set(self.contained=FALSE)
+@
+
 \section{The form and history of noun-verb units in German}
 \label{sec:theformandhistoryofnounverbunitsingerman}
 
+\newpage
