@@ -60,8 +60,8 @@ cases$Univerbation <- as.factor(cases$Univerbation)
 
 
 # Reorder factor for nicer effect plot.
-cases$Condition <- factor(cases$Condition, levels = c("Inf", "Part", "Prog", "Prepart"))
-cases$Condition <- revalue(cases$Condition, c("Inf"="Infinitive", "Part"="Participle", "Prepart"="Clitic", "Prog"="Progressive"))
+#cases$Condition <- factor(cases$Condition, levels = c("Inf", "Part", "Prog", "Prepart"))
+#cases$Condition <- revalue(cases$Condition, c("Inf"="Infinitive", "Part"="Participle", "Prepart"="Clitic", "Prog"="Progressive"))
 
 
 # Store the data frame for archiving.
@@ -69,7 +69,7 @@ save(cases, file = paste0(out.dir, "experiment.Rdata"))
 
 
 ### Informative plot ###
-cases$Condition <- factor(cases$Condition, levels = c("Infinitive", "Participle", "Clitic", "Progressive"))
+#cases$Condition <- factor(cases$Condition, levels = c("Infinitive", "Participle", "Clitic", "Progressive"))
 cases$Attraction <- revalue(cases$Attraction, c("Hi"="High", "Lo"="Low"))
 cases$Univerbation <- revalue(cases$Univerbation, c("1"="Yes", "0"="No"))
 
@@ -82,9 +82,7 @@ if (save.persistent) pdf(file = paste0(out.dir, "Responses.pdf"))
 the.plot <- mosaic(the.table, pop = F, direction = c("h", "v", "h"),
                    labeling = T, colorize = T,
                    shade = T,
-                   gp = gpar(fill=c("lightyellow", "lightgreen"))
-                   #set_labels=list(Univerbation = c("No", "Yes"), Attraction = c("High", "Low"),
-                  #                 Condition = rev(c("Progressive", "Clitic", "Participle", "Infinitive")))
+                   gp = gpar(fill=c(rep("lightyellow", 8), rep("lightgreen", 8)))
                   )
 tmparray <- as.table(the.table)
 labeling_cells(text = lab)(tmparray)
@@ -121,8 +119,8 @@ if (save.persistent) dev.off()
 
 fx <- effect("Condition", univerbate.glmer, KR = T)
 
-fx$variables$Condition$levels <- c("Inf.", "Part.", "Clitic", "Prog.")
-levels(fx$x$Condition) <- c("Clitic", "Inf.", "Part.", "Prog.")
+#fx$variables$Condition$levels <- c("Inf.", "Part.", "Clitic", "Prog.")
+#levels(fx$x$Condition) <- c("Clitic", "Inf.", "Part.", "Prog.")
 
 plot(fx, rug=F, colors = c("black", "darkorange"),
           main="",
@@ -132,7 +130,16 @@ plot(fx, rug=F, colors = c("black", "darkorange"),
 
 
 
+designtable <- cases[1:8, c("Condition", "Item", "AttractionNum")]
+designtable <- designtable[order(designtable$AttractionNum),]
+designtable <- cbind(designtable, data.frame(Attraction=c(rep("Low",4), rep("High", 4))))
+designtable <- designtable[order(designtable$Condition),]
 
-plot(c(1:10),
-     main = substitute(NPs~OB*n[unit]=NUNIT*CB, list(OB="(", CB=")", NUNIT=length(which(!is.na(concordance$np.all.assocs)))))
-     )
+
+
+length(levels(as.factor(cases$Participant)))
+summary(as.integer(cases$Age))[1]
+summary(as.integer(cases$Age))[3]
+summary(as.integer(cases$Age))[6]
+length(levels(results.w1$ID))
+length(levels(results.w2$ID))

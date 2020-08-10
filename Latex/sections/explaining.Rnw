@@ -3,5 +3,5 @@
 opts_knit$set(self.contained=FALSE)
 @
 
-\section{Explaining the process of noun-verb univerbation}
-\label{sec:explainingtheprocessofnounverbuniverbation}
+\section{Explaining noun-verb univerbation}
+\label{sec:explainingnounverbuniverbation}

@@ -108,6 +108,7 @@ require(showtext)
 require(xtable)
 require(plyr)
 require(vcd)
+require(gridExtra)
 
 opts_knit$set(self.contained=FALSE)
 
@@ -214,6 +215,8 @@ nice.int <- function(n) formatC(n, format="d", big.mark=",")
 \newpage
 
 \section*{Acknowledgments}
+
+We thank Luise Rissmann for her help annotating and cleaning the corpus data.
 
 <<child="sections/appendix.Rnw">>=
 @

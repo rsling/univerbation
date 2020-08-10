@@ -26,9 +26,9 @@ However, the German DECOW (containing 20.5 billion tokens in 808 million sentenc
 For our purpose, the fully internal analysis of nominal compounds described in \textcite{SchaeferPankratz2018} was particularly of interest.
 It allows for searches of roots within nominal compounds.
 For example, we could query compounds with a deverbal head such as \textit{Zeitnehmen} (`time taking').
-Furthermore, the interface offered by the creators of the COW corpora allows for automated queries controlled by Python scripts using the open-source \textit{SeaCOW} interface.%
+Furthermore, the interface offered by the creators of the COW corpora allows for automated queries controlled by Python scripts using the open-source SeaCOW interface.%
 \footnote{\url{https://github.com/rsling/seacow}}
-The scripts we used to make the queries are released on a cureted open-data server along with all data as well as the \LaTeX, knitr, and R scripts created in the writing of this paper.%
+The scripts we used to make the queries are released on a curated open-data server along with all data as well as the \LaTeX, knitr, and R scripts created in the writing of this paper.%
 \footnote{The DOI of the data set will be revealed in the accepted version of this paper.}
 
 \subsection{Sampling and annotation}
@@ -63,12 +63,12 @@ This class is illustrated by \textit{Daumenlutschen} (``thumb sucking''), which 
 \end{exe}
 
 
-\subsection{Modelling the corpus data}
-\label{sub:modellingthecorpusdata}
+\subsection{Results 1: Multilevel model}
+\label{sub:results1multilevelmodel}
 
 In this section, we present the parameter estimates (and predictions of conditional modes) for a multilevel generalised model (or generalised linear mixed model, GLMM) which models the -- in our view -- the relevant factors influencing speakers' choice of the compound and the separate spelling.%
 \footnote{See \parencite{Schaefer2020a} for an overview of the method and our philosophy in modelling.}
-Given the grand total of \Sexpr{nice.int(sum(concordance$Joint)+sum(concordance$Separate))} observations in the sample (see Section~\ref{sec:samplingandannotation}), we will completely refrain of using inferential statistics per se.
+Given the grand total of \Sexpr{nice.int(sum(concordance$Joint)+sum(concordance$Separate))} observations in the sample (see Section~\ref{sub:samplingandannotation}), we will completely refrain of using inferential statistics per se.
 For samples of such magnitude in data-driven approaches, frequentist significance tests are the wrong tool.
 Bayesian methods reliably converge with frequentist methods at this sample size.
 Therefore, we provide standard likelihood ratio confidence intervals for parameter estimates and prediction intervals for conditional modes as an approximate measure quantifying the precision of the parameter estimates.
@@ -86,11 +86,11 @@ The only first-level (or observation-level) fixed effect regressor is the morpho
 As there is a huge number of \Sexpr{nrow(concordance)} N+V units, the lexical indicator variable for the individual N+V unit should not be used as a fixed effect \parencite[244--247]{GelmanHill2006}.
 Therefore, we specified a generalised linear model with the N+V unit variable as a random effect.
 The variables encoding the internal relation and the presence\slash absence of a linking element are nested inside the levels of the random effect, and they are therefore threated as second-level fixed effects in a multilevel model.%
-In R notation, the specification is shown in Equation~\ref{eq:corpusglmmr}.%
+In R notation, the specification is shown in (\ref{eq:corpusglmmr}).%
 \footnote{See Appendix~\ref{sec:specifictionofthecorpusglmm} for a precise specification in mathematical notation.}
 
 \begin{equation}
-  \mathtt{Proportion\sim Context+Relation+Link+(1|NVUnit)} \label{eq:corpusglmmr}
+  \mathtt{Proportion\sim (1|NVUnit)+Context+Relation+Link} \label{eq:corpusglmmr}
 \end{equation}
 
 <<corpusglmm, results="asis", results="hide">>=
@@ -106,8 +106,8 @@ corpus.glmm <- glmer(cbind(Joint, Separate)~Context+Relation+Link+(1|Compound),
                      )
 
 corpus.fixefs <- fixef(corpus.glmm)
-corpus.confints <- confint(corpus.glmm)
-# corpus.confints <- cbind(corpus.fixefs, corpus.fixefs) # Fake CIs for quick recompiles.
+# corpus.confints <- confint(corpus.glmm)
+corpus.confints <- cbind(corpus.fixefs, corpus.fixefs) # Fake CIs for quick recompiles.
 corpus.glmm.r2 <- r.squaredGLMM(corpus.glmm)
 @
 
@@ -121,13 +121,13 @@ format.ranef <- function(glmm, ranef) {
 }
 
 # Build the table.
-corpus.ct <- nice.float(cbind(corpus.fixefs, corpus.confints[1:7,]))
+corpus.ct <- cbind(corpus.fixefs, corpus.confints[1:7,])
 colnames(corpus.ct) <- c("Estimate", "CI low", "CI high")
 ranef.nv <- format.ranef(corpus.glmm, "Compound")
 corpus.r2.txt <- paste0("Nakagawa \\& Schielzeth's \\CM{R^2_m=", nice.float(corpus.glmm.r2[1,1]), "} and \\CM{R^2_c=", nice.float(corpus.glmm.r2[1,2]), "}")
 ranef.txt <- paste0("Random effect for V+N lemma: \\CM{Intercept=", nice.float(ranef.nv$Intercept), "}, \\CM{sd=", nice.float(ranef.nv$sd),
                     "}")
-corpus.ctxt <- xtable(corpus.ct,
+corpus.ctxt <- xtable(corpus.ct, digits = 3,
                     caption = paste0("Coefficient table for the binomial GLMM modelling the corpus data with 95\\% profile likelihood ratio confidence intervals. The horizontal line separates first-level and second-level effects. Weighting was used to account for the bias in models on proportion data. ", ranef.txt, ". The intercepts model the fixed effects Relation=Object and Link=No. " , corpus.r2.txt),
                     label = "tab:corpusglmm")
 
@@ -147,11 +147,11 @@ The estimated parameters of the model are given in Table~\ref{tab:corpusglmm}.
 Additionally, effect plots for \textit{Context} and \textit{Relation} are given in Figure~\ref{fig:corpuseffects}\ref{fig:corpuseffects}.%
 \footnote{Put in an oversimplified manner, effect plots for binomial GLM(M)s \parencite{FoxWeisberg2018} plot the probability of the outcome across values of a regressor assuming default values for all other regressors.
 While model coefficients in binomial (and other) models have no direct interpretation in terms of probability, effect plots allow a more intuitive interpretation in terms of changes in probability.}
-As expected, the prototypically verbal contexts (infinitives and participles in analytic verb forms) are associated with a low probability of compound spelling (the infinitive is on the intercept $\Sexpr{corpus.ct["(Intercept)","Estimate"]}$, and participles have a coefficient of $\Sexpr{corpus.ct["ContextParticiple","Estimate"]}$).
-NPs and progressives as prototypically nominal contexts clearly favour compound spelling (coefficients of $\Sexpr{corpus.ct["ContextNP","Estimate"]}$ and $\Sexpr{corpus.ct["ContextProgressive","Estimate"]}$, respectively).
-Both the coefficients and the effect plot (right panel in Figure~\ref{fig:corpuseffects}) show alow probability of compound spelling when the relation between the verb and the noun (on the intercept) is that of an object, and a high probability when the relation is that of an adjunct (coefficient $\Sexpr{corpus.ct["RelationAdjunct","Estimate"]}$).
-The undetermined cases are in between the two clearcut cases (coefficient $\Sexpr{corpus.ct["RelationUndetermined","Estimate"]}$).
-The presence of a linking element in fully nominalised compounds favours compound spelling only slightly (coefficient $\Sexpr{corpus.ct["LinkYes","Estimate"]}$).
+As expected, the prototypically verbal contexts (infinitives and participles in analytic verb forms) are associated with a low probability of compound spelling (the infinitive is on the intercept $\Sexpr{nice.float(corpus.ct["(Intercept)","Estimate"])}$, and participles have a coefficient of $\Sexpr{nice.float(corpus.ct["ContextParticiple","Estimate"])}$).
+NPs and progressives as prototypically nominal contexts clearly favour compound spelling (coefficients of $\Sexpr{nice.float(corpus.ct["ContextNP","Estimate"])}$ and $\Sexpr{nice.float(corpus.ct["ContextProgressive","Estimate"])}$, respectively).
+Both the coefficients and the effect plot (right panel in Figure~\ref{fig:corpuseffects}) show alow probability of compound spelling when the relation between the verb and the noun (on the intercept) is that of an object, and a high probability when the relation is that of an adjunct (coefficient $\Sexpr{nice.float(corpus.ct["RelationAdjunct","Estimate"])}$).
+The undetermined cases are in between the two clearcut cases (coefficient $\Sexpr{nice.float(corpus.ct["RelationUndetermined","Estimate"])}$).
+The presence of a linking element in fully nominalised compounds favours compound spelling only slightly (coefficient $\Sexpr{nice.float(corpus.ct["LinkYes","Estimate"])}$).
 
 <<corpuseffects, results="asis", fig.showtext=TRUE, fig.pos="!htbp", fig.height=4, fig.cap="Effect plots for the regressor encoding the morphosyntactic context of the N+V unit and the regressor encoding the syntactic relation within the N+V unit in the GLMM modelling the corpus data">>=
 corpus.glmm.fx.context <- plot(effect("Context", corpus.glmm, KR = T),
@@ -190,16 +190,16 @@ corpus.ranef.selection <- ranef.plot(corpus.glmm, effect = "Compound", number = 
 
 The individual V+N unit thus plays a major role in writers' affinity to the univerbation of V+N units.
 This was shown in the form of the second-level predictors and the residual conditional modes.
-In Section~\ref{sub:associationastrengths}, we approach this effect using yet another method, and the results obtained using that method will be used to predict participants' behaviour in the controlled experiment reported in Section~\ref{sec:elicitedproductionofnounverbunitsinwrittenlanguage}.
+In Section~\ref{sub:results2associationastrengths}, we approach this effect using yet another method, and the results obtained using that method will be used to predict participants' behaviour in the controlled experiment reported in Section~\ref{sec:elicitedproductionofnounverbunitsinwrittenlanguage}.
 
-\subsection{Association strengths}
-\label{sub:associationastrengths}
+\subsection{Results 2: Association strengths}
+\label{sub:results2associationastrengths}
 
 In this section, we report an analysis of the item-specific affinities of N+V units towards univerbation.
 The reasons for this additional analysis of the data is twofold.
 First, we aim to demonstrate that the same interpretation can be obtained using a method that is technically much simpler and more robust against problems with the distribution of the data and against misinterpretation than multilevel modelling.
 This is a valuable contribution to the current discussisons in linguistics and statistics, also in the sense of methodological pluralism (see, for example \citealt{ArppeJaervikivi2007}).
-Second, we saw in Section~\ref{sub:modellingthecorpusdata} that the second-level predictors and the individual N+V units -- both being related to the choice of concrete N+V units -- are highly predictive of the outcome (univerbation or not).
+Second, we saw in Section~\ref{sub:results1multilevelmodel} that the second-level predictors and the individual N+V units -- both being related to the choice of concrete N+V units -- are highly predictive of the outcome (univerbation or not).
 Therefore, in the experiment reported in Section~\ref{sec:elicitedproductionofnounverbunitsinwrittenlanguage}, we need to control for the N+V units' affinity towards univerbation.
 The measures introduced here are ideally suited for this task.
 
@@ -218,8 +218,8 @@ Such comparisons must be made relative to the overall number of the specific N+V
   All other N+V Units & $c_{21}$ & $c_{22}$ \\
   \bottomrule
   \end{tabular}
-  \label{tab:associationsexplained}
   \caption{2\CM{\times}2 contingency table as used in the calculation of the strengths of the associations of N+V units with univerbation}
+  \label{tab:associationsexplained}
 \end{table}
 
 We're interested in deviations between the first row and the second row, and there is a range of statistical measures for that.
@@ -236,9 +236,9 @@ The association scores are related to the second-level model (including the cond
 We calculated the signed $v$ for each of the $\Sexpr{length(concordance$all.assocs)}$ N+V units.
 Their distribution is plotted in the form of a density estimate in Figure~\ref{fig:associationsall}.%
 \footnote{It approximates a scaled symmetric $\chi^2$ distribution squashed between -1 and 1.}
-%See also \parencite{SchaeferPankratz2018} for similar use of association measures.
+See also \parencite{SchaeferPankratz2018} for similar use of association measures.
 
-<<associationsall, results="asis", fig.showtext = TRUE, fig.pos="htbp", fig.height=3.5, fig.width=3.5, fig.cap=paste0("Density estimate of the distribution of the overall association scores (across all morphosyntactic conditions) with \\CM{n=", length(which(!is.na(concordance$all.assocs))), "}")>>=
+<<associationsall, results="asis", fig.showtext = TRUE, fig.pos="htbp", fig.height=3.5, fig.width=3.5, fig.cap=paste0("Density estimate of the distribution of the overall association scores (across all morphosyntactic conditions) with \\CM{n_{Unit}=", length(which(!is.na(concordance$all.assocs))), "}")>>=
 
 ### Plot distributions of association measures.
 density.opts <- list(lwd = 2)
@@ -302,7 +302,7 @@ axis(1)
 axis(2)
 @
 
-The context-wise distributions of the association scores corroborate the results from the GLMM reported in Section~\ref{sub:modellingthecorpusdata}.
+The context-wise distributions of the association scores corroborate the results from the GLMM reported in Section~\ref{sub:results1multilevelmodel}.
 In the NP context (top left panel of Figure~\ref{fig:associationssingle}), the right tail of the curve is much heavier than the left tail, which means there are mostly higher than usual tendencies towards univerbation.
 In the syntactically similar progressive (top right panel), the distribution is (very) approximately symmetric, but given the low number of \Sexpr{length(which(!is.na(concordance$prog.assocs)))} N+V units for which $v$ could be calculated, the result cannot be seen as stable.%
 \footnote{The low number is one the one hand due to the fact that progressives are rare compared to NPs, participles, and infinitives.
@@ -326,11 +326,10 @@ corpus.assoc.sel <- corpus.assoc.sel[, 1:3]
 @
 
 \begin{table}[!htbp]
-  \label{tab:corpusassocslohi}
   \begin{minipage}{.45\textwidth}
     \centering
     <<corpusassoctablehi, results="asis">>=
-    corpus.assoc.hi <- xtable(corpus.assoc.sel[1:10,])
+    corpus.assoc.hi <- xtable(corpus.assoc.sel[1:10,], digits = 3)
     print(corpus.assoc.hi,
           include.rownames=F,
           floating = F,
@@ -343,7 +342,7 @@ corpus.assoc.sel <- corpus.assoc.sel[, 1:3]
   \end{minipage}\hspace{1em}\begin{minipage}{.45\textwidth}
     \centering
     <<corpusassoctablelo, results="asis">>=
-    corpus.assoc.lo <- xtable(corpus.assoc.sel[30:21,])
+    corpus.assoc.lo <- xtable(corpus.assoc.sel[30:21,], digits = 3)
     print(corpus.assoc.lo,
           include.rownames=F,
           floating = F,
@@ -355,6 +354,7 @@ corpus.assoc.sel <- corpus.assoc.sel[, 1:3]
     @
   \end{minipage}
   \caption{Top ten V+N units with a strong tendency for univerbation (left panel) and top ten V+N units with a strong tendency against univerbation (right panel)}
+  \label{tab:corpusassocslohi}
 \end{table}
 
 The tables illustrate that units with the strongest tendencies against univerbation are predominantly ones with an object relation.
@@ -363,7 +363,7 @@ The ten items with the least clear tendency in either direction are shown in Tab
 They mostly have an internal object relation.
 
 <<corpusassoctablenull, results="asis", >>=
-corpus.assoc.null <- xtable(corpus.assoc.sel[11:20,],
+corpus.assoc.null <- xtable(corpus.assoc.sel[11:20,], digits = 3,
                             caption = paste0("Top ten V+N units without any tendency for or against univerbation"),
                             label = "tab:corpusassoctablenull")
 # Print the table.

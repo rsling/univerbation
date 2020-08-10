@@ -596,7 +596,7 @@ Index	Osort	Noun	Verb	Linking	Compound	Valency	Relation	Prefix	Particle	Freq	Nou
 482	595	Film	gucken	0	Filmgucken	Optional	Object			7	Filme	geguckt	X	gucken|gucke|guckst|guckten|guckte|guckt	85	8	2	1	393	60	1	52	4	60	10	0	25	3	238	61	2	0	0	8	2	2	0	2	0	0	0	1	35	8	0	0	0	17	5
 516	596	Probe	gucken	0	Probegucken	Optional	Adjunct			6	Proben	geguckt	X	gucken|gucke|guckst|guckten|guckte|guckt	16	13	1	0	0	0	0	7	1	1	0	0	11	13	3	1	1	0	0	1	1	0	0	0	0	0	0	1	1	0	0	1	0	0	0
 590	597	Stern	gucken	0	Sterngucken	Optional	Object			5	Sterne	geguckt	X	gucken|gucke|guckst|guckten|guckte|guckt	44	2	7	0	0	0	0	16	0	0	0	0	28	3	0	0	0	0	0	0	0	1	0	0	0	0	0	0	0	0	0	0	0	0	0
-66	598	Teil	haben	0	Teilhaben	Transitive	Object			72	Teile	gehabt	X	ham|haette|hab|habs|hatt|hät|hätt|hats	586	32702	136	73	602	10	1	41	18	401	14	1	450	31946	745	963	1	14	4969	139	326	2	2	2	0	0	1	128	15	21	0	3	1	668	209
+66	598	Teil	haben	0	Teilhaben	Erroneous	Erroneous			72	Teile	gehabt	X	ham|haette|hab|habs|hatt|hät|hätt|hats	586	32702	136	73	602	10	1	41	18	401	14	1	450	31946	745	963	1	14	4969	139	326	2	2	2	0	0	1	128	15	21	0	3	1	668	209
 115	599	Recht	haben	0	Rechthaben	Transitive	Object			38	Rechte	gehabt	X	ham|haette|hab|habs|hatt|hät|hätt|hats	382	131	82	7	5145	95	1	115	17	69	8	0	191	172	11346	14671	4	1	6	897	714	5	0	1	0	0	0	14	1383	1864	2	0	0	111	380
 166	600	Spaß	haben	0	Spaßhaben	Transitive	Object			23	Spass	gehabt	X	ham|haette|hab|habs|hatt|hät|hätt|hats	205	10	11	1	5658	381	3	62	3	385	31	2	141	22	25372	1773	10	1	0	4846	295	2	0	5	0	0	1	0	1847	101	0	0	0	171	51
 9	601	Kreuz	heben	0	Kreuzheben	Transitive	Adjunct			481	Kreuze	gehoben	X	hob|heben|hub|hebt|hebst|hoben|hebe|huben	3576	514	249	31	3	0	0	681	64	0	0	0	3564	508	1	1	0	0	0	0	0	4	0	0	0	0	1	0	0	0	0	13	6	1	0

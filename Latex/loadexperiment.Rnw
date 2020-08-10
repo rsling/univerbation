@@ -10,9 +10,9 @@ exp.attracts <- join(exp.lexicals.df, concordance)[, "all.assocs"]
 exp.attracts.f <- ifelse(exp.attracts < -0.003, "Lo", "Hi")
 
 exp.w1 <- read.csv(file = paste0(path.experiment, "Ergebnisse_Woche1.csv"), sep = "\t",
-                   colClasses = c("factor"))
+                   colClasses = c("Alter" = "integer"))
 exp.w2 <- read.csv(file = paste0(path.experiment, "Ergebnisse_Woche2.csv"), sep = "\t",
-                   colClasses = c("factor"))
+                   colClasses = c("Alter" = "integer"))
 experiment <- rbind(exp.w1, exp.w2[,colnames(exp.w1)])
 
 # Remove remarks and secondary experiment.
@@ -33,12 +33,12 @@ for (r in 1:nrow(experiment)) {
 exp.cases <- as.data.frame(exp.cases)
 rownames(exp.cases) <- c()
 exp.cases <- cbind(exp.cases, rep(exp.conditions, nrow(experiment)), rep(exp.lexicals, nrow(experiment)), rep(exp.attracts.f, nrow(experiment)), rep(exp.attracts, nrow(experiment)))
-colnames(exp.cases) <- c("Univerbation", "Participant", "Age", "Gender", "Condition", "Item", "Attraction", "AttractionNum")
+colnames(exp.cases) <- c("Univerbation", "Participant", "Gender", "Age", "Condition", "Item", "Attraction", "AttractionNum")
 exp.cases$Univerbation <- as.factor(exp.cases$Univerbation)
 
 # Reorder factor for nicer effect plot.
-exp.cases$Condition <- factor(exp.cases$Condition, levels = c("Inf", "Part", "Prog", "Prepart"))
 exp.cases$Condition <- revalue(exp.cases$Condition, c("Inf"="Infinitive", "Part"="Participle", "Prepart"="Clitic", "Prog"="Progressive"))
+exp.cases$Condition <- factor(exp.cases$Condition, levels = c("Infinitive", "Participle", "Clitic", "Progressive"))
 
 # Rename Condition => Context.
 names(exp.cases)[names(exp.cases) == "Condition"] <- "Context"
