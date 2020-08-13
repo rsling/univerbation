@@ -250,7 +250,7 @@ Index	Osort	Noun	Verb	Linking	Compound	Valency	Relation	Prefix	Particle	Freq	Nou
 625	249	Licht	setzen	0	Lichtsetzen	Transitive	Object			5	Lichter	gesetzt	X	setzten|setzen|setzte|setze|setzet|setzt	22	0	6	0	35	0	0	4	0	43	0	0	14	0	49	2	0	0	0	18	1	0	0	0	0	0	0	0	17	4	0	0	0	32	0
 599	250	Seife	sieden	0	Seifesieden	Transitive	Object			5	Seife	gesotten	X	sott|sieden|sotten|siedet	12	1	4	0	1	0	0	4	0	2	1	0	4	1	25	0	0	0	0	3	0	0	0	0	0	0	0	0	1	0	0	0	0	0	0
 606	251	Salz	sieden	0	Salzsieden	Transitive	Object			5	Salze	gesotten	X	sott|sieden|sotten|siedet	50	0	22	0	0	0	0	17	0	0	0	0	15	0	9	0	0	0	0	6	0	0	0	0	0	0	0	0	4	0	0	0	0	0	0
-93	252	Ei	singen	0	Eisingen	Optional	Erroneous			49	Eier	gesungen	X	sänge|singet|singt|sangen|sang|singen|singe|singst	376	2	2	0	1	0	0	0	0	0	0	0	380	2	0	0	0	0	0	1	0	0	0	0	0	0	1	1	0	0	0	0	0	0	1
+93	252	Ei	singen	0	Eisingen	Erroneous	Erroneous			49	Eier	gesungen	X	sänge|singet|singt|sangen|sang|singen|singe|singst	376	2	2	0	1	0	0	0	0	0	0	0	380	2	0	0	0	0	0	1	0	0	0	0	0	0	1	1	0	0	0	0	0	0	1
 270	253	Mantra	singen	0	Mantrasingen	Optional	Object			14	Mantras	gesungen	X	sänge|singet|singt|sangen|sang|singen|singe|singst	121	0	17	0	6	0	0	9	0	1	0	0	128	0	10	1	19	0	0	0	0	0	0	0	0	0	0	0	2	0	0	0	0	1	0
 272	254	Kritik	singen	0	Kritiksingen	Optional	Object			14	Kritiken	gesungen	X	sänge|singet|singt|sangen|sang|singen|singe|singst	54	0	17	0	0	0	0	7	0	0	0	0	22	0	0	0	0	0	0	0	0	8	0	0	0	0	0	0	0	0	0	0	0	0	0
 362	255	Mai	singen	0	Maisingen	Optional	Adjunct			10	Mai	gesungen	X	sänge|singet|singt|sangen|sang|singen|singe|singst	81	0	23	0	1	0	0	12	0	0	0	0	17	0	1	0	0	0	0	1	0	3	0	0	0	0	0	0	0	0	0	0	0	2	0
@@ -407,7 +407,7 @@ Index	Osort	Noun	Verb	Linking	Compound	Valency	Relation	Prefix	Particle	Freq	Nou
 243	406	Axt	werfen	0	Axtwerfen	Transitive	Object			16	Äxten	geworfen	X	werft|würfen|würfe|wirfst|werfe|werfen|warf|warfen|wirft	137	1	13	0	3	0	0	23	0	0	0	0	118	1	14	0	0	0	0	0	0	0	0	0	0	0	0	0	1	0	0	5	0	4	0
 269	407	Messer	werfen	0	Messerwerfen	Transitive	Object			14	Messer	geworfen	X	werft|würfen|würfe|wirfst|werfe|werfen|warf|warfen|wirft	144	3	20	1	10	0	0	40	0	3	0	0	116	5	39	4	1	0	0	3	0	1	0	0	0	0	0	0	5	0	0	10	1	4	0
 271	408	Lasso	werfen	0	Lassowerfen	Transitive	Object			14	Lassos	geworfen	X	werft|würfen|würfe|wirfst|werfe|werfen|warf|warfen|wirft	102	2	7	1	4	1	0	28	1	7	0	0	103	0	42	0	1	0	0	1	0	0	0	0	0	0	0	0	4	0	0	1	0	1	0
-333	409	Schein	werfen	0	Scheinwerfen	Transitive	Erroneous			11	Scheine	geworfen	X	werft|würfen|würfe|wirfst|werfe|werfen|warf|warfen|wirft	99	7	35	4	3	0	0	2	0	0	0	0	59	7	1	1	0	0	0	0	0	0	0	0	0	0	0	0	1	0	0	7	7	7	0
+333	409	Schein	werfen	0	Scheinwerfen	Erroneous	Erroneous			11	Scheine	geworfen	X	werft|würfen|würfe|wirfst|werfe|werfen|warf|warfen|wirft	99	7	35	4	3	0	0	2	0	0	0	0	59	7	1	1	0	0	0	0	0	0	0	0	0	0	0	0	1	0	0	7	7	7	0
 390	410	Pfeil	werfen	0	Pfeilwerfen	Transitive	Object			9	Pfeilen	geworfen	X	werft|würfen|würfe|wirfst|werfe|werfen|warf|warfen|wirft	76	0	5	0	5	0	0	9	0	1	0	0	89	0	3	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	2	0	0	0
 457	411	Reis	werfen	0	Reiswerfen	Transitive	Object			7	Reis	geworfen	X	werft|würfen|würfe|wirfst|werfe|werfen|warf|warfen|wirft	30	0	10	0	7	1	0	5	0	0	0	0	10	0	42	2	0	0	0	9	0	0	0	0	0	0	0	0	18	0	0	0	0	3	0
 476	412	Gewicht	werfen	0	Gewichtwerfen	Transitive	Object			7	Gewichte	geworfen	X	werft|würfen|würfe|wirfst|werfe|werfen|warf|warfen|wirft	121	1	11	0	1	0	0	60	0	2	0	0	48	1	4	1	0	0	0	1	0	0	0	0	0	0	0	0	0	0	0	0	0	2	0
@@ -474,7 +474,7 @@ Index	Osort	Noun	Verb	Linking	Compound	Valency	Relation	Prefix	Particle	Freq	Nou
 409	473	Ventil	einstellen	0	Ventileinstellen	Transitive	Object		ein	8	Ventile	eingestellt	einzustellen	einstellten|einstellen|einstellte|einstelle|einstellt	45	6	9	3	4	0	0	14	1	4	0	0	13	3	6	3	0	0	0	0	0	0	0	0	0	0	0	0	1	0	0	0	0	0	0
 508	474	Spur	einstellen	0	Spureinstellen	Transitive	Object		ein	6	Spuren	eingestellt	einzustellen	einstellten|einstellen|einstellte|einstelle|einstellt	77	6	13	0	86	14	0	28	1	29	5	0	41	8	118	46	1	0	0	0	0	0	0	0	0	0	0	0	22	2	1	0	0	0	0
 543	475	Geld	eintreiben	0	Geldeintreiben	Transitive	Object		ein	6	Gelder	eingetrieben	einzutreiben	eintrieb|eintreibt|eintreiben|eintrieben	89	2	20	0	67	7	0	49	0	12	0	0	16	0	138	11	0	0	1	0	0	0	0	0	0	0	0	0	20	2	0	0	0	22	1
-314	476	Moral	empfinden	0	Moralempfinden	Transitive	Erroneous			12	Moral	empfunden	X	empfänden|empfindest|empfindet|empfanden|empfand|empfinden|empfinde|empfände	139	6	38	1	0	0	1	2	0	0	0	0	77	5	1	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	2	0
+314	476	Moral	empfinden	0	Moralempfinden	Erroneous	Erroneous			12	Moral	empfunden	X	empfänden|empfindest|empfindet|empfanden|empfand|empfinden|empfinde|empfände	139	6	38	1	0	0	1	2	0	0	0	0	77	5	1	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	2	0
 313	477	Natur	erkennen	0	Naturerkennen	Transitive	Object	er		12	Naturen	erkannt	X	erkannten|erkannte|erkenne|erkennen|erkennten|erkennte|erkennst|erkennt	23	0	12	0	131	1	0	0	0	2	0	0	16	0	45	0	1	0	0	16	0	0	0	0	0	0	0	0	4	0	0	0	0	8	0
 144	478	Körper	erleben	0	Körpererleben	Transitive	Object	er		29	Körper	erlebt	X	erlebt|erlebten|erlebte|erleben|erlebst|erlebe	178	0	45	0	10	0	1	25	0	6	0	0	110	0	37	1	2	0	0	9	0	1	0	2	0	0	0	0	17	0	0	0	0	26	0
 147	479	Zeit	erleben	0	Zeiterleben	Transitive	Object	er		28	Zeiten	erlebt	X	erlebt|erlebten|erlebte|erleben|erlebst|erlebe	181	0	56	0	193	3	0	11	0	149	0	0	84	0	112	0	1	0	0	19	1	0	0	0	0	0	0	0	63	11	0	0	0	76	19

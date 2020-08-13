@@ -12,12 +12,12 @@ opts_knit$set(self.contained=FALSE)
 In Section~\ref{sub:results1multilevelmodel}, the specification of the model was given in R notation as (\ref{eq:corpusglmmr}), repeated here as (\ref{eq:corpusglmmr2}).
 
 \begin{equation}
-  \mathtt{Proportion\sim Context+Relation+Link+(1|NV)} \label{eq:corpusglmmr2}
+  \mathtt{Proportion\sim (1|NVUnit)+Context+Relation+Link} \label{eq:corpusglmmr2}
 \end{equation}
 
 This notation blurs the difference between first-level and second-level fixed effects.
 The model specification is the crucial step in statistical modelling since it encodes the researchers' commitment to a causal mechanism controlling the phenomenon to be modelled (in this case, writers' mental grammars with respect to the univerbation of N+V units).
-Model specification thus deserves more attention than \ref{eq:corpusglmmr2} has to offer.
+Model specification thus deserves more attention than (\ref{eq:corpusglmmr2}) has to offer.
 Mathematically and thus more transparently, the model is given in (\ref{eq:corpusglmm}).
 The notation with angled brackets in $\alpha_{NV_j[i]}$ should be read as ``the value of the random effect $\alpha_{NV}$ for the factor level $j$, chosen appropriately for observation $i$.
 
@@ -29,7 +29,7 @@ The notation with angled brackets in $\alpha_{NV_j[i]}$ should be read as ``the 
   ] \label{eq:corpusglmm}
 \end{equation}
 
-The proportion of compound spellings $Prop_{Comp_i}$ is the logit-transformed sum of the overall intercept $\alpha_0$, the random intercept for the $j$-th N+V unit $\alpha_{NV_j[i]}$ (whichever is observed in observation $i$) and the dot product of the vector of dummy-coded binary value for the morphosyntactic context $\vec{x}_{Context_i}$ and the vector of their corresponding regressors $\vec{\beta}_{Context}$.
+The proportion of compound spellings $Prop_{Comp_i}$ is the logit-transformed sum of the overall intercept $\alpha_0$, the random intercept for the $j$-th N+V unit $\alpha_{NV_j[i]}$ (whichever is found in observation $i$) and the dot product of the vector of dummy-coded binary value for the morphosyntactic context $\vec{x}_{Context_i}$ and the vector of their corresponding regressors $\vec{\beta}_{Context}$.
 Since it is a multilevel model, $\alpha_{NV}$ has its own linear model, which is given in (\ref{eq:corpusglmm2}).
 It is also assumed that \ref{eq:corpusrandomnorm} holds.
 
@@ -45,6 +45,36 @@ It is also assumed that \ref{eq:corpusrandomnorm} holds.
 \end{equation}
 
 The random effects are assumed to be a normally distributed variable $\alpha_{NV}$ which is for each N+V unit $j$ given as the sum of the conditional mode of unit $i$ (often wrongly called the \textit{random effect} per se), the dot product $\vec{\delta}_{Relation}\cdot\vec{x}_{Relation_j}$ of the vector of binary variables encoding the relation and the vector of their corresponding coefficients, and finally the product $\delta_{Link}\cdot x_{Link}$ of the binary variable encoding the presence of a linking element and its coefficient.
+
+
+
+
+
+
+\section{Full specification of the experiment GLMM}
+\label{sec:specifictionoftheexperimentglmm}
+
+The model is specified in the same notation as in Appendix~\ref{sec:specifictionofthecorpusglmm} in (\ref{eq:experimentglmm}).
+The regressor $x_{Attract_i}$ is numeric (the attraction score), whereas $\vec{x}_{Context_i}$ is a dummy-coded vector of binary variables.
+Additionally, it is assumed that (\ref{eq:experimentrandomnorm}) holds.
+
+\begin{equation}
+  Pr(Univ=1)=logit^{-1}[
+  \alpha_0
+  +\alpha_{Part_j[i]}
+  +\beta_{Attract}\cdot x_{Attract_i}
+  +\vec{\beta}_{Context}\cdot\vec{x}_{Context_i}
+  ] \label{eq:experimentglmm}
+\end{equation}
+
+\begin{equation}
+  \alpha_{Participant}\sim Norm \label{eq:experimentrandomnorm}
+\end{equation}
+
+
+
+
+
 
 
 \section{Sentences used in the experiment}
@@ -81,22 +111,3 @@ The order of the sentences corresponds to Table~\ref{tab:designtable}.
 \end{exe}
 
 
-\section{Full specification of the experiment GLMM}
-\label{sec:specifictionoftheexperimentglmm}
-
-The model is specified in the same notation as in Appendix~\ref{sec:specifictionofthecorpusglmm} in (\ref{eq:experimentglmm}).
-The regressor $x_{Attract_i}$ is numeric (the attraction score), whereas $\vec{x}_{Context_i}$ is a dummy-coded vector of binary variables.
-Additionally, it is assumed that (\ref{eq:experimentrandomnorm}) holds.
-
-\begin{equation}
-  Pr(Univ=1)=logit^{-1}[
-  \alpha_0
-  +\alpha_{Part_j[i]}
-  +\beta_{Attract}\cdot x_{Attract_i}
-  +\vec{\beta}_{Context}\cdot\vec{x}_{Context_i}
-  ] \label{eq:experimentglmm}
-\end{equation}
-
-\begin{equation}
-  \alpha_{Participant}\sim Norm \label{eq:experimentrandomnorm}
-\end{equation}

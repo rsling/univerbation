@@ -6,24 +6,26 @@ opts_knit$set(self.contained=FALSE)
 \section{Elicited production of noun-verb units}
 \label{sec:elicitedproductionofnounverbunitsinwrittenlanguage}
 
+In this section, we corroborate the findings from Section~\ref{sec:corpusbasedanalysisoftheusageofvnunits} in a controlled experiment.
+We describe the rationale behind the experiment, the methods used, the design, and the group of participants in Section~\ref{sub:designandparticipants}.
+Section~\ref{sub:resultsexperiment} reports the results descriptively and in the form of a generalised linear mixed model.
+
 \subsection{Design and participants}
 \label{sub:designandparticipants}
 
-The goal of the experiment was to corroborate the findings from the corpus and to test whether writers' behaviour under controlled experimental conditions is similar to the behaviour of writers under uncontrolled circumstances.
-Furthermore, the experiment allowed us to quantify individual preferences, something which is impossible with most types of corpus data.
-
-We used pre-recorded auditory stimuli in the experiment in order to elicit spellings of given N+V units.
+The goal of the experiment was to corroborate the findings from the corpus and to test whether writers' behaviour under controlled experimental conditions is similar to the behaviour of writers under uncontrolled circumstances as found in corpora.
+We used pre-recorded auditory stimuli in order to elicit spellings of given N+V units.
 The stimuli were chosen based on theoretical criteria and information obtained from the corpus.
-We constructed eight sentences instantiation four contexts, twice each.
+We constructed eight sentences instantiating the four contexts.
 In each context, we chose one N+V unit with a high and one with a low attraction strength according to the corpus.%
 \footnote{Given the overall constraints on the choice of the items, \textit{low} and \textit{high} had to be seen as relative terms.
 However, all low attractions scores are higher than zero, all high attraction scores are greater than zero, and for each context, the pair of low and high attraction scores differs at least by 0.05.}
-The sentences were constructed in a ways such that all N+V units were the predicate of a subordinate clause in order to consistently ensure verb-last constituent order and avoid interferring verb-second effects, which are inevitable in independent sentences.
+The sentences were constructed in a ways such that all N+V units were the predicate of a subordinate clause in order to consistently ensure verb-last constituent order and avoid interfering verb-second effects, which are inevitable in independent sentences in German.
 The full sentences are given in Appendix~\ref{sec:sentencesusedintheexperiment}.
 
-We added 32 fillers, resulting in a total of fourty sentences being read to the participants.%
-\footnote{Of the fourty fillers, six were items from an unrelated experiment.}
-Of the fourty sentences, twenty (including the target items, of course) had to be written down.
+We added 32 fillers, resulting in a total of forty sentences being read to the participants.%
+\footnote{Of the forty fillers, six were actually items from an unrelated experiment.}
+Of the forty sentences, twenty (including the target items, of course) had to be written down.
 The order of the target items was randomised, by it was made sure that there were at least three sentences in between pairs of items.
 There were nine distractors in the form of yes-no questions related to random sentences previously heard by the participants.
 An overview of the item design is shown in Table~\ref{tab:designtable}, where each line represents the features of one of the eight items.
@@ -83,8 +85,8 @@ mosaic.array <- as.table(exp.table)
 labeling_cells(text = lab)(mosaic.array)
 @
 
-The overall number of positive responses (\ie, compound spellings) rises across the four contexts.
-It's \Sexpr{length(which(exp.cases$Context=="Infinitive" & exp.cases$Univerbation=="Yes"))} for the infinitive, \Sexpr{length(which(exp.cases$Context=="Participle" & exp.cases$Univerbation=="Yes"))} for the participle, \Sexpr{length(which(exp.cases$Context=="Clitic" & exp.cases$Univerbation=="Yes"))} for NPs with  cliticised article, and finally \Sexpr{length(which(exp.cases$Context=="Progressive" & exp.cases$Univerbation=="Yes"))} for the progressive (in each case out of \Sexpr{length(which(exp.cases$Context=="Infinitive"))}.
+The overall number of positive responses (\ie compound spellings) rises across the four contexts.
+It's \Sexpr{length(which(exp.cases$Context=="Infinitive" & exp.cases$Univerbation=="Yes"))} for the infinitive, \Sexpr{length(which(exp.cases$Context=="Participle" & exp.cases$Univerbation=="Yes"))} for the participle, \Sexpr{length(which(exp.cases$Context=="Clitic" & exp.cases$Univerbation=="Yes"))} for NPs with a cliticised article, and finally \Sexpr{length(which(exp.cases$Context=="Progressive" & exp.cases$Univerbation=="Yes"))} for the progressive (in each case out of \Sexpr{length(which(exp.cases$Context=="Infinitive"))}).
 For the N+V units with a high attraction score, participants (almost) always use compound spelling in NPs with a cliticised article (\Sexpr{length(which(exp.cases$Context=="Clitic" & exp.cases$Univerbation=="Yes" & exp.cases$Attraction=="High"))} out of \Sexpr{length(which(exp.cases$Context=="Clitic" & exp.cases$Attraction=="High"))}) and in the progressive (\Sexpr{length(which(exp.cases$Context=="Progressive" & exp.cases$Univerbation=="Yes" & exp.cases$Attraction=="High"))}).
 Between the infinitive (\Sexpr{length(which(exp.cases$Context=="Infinitive" & exp.cases$Univerbation=="Yes" & exp.cases$Attraction=="High"))}) and the participle (\Sexpr{length(which(exp.cases$Context=="Participle" & exp.cases$Univerbation=="Yes" & exp.cases$Attraction=="High"))}), there is a clear differentiation in positive responses, however.
 
@@ -128,7 +130,7 @@ experiment.r2.txt <- paste0("Nakagawa \\& Schielzeth's \\CM{R^2_m=", nice.float(
 exp.ranef.txt <- paste0("Random effect for participant: \\CM{Intercept=", nice.float(ranef.participant$Intercept), "}, \\CM{sd=", nice.float(ranef.participant$sd),
                     "}")
 experiment.ctx <- xtable(experiment.ct, digits = 3,
-                         caption = paste0("Coefficient table for the GLMM  modelling the experiment data with 95\\% confidence intervals.", experiment.r2.txt, exp.ranef.txt, " The intercept models the fixed effect Context=Infinitive as well as Attraction=0."),
+                         caption = paste0("Coefficient table for the GLMM  modelling the experiment data with 95\\% confidence intervals.", experiment.r2.txt, exp.ranef.txt, " The intercept models the fixed effect Context=Infinitive as well as Attraction=0"),
                          label = "tab:experimentglmm")
 
 # Print the table.
@@ -142,13 +144,12 @@ print(experiment.ctx,
 )
 @
 
-There is some variation between writers as captured in the standard deviation of the conditional modes ($\Sexpr{nice.float(ranef.participant$sd)}$), but the small difference between the very high marginal $R^2$ ($\Sexpr{nice.float(experiment.glmm.r2[1,1])}$) and the conditional $R^2$ ($\Sexpr{nice.float(experiment.glmm.r2[1,2])}$) suggests that speaker variation does not help to explain much of the variance in the the data.
+There is some variation between writers as captured in the standard deviation of the conditional modes ($\Sexpr{nice.float(ranef.participant$sd)}$), but the small difference between the marginal $R^2$ ($\Sexpr{nice.float(experiment.glmm.r2[1,1])}$) and the conditional $R^2$ ($\Sexpr{nice.float(experiment.glmm.r2[1,2])}$) suggests that speaker variation does not help to explain much of the variance in the the data.
 The coefficients indicate that the attraction strength derived from the corpus is positively correlated with participants tendency to univerbate ($\Sexpr{nice.float(experiment.ct["Attraction", "Estimate"])}$).
 Given the large confidence interval ($[\Sexpr{nice.float(experiment.ct["ContextParticiple", "CI low"])}..\Sexpr{nice.float(experiment.ct["ContextParticiple", "CI high"])}]$), there seems to be no evidence that the participle has a different effect than the infinitive (which is on the intercept).
 On the other hand, progressives ($\Sexpr{nice.float(experiment.ct["ContextProgressive", "Estimate"])}$) and NPs with cliticised articles ($\Sexpr{nice.float(experiment.ct["ContextClitic", "Estimate"])}$) clearly have a much more positive effect on the probability of univerbation.
 Thus, in the GLMM analysis NPs appear to have a stronger tendency to favour univerbation than progressives.
 This is in line with our theoretical predictions but seems to contradict the descriptive analysis (see Figure~\ref{fig:experimentmosaic}).
-For the further analysis of this apparent contradiction, we provide effect plots for the two fixed effects in Figure~\ref{fig:experimentfx}.
 
 <<experimentfx, results="asis", fig.height=4, fig.showtext=TRUE, fig.pos="htbp", fig.height=4, fig.cap="Effect plots for the regressor encoding the morphosyntactic context and the attraction strength as calculated from the corpus in the GLMM modelling the experimental data">>=
 
@@ -168,17 +169,17 @@ experiment.glmm.fx.attraction <- plot(effect("AttractionNum", experiment.glmm, K
 grid.arrange(experiment.glmm.fx.context, experiment.glmm.fx.attraction, ncol=2)
 @
 
-The effect plots show the same picture as the coefficient table.
+The effect plots in Figure~\ref{fig:experimentfx} show the same picture as the coefficient table.
 The prototypically verbal contexts are associated with low probabilities of univerbation, the two prototypically nominal ones with high probabilities of univerbation.
-While progressives and NPs with clitics show the order predicted by theory, there is only very weak evidence that the difference is substantial (large confidence intervals).
+While progressives and NPs with clitics show the order predicted by theory, there is only very weak evidence that the difference is substantial (see the large and mostly overlapping confidence intervals).
 The attraction scores are neatly correlated with the probability of univerbation.
 
 The apparent paradox with respect to the order of the effects of NP and progressive contexts that we see between Figure~\ref{fig:experimentmosaic} on the one hand and Table~\ref{tab:experimentglmm} and Figure~\ref{fig:experimentfx} on the other hand can be explained by looking at the concrete attraction strengths in Table~\ref{tab:designtable}.
 The unit with ``low'' attraction used in the progressive context (\textit{\Sexpr{designtable[5, "N+V unit"]}}) has a numeric attraction score of $\Sexpr{nice.float(designtable[5, "Attraction"])}$, which is much closer to 0 than the one used in the NP context (\textit{\Sexpr{designtable[7, "N+V unit"]}}) with $\Sexpr{nice.float(designtable[7, "Attraction"])}$.
 At the same time, the high attraction counterparts are rather close numerically ($\Sexpr{nice.float(designtable[6, "Attraction"])}$ for \textit{\Sexpr{designtable[6, "N+V unit"]}} and $\Sexpr{nice.float(designtable[8, "Attraction"])}$ for \textit{\Sexpr{designtable[8, "N+V unit"]}}).
-Figure~\ref{fig:experimentmosaic} therefore shows an item-specific positive bias for the progressive context, which is likely due to the concrete choice of items.
-The truely multifactorial analysis in the form of a GLMM compensates for it because it uses the numerical attraction scores.
-As the selection of stimuli is often not possible with perfect control over all variables, the more advanced statistical analysis protects us against misinterpretation.
+Figure~\ref{fig:experimentmosaic} therefore shows a positive bias for the progressive context, which is likely due to the concrete choice of items for this experiment.
+The truly multifactorial analysis in the form of a GLMM compensates for it because it uses the numerical attraction scores rather than just a binned ``low'' and ``high'' classification as used in Figure~\ref{fig:experimentmosaic}.
+As the selection of the few stimuli for a given experiment is virtually never possible with perfect control over all variables, the more advanced statistical analysis protects us against misinterpretation.
 
 In sum, the experiment clearly corroborates our theoretically motivated predictions and the corpus study.
 We proceed to a final analysis of the phenomenon at hand in Section~\ref{sec:explainingnounverbuniverbation}.
