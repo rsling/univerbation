@@ -6,11 +6,11 @@ opts_knit$set(self.contained=FALSE)
 \section{Analysing the usage of verb-noun units}
 \label{sec:corpusbasedanalysisoftheusageofvnunits}
 
-In this section, we use both exploratory and confirmatory methods of analy\-sing the univerbation of N+V units using corpus data.
-In Section~\ref{sub:designandchoiceofcorpus}, we lay out which research questions we want to answer with the corpus data, and which corpus we chose as appropriate for the task.
-We then describe how we sampled and annotated the data (both automatically and manually) in Section~\ref{sub:samplingandannotation}.
-The results of estimating a multilevel model explaining the variation of the univerbation of N+V units are reported in Section~\ref{sub:results1multilevelmodel}.
-Finally, we confirm the model using an alternative analysis in terms of association measures in Section~\ref{sub:results2associationastrengths}, which will also partly be the basis of the experiment reported in Section~\ref{sec:elicitedproductionofnounverbunitsinwrittenlanguage}.
+In this section, we apply both exploratory and confirmatory methods of analy\-sing the univerbation of N+V units using corpus data.
+In Section~\ref{sub:designandchoiceofcorpus}, we lay out which research questions we answer through corpus analysis, and which corpus we chose as appropriate for the task.
+We then describe how we sampled and annotated (both automatically and manually) the data in Section~\ref{sub:samplingandannotation}.
+The results of estimating a multilevel model explaining the variation in the univerbation of N+V units are reported in Section~\ref{sub:results1multilevelmodel}.
+Finally, we corroborate the multilevel model through an alternative analysis in terms of association measures in Section~\ref{sub:results2associationastrengths}, which will also partly be the basis of the experiment reported in Section~\ref{sec:elicitedproductionofnounverbunitsinwrittenlanguage}.
 
 \subsection{Design and choice of corpus}
 \label{sub:designandchoiceofcorpus}
@@ -97,7 +97,7 @@ In R notation, the specification is shown in (\ref{eq:corpusglmmr}).%
 \footnote{See Appendix~\ref{sec:specifictionofthecorpusglmm} for a precise specification in mathematical notation.}
 
 \begin{equation}
-  \mathtt{Proportion\sim (1|NVUnit)+Context+Relation+Link} \label{eq:corpusglmmr}
+  \mathtt{Univerbation\sim (1|NVUnit)+Context+Relation+Link} \label{eq:corpusglmmr}
 \end{equation}
 
 <<corpusglmm, results="asis", results="hide">>=
@@ -222,7 +222,7 @@ The required counts are nicely summarised in a 2$\times$2 contingency table as s
   & Univerbation & No univerbation \\
   \midrule
   Specific N+V unit   & $c_{11}$ & $c_{21}$ \\
-  All other N+V Units & $c_{21}$ & $c_{22}$ \\
+  All other N+V units & $c_{21}$ & $c_{22}$ \\
   \bottomrule
   \end{tabular}
   \caption{2\CM{\times}2 contingency table as used in the calculation of the strengths of the associations of N+V units with univerbation}

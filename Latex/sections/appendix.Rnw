@@ -6,13 +6,13 @@ opts_knit$set(self.contained=FALSE)
 \appendix
 
 
-\section{Full specification of the corpus GLMM}
+\section{Corpus study: full specification of the model}
 \label{sec:specifictionofthecorpusglmm}
 
 In Section~\ref{sub:results1multilevelmodel}, the specification of the model was given in R notation as (\ref{eq:corpusglmmr}), repeated here as (\ref{eq:corpusglmmr2}).
 
 \begin{equation}
-  \mathtt{Proportion\sim (1|NVUnit)+Context+Relation+Link} \label{eq:corpusglmmr2}
+  \mathtt{Univerbation\sim (1|NVUnit)+Context+Relation+Link} \label{eq:corpusglmmr2}
 \end{equation}
 
 This notation blurs the difference between first-level and second-level fixed effects.
@@ -22,7 +22,7 @@ Mathematically and thus more transparently, the model is given in (\ref{eq:corpu
 The notation with angled brackets in $\alpha_{NV_j[i]}$ should be read as ``the value of the random effect $\alpha_{NV}$ for the factor level $j$, chosen appropriately for observation $i$.
 
 \begin{equation}
-  Prop_{Comp_i}=logit^{-1}[
+  Pr(Univ_i=1)=logit^{-1}[
   \alpha_0
   +\alpha_{NV_j[i]}
   +\vec{\beta}_{Context}\cdot\vec{x}_{Context_i}
@@ -31,7 +31,6 @@ The notation with angled brackets in $\alpha_{NV_j[i]}$ should be read as ``the 
 
 The proportion of compound spellings $Prop_{Comp_i}$ is the logit-transformed sum of the overall intercept $\alpha_0$, the random intercept for the $j$-th N+V unit $\alpha_{NV_j[i]}$ (whichever is found in observation $i$) and the dot product of the vector of dummy-coded binary value for the morphosyntactic context $\vec{x}_{Context_i}$ and the vector of their corresponding regressors $\vec{\beta}_{Context}$.
 Since it is a multilevel model, $\alpha_{NV}$ has its own linear model, which is given in (\ref{eq:corpusglmm2}).
-It is also assumed that \ref{eq:corpusrandomnorm} holds.
 
 \begin{equation}
   \alpha_{NV_j}=\gamma_{j}
@@ -39,6 +38,8 @@ It is also assumed that \ref{eq:corpusrandomnorm} holds.
   +\delta_{Link}\cdot x_{Link_j}
   \label{eq:corpusglmm2}
 \end{equation}
+
+It is also assumed that \ref{eq:corpusrandomnorm} holds, \ie that the random intercepts for individual N+V units are normally distributed.
 
 \begin{equation}
   \alpha_{NV}\sim Norm \label{eq:corpusrandomnorm}
@@ -51,21 +52,29 @@ The random effects are assumed to be a normally distributed variable $\alpha_{NV
 
 
 
-\section{Full specification of the experiment GLMM}
+\section{Experiment: full specification of the model}
 \label{sec:specifictionoftheexperimentglmm}
+
+In this appendix, we provide the mathematical notation of the model specified in Section~\ref{sub:resultsexperiment} as (\ref{eq:expglmmformula}) and repeated here as (\ref{eq:expglmmformula2}).
+
+\begin{equation}
+  \mathtt{Univerbation\sim (1|Participant)+Attraction+Context}
+  \label{eq:expglmmformula2}
+\end{equation}
 
 The model is specified in the same notation as in Appendix~\ref{sec:specifictionofthecorpusglmm} in (\ref{eq:experimentglmm}).
 The regressor $x_{Attract_i}$ is numeric (the attraction score), whereas $\vec{x}_{Context_i}$ is a dummy-coded vector of binary variables.
-Additionally, it is assumed that (\ref{eq:experimentrandomnorm}) holds.
 
 \begin{equation}
-  Pr(Univ=1)=logit^{-1}[
+  Pr(Univ_i=1)=logit^{-1}[
   \alpha_0
   +\alpha_{Part_j[i]}
   +\beta_{Attract}\cdot x_{Attract_i}
   +\vec{\beta}_{Context}\cdot\vec{x}_{Context_i}
   ] \label{eq:experimentglmm}
 \end{equation}
+
+It is also assumed that \ref{eq:corpusrandomnorm} holds, \ie that the random intercepts for individual participants are normally distributed.
 
 \begin{equation}
   \alpha_{Participant}\sim Norm \label{eq:experimentrandomnorm}

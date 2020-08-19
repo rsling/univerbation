@@ -36,7 +36,10 @@ designtable$Context <- factor(designtable$Context, levels = c("Infinitive", "Par
 designtable <- designtable[order(designtable$AttractionNum),]
 designtable <- designtable[order(designtable$Context),]
 designtable$AttractionNum <- as.numeric(designtable$AttractionNum)
-colnames(designtable) <- c("Context", "N+V unit", "Attraction")
+
+designtable <- cbind(designtable, ifelse(designtable$AttractionNum <= 0, "Low", "High"))
+colnames(designtable) <- c("Context", "N+V unit", "Attraction", "Binary")
+
 designtable[2, "Context"] <- ""
 designtable[4, "Context"] <- ""
 designtable[6, "Context"] <- ""
