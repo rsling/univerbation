@@ -3,6 +3,45 @@
 opts_knit$set(self.contained=FALSE)
 @
 
-\section{The status of noun-verb units}
-\label{sec:thestatusofounverbunits}
+\section{Theoretical background}
+\label{sec:theoreticalbackground}
 
+\subsection{Prototypes in contexts and usage-based probabilistic grammar}
+\label{sub:prototypesincontextsandusagebasedprobabilisticgrammar}
+
+(A brief overview of prototype as applied to grammatical categories, including the role of contexts in alternation modelling.)
+
+\subsection{Spaces, words, and univerbation}
+\label{sub:spaceswordsanduniverbation}
+
+In this paper, we use graphemic evidence---both from corpora and from controlled experiments---and argue that it allows us to draw conclusions about writers' cognitive grammars.
+More specifically, we assume that compound spellings of N+V units indicate that writers conceive of those units as single syntactic words, whereas disjunct spelling indicates that they conceive of the unit as two syntactic words.
+Therefore, we briefly introduce the status of the space in German writing and how it pertains to N+V units.
+
+German writing uses an alphabetic script with a strong correlation between underlying phonological forms (the phonemic level) and characters (graphemes).
+A common fundamental principle of such scripts is the separation of syntactic words by spaces \parencite[22]{Jacobs2005}.
+Also, parts of a word (stems and affixes) are never separated from one another, which reinforces the status of the space as a demarcation of syntactic words.
+These factors facilitate the reader's ability to decode the sequence of syntactic words, and they constitute a crucial principle in the encoding and conventionalisation of meanings associated with word forms \parencite[22]{Jacobs2005}.
+
+Unlike in English, compound spelling of syntactic words comprising more than one stem was also established in the history of German writing, especially for the case of the highly productive noun + noun compound pattern (\citealt[182]{Fuhrhop2007}, \citealt[34]{Jacobs2005}), for which compound spelling is the dominant graphemic realisation.
+However, there is a heterogeneous group of multi-word constructions for which only a tendency towards compound spelling can be observed (\citealt[95]{Szczepaniak2009}, \citealt[335]{Wurzel1998}.
+As opposed to noun + noun compounds, these constructions typically consist of words with different parts of speech, such as \textit{mithilfe} (\textit{von}) (`with the help (of)') from \textit{mit der Hilfe} (\textit{von}) or \textit{zuhause} (`at home') from \textit{zu} \textit{Hause}.%
+\footnote{Normative approaches as well as individuals display a lot of variation with respect to at least some of those constructions (cf.\ below).}
+For such cases, \citet[2]{Lehmann2021} posits a ``downgrading of a syntactic to a morphological boundary'' between the two words.
+When writers use compound spelling in these cases, they choose to encode the construction as a single word with a morphological boundary instead of a sequence of words with a syntactic boundary.
+If many speakers consistently make this choice over a significant period, the unit might become conventionalised as a single lexical word \parencite[7]{Lehmann2021}.
+Until such a diachronic process is complete, conventionalisation is not strong enough, and writers alternate between a syntagmatic and a morphological realisation.
+For many of these constructions, this is the case both in as well as standard written German.
+
+N+V units with different affinities towards compound spelling like \textit{Rad fahren} (`bike riding', often also spelled \textit{radfahren}) and \textit{eislaufen} (`ice skating', infrequently also spelled \textit{Eis laufen}) are assumed to represent different levels of diachronic re-conventionalisation as single words (\textbf{Reference?}).%
+\footnote{The orthographic norm is notoriously unstable with respect to N+V units, which contributes to their unclear status.
+Before the significant reform of the orthographic norm in 1996, both \textit{radfahren} and \textit{eislaufen} were supposed to be spelled as one word.
+After the reform, both units were supposed to be written as two words (\textit{Eis laufen} and \textit{Rad fahren}).
+After a revision of the reform in 2006, \textit{eislaufen} was again supposed to be spelled as one word, whereas \textit{Auto fahren} was supposed to be spelled as two words exclusively \parencite[327]{Eisenberg2013a}.}
+This indeterminacy means that speakers have both the syntagmatic realisation (disjunct spelling) and the morphological realisation (compound spelling) in their graphemic input, which subsequently leaves them with a choice to be made based on how a concrcete unit is classified according to their individual grammar.
+It is the task of usage-based probabilistic graphemics \parencite{SchaeferSayatz2016} to uncover factors influencing such decisions and decode the principles at work in speakers' internal grammar by analysing their writing habits.
+
+
+\subsection{The status of noun-verb units in German}
+
+(Ulrike material.)

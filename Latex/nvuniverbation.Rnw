@@ -197,7 +197,7 @@ nice.int <- function(n) formatC(n, format="d", big.mark=",")
 
 \rmfamily
 
-<<child="sections/nvuniverbation.Rnw">>=
+<<child="sections/introduction.Rnw">>=
 @
 
 <<child="sections/theory.Rnw">>=

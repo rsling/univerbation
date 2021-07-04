@@ -13,20 +13,21 @@ Section~\ref{sub:resultsexperiment} reports the results descriptively and in the
 \subsection{Design and participants}
 \label{sub:designandparticipants}
 
-The goal of the experiment was to corroborate the findings from the corpus and to test whether writers' behaviour under controlled experimental conditions is similar to the behaviour of writers under uncontrolled circumstances as found in corpora.
+The goal of the experiment was to corroborate the findings from the corpus study and to test whether writers' behaviour under controlled experimental conditions is similar to the behaviour of writers under uncontrolled circumstances as found in corpora.
 We used pre-recorded auditory stimuli in order to elicit spellings of given N+V units.
 The stimuli were chosen based on theoretical criteria and information obtained from the corpus.
 We constructed eight sentences instantiating the four contexts.
 In each context, we chose one N+V unit with a high and one with a low attraction strength according to the corpus.%
 \footnote{Given the overall constraints on the choice of the items, \textit{low} and \textit{high} had to be seen as relative terms.
 However, all low attractions scores are higher than zero, all high attraction scores are greater than zero, and for each context, the pair of low and high attraction scores differs at least by 0.05.}
-The sentences were constructed in a ways such that all N+V units were the predicate of a subordinate clause in order to consistently ensure verb-last constituent order and avoid interfering verb-second effects, which are inevitable in independent sentences in German.
+The sentences were constructed in a ways such that all N+V units were the predicate of a subordinate clause.
+This consistently ensured verb-last constituent order and avoided interfering verb-second effects, which are typical of independent sentences in German.
 The full sentences are given in Appendix~\ref{sec:sentencesusedintheexperiment}.
 
 We added 32 fillers, resulting in a total of forty sentences being read to the participants.%
 \footnote{Of the forty fillers, six were actually items from an unrelated experiment.}
-Of the forty sentences, twenty (including the target items, of course) had to be written down.
-The order of the target items was randomised, by it was made sure that there were at least three sentences in between pairs of items.
+Of the forty sentences, twenty (including the target items) had to be written down by the participants.
+The order of the target items was randomised, but it was made sure that there were at least three sentences in between pairs of items.
 There were nine distractors in the form of yes-no questions related to random sentences previously heard by the participants.
 An overview of the item design is shown in Table~\ref{tab:designtable}, where each line represents the features of one of the eight items.
 
@@ -58,7 +59,8 @@ print(designtable.ctx,
 )
 @
 
-In total, \Sexpr{length(levels(as.factor(exp.cases$Participant)))} participants took part in the experiment, all of them first-semester students of German Language and Literature at Freie Universität Berlin.
+In total, \Sexpr{length(levels(as.factor(exp.cases$Participant)))} participants took part in the experiment.
+All of them were first-semester students of German Language and Literature at Freie Universität Berlin.
 They were between \Sexpr{summary(as.integer(exp.cases$Age))[1]} and \Sexpr{summary(as.integer(exp.cases$Age))[6]} years old with a median age of \Sexpr{summary(as.integer(exp.cases$Age))[3]} years.
 There were two separate groups (\Sexpr{nrow(exp.w1)} and \Sexpr{nrow(exp.w2)} participants, respectively), and the randomisation of the stimuli was different between the two groups.
 
@@ -133,7 +135,7 @@ experiment.r2.txt <- paste0("Nakagawa \\& Schielzeth's \\CM{R^2_m=", nice.float(
 exp.ranef.txt <- paste0("Random effect for participant: \\CM{Intercept=", nice.float(ranef.participant$Intercept), "}, \\CM{sd=", nice.float(ranef.participant$sd),
                     "}")
 experiment.ctx <- xtable(experiment.ct, digits = 3,
-                         caption = paste0("Coefficient table for the GLMM  modelling the experiment data with 95\\% confidence intervals.", experiment.r2.txt, exp.ranef.txt, " The intercept models the fixed effect Context=Infinitive as well as Attraction=0"),
+                         caption = paste0("Coefficient table for the GLMM  modelling the experiment data with 95\\% confidence intervals.", experiment.r2.txt, exp.ranef.txt, " The intercept models the fixed effect Context~=~Infinitive as well as Attraction~=~0"),
                          label = "tab:experimentglmm")
 
 # Print the table.
@@ -143,13 +145,13 @@ print(experiment.ctx,
       table.placement = 'h!',
       booktabs = T,
       scalebox = 1,
-      sanitize.text.function = function(x){x},
+      sanitize.text.function = lme4.pretty#function(x){x},
 )
 @
 
-There is some variation between writers as captured in the standard deviation of the conditional modes ($\Sexpr{nice.float(ranef.participant$sd)}$), but the small difference between the marginal $R^2$ ($\Sexpr{nice.float(experiment.glmm.r2[1,1])}$) and the conditional $R^2$ ($\Sexpr{nice.float(experiment.glmm.r2[1,2])}$) suggests that speaker variation does not help to explain much of the variance in the the data.
-The coefficients indicate that the attraction strength derived from the corpus is positively correlated with participants tendency to univerbate ($\Sexpr{nice.float(experiment.ct["Attraction", "Estimate"])}$).
-Given the large confidence interval ($[\Sexpr{nice.float(experiment.ct["ContextParticiple", "CI low"])}..\Sexpr{nice.float(experiment.ct["ContextParticiple", "CI high"])}]$), there seems to be no evidence that the participle has a different effect than the infinitive (which is on the intercept).
+There is some variation between writers as captured in the standard deviation of the conditional modes ($\Sexpr{nice.float(ranef.participant$sd)}$), but the small difference between the marginal $R^2$ ($\Sexpr{nice.float(experiment.glmm.r2[1,1])}$) and the conditional $R^2$ ($\Sexpr{nice.float(experiment.glmm.r2[1,2])}$) suggests that speaker variation does not explain much of the variance in the the data.
+The coefficients indicate that the attraction strength derived from the corpus is positively correlated with the participants' tendency to univerbate ($\Sexpr{nice.float(experiment.ct["Attraction", "Estimate"])}$).
+There seems to be no evidence that the participle has a different effect than the infinitive (which is on the intercept) given the large confidence interval ($[\Sexpr{nice.float(experiment.ct["ContextParticiple", "CI low"])}..\Sexpr{nice.float(experiment.ct["ContextParticiple", "CI high"])}]$).
 On the other hand, progressives ($\Sexpr{nice.float(experiment.ct["ContextProgressive", "Estimate"])}$) and NPs with cliticised articles ($\Sexpr{nice.float(experiment.ct["ContextClitic", "Estimate"])}$) clearly have a much more positive effect on the probability of univerbation.
 Thus, in the GLMM analysis NPs appear to have a stronger tendency to favour univerbation than progressives.
 This is in line with our theoretical predictions but seems to contradict the descriptive analysis (see Figure~\ref{fig:experimentmosaic}).
@@ -179,10 +181,10 @@ The attraction scores are neatly correlated with the probability of univerbation
 
 The apparent paradox with respect to the order of the effects of NP and progressive contexts that we see between Figure~\ref{fig:experimentmosaic} on the one hand and Table~\ref{tab:experimentglmm} and Figure~\ref{fig:experimentfx} on the other hand can be explained by looking at the concrete attraction strengths in Table~\ref{tab:designtable}.
 The unit with ``low'' attraction used in the progressive context (\textit{\Sexpr{designtable[5, "N+V unit"]}}) has a numeric attraction score of $\Sexpr{nice.float(designtable[5, "Attraction"])}$, which is much closer to 0 than the one used in the NP context (\textit{\Sexpr{designtable[7, "N+V unit"]}}) with $\Sexpr{nice.float(designtable[7, "Attraction"])}$.
-At the same time, the high attraction counterparts are rather close numerically ($\Sexpr{nice.float(designtable[6, "Attraction"])}$ for \textit{\Sexpr{designtable[6, "N+V unit"]}} and $\Sexpr{nice.float(designtable[8, "Attraction"])}$ for \textit{\Sexpr{designtable[8, "N+V unit"]}}).
+At the same time, the high attraction counterparts are rather close to each other numerically ($\Sexpr{nice.float(designtable[6, "Attraction"])}$ for \textit{\Sexpr{designtable[6, "N+V unit"]}} and $\Sexpr{nice.float(designtable[8, "Attraction"])}$ for \textit{\Sexpr{designtable[8, "N+V unit"]}}).
 Figure~\ref{fig:experimentmosaic} therefore shows a positive bias for the progressive context, which is likely due to the concrete choice of items for this experiment.
 The truly multifactorial analysis in the form of a GLMM compensates for it because it uses the numerical attraction scores rather than just a binned ``low'' and ``high'' classification as used in Figure~\ref{fig:experimentmosaic}.
 As the selection of the few stimuli for a given experiment is virtually never possible with perfect control over all variables, the more advanced statistical analysis protects us against misinterpretation.
 
 In sum, the experiment clearly corroborates our theoretically motivated predictions and the corpus study.
-We proceed to a final analysis of the phenomenon at hand in Section~\ref{sec:explainingnounverbuniverbation}.
+We proceed to a final analysis of the phenomenon at in the light of our findings hand in Section~\ref{sec:explainingnounverbuniverbation}.
