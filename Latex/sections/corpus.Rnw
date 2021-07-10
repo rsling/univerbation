@@ -3,8 +3,8 @@
 opts_knit$set(self.contained=FALSE)
 @
 
-\section{Analysing the usage of verb-noun units}
-\label{sec:corpusbasedanalysisoftheusageofvnunits}
+\section{Analysing the usage of noun-verb units}
+\label{sec:corpusbasedanalysisoftheusageofnvunits}
 
 In this section, we apply both exploratory and confirmatory methods of analy\-sing the univerbation of N+V units using corpus data.
 In Section~\ref{sub:designandchoiceofcorpus}, we lay out which research questions we aim to answer through corpus analysis, and which corpus we chose as appropriate for the task.
@@ -70,139 +70,7 @@ This class is illustrated by \textit{Daumenlutschen} (``thumb sucking''), which 
 \end{exe}
 
 
-\subsection{Results 1: Multilevel model}
-\label{sub:results1multilevelmodel}
-
-In this section, we present the parameter estimates (and predictions of conditional modes) for a binomial multilevel model (or generalised linear mixed model, GLMM) which models the relevant factors influencing speakers' choice of the compound and the separate spelling.%
-\footnote{See \parencite{Schaefer2020a} for an overview of the method and our philosophy in modelling.}
-Given the grand total of \Sexpr{nice.int(sum(concordance$Joint)+sum(concordance$Separate))} observations in the sample (see Section~\ref{sub:samplingandannotation}), we will completely refrain from an interpretation in terms of inferential statistics.
-For samples of such magnitude in data-driven approaches, frequentist significance tests are the wrong tool (\textbf{Reference?}).
-Therefore, we provide standard likelihood ratio confidence intervals for parameter estimates and prediction intervals for conditional modes as an approximate measure quantifying the precision of the parameter estimates and predictions.
-The models we specify reflect theoretically motivated decisions, and we therefore reject all types of model selection by means of step-up or step-down procedures.
-
-As argued in Section~\ref{sec:thestatusofounverbunits}, we expect the probability of the univerbation of N+V units to depend on the morphosyntactic context, the relation holding between the verb and the noun, the presence of absence of a linking element in the nominal compound (as a marker of a stronger reconceptualisation) and on the specific N+V unit (a lexical tendency).
-Accordingly, the response variable was chosen to be the proportion of compound spellings among all the spellings of the N+V unit.
-In the input data provided to the estimator, the response variable was thus a vector of \Sexpr{nrow(concordance)} proportions, one for each N+V unit.%
-\footnote{Binomial models can be specified in this manner \parencite[245--260]{ZuurEa2009}.
-In the estimation of such models, the influence of each proportion is weighted according to the number of cases observed to calculate it.
-Without the weighting, highly frequent observed proportions would have too small an influence on the estimation, and infrequent ones would have an inappropriately high influence.
-In the case at hand, such a model on proportion data is also a convenient way of getting around the practical difficulties of estimating a model on the raw \Sexpr{nice.int(sum(concordance$Joint)+sum(concordance$Separate))} observations.}
-We specified four regressors.
-The only first-level (or observation-level) fixed effect regressor is the morphosyntactic context (a four-way categorical variable).
-As there is a huge number of \Sexpr{nrow(concordance)} N+V units, the lexical indicator variable for the individual N+V unit should not be used as a fixed effect \parencite[244--247]{GelmanHill2006}.
-We specified a generalised linear mixed model with the N+V unit variable as a random effect.
-The variables encoding the internal relation and the presence\slash absence of a linking element are nested inside the levels of the random effect, and they are therefore treated as second-level fixed effects in a multilevel model.
-In R notation, the specification is shown in (\ref{eq:corpusglmmr}).%
-\footnote{See Appendix~\ref{sec:specifictionofthecorpusglmm} for a precise specification in mathematical notation.}
-
-\begin{equation}
-  \mathtt{Univerbation\sim (1|NVUnit)+Context+Relation+Link} \label{eq:corpusglmmr}
-\end{equation}
-
-<<corpusglmm, results="asis", results="hide">>=
-
-concordance.glmm$Relation <- factor(concordance.glmm$Relation, levels = c("Object", "Undetermined", "Adjunct"))
-concordance.glmm$Context <- factor(concordance.glmm$Context, levels = c("Infinitive", "Participle", "NP", "Progressive"))
-concordance.glmm$FullLink <- concordance.glmm$Link
-concordance.glmm$Link <- concordance.glmm$Linkbinary
-
-corpus.glmm <- glmer(cbind(Joint, Separate)~Context+Relation+Link+(1|Compound),
-                     data=concordance.glmm, family=binomial,
-                     na.action = na.fail, control=glmerControl(optimizer="nloptwrap2", optCtrl=list(maxfun=2e5))
-                     )
-
-corpus.fixefs <- fixef(corpus.glmm)
-corpus.confints <- confint(corpus.glmm)
-# corpus.confints <- cbind(corpus.fixefs, corpus.fixefs) # Fake CIs for quick recompiles.
-corpus.glmm.r2 <- r.squaredGLMM(corpus.glmm)
-@
-
-<<corpusglmmreport, results="asis">>=
-
-# Helper function.
-format.ranef <- function(glmm, ranef) {
-  require(lme4)
-  .vcov   <- as.data.frame(VarCorr(glmm))
-  list(Name = ranef, Intercept = .vcov[which(.vcov$grp == ranef), "vcov"], sd = .vcov[which(.vcov$grp == ranef), "sdcor"])
-}
-
-# Build the table.
-corpus.ct <- cbind(corpus.fixefs, corpus.confints[1:7,])
-colnames(corpus.ct) <- c("Estimate", "CI low", "CI high")
-ranef.nv <- format.ranef(corpus.glmm, "Compound")
-corpus.r2.txt <- paste0("Nakagawa \\& Schielzeth's \\CM{R^2_m=", nice.float(corpus.glmm.r2[1,1]), "} and \\CM{R^2_c=", nice.float(corpus.glmm.r2[1,2]), "}")
-ranef.txt <- paste0("Random effect for V+N lemma: \\CM{Intercept=", nice.float(ranef.nv$Intercept), "}, \\CM{sd=", nice.float(ranef.nv$sd),
-                    "}")
-corpus.ctxt <- xtable(corpus.ct, digits = 3,
-                    caption = paste0("Coefficient table for the binomial GLMM modelling the corpus data with 95\\% profile likelihood ratio confidence intervals. The horizontal line separates first-level and second-level effects. Weighting was used to account for the bias in models on proportion data. ", ranef.txt, ". The intercepts model the fixed effects Relation~=~Object and Link~=~No. " , corpus.r2.txt),
-                    label = "tab:corpusglmm")
-
-# Experimental function to fix variable names.
-lme4.pretty <- function(s) {
-  gsub("([a-z])([A-Z])", "\\1 = \\2", s)
-}
-
-# Print the table.
-print(corpus.ctxt,
-      include.rownames=T,
-      floating = T,
-      table.placement = '!htbp',
-      booktabs = T,
-      scalebox = 1,
-      hline.after = c(-1,1,4,7),
-      sanitize.text.function = lme4.pretty# function(x){x},
-)
-@
-
-The estimated parameters of the model are given in Table~\ref{tab:corpusglmm}.
-Additionally, effect plots for \textit{Context} and \textit{Relation} are given in Figure~\ref{fig:corpuseffects}\ref{fig:corpuseffects}.%
-\footnote{Put in an oversimplified manner, effect plots for binomial GLM(M)s \parencite{FoxWeisberg2018} plot the probability of the outcome across values of a regressor assuming default values for all other regressors.
-While model coefficients in binomial (and other) models have no direct interpretation in terms of probability, effect plots allow a more intuitive interpretation in terms of changes in probability.}
-As expected, the prototypically verbal contexts (infinitives and participles in analytic verb forms) are associated with a low probability of compound spelling (the infinitive is on the intercept estimated at $\Sexpr{nice.float(corpus.ct["(Intercept)","Estimate"])}$, and participles have a coefficient of $\Sexpr{nice.float(corpus.ct["ContextParticiple","Estimate"])}$).
-NPs and progressives as prototypically nominal contexts clearly favour compound spelling (coefficients of $\Sexpr{nice.float(corpus.ct["ContextNP","Estimate"])}$ and $\Sexpr{nice.float(corpus.ct["ContextProgressive","Estimate"])}$, respectively).
-Both the coefficients and the effect plot (right panel in Figure~\ref{fig:corpuseffects}) show a low probability of compound spelling when the relation between the verb and the noun (on the intercept) is that of an object, and a high probability when the relation is that of an adjunct (coefficient $\Sexpr{nice.float(corpus.ct["RelationAdjunct","Estimate"])}$).
-The undetermined cases are in between the two clear-cut cases (coefficient $\Sexpr{nice.float(corpus.ct["RelationUndetermined","Estimate"])}$).
-The presence of a linking element in fully nominalised compounds favours compound spelling only slightly (coefficient $\Sexpr{nice.float(corpus.ct["LinkYes","Estimate"])}$).
-
-<<corpuseffects, results="asis", fig.showtext=TRUE, fig.pos="!htbp", fig.height=4, fig.cap="Effect plots for the regressor encoding the morphosyntactic context of the N+V unit and the regressor encoding the syntactic relation within the N+V unit in the GLMM modelling the corpus data">>=
-corpus.glmm.fx.context <- plot(effect("Context", corpus.glmm, KR = T),
-                              rug=F, colors = c("black", "black"),
-                              main="",ylab="Probability of univerbation",
-                              xlab="Context"
-)
-corpus.glmm.fx.relation <- plot(effect("Relation", corpus.glmm, KR = T),
-                                rug=F, colors = c("black", "black"),
-                                main="",
-                                ylab="Probability of univerbation",
-                                xlab="Relation"
-)
-grid.arrange(corpus.glmm.fx.context, corpus.glmm.fx.relation, ncol=2)
-@
-
-
-<<ranefplotsetnumber, results="hide">>=
-ranefplot.num=20
-@
-
-Given the narrow confidence intervals and the high marginal measure of determination $R^2_m=\Sexpr{nice.float(corpus.glmm.r2[1,1])}$, we consider the hypotheses regarding fixed effects as well corroborated by the data, especially the effects of the context and the internal relation.
-Based on our commitment to a usage-based probabilistic view of language, we also predicted differences between N+V units not explainable by the fixed effects.
-These effects would show up as the residual variance in the random effects (in the form of the conditional modes) not modelled by the second-level effects.
-The conditional modes are centred around a second-level intercept of $\Sexpr{nice.float(ranef.nv$Intercept)}$ with a standard deviation of $\Sexpr{nice.float(ranef.nv$sd)}$.
-The standard deviation is a sign that there is considerable variation between single N+V units.
-Furthermore, the conditional $R^2_c$ is as high as $\Sexpr{nice.float(corpus.glmm.r2[1,2])}$.
-This is commonly interpreted as saying that the fixed effects and the idiosyncratic effect of concrete N+V units almost fully explain the variance in the data.
-A random selection of \Sexpr{nice.int(ranefplot.num)} conditional modes, which illustrates the relevance of lexical idiosyncrasies through obvious differences with mostly very narrow prediction intervals, is shown in Figure~\ref{fig:corpusranefs}.
-
-<<corpusranefs, results="asis", fig.showtext=TRUE, fig.pos="!htbp", fig.cap="A random selection of conditional modes with 95\\% prediction intervals for the levels of the random effect in the GLMM modelling the corpus data">>=
-set.seed(3478)
-par(family = "Fira Sans")
-corpus.ranef.selection <- ranef.plot(corpus.glmm, effect = "Compound", number = 20)
-@
-
-The individual V+N unit thus plays a major role in writers' tendency to univerbate V+N units.
-In Section~\ref{sub:results2associationastrengths}, we approach this effect using an alternative method, and the results obtained from that method will be used to predict participants' behaviour in the controlled experiment reported in Section~\ref{sec:elicitedproductionofnounverbunitsinwrittenlanguage}.
-
-\subsection{Results 2: Association strengths}
+\subsection{Results 1: Association strengths}
 \label{sub:results2associationastrengths}
 
 In this section, we report an analysis of the item-specific affinities of N+V units towards univerbation.
@@ -390,5 +258,141 @@ print(corpus.assoc.null,
 Among the units with an object relation, it is difficult to tell based on native-speaker intuition, why the ones in Table~\ref{tab:corpusassoctablenull} should have no preference and the ones in Table~\ref{tab:corpusassocslohi} (right panel) should resist univerbation.
 This goes to show that, while we can model the tendencies to some extent using linguistic features, there are obvious item-specific effects which should be taken seriously from a theoretical perspective, and which must be accounted for in behavioural experiments.
 We now turn to such an experiment in Section~\ref{sec:elicitedproductionofnounverbunitsinwrittenlanguage}.
+
+
+
+\subsection{Results 2: Multilevel model}
+\label{sub:results1multilevelmodel}
+
+In this section, we present the parameter estimates (and predictions of conditional modes) for a binomial multilevel model (or generalised linear mixed model, GLMM) which models the relevant factors influencing speakers' choice of the compound and the separate spelling.%
+\footnote{See \parencite{Schaefer2020a} for an overview of the method and our philosophy in modelling.}
+Given the grand total of \Sexpr{nice.int(sum(concordance$Joint)+sum(concordance$Separate))} observations in the sample (see Section~\ref{sub:samplingandannotation}), we will completely refrain from an interpretation in terms of inferential statistics.
+For samples of such magnitude in data-driven approaches, frequentist significance tests are the wrong tool (\textbf{Reference?}).
+Therefore, we provide standard likelihood ratio confidence intervals for parameter estimates and prediction intervals for conditional modes as an approximate measure quantifying the precision of the parameter estimates and predictions.
+The models we specify reflect theoretically motivated decisions, and we therefore reject all types of model selection by means of step-up or step-down procedures.
+
+As argued in Section~\ref{sec:thestatusofounverbunits}, we expect the probability of the univerbation of N+V units to depend on the morphosyntactic context, the relation holding between the verb and the noun, the presence of absence of a linking element in the nominal compound (as a marker of a stronger reconceptualisation) and on the specific N+V unit (a lexical tendency).
+Accordingly, the response variable was chosen to be the proportion of compound spellings among all the spellings of the N+V unit.
+In the input data provided to the estimator, the response variable was thus a vector of \Sexpr{nrow(concordance)} proportions, one for each N+V unit.%
+\footnote{Binomial models can be specified in this manner \parencite[245--260]{ZuurEa2009}.
+In the estimation of such models, the influence of each proportion is weighted according to the number of cases observed to calculate it.
+Without the weighting, highly frequent observed proportions would have too small an influence on the estimation, and infrequent ones would have an inappropriately high influence.
+In the case at hand, such a model on proportion data is also a convenient way of getting around the practical difficulties of estimating a model on the raw \Sexpr{nice.int(sum(concordance$Joint)+sum(concordance$Separate))} observations.}
+We specified four regressors.
+The only first-level (or observation-level) fixed effect regressor is the morphosyntactic context (a four-way categorical variable).
+As there is a huge number of \Sexpr{nrow(concordance)} N+V units, the lexical indicator variable for the individual N+V unit should not be used as a fixed effect \parencite[244--247]{GelmanHill2006}.
+We specified a generalised linear mixed model with the N+V unit variable as a random effect.
+The variables encoding the internal relation and the presence\slash absence of a linking element are nested inside the levels of the random effect, and they are therefore treated as second-level fixed effects in a multilevel model.
+In R notation, the specification is shown in (\ref{eq:corpusglmmr}).%
+\footnote{See Appendix~\ref{sec:specifictionofthecorpusglmm} for a precise specification in mathematical notation.}
+
+\begin{equation}
+  \mathtt{Univerbation\sim (1|NVUnit)+Context+Relation+Link} \label{eq:corpusglmmr}
+\end{equation}
+
+<<corpusglmm, results="asis", results="hide">>=
+
+concordance.glmm$Relation <- factor(concordance.glmm$Relation, levels = c("Object", "Undetermined", "Adjunct"))
+concordance.glmm$Context <- factor(concordance.glmm$Context, levels = c("Infinitive", "Participle", "NP", "Progressive"))
+concordance.glmm$FullLink <- concordance.glmm$Link
+concordance.glmm$Link <- concordance.glmm$Linkbinary
+
+corpus.glmm <- glmer(cbind(Joint, Separate)~Context+Relation+Link+(1|Compound),
+                     data=concordance.glmm, family=binomial,
+                     na.action = na.fail, control=glmerControl(optimizer="nloptwrap2", optCtrl=list(maxfun=2e5))
+                     )
+
+corpus.fixefs <- fixef(corpus.glmm)
+corpus.confints <- confint(corpus.glmm)
+# corpus.confints <- cbind(corpus.fixefs, corpus.fixefs) # Fake CIs for quick recompiles.
+corpus.glmm.r2 <- r.squaredGLMM(corpus.glmm)
+@
+
+<<corpusglmmreport, results="asis">>=
+
+# Helper function.
+format.ranef <- function(glmm, ranef) {
+  require(lme4)
+  .vcov   <- as.data.frame(VarCorr(glmm))
+  list(Name = ranef, Intercept = .vcov[which(.vcov$grp == ranef), "vcov"], sd = .vcov[which(.vcov$grp == ranef), "sdcor"])
+}
+
+# Build the table.
+corpus.ct <- cbind(corpus.fixefs, corpus.confints[1:7,])
+colnames(corpus.ct) <- c("Estimate", "CI low", "CI high")
+ranef.nv <- format.ranef(corpus.glmm, "Compound")
+corpus.r2.txt <- paste0("Nakagawa \\& Schielzeth's \\CM{R^2_m=", nice.float(corpus.glmm.r2[1,1]), "} and \\CM{R^2_c=", nice.float(corpus.glmm.r2[1,2]), "}")
+ranef.txt <- paste0("Random effect for V+N lemma: \\CM{Intercept=", nice.float(ranef.nv$Intercept), "}, \\CM{sd=", nice.float(ranef.nv$sd),
+                    "}")
+corpus.ctxt <- xtable(corpus.ct, digits = 3,
+                    caption = paste0("Coefficient table for the binomial GLMM modelling the corpus data with 95\\% profile likelihood ratio confidence intervals. The horizontal line separates first-level and second-level effects. Weighting was used to account for the bias in models on proportion data. ", ranef.txt, ". The intercepts model the fixed effects Relation~=~Object and Link~=~No. " , corpus.r2.txt),
+                    label = "tab:corpusglmm")
+
+# Experimental function to fix variable names.
+lme4.pretty <- function(s) {
+  gsub("([a-z])([A-Z])", "\\1 = \\2", s)
+}
+
+# Print the table.
+print(corpus.ctxt,
+      include.rownames=T,
+      floating = T,
+      table.placement = '!htbp',
+      booktabs = T,
+      scalebox = 1,
+      hline.after = c(-1,1,4,7),
+      sanitize.text.function = lme4.pretty# function(x){x},
+)
+@
+
+The estimated parameters of the model are given in Table~\ref{tab:corpusglmm}.
+Additionally, effect plots for \textit{Context} and \textit{Relation} are given in Figure~\ref{fig:corpuseffects}\ref{fig:corpuseffects}.%
+\footnote{Put in an oversimplified manner, effect plots for binomial GLM(M)s \parencite{FoxWeisberg2018} plot the probability of the outcome across values of a regressor assuming default values for all other regressors.
+While model coefficients in binomial (and other) models have no direct interpretation in terms of probability, effect plots allow a more intuitive interpretation in terms of changes in probability.}
+As expected, the prototypically verbal contexts (infinitives and participles in analytic verb forms) are associated with a low probability of compound spelling (the infinitive is on the intercept estimated at $\Sexpr{nice.float(corpus.ct["(Intercept)","Estimate"])}$, and participles have a coefficient of $\Sexpr{nice.float(corpus.ct["ContextParticiple","Estimate"])}$).
+NPs and progressives as prototypically nominal contexts clearly favour compound spelling (coefficients of $\Sexpr{nice.float(corpus.ct["ContextNP","Estimate"])}$ and $\Sexpr{nice.float(corpus.ct["ContextProgressive","Estimate"])}$, respectively).
+Both the coefficients and the effect plot (right panel in Figure~\ref{fig:corpuseffects}) show a low probability of compound spelling when the relation between the verb and the noun (on the intercept) is that of an object, and a high probability when the relation is that of an adjunct (coefficient $\Sexpr{nice.float(corpus.ct["RelationAdjunct","Estimate"])}$).
+The undetermined cases are in between the two clear-cut cases (coefficient $\Sexpr{nice.float(corpus.ct["RelationUndetermined","Estimate"])}$).
+The presence of a linking element in fully nominalised compounds favours compound spelling only slightly (coefficient $\Sexpr{nice.float(corpus.ct["LinkYes","Estimate"])}$).
+
+<<corpuseffects, results="asis", fig.showtext=TRUE, fig.pos="!htbp", fig.height=4, fig.cap="Effect plots for the regressor encoding the morphosyntactic context of the N+V unit and the regressor encoding the syntactic relation within the N+V unit in the GLMM modelling the corpus data">>=
+corpus.glmm.fx.context <- plot(effect("Context", corpus.glmm, KR = T),
+                              rug=F, colors = c("black", "black"),
+                              main="",ylab="Probability of univerbation",
+                              xlab="Context"
+)
+corpus.glmm.fx.relation <- plot(effect("Relation", corpus.glmm, KR = T),
+                                rug=F, colors = c("black", "black"),
+                                main="",
+                                ylab="Probability of univerbation",
+                                xlab="Relation"
+)
+grid.arrange(corpus.glmm.fx.context, corpus.glmm.fx.relation, ncol=2)
+@
+
+
+<<ranefplotsetnumber, results="hide">>=
+ranefplot.num=20
+@
+
+Given the narrow confidence intervals and the high marginal measure of determination $R^2_m=\Sexpr{nice.float(corpus.glmm.r2[1,1])}$, we consider the hypotheses regarding fixed effects as well corroborated by the data, especially the effects of the context and the internal relation.
+Based on our commitment to a usage-based probabilistic view of language, we also predicted differences between N+V units not explainable by the fixed effects.
+These effects would show up as the residual variance in the random effects (in the form of the conditional modes) not modelled by the second-level effects.
+The conditional modes are centred around a second-level intercept of $\Sexpr{nice.float(ranef.nv$Intercept)}$ with a standard deviation of $\Sexpr{nice.float(ranef.nv$sd)}$.
+The standard deviation is a sign that there is considerable variation between single N+V units.
+Furthermore, the conditional $R^2_c$ is as high as $\Sexpr{nice.float(corpus.glmm.r2[1,2])}$.
+This is commonly interpreted as saying that the fixed effects and the idiosyncratic effect of concrete N+V units almost fully explain the variance in the data.
+A random selection of \Sexpr{nice.int(ranefplot.num)} conditional modes, which illustrates the relevance of lexical idiosyncrasies through obvious differences with mostly very narrow prediction intervals, is shown in Figure~\ref{fig:corpusranefs}.
+
+<<corpusranefs, results="asis", fig.showtext=TRUE, fig.pos="!htbp", fig.cap="A random selection of conditional modes with 95\\% prediction intervals for the levels of the random effect in the GLMM modelling the corpus data">>=
+set.seed(3478)
+par(family = "Fira Sans")
+corpus.ranef.selection <- ranef.plot(corpus.glmm, effect = "Compound", number = 20)
+@
+
+The individual V+N unit thus plays a major role in writers' tendency to univerbate V+N units.
+In Section~\ref{sub:results2associationastrengths}, we approach this effect using an alternative method, and the results obtained from that method will be used to predict participants' behaviour in the controlled experiment reported in Section~\ref{sec:elicitedproductionofnounverbunitsinwrittenlanguage}.
+
+
 
 

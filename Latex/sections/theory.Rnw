@@ -20,28 +20,112 @@ Therefore, we briefly introduce the status of the space in German writing and ho
 
 German writing uses an alphabetic script with a strong correlation between underlying phonological forms (the phonemic level) and characters (graphemes).
 A common fundamental principle of such scripts is the separation of syntactic words by spaces \parencite[22]{Jacobs2005}.
-Also, parts of a word (stems and affixes) are never separated from one another, which reinforces the status of the space as a demarcation of syntactic words.
+Also, stems and affixes are never separated from one another in German, which reinforces the status of the space as a demarcation of syntactic words.%
+\footnote{There is a class of verbal particles which does not follow this principle \textbf{(Reference)}.
+Verbs like \textit{aufessen} (`eat up') formed from a verb stem (\textit{essen}) and a prefixed particle (\textit{auf}) are spelled as one word when they are adjacent in verb-last order, but they are separated in verb-second order where the verb is moved to sentence-second position and the particle remains in sentence-last position through obligatory long-distance movement \citet{MuellerXYZ}.}
 These factors facilitate the reader's ability to decode the sequence of syntactic words, and they constitute a crucial principle in the encoding and conventionalisation of meanings associated with word forms \parencite[22]{Jacobs2005}.
 
-Unlike in English, compound spelling of syntactic words comprising more than one stem was also established in the history of German writing, especially for the case of the highly productive noun + noun compound pattern (\citealt[182]{Fuhrhop2007}, \citealt[34]{Jacobs2005}), for which compound spelling is the dominant graphemic realisation.
-However, there is a heterogeneous group of multi-word constructions for which only a tendency towards compound spelling can be observed (\citealt[95]{Szczepaniak2009}, \citealt[335]{Wurzel1998}.
+Unlike in English, compound spelling of syntactic words comprising more than one stem was also established in the history of German writing, especially for the case of the highly productive noun + noun compound pattern (\citealt[182]{Fuhrhop2007}, \citealt[34]{Jacobs2005}, see also Section~\ref{sec:thestatusofnounverbunitsingerman} below), for which compound spelling is the dominant graphemic realisation.
+However, there is a heterogeneous group of multi-word constructions for which only a tendency towards compound spelling can be observed (\citealt[95]{Szczepaniak2009}, \citealt[335]{Wurzel1998}).
 As opposed to noun + noun compounds, these constructions typically consist of words with different parts of speech, such as \textit{mithilfe} (\textit{von}) (`with the help (of)') from \textit{mit der Hilfe} (\textit{von}) or \textit{zuhause} (`at home') from \textit{zu} \textit{Hause}.%
 \footnote{Normative approaches as well as individuals display a lot of variation with respect to at least some of those constructions (cf.\ below).}
 For such cases, \citet[2]{Lehmann2021} posits a ``downgrading of a syntactic to a morphological boundary'' between the two words.
 When writers use compound spelling in these cases, they choose to encode the construction as a single word with a morphological boundary instead of a sequence of words with a syntactic boundary.
-If many speakers consistently make this choice over a significant period, the unit might become conventionalised as a single lexical word \parencite[7]{Lehmann2021}.
-Until such a diachronic process is complete, conventionalisation is not strong enough, and writers alternate between a syntagmatic and a morphological realisation.
-For many of these constructions, this is the case both in as well as standard written German.
+If many speakers consistently make this choice over a significant period of time, the unit might become conventionalised as a single lexical word \parencite[7]{Lehmann2021}.
+Until such a diachronic process is complete and one of the spellings has become clearly dominant, conventionalisation does not provide a very strong input to writers, and they alternate between a syntagmatic and a morphological realisation.
+For many of these constructions, this is the case both in non-standard as well as standard written German, albeit assumedly to different degrees.%
+\footnote{We are not aware of any published research comparing the alternation tendencies in standard and non-standard written German.}
 
-N+V units with different affinities towards compound spelling like \textit{Rad fahren} (`bike riding', often also spelled \textit{radfahren}) and \textit{eislaufen} (`ice skating', infrequently also spelled \textit{Eis laufen}) are assumed to represent different levels of diachronic re-conventionalisation as single words (\textbf{Reference?}).%
+N+V units with different affinities towards compound spelling like \textit{Rad fahren} (`bike riding', often also spelled \textit{radfahren}) and \textit{eislaufen} (`ice skating', infrequently also spelled \textit{Eis laufen}) represent different levels of diachronic re-conventionalisation as single words (\textbf{Reference?}).%
 \footnote{The orthographic norm is notoriously unstable with respect to N+V units, which contributes to their unclear status.
 Before the significant reform of the orthographic norm in 1996, both \textit{radfahren} and \textit{eislaufen} were supposed to be spelled as one word.
 After the reform, both units were supposed to be written as two words (\textit{Eis laufen} and \textit{Rad fahren}).
 After a revision of the reform in 2006, \textit{eislaufen} was again supposed to be spelled as one word, whereas \textit{Auto fahren} was supposed to be spelled as two words exclusively \parencite[327]{Eisenberg2013a}.}
-This indeterminacy means that speakers have both the syntagmatic realisation (disjunct spelling) and the morphological realisation (compound spelling) in their graphemic input, which subsequently leaves them with a choice to be made based on how a concrcete unit is classified according to their individual grammar.
+This indeterminacy means that speakers have both the syntagmatic realisation (disjunct spelling) and the morphological realisation (compound spelling) in their graphemic input, which subsequently leaves them with quite a free choice to be made based on how a concrete token is classified according to their individual grammar.
 It is the task of usage-based probabilistic graphemics \parencite{SchaeferSayatz2016} to uncover factors influencing such decisions and decode the principles at work in speakers' internal grammar by analysing their writing habits.
 
 
 \subsection{The status of noun-verb units in German}
+\label{sec:thestatusofnounverbunitsingerman}
 
-(Ulrike material.)
+In Sections~\ref{sec:introduction} and~\ref{sub:spaceswordsanduniverbation}, we showed that N+V units alternate between compound spelling and disjunct spelling when they occur in sequence.
+In this section, we explain why the existence of this alternation is not surprising considering the morphosyntactic system of German.
+Furthermore, we argue that in each concrete case where an N+V is written, the strength of the tendency towards either compound or disjunct spelling can be derived from the overall syntactic and morphological patterns available in present-day German.
+These patterns are shown to have prototypical properties which are matched by individual N+V units and their syntactic contexts more or less well, which leads to either compound or disjunct spelling being the preferred realisation.
+The hypotheses put forward here are then tested in Sections~\ref{sec:corpusbasedanalysisoftheusageofnvunits} and \ref{sec:elicitedproductionofnounverbunitsinwrittenlanguage}.
+
+To this end, we need to shed some light on the productive N+N compound construction in Section~\ref{sub:nncompounds} before turning to N+V units as reluctant compounds in Section~\ref{sub:nvunitsasreluctantcompounds}.
+We sum up our arguments and derive our hypotheses for the empirical studies in Section~\ref{sub:hypothesesfortheempiricalstudies}.
+
+
+\subsubsection{N+N compounds}
+\label{sub:nncompounds}
+
+For an N+V unit to undergo graphemic univerbation (\ie, a downgrading of a syntactic to a morphological construction in the sense of \citealt[2]{Lehmann2021}), it must resemble an established morphological construction enough to be classified as a morphological construction.
+As mentioned above, the dominant productive morphological construction combining more than one stem is nominal compounding (N+N), to which we turn now in some detail.
+German N+N compounds are strictly inseparable (syntactically but also graphemically), always head-final, mostly determinative, and they allow recursive formation.
+Some examples are given in (\ref{ex:nncompounds}) for \textit{Haustür} and \textit{Haustürschlüssel}, the latter being recursively formed from the former.
+
+\begin{exe}
+  \ex\label{ex:nncompounds}
+  \begin{xlist}
+    \ex\gll Haus + tür\\
+    house + door\\
+    \trans front door
+    \ex\gll Haus + tür + schlüssel\\
+    (house + door) + key\\
+    \trans key to the front door
+  \end{xlist}
+\end{exe}
+
+The semantic relation between the first noun (\Ni) and the second noun (\Nii) is highly unspecific, rendering many compounds semantically ambiguous unless they are strongly lexicalised \parencite[252]{Klos2011}.%
+\footnote{Obviously, once they are strongly lexicalised, they cannot help to establish a more canonical type of semantic relation between \Ni\ and \Nii, either, simply because lexicalised compounds are often intransparent to the language user \parencite[59]{Klos2011}, such as \textit{Kammerjäger} (`pest controller', literally \textit{chamber hunter}).}
+The historic development of the stable N+N compound construction was furthered during the Early High German period (approximately from the 14th to the 17th century AD) by to a syntactic change.
+The dominant pattern of noun--noun attribution had been a prenominal genitive as in the now obsolete (\ref{ex:prenomgen}), which swiftly changed to a postnominal genitive as in (\ref{ex:postnomgen}).
+
+\begin{exe}
+  \ex[$\dagger$]{\gll des Hauses Tür\\
+  {the\Sub{Gen}} {house\Sub{Gen}} door\\
+  \trans the door of the house\\\label{ex:prenomgen}}
+  \ex[ ]{\gll die Tür des Hauses\\
+  the door {the\Sub{Gen}} {house\Sub{Gen}}\\
+  \trans the door of the house\\\label{ex:postnomgen}}
+\end{exe}
+
+To the extent that prenominal attribution in syntax became impossible, the prenominal position was used to establish the highly productive morphological construction of N+N compounds as in (\ref{ex:nncompounds}) (see \citealt[132]{NueblingEa2017}, \citealt{Schluecker2012}), which showed a tendency to be written in compound spelling very early on \textbf{(Reference?)}.
+The N+N compound construction is semantically at least as unspecific as the syntactic genitive construction to which it is diachronically related (see also \citealt[220]{Eisenberg2013a}), and its recursivity is virtually unrestricted \parencite[504]{Wurzel1994}.
+\Ni\ and \Nii\ are are just concatenated as bare stems in most cases, but there are also so-called linking elements, which are sometimes positioned in between the stems.%
+\footnote{A recent large-scale study \parencite[339]{SchaeferPankratz2018} showed that 60\% of all N+N compound types have no linking element, whereas 40\% do.}
+The linking elements have diverse sources diachronically, but the overall pattern of inserting them is related to the former morphological marking in prenominal genitives \textbf{(Reference?)}.
+
+
+\subsubsection{N+V units as reluctant compounds}
+\label{sub:nvunitsasreluctantcompounds}
+
+
+\subsubsection{Hypotheses for the empirical studies}
+\label{sub:hypothesesfortheempiricalstudies}
+
+
+
+%  [compana="[A-ZÄÖÜ][^_]+_[a-zäöü][^_]+en_#en_[A-ZÄÖÜ][^_]+"]
+%
+% Liebe Ulrike,
+%
+% ich bin gerade auf deinen Seiten 5 und 6. Da erzählst du, dass NF zu dem Schluss kommt, dass N+V nur dann als Erstglied im Kompositum – also (N+V)+N – vorkommen kann, wenn der Stamm nominal mit s-Genitiv etabliert ist.* Sollen die Beispiele, die dann da stehen, alle einen Asterisk bekommen und damit zeigen, dass das nicht geht? Bei mir gehen die alle absolut einwandfrei (Biertrinkabend usw.). Ich verstehe daher den Punkt nicht. Aber vielleicht lese ich deine Wiedergabe von NF auch falsch.
+%
+% * Da steht s-Stamm. Gemeint ist sicher eine Nullableitung vom Stamm, die dann den s-Genitiv nimmt.
+%
+% Anbei die Frequenzliste für die entsprechende Anfrage (nur die ersten tausend Belege für eine heuristische Anfrage). Da sind natürlich viele Treffer dabei, die definitiv was anderes sind (wie gesagt: Heuristik). Aber alles mit Energiespar~, Steuerspar~ oder Wärmeleitfähigkeit, Autoabstellplatz, Geschirrspülmittel, Bildwiederholrate (?), Feuerlöschanlage, Endlagersuchgesetz, Haarwaschmittel, Ballfangzaun, Autovermietfirma (!), Abwasserpumpwerk, Wasserspritzpistole usw.
+%
+% Klar kann man bei vielen argumentieren, dass sie anders geklammert sind, also [Auto-[abstell-platz]] usw. Bei sowas wie Energiesparmesse finde ich die Lesart „eine Sparmesse für Energie“ allerdings komplett absurd. Ähnliches gilt für Endlagersuchgesetz mit „Suchgesetz für Endlager“ und simile für Feuerlöschboot, Ballfangzaun u.v.a.m.
+%
+% Aber vielleicht habe ich es ja auch einfach nicht verstanden.
+%
+% Das nur als kleines Detail vorab.
+%
+% Viele Grüße
+% Roland
+%
+% PS: Rekursivität des N+V-Musters im eigentlichen Sinn wäre übrigens was anderes. Das wären so Wörter wie „Jule hat radfahrgemacht.“ wo [N+V]+V mit [N+V] als N aus V konvertiert. Das kommt definitiv nicht vor, und dafür brauchen wir auch keine Tests.
+

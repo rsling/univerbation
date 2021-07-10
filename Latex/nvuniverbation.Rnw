@@ -72,24 +72,26 @@
 \newcommand{\Sub}[1]{\ensuremath{\mathrm{_{#1}}}}
 \newcommand{\Sup}[1]{\ensuremath{\mathrm{^{#1}}}}
 \newcommand{\CM}[1]{\ensuremath{\mathsf{#1}}}
+\newcommand{\Ni}{N\Sub{1}}
+\newcommand{\Nii}{N\Sub{2}}
 
 \pdfauthor{Roland Schaefer and Ulrike Sayatz}
-\pdftitle{Prototypes in verb-noun univerbation in German}
+\pdftitle{Prototypes in noun-verb univerbation in German}
 \pdfkeywords{univerbation, prototypes, production experiments, corpus data, German}
 
-\title[Prototypes in the univerbation of German verb-noun units]{Prototypes in the univerbation\\of German verb-noun units}
+\title[Prototypes in the univerbation of German noun-verb units]{Prototypes in the univerbation\\of German noun-verb units}
 
 \author{
   \spauthor{Roland Schäfer\\
   \institute{\small Deutsche Sprache und Linguistik,\\Humboldt-Universität zu Berlin}\\
   \small{Dorotheenstraße 24, 10117 Berlin\\
-  schaefer@hu-berlin.de}
+  roland.schaefer@hu-berlin.de}
   }
   \AND
   \spauthor{Ulrike Sayatz\\
   \institute{\small Deutsche und niederl.\ Philologie,\\Freie Universität Berlin}\\
   \small{Habelschwerdter Allee 45, 14195 Berlin\\
-  sayatz@fu-berlin.de}
+  ulrike.sayatz@fu-berlin.de}
   }
 }
 
@@ -212,7 +214,10 @@ nice.int <- function(n) formatC(n, format="d", big.mark=",")
 <<child="sections/explaining.Rnw">>=
 @
 
-\newpage
+\section*{Funding information}
+
+Roland Schäfer’s work was funded by the Deutsche Forschungsgemeinschaft (DFG, German Research Foundation) – SFB 1412, 416591334.
+
 
 \section*{Acknowledgments}
 

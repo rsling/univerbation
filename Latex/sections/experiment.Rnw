@@ -6,7 +6,7 @@ opts_knit$set(self.contained=FALSE)
 \section{Elicited production of noun-verb units}
 \label{sec:elicitedproductionofnounverbunitsinwrittenlanguage}
 
-In this section, we corroborate the findings from Section~\ref{sec:corpusbasedanalysisoftheusageofvnunits} in a controlled experiment.
+In this section, we corroborate the findings from Section~\ref{sec:corpusbasedanalysisoftheusageofnvunits} in a controlled experiment.
 We describe the rationale behind the experiment, the methods used, the design, and the group of participants in Section~\ref{sub:designandparticipants}.
 Section~\ref{sub:resultsexperiment} reports the results descriptively and in the form of a generalised linear mixed model.
 
