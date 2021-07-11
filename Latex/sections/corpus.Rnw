@@ -73,6 +73,8 @@ This class is illustrated by \textit{Daumenlutschen} (``thumb sucking''), which 
 \subsection{Results 1: Association strengths}
 \label{sub:results2associationastrengths}
 
+\todo{Order of this section and the next section was switched without adapting the text, yet.}
+
 In this section, we report an analysis of the item-specific affinities of N+V units towards univerbation.
 The reason behind this additional analysis of the data is twofold.
 First, we aim to demonstrate that the same interpretation can be obtained using a method that is technically much simpler and more robust against problems with the distribution of the data and against misinterpretation than multilevel modelling.

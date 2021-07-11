@@ -37,6 +37,10 @@
 \usepackage{rotating}
 \usepackage{bbding}
 \usepackage{soul}
+\usepackage[textsize=tiny,backgroundcolor=yellow!50]{todonotes}
+
+\newcommand{\ulrike}[1]{\todo{#1}}
+\newcommand{\roland}[1]{\todo[backgroundcolor=blue!20]{#1}}
 
 \usepackage[firstpage, scale=0.25]{draftwatermark}
 \SetWatermarkLightness{0.75}
@@ -68,6 +72,7 @@
 \newcommand{\ie}{i.\,e.,\ }
 \newcommand{\Ie}{I.\,e.,\ }
 \newcommand{\Eg}{E.\,g.,\ }
+\newcommand{\eG}{e.\,g.}
 \newcommand{\egg}{e.\,g.,\ }
 \newcommand{\Sub}[1]{\ensuremath{\mathrm{_{#1}}}}
 \newcommand{\Sup}[1]{\ensuremath{\mathrm{^{#1}}}}
@@ -76,10 +81,10 @@
 \newcommand{\Nii}{N\Sub{2}}
 
 \pdfauthor{Roland Schaefer and Ulrike Sayatz}
-\pdftitle{Prototypes in noun-verb univerbation in German}
+\pdftitle{Syntax and morphology competing: German noun-verb units as reluctant compounds}
 \pdfkeywords{univerbation, prototypes, production experiments, corpus data, German}
 
-\title[Prototypes in the univerbation of German noun-verb units]{Prototypes in the univerbation\\of German noun-verb units}
+\title[Syntax and morphology competing: German noun-verb units as reluctant compounds]{Syntax and morphology competing:\\German noun-verb units\\as reluctant compounds}
 
 \author{
   \spauthor{Roland Schäfer\\
@@ -214,6 +219,9 @@ nice.int <- function(n) formatC(n, format="d", big.mark=",")
 <<child="sections/explaining.Rnw">>=
 @
 
+<<child="sections/appendix.Rnw">>=
+@
+
 \section*{Funding information}
 
 Roland Schäfer’s work was funded by the Deutsche Forschungsgemeinschaft (DFG, German Research Foundation) – SFB 1412, 416591334.
@@ -221,10 +229,7 @@ Roland Schäfer’s work was funded by the Deutsche Forschungsgemeinschaft (DFG,
 
 \section*{Acknowledgments}
 
-We thank Luise Rissmann for her help annotating and cleaning the corpus data.
-
-<<child="sections/appendix.Rnw">>=
-@
+We thank Luise Rissmann for her help annotating and cleaning the corpus data as well as conducting most of the experiments.
 
 \printbibliography
 
