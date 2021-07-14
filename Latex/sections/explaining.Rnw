@@ -5,3 +5,15 @@ opts_knit$set(self.contained=FALSE)
 
 \section{Explaining noun-verb univerbation}
 \label{sec:explainingnounverbuniverbation}
+
+\roland{Does not work with prepositional objects. *vorurteilsgelitten}
+
+\roland{Not very productive with adjuncts. *brückengestanden}
+
+\roland{Mention difference: object is related to argument structure of the verb, adjunct is not.}
+
+\roland{How productive is the N+V incorporation? Further studies required.}
+
+\roland{Es geht ja um die „Umdeutung/Modifizierung“ eines verbalen Ereigniskonzepts, bei dem entweder eine Objektrelation oder eine Adjunktrelation zu einer Veränderung der lexikalischen Markierungsstruktur des – wie auch immer -  entstehenden komplexen Verbstammes führt.
+Nicht unwichtig scheint dabei auch zu sein, wie spezifisch das Verb in seiner lexikalischen Bedeutung ist. Ist das verbale Ereigniskonzept semantisch spezifiziert, wie bei fahren oder schwimmen, scheint eine weitere Modifizierung leichter möglich (was dann am Ende zu komplexen N-V-Verbindungen führt oder wenigstens zu Reihenbildungen oder Noun-stripping  wie rad/auto/zug fahren  (vgl. hierzu u.a. Gallmann 1999: XXL). Je semantisch unspezifizierter das verbale Ereigniskonzept des Verbs ist, z.B. bei machen, desto dispräferierter scheint die Tendenz zu sein, eine syntaktische Objekt- oder Adjunktrelation morphologisch zu ersetzen. (Verweis auf die niedrige Univerbierungstendenz in den Korpusdaten auf S. 12, Tab.3. Das kann auch alles erst später oder in die Schlussfolgerungen).
+Jedenfalls wäre bei spezifischen Ereigniskonzepten wie fahren und schwimmen eine semantische Paraphrase in der Art: Wenn jemand radfahren will, will er fahren oder Wenn jemand brustschwimmen will, will er schwimmen möglich. Der Verbstamm ist eindeutig das semantische Zentrum des komplexen Wortes; bei machen und haben dagegen nicht, vgl. *Wenn jemand spaßhaben will, will er haben. *Wenn jemand fehlermachen will, will er machen.  (Nähe zu Funktionsverbgefügen!)}

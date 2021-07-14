@@ -42,6 +42,8 @@
 \newcommand{\ulrike}[1]{\todo{#1}}
 \newcommand{\roland}[1]{\todo[backgroundcolor=blue!20]{#1}}
 
+\newcommand{\exhl}[1]{\textbf{#1}}
+
 \usepackage[firstpage, scale=0.25]{draftwatermark}
 \SetWatermarkLightness{0.75}
 \SetWatermarkText{Draft of \today}
@@ -81,10 +83,10 @@
 \newcommand{\Nii}{N\Sub{2}}
 
 \pdfauthor{Roland Schaefer and Ulrike Sayatz}
-\pdftitle{Syntax and morphology competing: German noun-verb units as reluctant compounds}
-\pdfkeywords{univerbation, prototypes, production experiments, corpus data, German}
+\pdftitle{Between syntax and morphology: German noun-verb units as reluctant compounds}
+\pdfkeywords{probabilistic grammar, graphemics, univerbation, corpus data, elicitation, German}
 
-\title[Syntax and morphology competing: German noun-verb units as reluctant compounds]{Syntax and morphology competing:\\German noun-verb units\\as reluctant compounds}
+\title[Between syntax and morphology: German noun-verb units as reluctant compounds]{Between syntax and morphology:\\German noun-verb units\\as reluctant compounds}
 
 \author{
   \spauthor{Roland Schäfer\\

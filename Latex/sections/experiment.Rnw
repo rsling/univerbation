@@ -15,11 +15,12 @@ Section~\ref{sub:resultsexperiment} reports the results descriptively and in the
 
 The goal of the experiment was to corroborate the findings from the corpus study and to test whether writers' behaviour under controlled experimental conditions is similar to the behaviour of writers under uncontrolled circumstances as found in corpora.
 We used pre-recorded auditory stimuli in order to elicit spellings of given N+V units.
-The stimuli were chosen based on theoretical criteria and information obtained from the corpus.
+The stimuli were chosen based on theoretically motivated criteria and the information about item-specific tendencies obtained from the exploratory part of the corpus study in Section~\ref{sub:results2associationastrengths}.
 We constructed eight sentences instantiating the four contexts.
-In each context, we chose one N+V unit with a high and one with a low attraction strength according to the corpus.%
-\footnote{Given the overall constraints on the choice of the items, \textit{low} and \textit{high} had to be seen as relative terms.
-However, all low attractions scores are higher than zero, all high attraction scores are greater than zero, and for each context, the pair of low and high attraction scores differs at least by 0.05.}
+For each of the four contexts, we chose one N+V unit with a high and one with a low attraction strength according to the analysis of the usage data.%
+\footnote{Given the overall constraints on the choice of the items, ``low'' and ``high'' had to be interpreted as quite relative terms.
+However, we made sure that all low attractions scores are lower than zero and all high attraction scores are greater than zero.
+Also, for each context, the low and the high attraction score differ by at least 0.05.}
 The sentences were constructed in a ways such that all N+V units were the predicate of a subordinate clause.
 This consistently ensured verb-last constituent order and avoided interfering verb-second effects, which are typical of independent sentences in German.
 The full sentences are given in Appendix~\ref{sec:sentencesusedintheexperiment}.
@@ -111,8 +112,9 @@ experiment.confints <- confint(experiment.glmm)
 experiment.glmm.r2 <- r.squaredGLMM(experiment.glmm)
 @
 
-Clearly, both independent variables are highly useful in predicting the behaviour of participants.
+Clearly, both independent variables are highly useful in predicting the behaviour of participants.\roland{Fix the nomenclature with ``NPs'' and ``Clitic''.}
 However, among the items with low association scores, we would expect the NPs as highly prototypical nominal contexts to trigger univerbation most strongly, while in the experiment they lose to the progressive (\Sexpr{length(which(exp.cases$Context=="Clitic" & exp.cases$Univerbation=="Yes" & exp.cases$Attraction=="Low"))} out of \Sexpr{length(which(exp.cases$Context=="Clitic" & exp.cases$Attraction=="Low"))} for the NPs, \Sexpr{length(which(exp.cases$Context=="Progressive" & exp.cases$Univerbation=="Yes" & exp.cases$Attraction=="Low"))} for the progressives).
+
 To examine the results further, we proceeded to estimate the parameters of a GLMM with additional control for individual participants in the form of a random effect.
 Instead of using a grouping variable for the N+V units, we included their association strengths directly in the model.
 The model specification in R notation is given in (\ref{eq:expglmmformula}).
@@ -176,15 +178,15 @@ grid.arrange(experiment.glmm.fx.context, experiment.glmm.fx.attraction, ncol=2)
 
 The effect plots in Figure~\ref{fig:experimentfx} show the same picture as the coefficient table.
 The prototypically verbal contexts are associated with low probabilities of univerbation, the two prototypically nominal ones with high probabilities of univerbation.
-While progressives and NPs with clitics show the order predicted by theory, there is only very weak evidence that the difference is substantial (see the large and mostly overlapping confidence intervals).
+While progressives and NPs with clitics show the order predicted by theory, there is only very weak to no support for assuming a substantial difference judging by the large and mostly overlapping confidence intervals.
 The attraction scores are neatly correlated with the probability of univerbation.
 
 The apparent paradox with respect to the order of the effects of NP and progressive contexts that we see between Figure~\ref{fig:experimentmosaic} on the one hand and Table~\ref{tab:experimentglmm} and Figure~\ref{fig:experimentfx} on the other hand can be explained by looking at the concrete attraction strengths in Table~\ref{tab:designtable}.
 The unit with ``low'' attraction used in the progressive context (\textit{\Sexpr{designtable[5, "N+V unit"]}}) has a numeric attraction score of $\Sexpr{nice.float(designtable[5, "Attraction"])}$, which is much closer to 0 than the one used in the NP context (\textit{\Sexpr{designtable[7, "N+V unit"]}}) with $\Sexpr{nice.float(designtable[7, "Attraction"])}$.
 At the same time, the high attraction counterparts are rather close to each other numerically ($\Sexpr{nice.float(designtable[6, "Attraction"])}$ for \textit{\Sexpr{designtable[6, "N+V unit"]}} and $\Sexpr{nice.float(designtable[8, "Attraction"])}$ for \textit{\Sexpr{designtable[8, "N+V unit"]}}).
-Figure~\ref{fig:experimentmosaic} therefore shows a positive bias for the progressive context, which is likely due to the concrete choice of items for this experiment.
-The truly multifactorial analysis in the form of a GLMM compensates for it because it uses the numerical attraction scores rather than just a binned ``low'' and ``high'' classification as used in Figure~\ref{fig:experimentmosaic}.
+Figure~\ref{fig:experimentmosaic} therefore shows a positive bias for the progressive context, which is likely due to the concrete choice of items for this experiment and the binary binning of the attraction scores into ``low'' and ``high''.
+The GLMM compensates for this because we used the numerical attraction scores rather than just a binned ``low'' and ``high'' classification.
 As the selection of the few stimuli for a given experiment is virtually never possible with perfect control over all variables, the more advanced statistical analysis protects us against misinterpretation.
 
-In sum, the experiment clearly corroborates our theoretically motivated predictions and the corpus study.
+In sum, the experiment supports our theoretically motivated hypotheses, and it corroborates the results from the corpus study.
 We proceed to a final analysis of the phenomenon at in the light of our findings hand in Section~\ref{sec:explainingnounverbuniverbation}.
