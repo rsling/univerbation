@@ -6,14 +6,15 @@ opts_knit$set(self.contained=FALSE)
 \section{Theoretical background}
 \label{sec:theoreticalbackground}
 
-\subsection{Probabilisic grammar and graphemic evidence}
-\label{sub:probabilisticgrammarandgraphemicevidence}
+\subsection{Usage-based graphemics}
+\label{sub:usagebasedgraphemics}
 
-\roland{A brief 1--2 page overview of prototype as applied to grammatical categories, including the role of contexts in alternation modelling.}
+%\roland{A brief 1--2 page overview of prototype as applied to grammatical categories, including the role of contexts in alternation modelling.}
+%\roland{Mention item-specific effects.}
+%\roland{Introduce usage-based graphemics.}
 
-\roland{Mention item-specific effects.}
+In this section, we discuss the status of written evidence in usage-based linguistics, adopting usage-based graphemics as introduced in \citet{SchaeferSayatz2016}.
 
-\roland{Introduce usage-based graphemics.}
 
 \subsection{Spaces, words, and univerbation}
 \label{sub:spaceswordsanduniverbation}
@@ -28,7 +29,7 @@ German writing uses an alphabetic script with a strong correlation between under
 A common fundamental principle of such scripts is the separation of syntactic words by spaces \parencite[22]{Jacobs2005}.
 Also, stems and affixes are never separated from one another in German, which reinforces the status of the space as a demarcation of syntactic words.\roland{Fix MuellerXYZ in footnote.}%
 \footnote{There is a class of verbal particles which does not follow this principle.
-Verbs like \textit{aufessen} (`eat up') formed from a verb stem (\textit{essen}) and a prefixed particle (\textit{auf}) are spelled as one word when they are adjacent in verb-last order, but they are separated in verb-second order where the verb is moved to sentence-second position and the particle remains in sentence-last position through obligatory long-distance movement \citet{MuellerXYZ}.}
+Verbs like \textit{aufessen} (`eat up') formed from a verb stem (\textit{essen}) and a prefixed particle (\textit{auf}) are spelled as one word when they are adjacent in verb-last order, but they are separated in verb-second order where the verb is moved to sentence-second position and the particle remains in sentence-last position through obligatory long-distance movement (see \citealt{Hoberg1981} for an account of German clausal and sentential syntax).}
 These factors facilitate the reader's ability to decode the sequence of syntactic words, and they constitute a crucial principle in the encoding and conventionalisation of meanings associated with word forms \parencite[22]{Jacobs2005}.
 
 Unlike in English, compound spelling of syntactic words comprising more than one stem was also established in the history of German writing, especially for the case of the highly productive noun+noun (N+N) compound pattern (\citealt[182]{Fuhrhop2007}, \citealt[34]{Jacobs2005}, Section~\ref{sec:thestatusofnounverbunitsingerman} below), for which compound spelling is the dominant graphemic realisation.
@@ -67,12 +68,13 @@ We sum up our arguments and derive our hypotheses for the empirical studies in S
 \subsubsection{N+N compounds}
 \label{sub:nncompounds}
 
-For an N+V unit to undergo graphemic univerbation (\ie, a downgrading of a syntactic to a morphological construction in the sense of \citealt[2]{Lehmann2021}) systematically, it must resemble established morphological constructions enough to be classified as an instance of that construction itself.%
+For an N+V unit to undergo graphemic univerbation (\ie a downgrading of a syntactic to a morphological construction in the sense of \citealt[2]{Lehmann2021}) systematically, it must resemble established morphological constructions enough to be classified as an instance of such constructions itself.%
 \footnote{Random isolated univerbations like \textit{zuhause} `at home' from \textit{zu Hause} are not systematic in this sense.
 They are merely the result of idiosyncratic diachronic developments.}
-The prototypical and by far most producitve morphological construction combining more than one stem is noun + noun compounding (N+N), to which we turn now in some detail.%
+We posit that this follows from the assumed underlying learning mechanisms under a usage-based perspective.
+The prototypical and arguably the only fully productive morphological construction combining more than one stem in German is noun + noun (N+N) compounding, to which we turn now in some detail.%
 \footnote{Adjectives also enter compounds as the head, such as in \textit{feuerrot} `red like fire', literally `fire red'.
-However, they are much less frequent than N+N compounds, and we consequently don't discuss them here.
+However, this pattern is much less productive than N+N compounding, and we don't discuss it here.
 See \citet[136]{Simunic2018} on the productivity of N+A compounds.}
 German N+N compounds instantiate a morphological construction proper and are therefore inseparable.
 Syntactically, nothing can intervene in between the two stems of the compound, and they cannot be rearranged.
@@ -95,7 +97,7 @@ Within compounds containing more than two stems, structure is using using square
 The semantic relation between the first noun (\Ni) and the second noun (\Nii) is highly unspecific, rendering many compounds semantically ambiguous unless they are strongly lexicalised \parencite[252]{Klos2011}.%
 \footnote{Obviously, once they are strongly lexicalised, they cannot help to establish a more canonical type of semantic relation between \Ni\ and \Nii, either, simply because lexicalised compounds are often intransparent to the language user \parencite[59]{Klos2011}, such as \textit{Kammerjäger} (`pest controller', literally \textit{chamber hunter}).}
 The historic development of the stable N+N compound construction was furthered during the Early High German period (approximately from the 14th to the 17th century AD) by a syntactic change.%
-\footnote{\citet[130]{Nuebling2017} finds that the prenominal genitive begins to give way to the postnominal genitive in the 13th century.
+\footnote{\citet[130]{NueblingEa2017} finds that the prenominal genitive begins to give way to the postnominal genitive in the 13th century.
 Around 1500, already 53\% of the genitives are postnominal, rising to 64\% at around 1700.}
 The dominant pattern of noun--noun attribution had been a prenominal genitive as in the now obsolete (\ref{ex:prenomgen}), which swiftly changed to a postnominal genitive as in (\ref{ex:postnomgen}).
 
@@ -113,7 +115,7 @@ The N+N compound construction is semantically at least as unspecific as the synt
 Its recursive application is virtually unrestricted \parencite[504]{Wurzel1994}.
 \Ni\ and \Nii\ are are just concatenated as bare stems in most cases, but there are also so-called linking elements, which are sometimes positioned in between the stems.%
 \footnote{A recent large-scale study \parencite[339]{SchaeferPankratz2018} showed that 60\% of all N+N compound types have no linking element, whereas 40\% do.}
-Diachronically, linking elements stem from diverse sources, but the overall pattern of inserting them is related to the former morphological marking in prenominal genitives \parencite[55--57]{Nuebling2017}.
+Diachronically, linking elements stem from diverse sources, but the overall pattern of inserting them is related to the former morphological marking in prenominal genitives \parencite[55--57]{NueblingEa2017}.
 
 N+N compounds as described in this section are clearly the prototype for morphological constructions combining more than one stem in German.
 In the next section, we show how N+V units deviate from this prototype, and how this leads to them alternating between a syntactic and a morphological construction.
@@ -127,9 +129,9 @@ While in principle the morphological N+V construction as a kind of compound writ
 At the same time, we argue why---at least under the right circumstances---morphological compounding (and consequently the spelling as one word) become the preferred realisation.
 
 As opposed to compounding with nominal heads (as discussed in the previous section), compounding with verbal heads is not a highly productive pattern in German.%
-\footnote{\citet{Günther1997} counts roughly 400 lexicalised N+V compounds in \citet{Muthmann1988} (see also \citealt[245]{Eisenberg2020a}).}
+\footnote{\citet{Guenther1997} counts roughly 400 lexicalised N+V compounds in \citet{Muthmann1988} (see also \citealt[245]{Eisenberg2020a}).}
 A major difference compared to N+N compounds is the fact that N+V units are usually not inseparable as was already shown in Section~\ref{sec:introduction}.
-There can be intervening material in between the noun and the verb in some contexts (the infinitival particle \textit{zu} and the inflecional affix \textit{ge-} of past participles).
+There can be intervening material in between the noun and the verb in some contexts (the infinitival particle \textit{zu} and the inflectional affix \textit{ge-} of past participles).
 Additionally, the noun and the verb can be separated and rearranged as in verb-second order, where N+V units resemble particle verbs \parencite[603]{Fortmann2015}.
 This fact alone means that N+V units do not fit the compounding prototype well.\roland{Maybe add details from Ulrike's page 3.}
 This likely introduces great resistance in speakers to classify them as compounds and consequently use compound spelling.
