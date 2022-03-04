@@ -82,6 +82,11 @@
 \newcommand{\Ni}{N\Sub{1}}
 \newcommand{\Nii}{N\Sub{2}}
 
+%\newcommand{\selfcitet}[1]{\textsc{self-references omitted}}
+\newcommand{\selfcitet}[1]{\textcolor{red}{\textbf{!}}\citet{#1}}
+%\newcommand{\selfcitealt}[1]{\textsc{self-references omitted}}
+\newcommand{\selfcitealt}[1]{\textcolor{red}{\textbf{!}}\citealt{#1}}
+
 \pdfauthor{Roland Schaefer and Ulrike Sayatz}
 \pdftitle{Between syntax and morphology: German noun-verb units as reluctant compounds}
 \pdfkeywords{probabilistic grammar, graphemics, univerbation, corpus data, elicitation, German}
@@ -224,9 +229,9 @@ nice.int <- function(n) formatC(n, format="d", big.mark=",")
 <<child="sections/appendix.Rnw">>=
 @
 
-\section*{Funding information}
-
-Roland Schäfer’s work was funded by the Deutsche Forschungsgemeinschaft (DFG, German Research Foundation) – SFB 1412, 416591334.
+%\section*{Funding information}
+%
+%Roland Schäfer’s work was funded by the Deutsche Forschungsgemeinschaft (DFG, German Research Foundation) – SFB 1412, 416591334.
 
 
 \section*{Acknowledgments}

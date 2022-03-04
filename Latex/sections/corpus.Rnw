@@ -6,19 +6,17 @@ opts_knit$set(self.contained=FALSE)
 \section{Analysing the usage of noun-verb units}
 \label{sec:corpusbasedanalysisoftheusageofnvunits}
 
-In this section, we apply both exploratory and confirmatory methods of analy\-sing the univerbation of N+V units using corpus data.
+In this section, we use two quantitative methods to analyse the univerbation of N+V units using corpus data.
 We motivate our choice of corpus and describe the sampling and annotation procedure in Section~\ref{sub:choiceofcorpussamplingandannotation}.
-
 We perform exploratory analysis using association measures in Section~\ref{sub:results2associationastrengths} in order to gauge the individual tendencies of N+V units to incorporate and undergo univerbation in written language usage.
 The tendencies calculated here will also be used as a control variable in the experiment reported in Section~\ref{sec:elicitedproductionofnounverbunitsinwrittenlanguage}.
-
 Finally, the results of estimating the parameters of a multilevel model explaining the variation in the univerbation of N+V units are reported in Section~\ref{sub:results1multilevelmodel}.
 
 \subsection{Choice of corpus, sampling, and annotation}
 \label{sub:choiceofcorpussamplingandannotation}
 
 As a first step, we adopted a data-driven approach in order to find close to all N+V units in contemporary written usage.
-In a second step, we had to count their occurrences in compound and separate spelling in the relevant morphosyntactic contexts enumerated in Section~\ref{sub:hypothesesfortheempiricalstudies}: fully nominalised as the heads of noun phrases, in \textit{am} progressives, as participles in analytical verb forms, and as infinitives in a range of verbal constructions (for example with modal verbs).
+In a second step, we counted their occurrences in compound and disjunct spelling in the relevant morphosyntactic contexts enumerated in Section~\ref{sub:hypothesesfortheempiricalstudies}: fully nominalised as the heads of noun phrases, in \textit{am} progressives, as participles in analytical verb forms, and as infinitives in a range of verbal constructions (for example with modal verbs).
 
 Clearly, a large corpus with rich morphological and morphosyntactic annotations containing texts written in a broad variety of registers and styles (including ones written under low normative pressure) was required.
 We chose the DECOW16B corpus \parencite{SchaeferBildhauer2012} because it fulfils all the aforementioned criteria.%
@@ -39,7 +37,7 @@ The rationale behind this approach is that any N+V unit of interest should occur
 Since this step relied on automatic annotation already available in the corpus, the results contained erroneous hits which we removed manually.
 The resulting list contained \Sexpr{nrow(concordance)} N+V units.%
 \footnote{Notice that three highly frequent N+V units were excluded because they could be considered outliers, having an overly strong tendency to be used in compound spelling.
-They are \textit{Teilnehmen} (``take part''), \textit{Maßnehmen} (``take measure''), and \textit{Teilhaben} (``have part'' = ``participate'').}
+They are \textit{Teilnehmen} `to take part', \textit{Maßnehmen} `take measure', and \textit{Teilhaben} `have part' (meaning `to participate'.}
 
 In the second step, we created lists of all relevant inflectional forms of the verb in each V+N unit and used these to query all possible compound and separate spellings (including variance in capitalisation) of each of the \Sexpr{nrow(concordance)} N+V unit types.
 In total, \Sexpr{nice.int(35*nrow(concordance))} queries were executed to create the final data set used here, a number which clearly demonstrates the necessity of script-based corpus access in data-driven methods.
@@ -60,16 +58,18 @@ This class is illustrated by \textit{Daumenlutschen} (``thumb sucking''), which 
   \end{xlist}\label{ex:daumenlutschen}
 \end{exe}
 
-\roland{Glue paragraph missing.}
+The data thus obtained were analysed in two ways.
+First, we report the results of a collexeme analysis in Section~\ref{sub:results2associationastrengths}, which quantifies how strongly individual N+V units tend to be written as one word or two words.
+Second, in Section~\ref{sub:results1multilevelmodel} we report a full statistical model of the alternation.
+Finally, the association strengths calculated in Section~\ref{sub:results2associationastrengths} were also used as a covariate in the analysis of the experiment reported in Section~\ref{sec:elicitedproductionofnounverbunitsinwrittenlanguage}.
 
 \subsection{Results 1: Association strengths}
 \label{sub:results2associationastrengths}
 
-\roland{The order of this section and the next section have been switched without adapting the text, yet. Do it!}
-
 In this section, we report an analysis of the item-specific affinities of N+V units towards univerbation.
-The method we use seems superficially similar to collocational analysis (\citealt{Evert2008} for an overview) or collostructional analysis \parencite{StefanowitschGries2003}.
-However, there are major differences to be explained momentarily (see also \citealt{SchaeferPankratz2018,Schaefer2019}).
+The method we use is similar to collocational analysis (\citealt{Evert2008} for an overview) and stems from under the umbrella of collostructional analysis \parencite{StefanowitschGries2003}.
+More specifically, the method is called \textit{collexem analysis} \parencite{StefanowitschGries2009}.%
+\footnote{See also \selfcitet{SchaeferPankratz2018} and \selfcitet{Schaefer2019a} for similar uses.}
 
 Our goal was to quantify how strongly each N+V unit tends towards univerbation vis-a-vis all other N+V units.
 Thus, we need to compare the counts of cases with and without univerbation of the unit in question with the total counts for all other N+V units.
@@ -79,7 +79,7 @@ The counts needed for each N+V unit are nicely summarised in a 2$\times$2 contin
 \begin{table}[!htbp]
   \begin{tabular}{lcc}
   \toprule
-  & Univerbation & No univerbation \\
+  & Compound spelling & Disjunct spelling \\
   \midrule
   Specific N+V unit   & $c_{11}$ & $c_{21}$ \\
   All other N+V units & $c_{21}$ & $c_{22}$ \\
@@ -97,8 +97,10 @@ We chose Cramér's $v$ derived from standard $\chi^2$ scores ($v=\sqrt{\chi^2/n}
 The $v$ measure quantifies for each individual N+V unit how strongly its counts (cells $c_{11}$ and $c_{21}$) deviate from its counts that we would expect if there were no difference between this unit and all other N+V units (cells $c_{21}$ and $c_{22}$) with respect to their tendency to univerbate.
 Since Cramér's $v$ is always in the range between 0 and 1, it allows us to compare analyses where the samples differ.
 In itself, $v$ does not tell us whether the deviation is negative (for a N+V unit with less than average compound spellings) or positive (for a N+V unit with more than average compound spellings).
-The information about the direction of the deviation is added by multiplying $v$ with the sign of the upper left cell of the residual table of the $\chi^2$ test.%
-\footnote{The association scores encode almost the same information as the second-level model in the GLMM reported in Section~\ref{sub:results1multilevelmodel}, but they have a much more accessible interpretation.}
+The information about the direction of the deviation is added by multiplying $v$ with the sign of the upper left cell of the residual table of the $\chi^2$ test.
+We calculated the signed $v$ for each of the $\Sexpr{length(concordance$all.assocs)}$ N+V units.
+Their distribution is plotted in the form of a density estimate in Figure~\ref{fig:associationsall}.%
+\footnote{As expected, it approximates a scaled symmetric $\chi^2$ distribution with $df=1$ squashed between -1 and 1.}
 
 <<associationsall, results="asis", fig.showtext = TRUE, fig.pos="htbp", fig.height=3, fig.width=3, fig.cap=paste0("Density estimate of the distribution of the \\CM{", length(which(!is.na(concordance$all.assocs))), "} association scores (across all morphosyntactic conditions)")>>=
 
@@ -116,68 +118,13 @@ axis(1)
 axis(2)
 @
 
-We calculated the signed $v$ for each of the $\Sexpr{length(concordance$all.assocs)}$ N+V units.
-Their distribution is plotted in the form of a density estimate in Figure~\ref{fig:associationsall}.%
-\footnote{It approximates a scaled symmetric $\chi^2$ distribution with $df=1$ squashed between -1 and 1.}
-Based on the annotations in the corpus data set, we can also compare the association strengths for specific morphosyntactic contexts.
-The counts as shown in Table~\ref{tab:associationsexplained} are simply reduced to the counts in each of the four contexts in turn.
-With the resulting lower sample sizes, the $\chi^2$ measure can no longer be calculated for a number of infrequent N+V units, leading to lower $n_{Unit}$ (= the number of N+V units analysed).
-The resulting distributions are shown in Figure~\ref{fig:associationssingle}.
-
-<<associationssingle, results="asis", fig.showtext = TRUE, fig.pos="htbp", fig.height=5, fig.width=5, fig.cap="Density estimates of the distribution of the association scores in the specific morphosyntactic conditions.">>=
-
-### Plot distributions of association measures.
-density.opts <- list(lwd = 2)
-par(mfrow=c(2,2), family = "Fira Sans", mar=rep(2.5, 4))
-
-plot(density(na.omit(concordance$np.all.assocs)),
-  axes = F, xlab = "", xlim = c(-0.15, 0.15), ylim = c(0, 35),
-  lwd = density.opts$lwd,
-  col = "black", lty = 1,
-  main = substitute(NPs~OB*n[Unit]*EQ*NUNIT*CB, list(EQ="=", OB="(", CB=")", NUNIT=length(which(!is.na(concordance$np.all.assocs)))))
-  )
-axis(1)
-axis(2)
-
-plot(density(na.omit(concordance$prog.assocs)),
-  axes = F, xlab = "", xlim = c(-0.15, 0.15), ylim = c(0, 11),
-  lwd = density.opts$lwd,
-  col = "black", lty = 1,
-  main = substitute(Progressives~OB*n[Unit]*EQ*NUNIT*CB, list(EQ="=", OB="(", CB=")", NUNIT=length(which(!is.na(concordance$prog.assocs)))))
-    )
-axis(1)
-axis(2)
-
-plot(density(na.omit(concordance$particip.assocs)),
-  axes = F, xlab = "", xlim = c(-0.15, 0.15), ylim = c(0, 165),
-  lwd = density.opts$lwd,
-  col = "black", lty = 1,
-  main = substitute(Participles~OB*n[Unit]*EQ*NUNIT*CB, list(EQ="=", OB="(", CB=")", NUNIT=length(which(!is.na(concordance$particip.assocs)))))
-  )
-axis(1)
-axis(2)
-
-plot(density(na.omit(concordance$infzu.assocs)),
-  axes = F, xlab = "", xlim = c(-0.15, 0.15), ylim = c(0, 165),
-  lwd = density.opts$lwd,
-  col = "black", lty = 1,
-  main = substitute(Infinitives~OB*n[Unit]*EQ*NUNIT*CB, list(EQ="=", OB="(", CB=")", NUNIT=length(which(!is.na(concordance$infzu.assocs)))))
-  )
-axis(1)
-axis(2)
-@
-
-The context-wise distributions of the association scores corroborate the results from the GLMM reported in Section~\ref{sub:results1multilevelmodel}.
-In the NP context (top left panel of Figure~\ref{fig:associationssingle}), the right tail of the curve is much heavier than the left tail, which means there are mostly higher than usual tendencies towards univerbation.
-In the morphosyntactically similar progressive (top right panel), the distribution is approximately symmetric, but given the low number of \Sexpr{length(which(!is.na(concordance$prog.assocs)))} N+V units for which $v$ could be calculated, the result cannot be seen as stable.%
-\footnote{The low number is one the one hand due to the fact that progressives are rare compared to NPs, participles, and infinitives.
-On the other hand, it is likely that many N+V units cannot be used in the progressive for semantic or pragmatic reasons.}
-Both prototypically verbal contexts (lower two panels) show heavier left tails, meaning that N+V units tend to resist univerbation in these contexts.
-Once again, this is just another (and maybe more intuitive) look at the data in addition the GLMM analysis.
-
-For the selection of stimuli in the experiment, the overall association strength (Figure~\ref{fig:associationsall}) is relevant, because it truly represents the effect of the unit, independently of the context.
-The context effect will be controlled independently in the experiment.
+For the selection of the target stimuli used in the experiment, the these association strengths are important, because they encode the effect of the individual N+V units, independently of the context.
+Context effects were controlled independently in the experiment.
 To illustrate how the data analysis allows for a selection of N+V units based on their affinity towards univerbation, we show the top ten units with the highest negative and highest positive association in Table~\ref{tab:corpusassocslohi}.
+The tables illustrate that units with the strongest tendencies against univerbation are predominantly ones with an object relation.
+The ones which most strongly favour univerbation are mostly ones with an adjunct relation or an ambiguous relation.
+The ten items with the least clear tendency in either direction are shown in Table~\ref{tab:corpusassoctablenull}.
+They mostly come with an object relation.
 
 <<corpuscreatetabledata, results="asis">>=
 corpus.assoc.sel <- format.assocs(df = concordance, col = 'all.assocs', show.results = "all",
@@ -221,11 +168,6 @@ corpus.assoc.sel <- corpus.assoc.sel[, 1:3]
   \label{tab:corpusassocslohi}
 \end{table}
 
-The tables illustrate that units with the strongest tendencies against univerbation are predominantly ones with an object relation.
-The ones which most strongly favour univerbation are mostly ones with an adjunct relation or an ambiguous relation.
-The ten items with the least clear tendency in either direction are shown in Table~\ref{tab:corpusassoctablenull}.
-They mostly come with an object relation.
-
 <<corpusassoctablenull, results="asis", >>=
 corpus.assoc.null <- xtable(corpus.assoc.sel[11:20,], digits = 3,
                             caption = paste0("Top ten V+N units without any tendency for or against univerbation"),
@@ -243,24 +185,24 @@ print(corpus.assoc.null,
 
 Among the units with an object relation, it is difficult to tell based on native-speaker intuition why the ones in Table~\ref{tab:corpusassoctablenull} should have no preference and the ones in Table~\ref{tab:corpusassocslohi} (right panel) should resist univerbation.
 This goes to show that, while we can model the tendencies to some extent using linguistic features, there are obvious item-specific effects which should be taken seriously from a theoretical perspective, and which must be accounted for in behavioural experiments.
-We now turn to such an experiment in Section~\ref{sec:elicitedproductionofnounverbunitsinwrittenlanguage}.
-
-\roland{Glue paragraph missing.}
+We turn to such an experiment in Section~\ref{sec:elicitedproductionofnounverbunitsinwrittenlanguage}.
+However, we first report a full statistical model of the influencing factors derived from the corpus data in Section~\ref{sub:results1multilevelmodel}.
 
 \subsection{Results 2: Multilevel model}
 \label{sub:results1multilevelmodel}
 
-\roland{Mention that results between assoc. and GLM converge, but mention \citealt{ArppeJaervikivi2007} etc.}
-
 In this section, we present the parameter estimates (and predictions of conditional modes) for a binomial multilevel model (or generalised linear mixed model, GLMM) which models the relevant factors influencing writers' choice of the compound and the separate spelling.%
-\footnote{See \parencite{Schaefer2020a} for an overview of the method and our philosophy in modelling.}
-Given the grand total of \Sexpr{nice.int(sum(concordance$Joint)+sum(concordance$Separate))} observations in the sample (see Section~\ref{sub:samplingandannotation}), we will completely refrain from an interpretation in terms of inferential statistics.
-For samples of such magnitude in data-driven approaches, frequentist significance tests are the wrong tool. \roland{References!}
+\footnote{See \selfcitet{Schaefer2020a} for an overview of the method and our philosophy in modelling.}
+The results of the method used in Section~\ref{sub:results2associationastrengths} and the GLMM presented here converge.
+However, the GLMM has a more concice interpretation and allows for finer-grained data analysis.
+Also, it has long been accepted that using several methods strengthens the analysis when the results converge (\egg \citealt{ArppeJaervikivi2007}).
+
+Given the grand total of \Sexpr{nice.int(sum(concordance$Joint)+sum(concordance$Separate))} observations in the sample (see Section~\ref{sub:choiceofcorpussamplingandannotation}), we will completely refrain from an interpretation of the GLMM in terms of frequentist inferential statistics.
+For samples of such magnitude in data-driven approaches, frequentist significance tests are the wrong tool.
 Therefore, we provide standard likelihood ratio confidence intervals for parameter estimates and prediction intervals for conditional modes as an approximate measure quantifying the precision of the parameter estimates and predictions.
 The models we specify reflect theoretically motivated decisions, and we therefore reject all types of model selection by means of step-up or step-down procedures.
 
-As argued in Section~{sec:thestatusofnounverbunitsingerman}, we expect the probability of the univerbation of N+V units to depend on the morphosyntactic context, the relation holding between the verb and the noun, the presence of absence of a linking element in the nominal compound (as a marker of a stronger lexicalisation) and on the specific N+V unit (a lexical tendency).%
-\footnote{Make sure linking elements were mentioned sufficiently prominently above!}
+As argued in Section~\ref{sec:thestatusofnounverbunitsingerman}, we expect the probability of the univerbation of N+V units to depend on the morphosyntactic context, the relation holding between the verb and the noun, the presence of absence of a linking element in the nominal compound (as a marker of a stronger lexicalisation) and on the specific N+V unit (a lexical tendency).
 Accordingly, the response variable was chosen to be the proportion of compound spellings among all the spellings of the N+V unit.
 In the input data provided to the estimator, the response variable was thus a vector of \Sexpr{nrow(concordance)} proportions, one for each N+V unit.%
 \footnote{Binomial models can be specified in this manner \parencite[245--260]{ZuurEa2009}.
@@ -269,7 +211,7 @@ Without the weighting, highly frequent observed proportions would have too small
 In the case at hand, such a model on proportion data is also a convenient way of getting around the practical difficulties of estimating a model on the raw \Sexpr{nice.int(sum(concordance$Joint)+sum(concordance$Separate))} observations.}
 We specified four regressors.
 The only first-level (or observation-level) fixed effect regressor is the morphosyntactic context (a four-way categorical variable).
-As there is a huge number of \Sexpr{nrow(concordance)} N+V units, the lexical indicator variable for the individual N+V unit should not be used as a fixed effect (\citealt[244--247]{GelmanHill2006}, \citealt{Schaefer2020a}).
+As there is a huge number of \Sexpr{nrow(concordance)} N+V units, the lexical indicator variable for the individual N+V unit should not be used as a fixed effect (\citealt[244--247]{GelmanHill2006}, \selfcitealt{Schaefer2020a}).
 We specified a generalised linear mixed model with the N+V unit variable as a random effect.
 The variables encoding the internal relation and the presence\slash absence of a linking element are nested inside the levels of the random effect, and they are therefore treated as second-level fixed effects in a multilevel model.
 In R notation, the specification is shown in (\ref{eq:corpusglmmr}).%
@@ -365,8 +307,8 @@ ranefplot.num=20
 @
 
 Given the narrow confidence intervals and the high marginal measure of determination $R^2_m=\Sexpr{nice.float(corpus.glmm.r2[1,1])}$, we consider the hypotheses regarding fixed effects as well corroborated by the data, especially the effects of the context and the internal relation.
-Based on our commitment to a usage-based probabilistic view of language, we also predicted differences between N+V units not explainable by the fixed effects.
-These effects would show up as the residual variance in the random effects (in the form of the conditional modes) not modelled by the second-level effects.
+The differences differences between specific N+V units already shown in Section~\ref{sub:results2associationastrengths} show up in the model as the residual variance in the random effects (in the form of the conditional modes).%
+\footnote{On a technical note, this is only the component of the variance which is not explained by the second-level effects.}
 The conditional modes are centred around a second-level intercept of $\Sexpr{nice.float(ranef.nv$Intercept)}$ with a standard deviation of $\Sexpr{nice.float(ranef.nv$sd)}$.
 The relatively high standard deviation is a sign that there is considerable variation across the individual N+V units.
 Furthermore, the conditional $R^2_c$ is as high as $\Sexpr{nice.float(corpus.glmm.r2[1,2])}$.

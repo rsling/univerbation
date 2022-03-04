@@ -68,36 +68,16 @@ There were two separate groups (\Sexpr{nrow(exp.w1)} and \Sexpr{nrow(exp.w2)} pa
 \subsection{Results}
 \label{sub:resultsexperiment}
 
-The distribution of responses of the experiment is shown in the form of a mosaic plot in Figure~\ref{fig:experimentmosaic}.
-It shows the number of compound spellings (univerbation) and separate spellings in each of the four contexts and for N+V units with high and low attraction score.
+To analyse the results further, we report the parameter estimates of a GLMM with additional control for individual participants in the form of a random effect.
+Instead of using a grouping variable for the N+V units, we included their association strengths directly in the model.
+The model specification in R notation is given in (\ref{eq:expglmmformula}).
+Appendix~\ref{sec:specifictionoftheexperimentglmm} provides the specification mathematical notation.
+The coefficient estimates for the GLMM are reported in Table~\ref{tab:experimentglmm}.
 
-<<experimentmosaic, results="asis", fig.showtext=TRUE, fig.pos="htbp", fig.height=3.75, fig.cap="Mosaic plot of the responses in the production experiment (vertical right) grouped by the morphosyntactic context (horizontal) and the binned N+V unit's attraction strength calculated from the corpus (vertical left)">>=
-exp.cases$Attraction <- revalue(exp.cases$Attraction, c("Hi"="High", "Lo"="Low"))
-exp.cases$Univerbation <- revalue(exp.cases$Univerbation, c("1"="Yes", "0"="No"))
-
-
-exp.table <- structable(Univerbation ~ Attraction + Context, data = exp.cases)
-exp.table <- as.table(exp.table)
-lab <-ifelse(exp.table <= 5, NA, exp.table)
-
-exp.mosaic <- mosaic(exp.table, pop = F, direction = c("h", "v", "h"),
-                     labeling = T, colorize = T,
-                     shade = T,
-                     margins = c(3, 3, 1, 3),
-                     gp = gpar(fill=c(rep("lightyellow", 8), rep("lightgreen", 8))),
-                     labeling_args=my.largs
-                     )
-mosaic.array <- as.table(exp.table)
-labeling_cells(text = lab)(mosaic.array)
-@
-
-The overall number of positive responses (\ie compound spellings) rises across the four contexts.
-It's \Sexpr{length(which(exp.cases$Context=="Infinitive" & exp.cases$Univerbation=="Yes"))} for the infinitive, \Sexpr{length(which(exp.cases$Context=="Participle" & exp.cases$Univerbation=="Yes"))} for the participle, \Sexpr{length(which(exp.cases$Context=="Clitic" & exp.cases$Univerbation=="Yes"))} for NPs with a cliticised article, and finally \Sexpr{length(which(exp.cases$Context=="Progressive" & exp.cases$Univerbation=="Yes"))} for the progressive (in each case out of \Sexpr{length(which(exp.cases$Context=="Infinitive"))}).
-For the N+V units with a high attraction score, participants (almost) always use compound spelling in NPs with a cliticised article (\Sexpr{length(which(exp.cases$Context=="Clitic" & exp.cases$Univerbation=="Yes" & exp.cases$Attraction=="High"))} out of \Sexpr{length(which(exp.cases$Context=="Clitic" & exp.cases$Attraction=="High"))}) and in the progressive (\Sexpr{length(which(exp.cases$Context=="Progressive" & exp.cases$Univerbation=="Yes" & exp.cases$Attraction=="High"))}).
-Between the infinitive (\Sexpr{length(which(exp.cases$Context=="Infinitive" & exp.cases$Univerbation=="Yes" & exp.cases$Attraction=="High"))}) and the participle (\Sexpr{length(which(exp.cases$Context=="Participle" & exp.cases$Univerbation=="Yes" & exp.cases$Attraction=="High"))}), there is a clear differentiation in positive responses, however.
-
-For the N+V units with a low attraction score, the items with an infinitive (\Sexpr{length(which(exp.cases$Context=="Infinitive" & exp.cases$Univerbation=="Yes" & exp.cases$Attraction=="Low"))}) or a participle (\Sexpr{length(which(exp.cases$Context=="Participle" & exp.cases$Univerbation=="Yes" & exp.cases$Attraction=="Low"))}) don't seem to allow univerbation at all.
-However, with NPs (\Sexpr{length(which(exp.cases$Context=="Clitic" & exp.cases$Univerbation=="Yes" & exp.cases$Attraction=="Low"))}) and progressives (\Sexpr{length(which(exp.cases$Context=="Progressive" & exp.cases$Univerbation=="Yes" & exp.cases$Attraction=="Low"))}), we see a considerable number of positive responses.
+\begin{equation}
+  \mathtt{Univerbation\sim (1|Participant)+Attraction+Context}
+  \label{eq:expglmmformula}
+\end{equation}
 
 <<experimentglmm, results="asis">>=
 exp.cases$Context <- factor(exp.cases$Context, levels = c("Infinitive", "Participle", "Progressive", "Clitic"))
@@ -111,20 +91,6 @@ experiment.fixefs <- fixef(experiment.glmm)
 experiment.confints <- confint(experiment.glmm)
 experiment.glmm.r2 <- r.squaredGLMM(experiment.glmm)
 @
-
-Clearly, both independent variables are highly useful in predicting the behaviour of participants.\roland{Fix the nomenclature with ``NPs'' and ``Clitic''.}
-However, among the items with low association scores, we would expect the NPs as highly prototypical nominal contexts to trigger univerbation most strongly, while in the experiment they lose to the progressive (\Sexpr{length(which(exp.cases$Context=="Clitic" & exp.cases$Univerbation=="Yes" & exp.cases$Attraction=="Low"))} out of \Sexpr{length(which(exp.cases$Context=="Clitic" & exp.cases$Attraction=="Low"))} for the NPs, \Sexpr{length(which(exp.cases$Context=="Progressive" & exp.cases$Univerbation=="Yes" & exp.cases$Attraction=="Low"))} for the progressives).
-
-To examine the results further, we proceeded to estimate the parameters of a GLMM with additional control for individual participants in the form of a random effect.
-Instead of using a grouping variable for the N+V units, we included their association strengths directly in the model.
-The model specification in R notation is given in (\ref{eq:expglmmformula}).
-Appendix~\ref{sec:specifictionoftheexperimentglmm} provides the specification mathematical notation.
-The coefficient estimates for the GLMM are reported in Table~\ref{tab:experimentglmm}.
-
-\begin{equation}
-  \mathtt{Univerbation\sim (1|Participant)+Attraction+Context}
-  \label{eq:expglmmformula}
-\end{equation}
 
 <<experimentglmmreport, results="asis">>=
 
@@ -156,7 +122,7 @@ The coefficients indicate that the attraction strength derived from the corpus i
 There seems to be no evidence that the participle has a different effect than the infinitive (which is on the intercept) given the large confidence interval ($[\Sexpr{nice.float(experiment.ct["ContextParticiple", "CI low"])}..\Sexpr{nice.float(experiment.ct["ContextParticiple", "CI high"])}]$).
 On the other hand, progressives ($\Sexpr{nice.float(experiment.ct["ContextProgressive", "Estimate"])}$) and NPs with cliticised articles ($\Sexpr{nice.float(experiment.ct["ContextClitic", "Estimate"])}$) clearly have a much more positive effect on the probability of univerbation.
 Thus, in the GLMM analysis NPs appear to have a stronger tendency to favour univerbation than progressives.
-This is in line with our theoretical predictions but seems to contradict the descriptive analysis (see Figure~\ref{fig:experimentmosaic}).
+This is in line with our theoretical predictions.
 
 <<experimentfx, results="asis", fig.height=4, fig.showtext=TRUE, fig.pos="htbp", fig.height=4, fig.cap="Effect plots for the regressor encoding the morphosyntactic context and the attraction strength as calculated from the corpus in the GLMM modelling the experimental data">>=
 
@@ -181,12 +147,6 @@ The prototypically verbal contexts are associated with low probabilities of univ
 While progressives and NPs with clitics show the order predicted by theory, there is only very weak to no support for assuming a substantial difference judging by the large and mostly overlapping confidence intervals.
 The attraction scores are neatly correlated with the probability of univerbation.
 
-The apparent paradox with respect to the order of the effects of NP and progressive contexts that we see between Figure~\ref{fig:experimentmosaic} on the one hand and Table~\ref{tab:experimentglmm} and Figure~\ref{fig:experimentfx} on the other hand can be explained by looking at the concrete attraction strengths in Table~\ref{tab:designtable}.
-The unit with ``low'' attraction used in the progressive context (\textit{\Sexpr{designtable[5, "N+V unit"]}}) has a numeric attraction score of $\Sexpr{nice.float(designtable[5, "Attraction"])}$, which is much closer to 0 than the one used in the NP context (\textit{\Sexpr{designtable[7, "N+V unit"]}}) with $\Sexpr{nice.float(designtable[7, "Attraction"])}$.
-At the same time, the high attraction counterparts are rather close to each other numerically ($\Sexpr{nice.float(designtable[6, "Attraction"])}$ for \textit{\Sexpr{designtable[6, "N+V unit"]}} and $\Sexpr{nice.float(designtable[8, "Attraction"])}$ for \textit{\Sexpr{designtable[8, "N+V unit"]}}).
-Figure~\ref{fig:experimentmosaic} therefore shows a positive bias for the progressive context, which is likely due to the concrete choice of items for this experiment and the binary binning of the attraction scores into ``low'' and ``high''.
-The GLMM compensates for this because we used the numerical attraction scores rather than just a binned ``low'' and ``high'' classification.
-As the selection of the few stimuli for a given experiment is virtually never possible with perfect control over all variables, the more advanced statistical analysis protects us against misinterpretation.
-
 In sum, the experiment supports our theoretically motivated hypotheses, and it corroborates the results from the corpus study.
 We proceed to a final analysis of the phenomenon at in the light of our findings hand in Section~\ref{sec:explainingnounverbuniverbation}.
+
