@@ -265,5 +265,5 @@ At any rate, under a probabilistic usage-based view of language, all these facto
 Even in cases where all factors favour a realisation with univerbation, writers might spell it without univerbation and vice versa.
 In usage data, such cases are just expected to be rare if the hypotheses put forward here correctly describe reality.
 
-As a preliminary step, the basis for any empirical look at N+V units and their spelling has to be a data-driven assessment of which units exist, how strongly they alternate, and what their item-specific tendencies are, \ie, how clearly they tend to be spelled as one word or two words.
+As a preliminary step, the basis for any empirical look at N+V units and their spelling has to be a data-driven assessment of which units exist, how strongly they alternate, and what their item-specific tendencies are, \ie how clearly they tend to be spelled as one word or two words.
 Therefore, Section~\ref{sec:corpusbasedanalysisoftheusageofnvunits} begins with such an assessment.
