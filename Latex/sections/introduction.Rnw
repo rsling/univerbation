@@ -137,9 +137,6 @@ According to him, it marked by the loss of morphological boundaries and phonolog
 Thus, a major aim of this paper is to show whether and how the univerbation of N+V units in German is based on an established morphological prototype construction wherein a noun is incorporated into a verb, forming a new verb expressing a new event concept.
 
 We will argue that such a morphological construction exists, but that the alternative syntactic construction remains available to speakers because N+V units have properties of both morphological as well as syntactic prototypes.
-This double nature and the resulting alternation is interpreted as favouring probabilistic competence models over deterministic competence models.
 In Section~\ref{sec:theoreticalbackground}, we lay the theoretical and descriptive foundations.
-Section~\ref{sub:usagebasedgraphemics} introduces probabilistic grammar and how graphemic evidence can be interpreted in probabilistic grammar.
-In Section~\ref{sub:spaceswordsanduniverbation}, the nature and status of spaces and their loss (univerbation) are discussed briefly, and Section~\ref{sec:thestatusofnounverbunitsingerman} provides a detailed account of N+V units in German.
-We finish Section~\ref{sec:thestatusofnounverbunitsingerman} by summing up our hypotheses before presenting a large-scale corpus study and an elicitation experiment in Sections~\ref{sec:corpusbasedanalysisoftheusageofnvunits} and~\ref{sec:elicitedproductionofnounverbunitsinwrittenlanguage}, both representing tests our particular hypotheses about N+V units and the overarching hypothesis regarding the probabilistic nature of grammar.
+We then present a large-scale corpus study and an elicitation experiment in Sections~\ref{sec:corpusbasedanalysisoftheusageofnvunits} and~\ref{sec:elicitedproductionofnounverbunitsinwrittenlanguage}, exploring our particular hypotheses about N+V units.
 We conclude with a summary, further interpretation and discussion in Section~\ref{sec:explainingnounverbuniverbation}.
