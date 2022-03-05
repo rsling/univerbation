@@ -45,7 +45,7 @@ The queries were matched by \Sexpr{nice.int(sum(concordance$Joint))} compound sp
 
 For each N+V unit in the sample, the following variables were annotated automatically: (i) the verb lemma, (ii) the noun lemma, (iii) whether a linking element is used in the use as a full noun, (iv) the overall frequency in the corpus.
 Additionally, we manually coded all \Sexpr{nrow(concordance)} N+V units for the relation holding between the verb and the noun.
-The codes used in clear-cut cases were \textit{Object} (\Sexpr{length(which(concordance$Relation=="Object"))} units) and \textit{Adjunct} (\Sexpr{length(which(concordance$Relation=="Adjunct"))} units).
+The codes used in clear-cut cases were \textit{Argument} (\Sexpr{length(which(concordance$Relation=="Object"))} units) and \textit{Oblique} (\Sexpr{length(which(concordance$Relation=="Adjunct"))} units).
 For \Sexpr{length(which(concordance$Relation=="Undetermined"))} units, both relations were conceivable, and those cases were coded as \textit{Undetermined}.
 This class is illustrated by \textit{Daumenlutschen} (``thumb sucking''), which could correspond to the paraphrase either in (\ref{ex:daumenlutschen-a}) or in (\ref{ex:daumenlutschen-b}).
 
@@ -121,17 +121,16 @@ axis(2)
 For the selection of the target stimuli used in the experiment, the these association strengths are important, because they encode the effect of the individual N+V units, independently of the context.
 Context effects were controlled independently in the experiment.
 To illustrate how the data analysis allows for a selection of N+V units based on their affinity towards univerbation, we show the top ten units with the highest negative and highest positive association in Table~\ref{tab:corpusassocslohi}.
-The tables illustrate that units with the strongest tendencies against univerbation are predominantly ones with an object relation.
-The ones which most strongly favour univerbation are mostly ones with an adjunct relation or an ambiguous relation.
+The tables illustrate that units with the strongest tendencies against univerbation are predominantly ones with an argument relation.
+The ones which most strongly favour univerbation are mostly ones with an oblique relation or an ambiguous relation.
 The ten items with the least clear tendency in either direction are shown in Table~\ref{tab:corpusassoctablenull}.
-They mostly come with an object relation.
+They mostly come with an argument relation.
 
 <<corpuscreatetabledata, results="asis">>=
 corpus.assoc.sel <- format.assocs(df = concordance, col = 'all.assocs', show.results = "all",
                                show.cols = c("Compound", "all.assocs", "Relation"),
                                num = 10, cx = "All contexts", effect = "UNIVERBATION", freq.cutoff = 0.2)
-corpus.assoc.sel$Association <- nice.float(corpus.assoc.sel$Association)
-corpus.assoc.sel$Relation <- revalue(corpus.assoc.sel$Relation, c("Undetermined" = "N/D"))
+corpus.assoc.sel$Relation <- revalue(corpus.assoc.sel$Relation, c("Undetermined"="Undet.", "Object"="Argument", "Adjunct"="Oblique"))
 colnames(corpus.assoc.sel) <- c("V+N Unit", "Assoc.", "Rel.")
 corpus.assoc.sel <- corpus.assoc.sel[, 1:3]
 @
@@ -183,7 +182,8 @@ print(corpus.assoc.null,
 )
 @
 
-Among the units with an object relation, it is difficult to tell based on native-speaker intuition why the ones in Table~\ref{tab:corpusassoctablenull} should have no preference and the ones in Table~\ref{tab:corpusassocslohi} (right panel) should resist univerbation.
+
+Among the units with an argument relation, it is difficult to tell based on native-speaker intuition why the ones in Table~\ref{tab:corpusassoctablenull} should have no preference and the ones in Table~\ref{tab:corpusassocslohi} (right panel) should resist univerbation.
 This goes to show that, while we can model the tendencies to some extent using linguistic features, there are obvious item-specific effects which should be taken seriously from a theoretical perspective, and which must be accounted for in behavioural experiments.
 We turn to such an experiment in Section~\ref{sec:elicitedproductionofnounverbunitsinwrittenlanguage}.
 However, we first report a full statistical model of the influencing factors derived from the corpus data in Section~\ref{sub:results1multilevelmodel}.
@@ -256,12 +256,14 @@ corpus.r2.txt <- paste0("Nakagawa \\& Schielzeth's \\CM{R^2_m=", nice.float(corp
 ranef.txt <- paste0("Random effect for V+N lemma: \\CM{Intercept=", nice.float(ranef.nv$Intercept), "}, \\CM{sd=", nice.float(ranef.nv$sd),
                     "}")
 corpus.ctxt <- xtable(corpus.ct, digits = 3,
-                    caption = paste0("Coefficient table for the binomial GLMM modelling the corpus data with 95\\% profile likelihood ratio confidence intervals. The horizontal line separates first-level and second-level effects. Weighting was used to account for the bias in models on proportion data. ", ranef.txt, ". The intercepts model the fixed effects Relation~=~Object and Link~=~No. " , corpus.r2.txt),
+                    caption = paste0("Coefficient table for the binomial GLMM modelling the corpus data with 95\\% profile likelihood ratio confidence intervals. The horizontal line separates first-level and second-level effects. Weighting was used to account for the bias in models on proportion data. ", ranef.txt, ". The intercepts model the fixed effects Relation~=~Argument and Link~=~No. " , corpus.r2.txt),
                     label = "tab:corpusglmm")
 
 # Experimental function to fix variable names.
 lme4.pretty <- function(s) {
-  gsub("([a-z])([A-Z])", "\\1 = \\2", s)
+  s <- gsub("([a-z])([A-Z])", "\\1 = \\2", s)
+  s <- gsub("Object", "Argument", s)
+  gsub("Adjunct", "Oblique", s)
 }
 
 # Print the table.
@@ -282,17 +284,29 @@ Additionally, effect plots for \textit{Context} and \textit{Relation} are given 
 While model coefficients in binomial (and other) models have no direct interpretation in terms of probability, effect plots allow a more intuitive interpretation in terms of changes in probability.}
 As expected, the prototypically verbal contexts (infinitives and participles in analytic verb forms) are associated with a low probability of compound spelling (the infinitive is on the intercept, which is estimated at $\Sexpr{nice.float(corpus.ct["(Intercept)","Estimate"])}$, and participles have a coefficient of $\Sexpr{nice.float(corpus.ct["ContextParticiple","Estimate"])}$).
 NPs and progressives as prototypically nominal contexts clearly favour compound spelling (coefficients of $\Sexpr{nice.float(corpus.ct["ContextNP","Estimate"])}$ and $\Sexpr{nice.float(corpus.ct["ContextProgressive","Estimate"])}$, respectively).
-Both the coefficients and the effect plot (right panel in Figure~\ref{fig:corpuseffects}) show a low probability of compound spelling when the relation between the verb and the noun (on the intercept) is that of an object, and a high probability when the relation is that of an adjunct (coefficient $\Sexpr{nice.float(corpus.ct["RelationAdjunct","Estimate"])}$).
+Both the coefficients and the effect plot (right panel in Figure~\ref{fig:corpuseffects}) show a low probability of compound spelling when an argument relation holds between the verb and the noun (on the intercept), and a high probability when the relation is oblique (coefficient $\Sexpr{nice.float(corpus.ct["RelationAdjunct","Estimate"])}$).
 The undetermined cases are in between the two clear-cut cases (coefficient $\Sexpr{nice.float(corpus.ct["RelationUndetermined","Estimate"])}$).
 The presence of a linking element in fully nominalised compounds favours compound spelling only slightly (coefficient $\Sexpr{nice.float(corpus.ct["LinkYes","Estimate"])}$).
 
 <<corpuseffects, results="asis", fig.showtext=TRUE, fig.pos="!htbp", fig.height=4, fig.cap="Effect plots for the regressor encoding the morphosyntactic context of the N+V unit and the regressor encoding the syntactic relation within the N+V unit in the GLMM modelling the corpus data">>=
-corpus.glmm.fx.context <- plot(effect("Context", corpus.glmm, KR = T),
-                              rug=F, colors = c("black", "black"),
-                              main="",ylab="Probability of univerbation",
-                              xlab="Context"
-)
-corpus.glmm.fx.relation <- plot(effect("Relation", corpus.glmm, KR = T),
+ef.context <- effect("Context", corpus.glmm, KR = T)
+ef.context$variables$Context$levels <- c("Inf.", "Part.", "NP", "Prog.")
+levels(ef.context$x$Context) <- c("Inf.", "NP", "Part.", "Prog.")
+corpus.glmm.fx.context <- plot(ef.context,
+                              rug = F,
+                              colors = c("black", "black"),
+                              main = "",
+                              ylab = "Probability of univerbation",
+                              xlab = "Context")
+
+ef.rel <- effect("Relation", corpus.glmm, KR = T)
+ef.rel$variables$Relation$levels <- c("Argument", "Undetermined", "Oblique")
+levels(ef.rel$x$Relation) <- c("Oblique", "Argument", "Undetermined")
+  # "Undetermined", "Argument", "Oblique") 1-3-2
+  # "Undetermined", "Oblique", "Argument") 2-3-1
+  # "Argument", "Undetermined", "Oblique") 3-1-2
+  # "Argument", "Oblique", "Undetermined") 3-2-1
+corpus.glmm.fx.relation <- plot(ef.rel,
                                 rug=F, colors = c("black", "black"),
                                 main="",
                                 ylab="Probability of univerbation",

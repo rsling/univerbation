@@ -9,7 +9,9 @@
 Usage-based Grammar (UBG, \egg \citealt{BybeeBeckner2009,Kapatsinski2014,Tomasello2003}) is based on two core assumptions: (i) grammar is acquired using only general cognitive devices, (ii) only the input and general cognitive constraints determine the grammar.
 Since the input is always rife with variation and often non-discrete, a third assumption is crucial to some researchers: (iii) grammars are learned as probability distributions over possible forms, meanings, and form-meaning pairs.
 We embrace all three assumptions and apply them to a graphemic alternation phenomenon, wherein certain noun-verb combinations in present-day German can be spelled as one word or two words.
-UBG is rarely extended to graphemics in such a way, but we view graphemics as a component of the language faculty on a par with components such as phonetics and phonology, and we consequently believe that graphemics should be viewed under the usage-based umbrella.
+UBG is rarely extended to graphemics in such a way, but we view graphemics as a component of the language faculty on a par with components such as phonetics and phonology, and we consequently believe that graphemics should be viewed under the usage-based umbrella.%
+\footnote{The huge body of work in different strains of linguistics based on popular corpora of written language has an intrinsic graphemic component because written data are used.
+While it might not be problematic for most studies that this is rarely acknowledged, we consider it important to focus on this component as well.}
 While the phono-component comprises regularities of how grammar is encoded in speech sounds, graphemics comprises similar regularities of how grammar is encoded in written symbols.\roland{REFERENCE?}
 Whether and how strongly the phono-component and the graphemics component are intertwined is determined by the type of script and the specific language, where ideograph-based writing systems like early cuneiform Sumerian (virtually complete separation) and phonographic writing systems like German (substantial overlap) represent extremes on a continuous scale.\roland{REFERENCE?}
 For writing systems like German, the mappings to be learned include sounds to letters, parts of speech to spellings, syntactic categories to spaces and punctuation marks, etc.\roland{REFERENCE?}\roland{REFERENCE FOR FN?}%
@@ -20,19 +22,21 @@ In UBG, corpus data (\ie production data) are often used as evidence, sometimes 
 This is justified because the probabilistic usage-based nature of the acquisition process as described at the outset should be reflected in the grammars of competent adult speakers\slash writers and not just in the acquisition process itself.
 Consequently, it should also be reflected in production data obtained from competent adults, and we should be able to uncover the probabilistic mappings of lexical-grammatical categories to written forms from such data.
 We consequently use corpus data as well as data elicited in controlled experiments, both being forms of production data.
-However, there is a difference between using corpus data as evidence and assuming that they directly mirror the cognitive reality.
+However, there is a difference between using corpus data as evidence and assuming that they \textit{directly} mirror cognitive reality.
 While it is generally assumed that corpora represent a valid source of data in cognitively oriented linguistics (\egg \citealt{Newman2011}), it is also known that there is no straightforward correspondence between corpus data and cognitive reality (\egg \citealt{Gries2003,Dabrowska2016}).
-What we hope to recover from corpus data are major abstractions performed by a majority of the learners, and a convenient framework to formulate such abstractions is Prototype Theory (\citealt{Rosch1973,Rosch1978}).
+What we hope to recover from corpus data are major abstractions performed by a majority of the learners, uncovering general cognitive principles that ideally go far beyond individual acquisition careers and idiosyncrasies of single languages.
+
+A convenient framework to formulate such abstractions is Prototype Theory (\citealt{Rosch1973,Rosch1978}).
 As a cognitive theory of classification, it is compatible with probabilistic views inasmuch as it allows for fuzzy category membership (\egg \citealt{Sutcliffe1993}; \citealt[11--16]{Murphy2002}).
 Grammatical units can thus be modelled as belonging to multiple categories to different degrees or---in our case to be introduced immediately below---as alternating between a morphological and a syntactic realisation.%
-\footnote{For applications of Prototype Theory in lingusitics see, among many others, \citet{DivjakArppe2013,Dobric2015,Gilquin2006,Gries2003,Schaefer2019a}.
+\footnote{For applications of Prototype Theory in lingusitics see, among many others, \citet{DivjakArppe2013,Dobric2015,Gilquin2006,Gries2003}; \selfcitet{Schaefer2019a}.
 See \citet{Taylor2003,Taylor2008} for introductory overviews.}
 Prototype Theory is also intrinsically compatible with UBG as it assumes just a very general mechanism of classification whereby newly encountered objects are classified by similarity to a protoypical exemplar.
 In most versions of Prototype Theory, these prototypes are identified by (weighted) features or \textit{cues}, and unseen exemplars are categorised depending on how many of those features they share with the prototype.
 We use Prototype Theory as a suitable framework in our analysis.
 Grammatical prototypes are mapped onto graphemic realisations (\egg spellings), and the stronger a unit matches the protoype, the more likely it is to be realised as mapped.
 
-One caveat that is specific to graphemics needs to be dealt with before we proceed to the description of the concrete phenomena.
+One caveat that is specific to graphemics needs to be mentioned before we proceed to the description of the concrete phenomena.
 The acquisition of the writing system involves explicit instruction and is thus more strongly superimposed by prescriptive norms.
 However, we expect writers to learn grammar-graphemics mappings first and foremost from their realisations in the input, especially whenever the norm is unspecific or unclear, a situation which provides ideal test cases for our view on graphemics.
 Variation or alternation in the written input shapes the acquired probability distribution, and conditioning factors are acquired to the degree that they can be retrieved from the type and the frequency of the input.%

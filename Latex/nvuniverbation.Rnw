@@ -122,6 +122,7 @@ require(beanplot)
 require(showtext)
 require(xtable)
 require(plyr)
+#require(plyr)
 require(vcd)
 require(gridExtra)
 
@@ -211,6 +212,7 @@ nice.int <- function(n) formatC(n, format="d", big.mark=",")
 
 \rmfamily
 
+
 <<child="sections/introduction.Rnw">>=
 @
 
@@ -229,9 +231,9 @@ nice.int <- function(n) formatC(n, format="d", big.mark=",")
 <<child="sections/appendix.Rnw">>=
 @
 
-%\section*{Funding information}
-%
-%Roland Schäfer’s work was funded by the Deutsche Forschungsgemeinschaft (DFG, German Research Foundation) – SFB 1412, 416591334.
+\section*{Funding information}
+
+Roland Schäfer’s work was funded by the Deutsche Forschungsgemeinschaft (DFG, German Research Foundation) – SFB 1412, 416591334.
 
 
 \section*{Acknowledgments}

@@ -56,7 +56,7 @@ print(designtable.ctx,
       table.placement = 'h!',
       booktabs = T,
       scalebox = 1,
-      sanitize.text.function = function(x){x}
+      sanitize.text.function = function(x){gsub("Clitic", "NP", x)}
 )
 @
 
@@ -113,22 +113,23 @@ print(experiment.ctx,
       table.placement = 'h!',
       booktabs = T,
       scalebox = 1,
-      sanitize.text.function = lme4.pretty#function(x){x},
+      sanitize.text.function = function(x){x <- lme4.pretty(x)
+                                           gsub("Clitic", "NP", x)}
 )
 @
 
 There is some variation between writers as captured in the standard deviation of the conditional modes ($\Sexpr{nice.float(ranef.participant$sd)}$), but the small difference between the marginal $R^2$ ($\Sexpr{nice.float(experiment.glmm.r2[1,1])}$) and the conditional $R^2$ ($\Sexpr{nice.float(experiment.glmm.r2[1,2])}$) suggests that speaker variation does not explain much of the variance in the the data.
 The coefficients indicate that the attraction strength derived from the corpus is positively correlated with the participants' tendency to univerbate ($\Sexpr{nice.float(experiment.ct["Attraction", "Estimate"])}$).
 There seems to be no evidence that the participle has a different effect than the infinitive (which is on the intercept) given the large confidence interval ($[\Sexpr{nice.float(experiment.ct["ContextParticiple", "CI low"])}..\Sexpr{nice.float(experiment.ct["ContextParticiple", "CI high"])}]$).
-On the other hand, progressives ($\Sexpr{nice.float(experiment.ct["ContextProgressive", "Estimate"])}$) and NPs with cliticised articles ($\Sexpr{nice.float(experiment.ct["ContextClitic", "Estimate"])}$) clearly have a much more positive effect on the probability of univerbation.
+On the other hand, progressives ($\Sexpr{nice.float(experiment.ct["ContextProgressive", "Estimate"])}$) and NPs ($\Sexpr{nice.float(experiment.ct["ContextClitic", "Estimate"])}$) clearly have a much more positive effect on the probability of univerbation.
 Thus, in the GLMM analysis NPs appear to have a stronger tendency to favour univerbation than progressives.
 This is in line with our theoretical predictions.
 
 <<experimentfx, results="asis", fig.height=4, fig.showtext=TRUE, fig.pos="htbp", fig.height=4, fig.cap="Effect plots for the regressor encoding the morphosyntactic context and the attraction strength as calculated from the corpus in the GLMM modelling the experimental data">>=
 
 experiment.glmm.fx.context.fx <- effect("Context", experiment.glmm, KR = T)
-experiment.glmm.fx.context.fx$variables$Context$levels <- c("Inf.", "Part.", "Prog.", "Clitic")
-levels(experiment.glmm.fx.context.fx$x$Context) <-  c("Clitic", "Inf.", "Part.", "Prog.")
+experiment.glmm.fx.context.fx$variables$Context$levels <- c("Inf.", "Part.", "Prog.", "NP")
+levels(experiment.glmm.fx.context.fx$x$Context) <-  c("NP", "Inf.", "Part.", "Prog.")
 experiment.glmm.fx.context <- plot(experiment.glmm.fx.context.fx, rug=F, colors = c("black", "black"),
      main="",
      ylab="Probability of univerbation",
@@ -144,7 +145,7 @@ grid.arrange(experiment.glmm.fx.context, experiment.glmm.fx.attraction, ncol=2)
 
 The effect plots in Figure~\ref{fig:experimentfx} show the same picture as the coefficient table.
 The prototypically verbal contexts are associated with low probabilities of univerbation, the two prototypically nominal ones with high probabilities of univerbation.
-While progressives and NPs with clitics show the order predicted by theory, there is only very weak to no support for assuming a substantial difference judging by the large and mostly overlapping confidence intervals.
+While progressives and NPs show the order predicted by theory, there is only very weak to no support for assuming a substantial difference judging by the large and mostly overlapping confidence intervals.
 The attraction scores are neatly correlated with the probability of univerbation.
 
 In sum, the experiment supports our theoretically motivated hypotheses, and it corroborates the results from the corpus study.

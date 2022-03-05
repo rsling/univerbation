@@ -3,22 +3,17 @@
 opts_knit$set(self.contained=FALSE)
 @
 
-\section{Theoretical background}
+\section{Theoretical and descriptive background}
 \label{sec:theoreticalbackground}
 
-%\subsection{Usage-based graphemics}
-%\label{sub:usagebasedgraphemics}
-
-%\roland{A brief 1--2 page overview of prototype as applied to grammatical categories, including the role of contexts in alternation modelling.}
-%\roland{Mention item-specific effects.}
-%\roland{Introduce usage-based graphemics.}
-
-%In this section, we discuss the status of written evidence in usage-based linguistics, adopting usage-based graphemics as introduced in \citet{SchaeferSayatz2016}.
+In this section, we lay the theoretical and descriptive foundations of our analysis of the alternation described in Section~\ref{sec:introduction}.
+First, we clarify the status of spaces (\ie \textit{spatia}) as syntactic boundaries in German in Section~\ref{sub:spaceswordsanduniverbation}.
+Then, we discuss previous analyses of N+V units and their spelling in Section~\ref{sec:thestatusofnounverbunitsingerman} and a formulation of predictions for the empirical studies in Sections~\ref{sec:corpusbasedanalysisoftheusageofnvunits} and~\ref{sec:elicitedproductionofnounverbunitsinwrittenlanguage}.
 
 \subsection{Spaces, words, and univerbation}
 \label{sub:spaceswordsanduniverbation}
 
-In this paper, we use graphemic evidence---both from corpora and from controlled experiments---and argue that it allows us to draw conclusions about writers' cognitive grammars.
+As explained in Section~\ref{sec:introduction}, we use graphemic evidence from corpora and controlled experiments, and we argue that it allows us to draw conclusions about writers' cognitive grammars.
 More specifically, we assume that compound spellings of N+V units indicate that writers conceive of those units as single syntactic words, whereas disjunct spelling indicates that they conceive of the unit as two syntactic words.
 Therefore, we briefly introduce the status of the space in German writing and how it pertains to N+V units.
 
@@ -35,8 +30,8 @@ As opposed to N+N compounds, these constructions typically consist of words with
 \footnote{Normative approaches as well as individuals display a lot of variation with respect to at least some of those constructions (cf.\ below).}
 For such cases, \citet[2]{Lehmann2021} posits a ``downgrading of a syntactic to a morphological boundary'' between the two words.
 When writers use compound spelling in these cases, they choose to encode the construction as a single word with a morphological boundary instead of a sequence of words with a syntactic boundary.
-If many speakers consistently make this choice over a significant period of time, the unit might become conventionalised as a single lexical word or---in other words---lexicalised \parencite[7]{Lehmann2021}.
-Until such a diachronic process is complete and one of the spellings has become clearly dominant, conventionalisation does not provide a very strong input to writers, and they alternate between a syntagmatic and a morphological realisation.
+If many speakers consistently make this choice over a significant period of time, the unit might become lexicalised  as a single word \parencite[7]{Lehmann2021}.
+Until such a diachronic process is complete and one of the spellings has become clearly dominant, lexicalisation does not provide a very strong input to writers, and they alternate between a syntagmatic and a morphological realisation.
 For many of these constructions, this is the case both in non-standard as well as standard written German, albeit to different degrees.%
 \footnote{We are not aware of any published research systematically comparing the alternation tendencies in standard and non-standard written German.}
 
@@ -44,7 +39,8 @@ N+V units with different affinities towards compound spelling like \textit{Rad f
 \footnote{The orthographic norm is notoriously unstable with respect to N+V units, which contributes to their unclear status.
 Before the significant reform of the orthographic norm in 1996, both \textit{radfahren} and \textit{eislaufen} were supposed to be spelled as one word.
 After the reform, both units were supposed to be written as two words (\textit{Eis laufen} and \textit{Rad fahren}).
-After a revision of the reform in 2006, \textit{eislaufen} was again supposed to be spelled as one word, whereas \textit{Auto fahren} was supposed to be spelled as two words exclusively (\citealt[32]{Primus2010}, \citealt[356]{Eisenberg2020a}).}
+After a revision of the reform in 2006, \textit{eislaufen} was again supposed to be spelled as one word, whereas \textit{Auto fahren} was supposed to be spelled as two words exclusively (\citealt[32]{Primus2010}, \citealt[356]{Eisenberg2020a}).
+From experience, we know that the norm is often not adhered to, and the data presented in Sections~\ref{sec:corpusbasedanalysisoftheusageofnvunits} and~\ref{sec:elicitedproductionofnounverbunitsinwrittenlanguage} strongly corroborate this experience.}
 This indeterminacy means that speakers have both the syntagmatic realisation (disjunct spelling) and the morphological realisation (compound spelling) in their graphemic input, which subsequently leaves them with quite a free choice to be made based on how a concrete token is classified according to their individual grammar.
 It is the task of usage-based probabilistic graphemics to uncover factors influencing such decisions and decode the principles at work in speakers' internal grammar by analysing their writing habits (see \selfcitealt{SchaeferSayatz2016}).
 
@@ -125,17 +121,17 @@ In this section, we argue that N+V units are \textit{reluctant compounds}.
 While in principle the morphological N+V construction (as a kind of compound written as one word) has existed for centuries, we show why and how it remains in competition with a syntactic construction.
 At the same time, we argue why---at least under the right circumstances---morphological compounding (and consequently the spelling as one word) become the preferred realisation.
 
-Most likely, full compounding of N+V units requires conversion of the verbal head to a noun
+Most likely, full compounding of N+V units requires conversion of the verbal head to a noun, making the result an N+N compound via conversion.
 As opposed to compounding with proper nominal heads (as discussed in the previous section), compounding with verbal heads is not a productive pattern in German.%
 \footnote{\citet{Guenther1997} counts roughly 400 lexicalised N+V compounds in \citet{Muthmann1988} (see also \citealt[245]{Eisenberg2020a}).}
-A major difference compared to N+N compounds is the fact that N+V units are usually not inseparable as was already shown in Section~\ref{sec:introduction}.
+A major difference to N+N compounds is the fact that N+V units are usually not inseparable as was already shown in Section~\ref{sec:introduction}.
 There can be intervening syntactic material in between the noun and the verb in some contexts, namely the infinitival particle \textit{zu}.
-Furthermore, the noun and the verb can be reordered in verb-second order, where N+V units resemble particle verbs \parencite[603]{Fortmann2015}, see (\ref{ex:ex:disjunctspelling1}).
-This fact alone means that N+V units do not fit the compounding prototype well.
+Furthermore, the noun and the verb can be reordered in verb-second order, where N+V units resemble particle verbs \parencite[603]{Fortmann2015}, see (\ref{ex:disjunctspelling1}).
+This fact alone means that N+V units do not fit the compounding prototype anywhere near perfectly.
 This likely introduces great resistance in speakers to classify them as compounds and consequently use compound spelling.
 
 Another major difference between N+N compounds and N+V units is that the morphological N+V construction is not recursive.
-Nominalised N+V units marginally occur as \Ni\ in N+N compounds (contrary to claims by \citealt[54]{Fuhrhop2007}) as in (\ref{ex:notfuhrhop}).%
+Nominalised N+V units marginally occur as \Ni\ in \Ni+\Nii\ compounds (contrary to claims by \citealt[54]{Fuhrhop2007}) as in (\ref{ex:notfuhrhop}).%
 \footnote{The examples in (\ref{ex:notfuhrhop}) are attested and taken from the DECOW16B web corpus (see Section~\ref{sub:choiceofcorpussamplingandannotation}).
 Their document frequencies are 218 for \textit{Energiesparmesse}, 416 for \textit{Endlagersuchgesetz}, and 414 for \textit{Feuerlöschboot} in a corpus of 17.1 million documents.
 The document frequency is the number of documents the lemma occurs in, not counting multiple occurrences within each document.}
@@ -162,9 +158,9 @@ Native speakers will readily acknowledge that such constructions are outright ab
 We posit that the lack of core properties of prototypical (productive) German compounding constructions (separability, potential reordering, lack of recursive application) is a major factor in keeping the formation of N+V units from establishing a fully productive morphological compounding construction, thus keeping it from reliably requiring graphemic univerbation.
 
 Another noticeable difference between the N+N and the N+V construction is the specificity of the internal relation.
-While the relation in N+N compounds is quite varied as well as both unspecified and often unspec ific (see Section~\ref{sub:nncompounds}), there are only two possible relations within N+V units, and these relations are determined by---and above all decodable through---the distributional properties of the verb (including its argument structure).
-It's either an object relation or an adjunct relation where all distributional restrictions apply that would apply in a syntactic realisation of the same verb.
-As a consequence, there is always a syntactic paraphrase for N+V units with an adjunct relation where the noun occurs in a prepositional phrase which is an adjunct to the verb.%
+While the relation in N+N compounds is quite varied as well as both unspecified and often unspec ific (see Section~\ref{sub:nncompounds}), there are only two possible relations within N+V units, and these relations are determined by---and above all decodable through---the distributional properties of the verb (mostly its argument structure).
+It's either an argument relation or an oblique relation where all distributional restrictions apply that would apply in a syntactic realisation of the same verb.
+As a consequence, there is always a syntactic paraphrase for N+V units with an oblique relation where the noun occurs in a prepositional phrase which is an adjunct to the verb.%
 \footnote{Pragmatically, these paraphrases might often be subject to blocking because of the availability of the N+V construction.
 However, this does not make them syntactically or semantically unacceptable.}
 See (\ref{ex:paraphrase}) for an example.
@@ -182,24 +178,25 @@ See (\ref{ex:paraphrase}) for an example.
 \end{exe}
 
 The relation is decodable except in rare cases which underwent full lexicalisation a long time ago such that the meanings of the lexemes or their distributions have changed significantly.
-However, the decodable relations (direct object or prepositional adjunct) are prototypically realised syntactically as German is a language with a very weak (if any) tendency towards noun incorporation (see below in this section).
+However, the decodable relations (argument or oblique) are prototypically realised syntactically as German is a language with a very weak (if any) tendency towards noun incorporation (see below in this section).
 The arguments and adjuncts of a verb are usually realised as syntactic dependants of the verb.
 Even if the verb is nominalised, direct objects are realised as genitives in the noun phrase, and adjuncts don't change their form when occurring as dependants of nominalised verbs.
 
 The fact that the relation can be decoded for almost all N+V units means that the morphological construction marked by graphemic univerbation almost always remains in competition with a syntactic construction with distinct syntactic words separated by spaces in writing.
 This competition between a morphological construction and a syntactic construction was pointed out with varying terminology by---among others---\citet[12]{FleischerBartz2012}, \citet[13]{Schluecker2012}, and \citet[88]{Morcinek2013}.
 Whereas the parallel syntactic construction for N+N compounds (prenominal genitives) disappeared within a relatively short period of time, the ambiguity between syntax and morphology of N+V units remains intact.
-This is true although univerbation of N+V units with an object relation dates back to Middle High German (\textit{lobpreisen} `praise', literally `to praise compliment') and even Old High German (\textit{hals-werf\=on} `turning around', literally `to turn neck'), see \citet[517]{Wurzel1994}, \citet[334]{Wurzel1998}.
-For N+V units with an adjunct relation, \citet[89]{Morcinek2013} notices that dictionaries from between 1750 and 1993 AD list novel N+V units with an adjunct relation with increasing frequency.
+This is true although univerbation of N+V units with an argument relation dates back to Middle High German (\textit{lobpreisen} `praise', literally `to praise compliment') and even Old High German (\textit{hals-werf\=on} `turning around', literally `to throw neck'),\roland{Correct gloss?} see \citet[517]{Wurzel1994}, \citet[334]{Wurzel1998}.
+For N+V units with an oblique relation, \citet[89]{Morcinek2013} notices that dictionaries from between 1750 and 1993 AD list novel N+V units with an oblique relation with increasing frequency.
 For centuries or even more than a millennium, N+V units have been co-existing in syntax and morphology.
 We assume that the stable availability of an alternative syntactic realisation is yet another major factor in preventing N+V formation from becoming a more clearly morphological construction in language users' cognitive grammars, making N+V units \textit{reluctant compounds}.
 
+So far, we have focussed on the factors that speak against the compounding of V+N units.
 We still have to show why and under which conditions we assume true compounding and (including potential V-to-N conversion of the head and subseqeunt graphemic univerbation) to be preferred.
 As mentioned in Section~\ref{sec:introduction}, the morphological construction for N+V units is a type of noun incorporation.
-N+V units are usually seen as the only cases of potential incorporation in Modern German \parencite[245]{Eisenberg2020a}, which is why we postulated above that object and prepositional adjunct relations are prototypically realised syntactically.
+N+V units are usually seen as the only cases of potential incorporation in Modern German \parencite[245]{Eisenberg2020a}, which is why we postulated above that argument and oblique relations are prototypically realised syntactically in the form of objects and adjuncts.
 According to \citet[848]{Mithun1984}, incorporation is ``a particular type of a compounding in which a V an N combine to form a new V''.%
 \footnote{From Mithun's types of noun incorporation, German N+V units clearly represent type 1 \textit{lexical compounding}.
-Since nothing could be gained from it, we do not discuss the literature on the typological classification of incorporation further.}
+Since this is highly straightforward and homogeneous, we do not discuss the literature on the typological classification of incorporation further.}
 As \citet[848--849]{Mithun1984} points out, incorporation happens when the verb denotes a new and independent event concept in combination with the incorporated noun the semantics of which are determined by the previous syntactic relation between the noun and the verb.
 Typically, the noun looses its referential autonomy as well as its specificity, and it acquires a generic reading, which is indeed the case for N+V units.
 In sentences like (\ref{ex:noreference}), no specific bike is referenced, and \textit{radfahren} refers to the whole concept of riding any bike.
@@ -226,7 +223,7 @@ Thus, the noun has the properties typical of nouns that are subject to incorpora
 Hence, N+V units have a tendency to form proper compounds and subsequently undergo univerbation despite the factors mentioned above that pull them towards a syntactic construction.
 
 In the next section, we will summarise the factors that influence the tendency of N+V units to incorporate and undergo univerbation.
-We also formulate testable hypotheses for the empirical work to be reported in Sections~\ref{sec:corpusbasedanalysisoftheusageofnvunits} and ~\ref{sec:elicitedproductionofnounverbunitsinwrittenlanguage}.
+These factors will then be analysed in the empirical work to be reported in Sections~\ref{sec:corpusbasedanalysisoftheusageofnvunits} and ~\ref{sec:elicitedproductionofnounverbunitsinwrittenlanguage}.
 
 \subsubsection{Conclusions for the empirical studies}
 \label{sub:hypothesesfortheempiricalstudies}
@@ -243,10 +240,10 @@ The most prototypical verbal realisation is thus outside the scope of this study
 However, when the unit occurs in a strongly nominal syntagma (\egg when the head is a fully nominalised head of an NP with a determiner), we expect a high tendency towards univerbation due to an accessible interpretation as an N+N compound.
 
 The second important cue is the internal semantic relation.
-As argued, N+V units with an oblique relation stand in weaker competition with a syntactic realisation compared with those that have an object relation.
+As argued, N+V units with an oblique relation stand in weaker competition with a syntactic realisation compared with those that have an argument relation.
 N+V units with an oblique relation would need more explicit marking with a preposition in the alternative unambiguously syntactic realisation.
 Also, for N+V units with an argument relation, there is the productive and functionally similar type of government N\Sub{1}+N\Sub{2} compound where N\Sub{2} is usually derived from a verb.
-However, there is no similar morphological pattern for units with an adjunct relation.
+However, there is no similar morphological pattern for units with an oblique relation.
 Hence, we expect a stronger tendency towards univerbation with oblique relations because they have a more accessible interpretation as a morphological unit (a compound).
 
 The univerbation of individual N+V units also involves very long-term diachronic processes of lexicalisation (see Section~\ref{sub:nvunitsasreluctantcompounds}).
