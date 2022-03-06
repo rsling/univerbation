@@ -83,6 +83,9 @@ German clausal syntax creates the conditions for the actual spelling alternation
     \ex[ ]{\gll Remy ist gestern \exhl{Rad} \exhl{gefahren}.\\
     Remy is yesterday bike ridden\Sub{\textsc{Part}}\\
     \trans Remy rode a bike yesterday.\label{ex:disjunctspelling3}}
+    \ex[ ]{\gll Remy will \exhl{Rad} \exhl{fahren}.\\
+    Remy wants bike ride\Sub{\textsc{Inf}}\\
+    \trans Remy wants to ride a bike.\label{ex:disjunctspelling34}}
     \ex[ ]{\gll Remy hat keine Lust, \exhl{Rad} \exhl{zu} \exhl{fahren}.\\
     Remy has no motivation bike to ride\Sub{\textsc{Inf}}\\
     \trans Remy doesn't feel like riding a bike.\label{ex:disjunctspelling4}}
@@ -98,7 +101,7 @@ German clausal syntax creates the conditions for the actual spelling alternation
   \end{xlist}
 \end{exe}
 
-Such N+V units occur flexibly in all types of syntactic contexts: with finite verbs in verb-second order (\ref{ex:disjunctspelling1}), with finite verbs in verb-last order (\ref{ex:disjunctspelling2}), in the analytical perfect where the lexical verb takes the form of a participle (\ref{ex:disjunctspelling3}), in infinitives with the particle \textit{zu} (\ref{ex:disjunctspelling4}), in a progressive-like construction with the preposition \textit{an} fusioned with the dative singular article \textit{dem} to \textit{am} where the infinitive is potentially nominalised (\ref{ex:disjunctspelling5}), and in regular prepositional phrases (\ref{ex:disjunctspelling6}).
+Such N+V units occur flexibly in all types of syntactic contexts: with finite verbs in verb-second order (\ref{ex:disjunctspelling1}), with finite verbs in verb-last order (\ref{ex:disjunctspelling2}), in the analytical perfect where the lexical verb takes the form of a participle (\ref{ex:disjunctspelling3}), in bare infinitives (\ref{ex:disjunctspelling34}), in infinitives with the particle \textit{zu} (\ref{ex:disjunctspelling4}), in a progressive-like construction with the preposition \textit{an} fusioned with the dative singular article \textit{dem} to \textit{am} where the infinitive is potentially nominalised (\ref{ex:disjunctspelling5}), and in regular prepositional phrases (\ref{ex:disjunctspelling6}).
 In (\ref{ex:disjunctspelling7}), the spelling of the N+V unit as two words is impossible, hence the asterisk.
 In this case, we can assume that the noun and a fully nominalised infinitive form a regular nominal compound.%
 \footnote{Infinitives in German can be routinely nominalised as an action noun (\citealt[224]{Gaeta2010}, \citealt[67]{DammelKempf2018}, \citealt[172--174]{WernerEa2020}).}
@@ -112,6 +115,7 @@ In these cases, the noun and the verb alternate between the spelling as multiple
   \begin{xlist}
     \setcounter{xnumii}{2}
     \ex[ ]{Remy ist gestern \exhl{radgefahren}.\label{ex:compoundspelling3}}
+    \ex[ ]{Remy will \exhl{radfahren}.\label{ex:compoundspelling34}}
     \ex[ ]{Remy hat keine Lust, \exhl{radzufahren}.\label{ex:compoundspelling4}}
     \ex[ ]{Remy ist am \exhl{Radfahren\slash radfahren}.\label{ex:compoundspelling5}}
     \ex[ ]{Remy singt beim \exhl{Radfahren\slash radfahren}.\label{ex:compoundspelling6}}

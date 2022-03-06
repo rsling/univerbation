@@ -190,7 +190,7 @@ For N+V units with an oblique relation, \citet[89]{Morcinek2013} notices that di
 For centuries or even more than a millennium, N+V units have been co-existing in syntax and morphology.
 We assume that the stable availability of an alternative syntactic realisation is yet another major factor in preventing N+V formation from becoming a more clearly morphological construction in language users' cognitive grammars, making N+V units \textit{reluctant compounds}.
 
-So far, we have focussed on the factors that speak against the compounding of V+N units.
+So far, we have focussed on the factors that speak against the compounding of N+V units.
 We still have to show why and under which conditions we assume true compounding and (including potential V-to-N conversion of the head and subseqeunt graphemic univerbation) to be preferred.
 As mentioned in Section~\ref{sec:introduction}, the morphological construction for N+V units is a type of noun incorporation.
 N+V units are usually seen as the only cases of potential incorporation in Modern German \parencite[245]{Eisenberg2020a}, which is why we postulated above that argument and oblique relations are prototypically realised syntactically in the form of objects and adjuncts.
