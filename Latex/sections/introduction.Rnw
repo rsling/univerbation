@@ -135,7 +135,7 @@ We call cases where a multi-stem unit is spelled as two words such as in (\ref{e
 We see that N+V units potentially undergo graphemic \textit{univerbation} in the form of compound spelling.
 \citet[2]{Lehmann2021} calls univerbation ``the union of two syntagmatically adjacent word forms in one''.
 We follow this terminology and assume univerbation to be the directly observable phenomenon, \ie compound spelling of adjacent words that could potentially also be used in disjunct spelling or were historically used in disjunct spelling.
-Historically and---as we're going to show especially in Section~\ref{sec:elicitedproductionofnounverbunitsinwrittenlanguage}---individually, univerbation is a gradual process, and it is thus a probabilistic phenomenon.
+Historically, univerbation is a gradual process, and it can thus be a strongly probabilistic phenomenon due to the slowly changing grammatical and lexical system.
 However, univerbation per se is not necessarily the result of a regular grammatical pattern or process.%
 \footnote{
 For \citet[294]{Gallmann1999} univerbation is a diachronic process wherein a complex syntactic unit is reanalysed as a simplex syntactic unit.
