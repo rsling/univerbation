@@ -6,15 +6,17 @@
 \section{Introduction}
 \label{sec:introduction}
 
-Usage-based Grammar (UBG, \egg \citealt{BybeeBeckner2009,Kapatsinski2014,Tomasello2003}) is based on two core assumptions: (i) grammar is acquired using only general cognitive devices, (ii) only the input and general cognitive constraints determine the grammar.
+\subsection{Grammar, graphemics, and usage}
+
+Usage-based Grammar (UBG; \egg \citealt{BybeeBeckner2009,Kapatsinski2014,Tomasello2003}) is based on two core assumptions: (i) grammar is acquired using only general cognitive devices, (ii) only the input and general cognitive constraints determine the grammar.
 Since the input is always rife with variation and often non-discrete, a third assumption is crucial to some researchers: (iii) grammars are learned as probability distributions over possible forms, meanings, and form-meaning pairs.
-We embrace all three assumptions and apply them to a graphemic alternation phenomenon, wherein certain noun-verb combinations in present-day German can be spelled as one word or two words.
+We embrace all three assumptions and apply them to a graphemic alternation phenomenon wherein certain noun-verb combinations in present-day German can be spelled as one word or two words.
 UBG is rarely extended to graphemics in such a way, but we view graphemics as a component of the language faculty on a par with components such as phonetics and phonology, and we consequently believe that graphemics should be viewed under the usage-based umbrella.%
-\footnote{The huge body of work in different strains of linguistics based on popular corpora of written language has an intrinsic graphemic component because written data are used.
+\footnote{The huge body of work in different strains of linguistics based on popular corpora of written language has an intrinsic graphemic component, simply because written data are used.
 While it might not be problematic for most studies that this is rarely acknowledged, we consider it important to focus on this component as well.}
 While the phono-component comprises regularities of how grammar is encoded in speech sounds, graphemics comprises similar regularities of how grammar is encoded in written symbols.\roland{REFERENCE?}
 Whether and how strongly the phono-component and the graphemics component are intertwined is determined by the type of script and the specific language, where ideograph-based writing systems like early cuneiform Sumerian (virtually complete separation) and phonographic writing systems like German (substantial overlap) represent extremes on a continuous scale.\roland{REFERENCE?}
-For writing systems like German, the mappings to be learned include sounds to letters, parts of speech to spellings, syntactic categories to spaces and punctuation marks, etc.\roland{REFERENCE?}\roland{REFERENCE FOR FN?}%
+For writing systems like German, the mappings to be learned include sounds to letters, parts of speech to spellings (\egg capitalisation), syntactic categories to spaces and punctuation marks, etc.\roland{REFERENCE?}\roland{REFERENCE FOR FN?}%
 \footnote{Notice that a probabilistic view does not necessarily imply that there are no discrete or virtually discrete mappings like the one-to-one mapping of consonantal segments to letters in German.
 Cases of discreteness can always be seen as extremes in a probabilistic system.}
 
@@ -22,9 +24,9 @@ In UBG, corpus data (\ie production data) are often used as evidence, sometimes 
 This is justified because the probabilistic usage-based nature of the acquisition process as described at the outset should be reflected in the grammars of competent adult speakers\slash writers and not just in the acquisition process itself.
 Consequently, it should also be reflected in production data obtained from competent adults, and we should be able to uncover the probabilistic mappings of lexical-grammatical categories to written forms from such data.
 We consequently use corpus data as well as data elicited in controlled experiments, both being forms of production data.
-However, there is a difference between using corpus data as evidence and assuming that they \textit{directly} mirror cognitive reality.
+However, there is a difference between using production data as evidence and assuming that they \textit{directly} mirror cognitive reality.
 While it is generally assumed that corpora represent a valid source of data in cognitively oriented linguistics (\egg \citealt{Newman2011}), it is also known that there is no straightforward correspondence between corpus data and cognitive reality (\egg \citealt{Gries2003,Dabrowska2016}).
-What we hope to recover from corpus data are major abstractions performed by a majority of the learners, uncovering general cognitive principles that ideally go far beyond individual acquisition careers and idiosyncrasies of single languages.
+What we hope to recover from corpus data are major abstractions learned by a majority of speakers, uncovering general cognitive principles that ideally go far beyond individual acquisition careers and idiosyncrasies of single languages.
 
 A convenient framework to formulate such abstractions is Prototype Theory (\citealt{Rosch1973,Rosch1978}).
 As a cognitive theory of classification, it is compatible with probabilistic views inasmuch as it allows for fuzzy category membership (\egg \citealt{Sutcliffe1993}; \citealt[11--16]{Murphy2002}).
@@ -38,9 +40,11 @@ Grammatical prototypes are mapped onto graphemic realisations (\egg spellings), 
 
 One caveat that is specific to graphemics needs to be mentioned before we proceed to the description of the concrete phenomena.
 The acquisition of the writing system involves explicit instruction and is thus more strongly superimposed by prescriptive norms.
-However, we expect writers to learn grammar-graphemics mappings first and foremost from their realisations in the input, especially whenever the norm is unspecific or unclear, a situation which provides ideal test cases for our view on graphemics.
-Variation or alternation in the written input shapes the acquired probability distribution, and conditioning factors are acquired to the degree that they can be retrieved from the type and the frequency of the input.%
+However, we expect writers to learn grammar-graphemics mappings first and foremost from their realisations in the input, especially whenever the norm is unspecific or unclear, a situation which provides ideal test cases for our view of graphemics.
+Variation and alternations in the written input shape the acquired probability distribution, and conditioning factors are acquired to the degree that they can be retrieved from the type and the frequency of the input.%
 \footnote{We have previously used a similar approach in, for example, \selfcitet{SchaeferSayatz2014,SchaeferSayatz2016}.}
+
+\subsection{Introducing N+V units in German}
 
 The alternation we are going to explore affects units containing a verb and a noun, and these units alternate between a syntactic manifestation (where the noun combines with the verb via a syntactic relation) and a morphological one (where the noun is incorporated into the verb).
 We will argue that alternations in spelling provide evidence for the grammatical status of the instances of the construction.
@@ -58,13 +62,13 @@ Simple examples not showing the alternation are given in (\ref{ex:introexamples}
   \end{xlist}
 \end{exe}
 
-In this construction, there is a noun N occurring in strictly bare form, which is either an argument (normally in the accusative case) as in (\ref{ex:introexamples1}) or an adjunct of the verb V as in (\ref{ex:introexamples2}), which would normally take the form of a prepositional phrase.%
+In this construction, there is a noun N occurring in its bare form, which either corresponds to an argument of the verb V (normally in the accusative case) as in (\ref{ex:introexamples1}) or to an adjunct of the verb V as in (\ref{ex:introexamples2}), which would normally take the form of a prepositional phrase.%
 \footnote{Whereas singular indefinite mass nouns typically occur without an article in German \citep[471]{Vogel2000}, this is the only frequent construction in German wherein bare count nouns occur.
 However, there is a class of lexicalised light verb constructions where a bare noun occurs with a light verb, such as \textit{Anklage erheben} `indict', literally `to raise indictment'.
 Like idiomatic expressions such as \textit{Leine ziehen} `get lost', literally `to pull leash', they do not instantiate a productive pattern (\citealt[76]{HentschelWeydt2003}, \citealt[198]{Stumpf2015}).
 Consequently, we do not discuss them further.}
-We use the terms `argument relation' and `oblique relation' to refer to the semantic relation between the noun and the verb following \citet[20]{GaetaZeldes2017}.
-Nouns with oblique status occur without their usual preposition, and since the accusative case is only morphologically encoded on determiners (if at all) in German, the relation between the noun and the verb is never formally encoded in either case.
+We use the terms `argument relation' and `oblique relation' to refer to the semantic relation between the noun and the verb in the former and the latter case, respectively, following \citet[20]{GaetaZeldes2017}.
+Oblique nouns occur without their usual preposition, and since the accusative case is only morphologically encoded on determiners (if at all) in German, the relation between the noun and the verb is never formally encoded in either case.
 Furthermore, the noun always acquires an unspecific generic reading:
 In examples such as (\ref{ex:introexamples1}), \textit{Rad fahren} (`to ride bike') refers to the concept of riding any bike, and the unspecific reading of \textit{Rad} is obligatory, which is not the case for the English translations with the indefinite article.
 
@@ -105,7 +109,7 @@ Such N+V units occur flexibly in all types of syntactic contexts: with finite ve
 In (\ref{ex:disjunctspelling7}), the spelling of the N+V unit as two words is impossible, hence the asterisk.
 In this case, we can assume that the noun and a fully nominalised infinitive form a regular nominal compound.%
 \footnote{Infinitives in German can be routinely nominalised as an action noun (\citealt[224]{Gaeta2010}, \citealt[67]{DammelKempf2018}, \citealt[172--174]{WernerEa2020}).}
-The spelling as two words for (\ref{ex:disjunctspelling5}) and (\ref{ex:disjunctspelling6}) is not accepted by all native speakers, a fact to which will return throughout the paper.
+The spelling as two words for (\ref{ex:disjunctspelling5}) and (\ref{ex:disjunctspelling6}) is not accepted by all native speakers.
 
 In the examples (\ref{ex:disjunctspelling3}) through (\ref{ex:disjunctspelling7}), the noun and the verb occur in sequence without intervening material.
 In these cases, the noun and the verb alternate between the spelling as multiple words seen in (\ref{ex:disjunctspelling}) and spellings as one word shown in (\ref{ex:compoundspelling}).
@@ -130,9 +134,9 @@ The compound with the nominalised infinitive in (\ref{ex:compoundspelling7}) is 
 We call cases where a multi-stem unit is spelled as two words such as in (\ref{ex:disjunctspelling}) `disjunct spellings' and cases where a unit is spelled as one word as in (\ref{ex:compoundspelling}) `compound spelling'.
 We see that N+V units potentially undergo graphemic \textit{univerbation} in the form of compound spelling.
 \citet[2]{Lehmann2021} calls univerbation ``the union of two syntagmatically adjacent word forms in one''.
-We follow this terminology and assume univerbation to be the directly observable phenomenon, \ie compound spelling of adjacent words that could potentially also be used in disjunct spelling or were historically used in compound spelling.
+We follow this terminology and assume univerbation to be the directly observable phenomenon, \ie compound spelling of adjacent words that could potentially also be used in disjunct spelling or were historically used in disjunct spelling.
 Historically and---as we're going to show especially in Section~\ref{sec:elicitedproductionofnounverbunitsinwrittenlanguage}---individually, univerbation is a gradual process, and it is thus a probabilistic phenomenon.
-However, univerbation per se is not necessarily the result of a regular grammatical pattern.%
+However, univerbation per se is not necessarily the result of a regular grammatical pattern or process.%
 \footnote{
 For \citet[294]{Gallmann1999} univerbation is a diachronic process wherein a complex syntactic unit is reanalysed as a simplex syntactic unit.
 \citet[107]{Jacobs2005} regards graphemic univerbation as not rooted in a morphological process as they are not paradigmatic (no \textit{Reihenbildung}).

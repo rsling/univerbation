@@ -133,6 +133,7 @@ plot(fx, rug=F, colors = c("black", "darkorange"),
 designtable <- cases[1:8, c("Condition", "Item", "AttractionNum")]
 designtable <- designtable[order(designtable$AttractionNum),]
 designtable <- cbind(designtable, data.frame(Attraction=c(rep("Low",4), rep("High", 4))))
+designtable <- cbind(designtable, data.frame(Relation=c(rep("Argument",4), rep("Oblique", 4))))
 designtable <- designtable[order(designtable$Condition),]
 
 
@@ -143,3 +144,4 @@ summary(as.integer(cases$Age))[3]
 summary(as.integer(cases$Age))[6]
 length(levels(results.w1$ID))
 length(levels(results.w2$ID))
+

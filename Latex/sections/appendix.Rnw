@@ -93,28 +93,28 @@ The N+V units are typeset in smallcaps and spelled as separate words.
 The order of the sentences corresponds to Table~\ref{tab:designtable}.
 
 \begin{exe}
-  \ex\gll Lara trat zur Seite, um \textsc{Platz} zu \textsc{machen}.\\
+  \ex\gll Lara trat zur Seite, um \textbf{Platz} zu \textbf{machen}.\\
   Lara stepped {to the} side {in order} room to make\\
   \trans Lara stepped aside to make way.
-  \ex\gll Sarah ging auf den Spielplatz, um \textsc{Seil} zu \textsc{springen}.\\
+  \ex\gll Sarah ging auf den Spielplatz, um \textbf{Seil} zu \textbf{springen}.\\
   Sarah went onto the playground {in order} rope to jump\\
   \trans Sarah went to the playground to do some skipping.
-  \ex\gll Leon konnte nur deshalb gewinnen, weil Johanna ihm \textsc{Mut} \textsc{gemacht} hat.\\
+  \ex\gll Leon konnte nur deshalb gewinnen, weil Johanna ihm \textbf{Mut} \textbf{gemacht} hat.\\
   Leon could only therefore win because Johanna him courage made has\\
   \trans Leon could win only because Johanna encouraged him.
-  \ex\gll Maria hat einen Kopfhörer gekauft, nachdem sie ihn \textsc{Probe} \textsc{gehört} hatte.\\
+  \ex\gll Maria hat einen Kopfhörer gekauft, nachdem sie ihn \textbf{Probe} \textbf{gehört} hatte.\\
   Maria has a headphone bought after she it test listened had\\
   \trans Maria bought a headphone after doing a listening test.
-  \ex\gll Melanie mag Fußball, weil es ein Sport zum \textsc{Spaß} \textsc{haben} ist.\\
+  \ex\gll Melanie mag Fußball, weil es ein Sport zum \textbf{Spaß} \textbf{haben} ist.\\
   Melanie likes soccer because it a sport {to the} fun have is\\
   \trans Melanie likes soccer because it's a fun sport.
-  \ex\gll Benjamin ruft seinen Freund an, weil er eine Frage zum \textsc{Berg} \textsc{steigen} hat.\\
+  \ex\gll Benjamin ruft seinen Freund an, weil er eine Frage zum \textbf{Berg} \textbf{steigen} hat.\\
   Banjamin calls his friend on because he a quaestion {to the} mountain climbing has\\
   \trans Benjamin calls his firend because he has a question about mountain climbing.
-  \ex\gll Kim sah sich das Tennisspiel an, solange sie am \textsc{Tee} \textsc{trinken} war.\\
+  \ex\gll Kim sah sich das Tennisspiel an, solange sie am \textbf{Tee} \textbf{trinken} war.\\
   Kim watched herself the {tennis match} on while she {at the} tea drink was\\
   \trans Kim watched the tennis match while drinking some tea.
-  \ex\gll Simone hört ein Hörbuch, während sie am \textsc{Bogen} \textsc{schießen} ist.\\
+  \ex\gll Simone hört ein Hörbuch, während sie am \textbf{Bogen} \textbf{schießen} ist.\\
   Simone listens an audiobook while she {at the} bow shoot is\\
   \trans Simone listened to an audiobook while practicing archery.
 \end{exe}
