@@ -51,12 +51,14 @@ It is the task of usage-based probabilistic graphemics to uncover factors influe
 In Section~\ref{sec:introduction}, we showed that N+V units alternate between compound spelling and disjunct spelling when they occur in sequence.
 In this section, we explain why the existence of this alternation is not surprising considering the morphosyntactic system of German.
 Furthermore, we argue that in each concrete case where an N+V unit is written, the strength of the tendency towards either compound or disjunct spelling can be derived from the overall syntactic and morphological patterns available in present-day German.
-These patterns are shown to have prototypical properties which are matched by individual N+V units and their syntactic contexts more or less well, which leads to either compound or disjunct spelling being the preferred realisation.
+These patterns are shown to have prototypical properties which are matched by individual N+V units and their syntactic contexts more or less well, which leads to either compound or disjunct spelling being the preferred realisation.%
+\footnote{\citet{Huening2010} describes a similar alternation of Adjective + Noun constructions in Dutch and German.
+He, too, argues that the respective constructions alternate between a syntactic and a morphological realisation, and he uses analogy to existing categories to explain the alternation.
+While we opt for a prototype description, Hüning's view is still based on the same underlying assumptions as ours.}
 The hypotheses put forward here are then evaluated empirically in Sections~\ref{sec:corpusbasedanalysisoftheusageofnvunits} and \ref{sec:elicitedproductionofnounverbunitsinwrittenlanguage}.
 
 To this end, we need to shed some light on the productive N+N compound construction in Section~\ref{sub:nncompounds} before turning to N+V units as reluctant compounds in Section~\ref{sub:nvunitsasreluctantcompounds}.
 We sum up our arguments and derive our hypotheses for the empirical studies in Section~\ref{sub:hypothesesfortheempiricalstudies}.
-
 
 \subsubsection{N+N compounds}
 \label{sub:nncompounds}
@@ -197,7 +199,9 @@ As already mentioned, the morphological relaisation of N+V units is a type of no
 N+V units are usually seen as the only cases of potential incorporation in Modern German \parencite[245]{Eisenberg2020a}, which is why we argued above that argument and oblique relations are prototypically realised syntactically in the form of objects and adjuncts.
 According to \citet[848]{Mithun1984}, incorporation is ``a particular type of a compounding in which a V an N combine to form a new V''.%
 \footnote{From Mithun's types of noun incorporation, German N+V units clearly represent type 1 \textit{lexical compounding}.
-Since this is highly straightforward and homogeneous, we do not discuss the literature on the typological classification of incorporation further.}
+Since this is highly straightforward and homogeneous, we do not discuss the literature on the typological classification of incorporation further.
+Also, we do not take up the typological discussion on whether noun incorporation is a syntactic or a morphological process (\egg \citealt[414--421]{Haugen2015}, \citet[923--925]{Mithun2000}).
+We argue that N+V units in German clearly undergo a word-formation process when the noun is fully incorporated into the verb, and it's the alternation between syntax and morphology that is of particular interest to us.}
 As \citet[848--849]{Mithun1984} points out, incorporation happens when the verb denotes a new and independent event concept in combination with the incorporated noun the semantics of which are determined by the previous syntactic relation between the noun and the verb.
 Typically, the noun looses its referential autonomy as well as its specificity, and it acquires a generic reading, which is indeed the case for N+V units.
 In sentences like (\ref{ex:noreference}), no specific bike is referenced, and \textit{radfahren} refers to the whole concept of riding any bike.

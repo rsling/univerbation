@@ -6,6 +6,8 @@ opts_knit$set(self.contained=FALSE)
 \section{Explaining noun-verb univerbation}
 \label{sec:explainingnounverbuniverbation}
 
+For participles as mixed categories, see \citet{BorikGehrke2019}.
+
 % Does not work with prepositional objects. *vorurteilsgelitten
 %
 % Not very productive with adjuncts. *brückengestanden

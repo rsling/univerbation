@@ -43,6 +43,8 @@ The acquisition of the writing system involves explicit instruction and is thus 
 However, we expect writers to learn grammar-graphemics mappings first and foremost from their realisations in the input, especially whenever the norm is unspecific or unclear, a situation which provides ideal test cases for our view of graphemics.
 Variation and alternations in the written input shape the acquired probability distribution, and conditioning factors are acquired to the degree that they can be retrieved from the type and the frequency of the input.%
 \footnote{We have previously used a similar approach in, for example, \selfcitet{SchaeferSayatz2014,SchaeferSayatz2016}.}
+We are convinces that graphemics as a field in its own right which deserves attention in any grammatical\slash linguistic framework.
+See \citet{Berg2016} for a compatible fundamental argument independent of a concrete grammatical framework.
 
 \subsection{Introducing N+V units in German}
 
