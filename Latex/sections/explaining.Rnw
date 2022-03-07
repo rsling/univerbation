@@ -8,6 +8,8 @@ opts_knit$set(self.contained=FALSE)
 
 For participles as mixed categories, see \citet{BorikGehrke2019}.
 
+% One problem: If it's nominalization of the head and then compounding, it's likely no longer incorporation (because V is now N).
+%
 % Does not work with prepositional objects. *vorurteilsgelitten
 %
 % Not very productive with adjuncts. *brückengestanden
