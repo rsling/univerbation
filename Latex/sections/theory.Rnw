@@ -200,8 +200,9 @@ N+V units are usually seen as the only cases of potential incorporation in Moder
 According to \citet[848]{Mithun1984}, incorporation is ``a particular type of a compounding in which a V an N combine to form a new V''.%
 \footnote{From Mithun's types of noun incorporation, German N+V units clearly represent type 1 \textit{lexical compounding}.
 Since this is highly straightforward and homogeneous, we do not discuss the literature on the typological classification of incorporation further.
-Also, we do not take up the typological discussion on whether noun incorporation is a syntactic or a morphological process (\egg \citealt[414--421]{Haugen2015}, \citet[923--925]{Mithun2000}).
-We argue that N+V units in German clearly undergo a word-formation process when the noun is fully incorporated into the verb, and it's the alternation between syntax and morphology that is of particular interest to us.}
+Also, we do not take up the typological discussion on whether noun incorporation is a syntactic or a morphological process (\egg \citealt[414--421]{Haugen2015}, \citealt[923--925]{Mithun2000}).
+We argue that N+V units in German clearly undergo a word-formation process when the noun is fully incorporated into the verb, and it's the alternation between syntax and morphology that is of particular interest to us.
+Semantically, the both cases (syntactic and morphological combination) have the same properties which are typical of incorporation.}
 As \citet[848--849]{Mithun1984} points out, incorporation happens when the verb denotes a new and independent event concept in combination with the incorporated noun the semantics of which are determined by the previous syntactic relation between the noun and the verb.
 Typically, the noun looses its referential autonomy as well as its specificity, and it acquires a generic reading, which is indeed the case for N+V units.
 In sentences like (\ref{ex:noreference}), no specific bike is referenced, and \textit{radfahren} refers to the whole concept of riding any bike.
@@ -233,7 +234,7 @@ The fact that such linking elements also occur in clearly verbal forms of N+V un
 These cases are rare, however, and we suspect that they are the result of some type of back-formation, where a fully nominalised N+V unit is re-analysed as a verbal N+V unit.
 The infrequency of the phenomenon makes it hard to assess in the present study, and we do not go into more detail.
 
-In the next section, we will summarise the factors that influence the tendency of N+V units to incorporate and undergo univerbation.
+In the next section, we will summarise the factors that influence the tendency of N+V units to undergo univerbation.
 These factors will then be analysed in the empirical work to be reported in Sections~\ref{sec:corpusbasedanalysisoftheusageofnvunits} and~\ref{sec:elicitedproductionofnounverbunitsinwrittenlanguage}.
 
 \subsubsection{Conclusions for the empirical studies}

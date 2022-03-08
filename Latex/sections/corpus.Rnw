@@ -8,7 +8,7 @@ opts_knit$set(self.contained=FALSE)
 
 In this section, we apply two quantitative methods to analyse the univerbation of N+V units using corpus data.
 We motivate our choice of corpus and describe the sampling and annotation procedure in Section~\ref{sub:choiceofcorpussamplingandannotation}.
-We perform exploratory analysis using association measures in Section~\ref{sub:results2associationastrengths} in order to gauge the individual tendencies of N+V units to incorporate and undergo univerbation in written language usage.
+We perform exploratory analysis using association measures in Section~\ref{sub:results2associationastrengths} in order to gauge the individual tendencies of N+V units to undergo univerbation in written language usage.
 The tendencies calculated here will also be used as a covariate in the experiment reported in Section~\ref{sec:elicitedproductionofnounverbunitsinwrittenlanguage}.
 Finally, the results of estimating the parameters of a multilevel model explaining the variation in the univerbation of N+V units are reported in Section~\ref{sub:results1multilevelmodel}.
 
