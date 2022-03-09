@@ -2,7 +2,7 @@ library(lme4)
 library(fmsb)
 library(MuMIn)
 
-source('../../Latex/glmtools.R')
+source('../../Latex/R/glmtools.R')
 
 # Format numbers for use in running text.
 nice.float <- function(x, d = 3) formatC(x, format="f", big.mark=",", digits = d)
