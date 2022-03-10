@@ -39,7 +39,7 @@ In the second step, we created lists of all relevant inflectional forms of the v
 In total, \Sexpr{nice.int(35*nrow(concordance))} queries were executed to create the final data set used here, a number which clearly demonstrates the necessity of script-based corpus access in data-driven methods.
 The queries were matched by \Sexpr{nice.int(sum(concordance$Joint))} compound spellings and \Sexpr{nice.int(sum(concordance$Separate))} separate spellings, which results in a total sample size of \Sexpr{nice.int(sum(concordance$Joint)+sum(concordance$Separate))} tokens.
 
-For each N+V unit in the sample, the following variables were annotated automatically: (i) the verb lemma, (ii) the noun lemma, (iii) whether a linking element is used in the use as a full noun, (iv) the overall frequency in the corpus.
+For each N+V unit in the sample, the following variables were annotated automatically: (i) the verb lemma, (ii) the noun lemma, and (iii) the overall frequency in the corpus.
 Additionally, we manually coded all \Sexpr{nrow(concordance)} N+V units for the relation holding between the verb and the noun.
 The codes used in clear-cut cases were \textit{Argument} (\Sexpr{length(which(concordance$Relation=="Object"))} units) and \textit{Oblique} (\Sexpr{length(which(concordance$Relation=="Adjunct"))} units).
 For \Sexpr{length(which(concordance$Relation=="Undetermined"))} units, both relations were conceivable, and those cases were coded as \textit{Undetermined}.
@@ -198,7 +198,7 @@ For samples of such magnitude in data-driven approaches, frequentist significanc
 Therefore, we provide standard likelihood ratio confidence intervals for parameter estimates and prediction intervals for conditional modes as an approximate measure quantifying the precision of the parameter estimates and predictions.
 The models we specify reflect theoretically motivated decisions, and we therefore reject all types of model selection by means of step-up or step-down procedures.
 
-As argued in Section~\ref{sec:thestatusofnounverbunitsingerman}, we expect the probability of the univerbation of N+V units to depend on the morphosyntactic context, the relation holding between the verb and the noun, the presence of absence of a linking element in the nominal compound (as a marker of a stronger lexicalisation) and on the specific N+V unit (a lexical tendency).
+As argued in Section~\ref{sec:thestatusofnounverbunitsingerman}, we expect the probability of the univerbation of N+V units to depend on the morphosyntactic context, the relation holding between the verb and the noun, and on the specific N+V unit (a lexical tendency).
 Accordingly, the response variable was chosen to be the proportion of compound spellings among all the spellings of the N+V unit.
 In the input data provided to the estimator, the response variable was thus a vector of \Sexpr{nrow(concordance)} proportions, one for each N+V unit.%
 \footnote{Binomial models can be specified in this manner \parencite[245--260]{ZuurEa2009}.
@@ -235,22 +235,20 @@ We have no prediction for the progressive as we are unsure whether it has truly 
 
 As there is a huge number of \Sexpr{nrow(concordance)} N+V units, the lexical indicator variable for the individual N+V unit should not be used as a fixed effect (\citealt[244--247]{GelmanHill2006}, \selfcitealt{Schaefer2020a}).
 We specified a generalised linear mixed model with the N+V unit variable as a random effect.
-The variables encoding the internal relation and the presence\slash absence of a linking element are nested inside the levels of the random effect, and they are therefore treated as second-level fixed effects in a multilevel model.
+The variable encoding the internal relation is nested inside the levels of the random effect, and its is therefore treated as a second-level fixed effect in a multilevel model.
 In R notation, the specification is shown in (\ref{eq:corpusglmmr}).%
 \footnote{See Appendix~\ref{sec:specifictionofthecorpusglmm} for a precise specification in mathematical notation.}
 
 \begin{equation}
-  \mathtt{Univerbation\sim (1|NVUnit)+Context+Relation+Link} \label{eq:corpusglmmr}
+  \mathtt{Univerbation\sim (1|NVUnit)+Context+Relation} \label{eq:corpusglmmr}
 \end{equation}
 
-<<corpusglmm, results="asis", results="hide">>=
+<<corpusglmm, results="asis">>=
 
 concordance.glmm$Relation <- factor(concordance.glmm$Relation, levels = c("Object", "Undetermined", "Adjunct"))
 concordance.glmm$Context <- factor(concordance.glmm$Context, levels = c("Infinitive", "Participle", "NP", "Progressive"))
-concordance.glmm$FullLink <- concordance.glmm$Link
-concordance.glmm$Link <- concordance.glmm$Linkbinary
 
-corpus.glmm <- glmer(cbind(Joint, Separate)~Context+Relation+Link+(1|Compound),
+corpus.glmm <- glmer(cbind(Joint, Separate)~Context+Relation+(1|Compound),
                      data=concordance.glmm, family=binomial,
                      na.action = na.fail, control=glmerControl(optimizer="nloptwrap2", optCtrl=list(maxfun=2e5))
                      )
@@ -278,7 +276,7 @@ corpus.r2.txt <- paste0("Nakagawa \\& Schielzeth's \\CM{R^2_m=", nice.float(corp
 ranef.txt <- paste0("Random effect for N+V lemma: \\CM{Intercept=", nice.float(ranef.nv$Intercept), "}, \\CM{sd=", nice.float(ranef.nv$sd),
                     "}")
 corpus.ctxt <- xtable(corpus.ct, digits = 3,
-                    caption = paste0("Coefficient table for the binomial GLMM modelling the corpus data with 95\\% profile likelihood ratio confidence intervals. The horizontal line separates first-level and second-level effects. Weighting was used to account for the bias in models on proportion data. ", ranef.txt, ". The intercepts model the fixed effects Relation~=~Argument and Link~=~No. " , corpus.r2.txt),
+                    caption = paste0("Coefficient table for the binomial GLMM modelling the corpus data with 95\\% profile likelihood ratio confidence intervals. The horizontal line separates first-level and second-level effects. Weighting was used to account for the bias in models on proportion data. ", ranef.txt, ". The intercepts model the fixed effects Relation~=~Argument. " , corpus.r2.txt),
                     label = "tab:corpusglmm")
 
 # Experimental function to fix variable names.
@@ -308,7 +306,6 @@ As expected, the prototypically verbal contexts (infinitives and participles) ar
 NPs and progressives as prototypically nominal contexts clearly favour compound spelling (coefficients of $\Sexpr{nice.float(corpus.ct["ContextNP","Estimate"])}$ and $\Sexpr{nice.float(corpus.ct["ContextProgressive","Estimate"])}$, respectively).
 Both the coefficients and the effect plot (right panel in Figure~\ref{fig:corpuseffects}) show a low probability of compound spelling when an argument relation holds between the verb and the noun (on the intercept), and a high probability when the relation is oblique (coefficient $\Sexpr{nice.float(corpus.ct["RelationAdjunct","Estimate"])}$).
 The undetermined cases are in between the two clear-cut cases (coefficient $\Sexpr{nice.float(corpus.ct["RelationUndetermined","Estimate"])}$).
-The presence of a linking element in fully nominalised compounds favours compound spelling only slightly (coefficient $\Sexpr{nice.float(corpus.ct["LinkYes","Estimate"])}$).
 
 <<corpuseffects, results="asis", fig.showtext=TRUE, fig.pos="!htbp", fig.height=4, fig.cap="Effect plots for the regressor encoding the morphosyntactic context of the N+V unit and the regressor encoding the syntactic relation within the N+V unit in the GLMM modelling the corpus data">>=
 ef.context <- effect("Context", corpus.glmm, KR = T)

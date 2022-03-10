@@ -8,15 +8,45 @@ opts_knit$set(self.contained=FALSE)
 
 For participles as mixed categories, see \citet{BorikGehrke2019}.
 
-% One problem: If it's nominalization of the head and then compounding, it's likely no longer incorporation (because V is now N).
+
+% Warum keine Fugen im Experiment? – Nicht kontrollierbar wegen Probandenzahl.
+%
+% Rückbildungsmuster (evt. bei Fugen-Komposita), vgl. Hüning.
+% Zwangsernähren als Beispiel, dass es möglich ist inkl. finiter Formen
+%
+% S. 23, (iv) Example is 2g not 2h
+%
+% S. 15 reluctabt
+%
+% half-werfon => halswerfon, "turn"
+%
+% S. 13: 10a and 10b are sxx. only for oblique, add argument
+%
+% S. 11 "are are"
+%
+% Fn 13 "Auto fahren" => "Fahrrad fahren"
+
+
+%
+% Kontext und Relation sind die relevanten Faktoren für Univerbierungstendenz in beiden Datenquellen.
+%
 %
 % Does not work with prepositional objects. *vorurteilsgelitten
-%
 % Not very productive with adjuncts. *brückengestanden
-%
 % Mention difference: object is related to argument structure of the verb, adjunct is not.
-%
 % How productive is the N+V incorporation? Further studies required.
+% Oblique relation is not productive, argument
+% Hüning: Was ist der Unterschied zwischen AN-Komp und Phrase. Beim Komp gibt es einen Namen (=Denotat), bei der PHrase eine Deskription
+%
+% In diesem Zusammenhang (Produktivität): Sind das teilweise Rückbildungen?
+%
+% mögliche Weiterführung: Wortakzentuntersuchung. Ist Kompositionsakzent da? ZB Diktatexperiment mit Kompositionsexperiment. Aber Achtung: "Ich habe TORE geschossen" kann auch komntrastiver Fokus sein.
+%
+%
+% Discuss Linking Elements!
+%
+% Progressiv: Verhält sich wie eine NP mit Kopula. Steht sowieso immer nominal mit Kopula. Der Kopula-Kontext ist stark nominal. Kopula ist kein sonstwie geartetets HV in diesem Kontext.
+%
 %
 % Es geht ja um die „Umdeutung/Modifizierung“ eines verbalen Ereigniskonzepts, bei dem entweder eine Objektrelation oder eine Adjunktrelation zu einer Veränderung der lexikalischen Markierungsstruktur des – wie auch immer -  entstehenden komplexen Verbstammes führt.
 % Nicht unwichtig scheint dabei auch zu sein, wie spezifisch das Verb in seiner lexikalischen Bedeutung ist. Ist das verbale Ereigniskonzept semantisch spezifiziert, wie bei fahren oder schwimmen, scheint eine weitere Modifizierung leichter möglich (was dann am Ende zu komplexen N-V-Verbindungen führt oder wenigstens zu Reihenbildungen oder Noun-stripping  wie rad/auto/zug fahren  (vgl. hierzu u.a. Gallmann 1999: XXL). Je semantisch unspezifizierter das verbale Ereigniskonzept des Verbs ist, z.B. bei machen, desto dispräferierter scheint die Tendenz zu sein, eine syntaktische Objekt- oder Adjunktrelation morphologisch zu ersetzen. (Verweis auf die niedrige Univerbierungstendenz in den Korpusdaten auf S. 12, Tab.3. Das kann auch alles erst später oder in die Schlussfolgerungen).
@@ -24,3 +54,10 @@ For participles as mixed categories, see \citet{BorikGehrke2019}.
 
 % Interpret results of studies.
 % Discuss progressive!
+
+%
+% As a clear indicator of full conversion of the verb to a noun and thus a clear indicator of compounding is the presence of a linking element in between the two parts of the N+V unit, such as in \textit{Leistungsschießen} `(high) performance shooting\slash competitive shooting' (or \textit{leistungsgeschossen} in the participle, etc.).
+% Such linking elements are otherwise exclusive to N+N compounds (see Section~\ref{sub:nncompounds}) and should thus indicate full nominalisation of V.
+% The fact that such linking elements also occur in clearly verbal forms of N+V units (such as \textit{leistungsgeschossen}) is perplexing.
+% These cases are rare, however, and we suspect that they are the result of some type of back-formation, where a fully nominalised N+V unit is re-analysed as a verbal N+V unit.
+% The infrequency of the phenomenon makes it hard to assess in the present study, and we do not go into more detail.

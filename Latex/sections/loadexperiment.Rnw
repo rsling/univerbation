@@ -47,4 +47,7 @@ exp.cases$Condition <- factor(exp.cases$Condition, levels = c("Infinitive", "Par
 
 # Rename Condition => Context.
 names(exp.cases)[names(exp.cases) == "Condition"] <- "Context"
+
+# Fix old idiotic naming.
+exp.cases$Context <- revalue(exp.cases$Context, c("Clitic"="NP"))
 @

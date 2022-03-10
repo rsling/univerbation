@@ -228,12 +228,6 @@ Functionally, the construction exists in order to express the new event concept 
 Thus, the noun has the properties typical of nouns that are subject to incorporation of the lexical compounding type.
 In contrast with the factors that prevent univerbation and make N+V units reluctabt compounds, this is a factor that we assume to facilitate their univerbation.
 
-As a clear indicator of full conversion of the verb to a noun and thus a clear indicator of compounding is the presence of a linking element in between the two parts of the N+V unit, such as in \textit{Leistungsschießen} `(high) performance shooting\slash competitive shooting' (or \textit{leistungsgeschossen} in the participle, etc.).
-Such linking elements are otherwise exclusive to N+N compounds (see Section~\ref{sub:nncompounds}) and should thus indicate full nominalisation of V.
-The fact that such linking elements also occur in clearly verbal forms of N+V units (such as \textit{leistungsgeschossen}) is perplexing.
-These cases are rare, however, and we suspect that they are the result of some type of back-formation, where a fully nominalised N+V unit is re-analysed as a verbal N+V unit.
-The infrequency of the phenomenon makes it hard to assess in the present study, and we do not go into more detail.
-
 In the next section, we will summarise the factors that influence the tendency of N+V units to undergo univerbation.
 These factors will then be analysed in the empirical work to be reported in Sections~\ref{sec:corpusbasedanalysisoftheusageofnvunits} and~\ref{sec:elicitedproductionofnounverbunitsinwrittenlanguage}.
 
