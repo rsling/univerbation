@@ -231,11 +231,6 @@ nice.int <- function(n) formatC(n, format="d", big.mark=",")
 <<child="sections/appendix.Rnw">>=
 @
 
-\section*{Funding information}
-
-Roland Schäfer’s work was funded by the Deutsche Forschungsgemeinschaft (DFG, German Research Foundation) – SFB 1412, 416591334.
-
-
 \section*{Acknowledgments}
 
 We thank Luise Rissmann for her help annotating and cleaning the corpus data as well as conducting most of the experiments.

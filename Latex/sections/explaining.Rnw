@@ -9,6 +9,9 @@ opts_knit$set(self.contained=FALSE)
 For participles as mixed categories, see \citet{BorikGehrke2019}.
 
 
+% Also, units with semantically weak or generic verbs like \textit{haben} (`to have'), \textit{machen} (`make'), and \textit{fahren} (`drive') are expected to undergo univerbation more easily, because the verbs only denote a specific concept together with the noun.
+
+
 % Rückbildungsmuster (evt. bei Fugen-Komposita), vgl. Hüning.
 % Zwangsernähren als Beispiel, dass es möglich ist inkl. finiter Formen
 %

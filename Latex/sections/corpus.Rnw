@@ -9,7 +9,6 @@ opts_knit$set(self.contained=FALSE)
 In this section, we apply two quantitative methods to analyse the univerbation of N+V units using corpus data.
 We motivate our choice of corpus and describe the sampling and annotation procedure in Section~\ref{sub:choiceofcorpussamplingandannotation}.
 We perform exploratory analysis using association measures in Section~\ref{sub:results2associationastrengths} in order to gauge the individual tendencies of N+V units to undergo univerbation in written language usage.
-The tendencies calculated here will also be used as a covariate in the experiment reported in Section~\ref{sec:elicitedproductionofnounverbunitsinwrittenlanguage}.
 Finally, the results of estimating the parameters of a multilevel model explaining the variation in the univerbation of N+V units are reported in Section~\ref{sub:results1multilevelmodel}.
 
 \subsection{Choice of corpus, sampling, and annotation}
@@ -67,6 +66,11 @@ The method we use is similar to collocation analysis (\citealt{Evert2008} for an
 More specifically, the method is called \textit{collexeme analysis} \parencite{StefanowitschGries2009}.%
 \footnote{See also \selfcitet{SchaeferPankratz2018} and \selfcitet{Schaefer2019a} for similar uses.}
 
+Our goal was to quantify how strongly each N+V unit tends towards univerbation vis-a-vis all other N+V units.
+Thus, we need to compare the counts of cases with and without univerbation of the unit in question with the total counts for all other N+V units.
+Such comparisons must be made relative to the overall number of the specific N+V unit as well as the number of all other units.
+The counts needed for each N+V unit are nicely summarised in a 2$\times$2 contingency table as shown in Table~\ref{tab:associationsexplained}.
+
 \begin{table}[!htbp]
   \begin{tabular}{lcc}
   \toprule
@@ -80,10 +84,15 @@ More specifically, the method is called \textit{collexeme analysis} \parencite{S
   \label{tab:associationsexplained}
 \end{table}
 
-Our goal was to quantify how strongly each N+V unit tends towards univerbation vis-a-vis all other N+V units.
-Thus, we need to compare the counts of cases with and without univerbation of the unit in question with the total counts for all other N+V units.
-Such comparisons must be made relative to the overall number of the specific N+V unit as well as the number of all other units.
-The counts needed for each N+V unit are nicely summarised in a 2$\times$2 contingency table as shown in Table~\ref{tab:associationsexplained}.
+With these counts, we are able to quantify how strongly the proportions in the first row differ from those in the second row, and there is a range of statistical measures for that.
+For example, one could use odds ratios or effects strengths from frequentist statistical tests.%
+\footnote{P-values from frequentist statistical tests are measures of evidence, and therefore not appropriate in such situations \parencite{SchmidKuechenhoff2013,KuechenhoffSchmid2015} although they were used in early Collostructional Analysis.
+However, even Collostructional Analysis is now often used with measures of effect strength \parencite{Gries2015b}.}
+We chose Cramér's $v$ derived from standard $\chi^2$ scores ($v=\sqrt{\chi^2/n}$).
+The $v$ measure quantifies for each individual N+V unit how strongly the counts (cells $c_{11}$ and $c_{21}$) deviate from its counts that we would expect if there were no difference between this unit and all other N+V units (cells $c_{21}$ and $c_{22}$) with respect to their tendency to univerbate.
+Since Cramér's $v$ is always in the range between 0 and 1, it allows us to compare analyses where the samples differ.
+In itself, $v$ does not tell us whether the deviation is negative (for a N+V unit with less than average compound spellings) or positive (for a N+V unit with more than average compound spellings).
+The information about the direction of the deviation is added by multiplying $v$ with the sign of the upper left cell of the residual table of the $\chi^2$ test.
 
 <<associationsall, results="asis", fig.showtext = TRUE, fig.pos="htbp", fig.height=3, fig.width=6, fig.cap=paste0("Density estimate of the distributions of the \\CM{", length(which(!is.na(concordance$all.assocs))), "} association scores by the two semantic relations; the x-axis was truncated at -0.05 and 0.05 where the curves are essentially flat")>>=
 
@@ -111,20 +120,14 @@ legend("topleft", legend = c("Oblique", "Argument"), bty = "n",
        )
 @
 
-With these counts, we are able to quantify how strongly the proportions in the first row differ from those in the second row, and there is a range of statistical measures for that.
-For example, one could use odds ratios or effects strengths from frequentist statistical tests.%
-\footnote{P-values from frequentist statistical tests are measures of evidence, and therefore not appropriate in such situations \parencite{SchmidKuechenhoff2013,KuechenhoffSchmid2015} although they were used in early Collostructional Analysis.
-However, even Collostructional Analysis is now often used with measures of effect strength \parencite{Gries2015b}.}
-We chose Cramér's $v$ derived from standard $\chi^2$ scores ($v=\sqrt{\chi^2/n}$).
-The $v$ measure quantifies for each individual N+V unit how strongly the counts (cells $c_{11}$ and $c_{21}$) deviate from its counts that we would expect if there were no difference between this unit and all other N+V units (cells $c_{21}$ and $c_{22}$) with respect to their tendency to univerbate.
-Since Cramér's $v$ is always in the range between 0 and 1, it allows us to compare analyses where the samples differ.
-In itself, $v$ does not tell us whether the deviation is negative (for a N+V unit with less than average compound spellings) or positive (for a N+V unit with more than average compound spellings).
-The information about the direction of the deviation is added by multiplying $v$ with the sign of the upper left cell of the residual table of the $\chi^2$ test.
 We calculated the signed $v$ for each of the $\Sexpr{length(concordance$all.assocs)}$ N+V units.
 Their distribution is plotted in the form of a density estimate in Figure~\ref{fig:associationsall}.%
 \footnote{As expected, it approximates a scaled symmetric $\chi^2$ distribution with $df=1$ squashed between -1 and 1.}
-
-While
+The graph shows the distribution of the attraction strengths for N+V units with argument and oblique relations separately.
+While there is variation in both directions in both cases, the argument relation tends more towards disjunct spelling (lower\slash more negative scores), and the oblique relation favours compound spelling more (higher\slash more positive scores).
+The number of units close to $0$ (\ie without a clear tendency) is notable with the argument relation.
+Examples include \textit{Zeitreisen} (`time travel') with an oblique relation and a strong tendency towards univerbation (\Sexpr{nice.float(concordance[which(concordance$Compound=="Zeitreisen"), "all.assocs"])}), \textit{Fehlermachen} (`mistake make') with an argument relation and a strong tendency against univerbation (\Sexpr{nice.float(concordance[which(concordance$Compound=="Fehlermachen"), "all.assocs"])}), and \textit{Haareschneiden} (`hair cut') with an argument relation and no clear tendency towards or against univerbation (\Sexpr{nice.float(concordance[which(concordance$Compound=="Haareschneiden"), "all.assocs"])}).
+These results will be corroborated by the analysis in Section~\ref{sub:results1multilevelmodel}, and we will use the scores to control for item-specific tendencies in the experiment in Section~\ref{sec:elicitedproductionofnounverbunitsinwrittenlanguage}.
 
 \subsection{Results 2: Multilevel model}
 \label{sub:results1multilevelmodel}
@@ -285,6 +288,7 @@ The relatively high standard deviation is a sign that there is considerable vari
 Furthermore, the conditional $R^2_c$ is as high as $\Sexpr{nice.float(corpus.glmm.r2[1,2])}$.
 This is commonly interpreted as saying that the fixed effects and the idiosyncratic effect of concrete N+V units almost fully explain the variance in the data.
 A random selection of \Sexpr{nice.int(ranefplot.num)} conditional modes, which illustrates the relevance of lexical idiosyncrasies through obvious differences with mostly very narrow prediction intervals, is shown in Figure~\ref{fig:corpusranefs}.
+The individual N+V unit thus plays a major role in writers' tendency to univerbate N+V units, which conforms the results from Section~\ref{sub:results2associationastrengths}.
 
 <<corpusranefs, results="asis", fig.showtext=TRUE, fig.pos="!htbp", fig.cap="A random selection of conditional modes with 95\\% prediction intervals for the levels of the random effect in the GLMM modelling the corpus data">>=
 set.seed(3478)
@@ -292,5 +296,3 @@ par(family = "Fira Sans")
 corpus.ranef.selection <- ranef.plot(corpus.glmm, effect = "Compound", number = 20)
 @
 
-The individual N+V unit thus plays a major role in writers' tendency to univerbate N+V units, which conforms the results from Section~\ref{sub:results2associationastrengths}.
-The results obtained from that method will be used to predict participants' behaviour in the controlled experiment reported in Section~\ref{sec:elicitedproductionofnounverbunitsinwrittenlanguage}.

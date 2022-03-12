@@ -8,6 +8,7 @@
 
 \subsection{Grammar, graphemics, and usage}
 
+In this paper, we apply usage-based grammar to a graphemic alternation phenomenon in German, arguing that properties of a probabilistic grammatical system can be inferred by examining written usage from a graphemic perspective.
 Usage-based Grammar (UBG; \egg \citealt{BybeeBeckner2009,Kapatsinski2014,Tomasello2003}) is based on two core assumptions: (i) grammar is acquired using only general cognitive devices, (ii) only the input and general cognitive constraints determine the grammar.
 Since the input is always rife with variation and often non-discrete, a third assumption is crucial to some researchers: (iii) grammars are learned as probability distributions over possible forms, meanings, and form-meaning pairs.
 We embrace all three assumptions and apply them to a graphemic alternation phenomenon wherein certain noun-verb combinations in present-day German can be spelled as one word or two words.

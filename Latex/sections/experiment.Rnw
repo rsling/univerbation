@@ -13,10 +13,10 @@ Section~\ref{sub:resultsexperiment} reports the results descriptively and in the
 \subsection{Design and participants}
 \label{sub:designandparticipants}
 
-The goal of the experiment was to corroborate the findings from the corpus study and to test whether writers' behaviour under controlled experimental conditions is similar to the behaviour of writers under uncontrolled circumstances as found in corpora.
+The goal of the experiment was to replicate the findings from the corpus study in another empirical paradigm and to test whether writers' behaviour under controlled experimental conditions is similar to the behaviour of writers under uncontrolled circumstances as found in corpora.
 We used pre-recorded auditory stimuli in order to elicit spellings of given N+V units.
 The stimuli were chosen based on theoretically motivated criteria and the information about item-specific tendencies obtained from the exploratory part of the corpus study in Section~\ref{sub:results2associationastrengths}.
-We constructed eight sentences instantiating the four morphosyntactic contexts crossed with the two semantic relations described in Section~\ref{sub:results1multilevelmodel}.
+We constructed eight sentences instantiating the four morphosyntactic contexts described in Section~\ref{sub:results1multilevelmodel} crossed with the two semantic relations.
 
 <<experimentdesign, results="asis">>=
 
@@ -64,7 +64,7 @@ The sentences were constructed in a way such that all N+V units were the predica
 This consistently ensured verb-last constituent order and avoided interfering verb-second effects, which are typical of independent sentences in German.
 The stimui with full glosses are given in Appendix~\ref{sec:sentencesusedintheexperiment}.
 Furthermore, we added 32 fillers, resulting in a total of forty sentences being read to the participants.%
-\footnote{Of the forty fillers, six were actually target items from an unrelated experiment.}
+\footnote{Of the fillers, six were actually target items from an unrelated experiment.}
 Of the forty sentences, twenty (including the target items) had to be written down by the participants.
 The order of the target items was randomised, but it was ensured that there were at least three sentences in between two target stimuli.
 There were nine distractors in the form of yes-no questions related to random sentences previously heard by the participants.
@@ -77,9 +77,9 @@ There were two separate groups (\Sexpr{nrow(exp.w1)} and \Sexpr{nrow(exp.w2)} pa
 \subsection{Results}
 \label{sub:resultsexperiment}
 
-In this section, we report the parameter estimates of a GLMM with additional control for individual participants in the form of a random effect.
-The model specification in R notation is given in (\ref{eq:expglmmformula}).
-Appendix~\ref{sec:specifictionoftheexperimentglmm} provides the specification mathematical notation.
+In this section, we report the parameter estimates of a GLMM modelling the behaviour of the participants in our experiment.
+The model specification in R notation is given in (\ref{eq:expglmmformula}).%
+\footnote{Appendix~\ref{sec:specifictionoftheexperimentglmm} provides the specification mathematical notation.}
 The coefficient estimates for the GLMM are reported in Table~\ref{tab:experimentglmm}.
 
 \begin{equation}
@@ -133,6 +133,7 @@ Instead, the major deciding factors are the ones predicted by our theoretical mo
 There seems to be no evidence that the participle has a different effect than the infinitive (which is on the intercept) given the large confidence interval ($[\Sexpr{nice.float(experiment.ct["ContextParticiple", "CI low"])}..\Sexpr{nice.float(experiment.ct["ContextParticiple", "CI high"])}]$).
 On the other hand, progressives ($\Sexpr{nice.float(experiment.ct["ContextProgressive", "Estimate"])}$) and NPs ($\Sexpr{nice.float(experiment.ct["ContextNP", "Estimate"])}$) clearly have a much more positive effect on the probability of univerbation.
 Again, we do not see evidence for a any difference between NP and progressive contexts given the large and overlapping confidence intervals.
+The oblique relation favours univerbation as predicted ($\Sexpr{nice.float(experiment.ct["RelationOblique", "Estimate"])}$) compared to the argument relation (which is modelled by the intercept), and despite a quite large confidence interval ($[\Sexpr{nice.float(experiment.ct["RelationOblique", "CI low"])}..\Sexpr{nice.float(experiment.ct["RelationOblique", "CI high"])}]$), the effect is clearly positive.
 
 <<experimentfx, results="asis", fig.height=4, fig.showtext=TRUE, fig.pos="htbp", fig.height=4, fig.cap="Effect plots for the regressor encoding the morphosyntactic context and the attraction strength as calculated from the corpus in the GLMM modelling the experimental data">>=
 
