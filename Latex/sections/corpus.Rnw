@@ -67,11 +67,6 @@ The method we use is similar to collocation analysis (\citealt{Evert2008} for an
 More specifically, the method is called \textit{collexeme analysis} \parencite{StefanowitschGries2009}.%
 \footnote{See also \selfcitet{SchaeferPankratz2018} and \selfcitet{Schaefer2019a} for similar uses.}
 
-Our goal was to quantify how strongly each N+V unit tends towards univerbation vis-a-vis all other N+V units.
-Thus, we need to compare the counts of cases with and without univerbation of the unit in question with the total counts for all other N+V units.
-Such comparisons must be made relative to the overall number of the specific N+V unit as well as the number of all other units.
-The counts needed for each N+V unit are nicely summarised in a 2$\times$2 contingency table as shown in Table~\ref{tab:associationsexplained}.
-
 \begin{table}[!htbp]
   \begin{tabular}{lcc}
   \toprule
@@ -85,9 +80,40 @@ The counts needed for each N+V unit are nicely summarised in a 2$\times$2 contin
   \label{tab:associationsexplained}
 \end{table}
 
-With these counts, we are able to quantify how strongly the proportion in the first row differ from those in the second row, and there is a range of statistical measures for that.
+Our goal was to quantify how strongly each N+V unit tends towards univerbation vis-a-vis all other N+V units.
+Thus, we need to compare the counts of cases with and without univerbation of the unit in question with the total counts for all other N+V units.
+Such comparisons must be made relative to the overall number of the specific N+V unit as well as the number of all other units.
+The counts needed for each N+V unit are nicely summarised in a 2$\times$2 contingency table as shown in Table~\ref{tab:associationsexplained}.
+
+<<associationsall, results="asis", fig.showtext = TRUE, fig.pos="htbp", fig.height=3, fig.width=6, fig.cap=paste0("Density estimate of the distributions of the \\CM{", length(which(!is.na(concordance$all.assocs))), "} association scores by the two semantic relations; the x-axis was truncated at -0.05 and 0.05 where the curves are essentially flat")>>=
+
+### Plot distributions of association measures.
+density.opts <- list(lwd = 2)
+par(family = "Fira Sans", mar=c(2.5, 2.5, 0.5, 2.5))
+
+plot(density(na.omit(concordance[which(concordance$Relation=="Adjunct"), "all.assocs"])),
+     axes = F, xlab = "",
+     xlim = c(-0.05, 0.05),
+     lwd = density.opts$lwd,
+     col = "black", lty = 1,
+     main = ""
+)
+lines(density(na.omit(concordance[which(concordance$Relation=="Object"), "all.assocs"])),
+      lwd = density.opts$lwd,
+      col = "darkgreen", lty = 2
+)
+
+axis(1, at = c(-0.05, 0.05), labels=rep("",2), lwd.ticks=0)
+axis(1, at = seq(-0.05, 0.05, 0.025), lwd = 0, lwd.ticks=1)
+axis(2)
+legend("topleft", legend = c("Oblique", "Argument"), bty = "n",
+       lwd = density.opts$lwd, col = c("black", "darkgreen"), lty = c(1,2)
+       )
+@
+
+With these counts, we are able to quantify how strongly the proportions in the first row differ from those in the second row, and there is a range of statistical measures for that.
 For example, one could use odds ratios or effects strengths from frequentist statistical tests.%
-\footnote{p-values from frequentist statistical tests are measures of evidence, and therefore not appropriate in such situations \parencite{SchmidKuechenhoff2013,KuechenhoffSchmid2015} although they were used in early Collostructional Analysis.
+\footnote{P-values from frequentist statistical tests are measures of evidence, and therefore not appropriate in such situations \parencite{SchmidKuechenhoff2013,KuechenhoffSchmid2015} although they were used in early Collostructional Analysis.
 However, even Collostructional Analysis is now often used with measures of effect strength \parencite{Gries2015b}.}
 We chose Cramér's $v$ derived from standard $\chi^2$ scores ($v=\sqrt{\chi^2/n}$).
 The $v$ measure quantifies for each individual N+V unit how strongly the counts (cells $c_{11}$ and $c_{21}$) deviate from its counts that we would expect if there were no difference between this unit and all other N+V units (cells $c_{21}$ and $c_{22}$) with respect to their tendency to univerbate.
@@ -98,91 +124,7 @@ We calculated the signed $v$ for each of the $\Sexpr{length(concordance$all.asso
 Their distribution is plotted in the form of a density estimate in Figure~\ref{fig:associationsall}.%
 \footnote{As expected, it approximates a scaled symmetric $\chi^2$ distribution with $df=1$ squashed between -1 and 1.}
 
-<<associationsall, results="asis", fig.showtext = TRUE, fig.pos="htbp", fig.height=3, fig.width=3, fig.cap=paste0("Density estimate of the distribution of the \\CM{", length(which(!is.na(concordance$all.assocs))), "} association scores (across all morphosyntactic conditions)")>>=
-
-### Plot distributions of association measures.
-density.opts <- list(lwd = 2)
-par(family = "Fira Sans", mar=c(2.5, 2.5, 0.5, 2.5))
-
-plot(density(na.omit(concordance$all.assocs)),
-  axes = F, xlab = "", xlim = c(-0.15, 0.15), ylim = c(0,42),
-  lwd = density.opts$lwd,
-  col = "black", lty = 1,
-  main = ""
-  )
-axis(1)
-axis(2)
-@
-
-For the selection of the target stimuli used in the experiment, the these association strengths are important, because they encode the effect of the individual N+V units independently of the context.
-To illustrate how the data analysis allows for a selection of N+V units based on their affinity towards univerbation, we show the top ten units with the highest negative and highest positive association in Table~\ref{tab:corpusassocslohi}.
-The tables illustrate that units with the strongest tendencies against univerbation are predominantly ones with an argument relation.
-The ones which most strongly favour univerbation are mostly ones with an oblique relation or an ambiguous relation.
-This is in line with our argumentation from Section~\ref{sec:theoreticalbackground}.
-The ten items with the least clear tendency in either direction are shown in Table~\ref{tab:corpusassoctablenull}.
-They mostly come with an argument relation.
-
-<<corpuscreatetabledata, results="asis">>=
-corpus.assoc.sel <- format.assocs(df = concordance, col = 'all.assocs', show.results = "all",
-                               show.cols = c("Compound", "all.assocs", "Relation"),
-                               num = 10, cx = "All contexts", effect = "UNIVERBATION", freq.cutoff = 0.2)
-corpus.assoc.sel$Relation <- revalue(corpus.assoc.sel$Relation, c("Undetermined"="Undet.", "Object"="Argument", "Adjunct"="Oblique"))
-colnames(corpus.assoc.sel) <- c("N+V Unit", "Assoc.", "Rel.")
-corpus.assoc.sel <- corpus.assoc.sel[, 1:3]
-@
-
-\begin{table}[!htbp]
-  \begin{minipage}{.45\textwidth}
-    \centering
-    <<corpusassoctablehi, results="asis">>=
-    corpus.assoc.hi <- xtable(corpus.assoc.sel[1:10,], digits = 3)
-    print(corpus.assoc.hi,
-          include.rownames=F,
-          floating = F,
-          table.placement = 'h!',
-          booktabs = T,
-          scalebox = 0.9,
-          sanitize.text.function = function(x){x}
-    )
-    @
-  \end{minipage}\hspace{1em}\begin{minipage}{.45\textwidth}
-    \centering
-    <<corpusassoctablelo, results="asis">>=
-    corpus.assoc.lo <- xtable(corpus.assoc.sel[30:21,], digits = 3)
-    print(corpus.assoc.lo,
-          include.rownames=F,
-          floating = F,
-          table.placement = 'h!',
-          booktabs = T,
-          scalebox = 0.9,
-          sanitize.text.function = function(x){x}
-    )
-    @
-  \end{minipage}
-  \caption{Top ten N+V units with a strong tendency for univerbation (left panel) and top ten N+V units with a strong tendency against univerbation (right panel)}
-  \label{tab:corpusassocslohi}
-\end{table}
-
-<<corpusassoctablenull, results="asis", >>=
-corpus.assoc.null <- xtable(corpus.assoc.sel[11:20,], digits = 3,
-                            caption = paste0("Top ten N+V units without any tendency for or against univerbation"),
-                            label = "tab:corpusassoctablenull")
-# Print the table.
-print(corpus.assoc.null,
-      include.rownames=F,
-      floating = T,
-      table.placement = '!htbp',
-      booktabs = T,
-      scalebox = 0.9,
-      sanitize.text.function = function(x){x},
-)
-@
-
-
-Among the units with an argument relation, it is difficult to tell based on native-speaker intuition why the ones in Table~\ref{tab:corpusassoctablenull} should have no preference and the ones in Table~\ref{tab:corpusassocslohi} (right panel) should resist univerbation.
-This goes to show that, while we can model the tendencies to some extent using linguistic features, there are obvious item-specific effects which should be taken seriously from a theoretical perspective (which is why Collostructional Analysis was introduced), and which must be accounted for in behavioural experiments.
-We turn to such an experiment in Section~\ref{sec:elicitedproductionofnounverbunitsinwrittenlanguage}.
-However, we first report a full statistical model of the influencing factors derived from the corpus data in Section~\ref{sub:results1multilevelmodel}.
+While
 
 \subsection{Results 2: Multilevel model}
 \label{sub:results1multilevelmodel}
@@ -216,7 +158,7 @@ We decided to break down the possible morphosyntactic contexts into four types:
   \item{\label{continf}  adjunct \textit{zu} infinitives (see example \ref{ex:disjunctspelling4}),}
   \item{\label{contpart} participles as complements of auxiliaries (see example \ref{ex:disjunctspelling3}),}
   \item{\label{contprog} the so-called \textit{am} progressive (see example \ref{ex:disjunctspelling5}),}
-  \item{\label{contnp}   full NPs (see example \ref{ex:disjunctspelling7}).}
+  \item{\label{contnp}   full NPs (see example \ref{ex:disjunctspelling6}).}
 \end{enumerate}
 
 \vspace{\baselineskip}
@@ -316,20 +258,16 @@ corpus.glmm.fx.context <- plot(ef.context,
                               colors = c("black", "black"),
                               main = "",
                               ylab = "Probability of univerbation",
-                              xlab = "Context")
+                              xlab = "Morphosyntactic context")
 
 ef.rel <- effect("Relation", corpus.glmm, KR = T)
 ef.rel$variables$Relation$levels <- c("Argument", "Undetermined", "Oblique")
 levels(ef.rel$x$Relation) <- c("Oblique", "Argument", "Undetermined")
-  # "Undetermined", "Argument", "Oblique") 1-3-2
-  # "Undetermined", "Oblique", "Argument") 2-3-1
-  # "Argument", "Undetermined", "Oblique") 3-1-2
-  # "Argument", "Oblique", "Undetermined") 3-2-1
 corpus.glmm.fx.relation <- plot(ef.rel,
                                 rug=F, colors = c("black", "black"),
                                 main="",
                                 ylab="Probability of univerbation",
-                                xlab="Relation"
+                                xlab="Lexical relation"
 )
 grid.arrange(corpus.glmm.fx.context, corpus.glmm.fx.relation, ncol=2)
 @

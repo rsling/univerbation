@@ -39,7 +39,7 @@ N+V units with different affinities towards compound spelling like \textit{Rad f
 \footnote{The orthographic norm is notoriously unstable with respect to N+V units, which contributes to their unclear status.
 Before the significant reform of the orthographic norm in 1996, both \textit{radfahren} and \textit{eislaufen} were supposed to be spelled as one word.
 After the reform, both units were supposed to be written as two words (\textit{Eis laufen} and \textit{Rad fahren}).
-After a revision of the reform in 2006, \textit{eislaufen} was again supposed to be spelled as one word, whereas \textit{Auto fahren} was supposed to be spelled as two words exclusively (\citealt[32]{Primus2010}, \citealt[356]{Eisenberg2020a}).
+After a revision of the reform in 2006, \textit{eislaufen} was again supposed to be spelled as one word, whereas \textit{Fahrrad fahren} was supposed to be spelled as two words exclusively (\citealt[32]{Primus2010}, \citealt[356]{Eisenberg2020a}).
 From experience, we know that the norm is often not adhered to, and the data presented in Sections~\ref{sec:corpusbasedanalysisoftheusageofnvunits} and~\ref{sec:elicitedproductionofnounverbunitsinwrittenlanguage} strongly corroborate this experience.}
 This indeterminacy means that speakers have both the syntagmatic realisation (disjunct spelling) and the morphological realisation (compound spelling) in their graphemic input, which subsequently leaves them with quite a free choice to be made based on how a concrete item is classified according to their individual grammar.
 It is the task of usage-based probabilistic graphemics to uncover factors influencing such decisions and decode the principles at work in speakers' internal grammar by analysing their writing habits (see \selfcitealt{SchaeferSayatz2016}).
@@ -108,7 +108,7 @@ The dominant pattern of noun--noun attribution had been a prenominal genitive as
 To the extent that prenominal attribution in syntax became more and more obsolete, the prenominal position was used to establish the highly productive morphological construction of N+N compounds as in (\ref{ex:nncompoundsa}) (see \citealt[132]{NueblingEa2017}, \citealt{Schluecker2012}), which showed a tendency to be written in compound spelling very early on \parencite[34--36]{DueckerSzczepaniak2017}.
 The N+N compound construction is semantically at least as unspecific as the syntactic genitive construction to which it is diachronically related (\citealt[239]{Eisenberg2020a}).
 Its recursive application is virtually unrestricted \parencite[504]{Wurzel1994}.
-\Ni\ and \Nii\ are are just concatenated as bare stems in most cases, but there are also so-called linking elements, which are sometimes positioned in between the stems.%
+\Ni\ and \Nii\ are just concatenated as bare stems in most cases, but there are also so-called linking elements, which are sometimes positioned in between the stems.%
 \footnote{A recent large-scale study \parencite[339]{SchaeferPankratz2018} showed that 60\% of all N+N compound types have no linking element, whereas 40\% have one of several possible linking elements.}
 Diachronically, linking elements stem from diverse sources, but the overall pattern of inserting them is related to the former morphological marking in prenominal genitives \parencite[55--57]{NueblingEa2017}.
 
@@ -167,10 +167,18 @@ It's either an argument relation or an oblique relation where all distributional
 As a consequence, there is always a syntactic paraphrase for N+V units with an oblique relation where the noun occurs in a prepositional phrase which is an adjunct to the verb.%
 \footnote{Pragmatically, these paraphrases might often be subject to blocking because of the availability of the N+V construction.
 However, this does not make them syntactically or semantically unacceptable.}
-See (\ref{ex:paraphrase}) for an example.
 
 \begin{exe}
-  \ex\label{ex:paraphrase}
+  \ex\label{ex:paraphrase-arg}
+  \begin{xlist}
+    \ex\gll Kim will {(*eine} {Tasse)} teetrinken.\\
+    Kim wants {(a} {cup)} {tea drink}\\
+    \trans Kim wants to drink tea.
+    \ex\gll Kim will(eine Tasse) Tee trinken.\\
+    Kim wants {(a} {cup)} tea drink\\
+    \trans Kim wants to drink (a cup of) tea.
+  \end{xlist}
+  \ex\label{ex:paraphrase-obl}
   \begin{xlist}
     \ex\gll Kim will die Corvette probefahren.\\
     Kim wants the Corvette test.drive\\
@@ -226,7 +234,7 @@ Such losses of referential autonomy and syntactic combinatorics are referred to 
 The loss of specificity and referential autonomy as well as the acquisition of a generic reading are part of the semantics of the N+V construction (see also \citealt[287]{Gallmann1999}, \citealt[108]{BredelGuenther2000}, \citealt[354]{Eisenberg2020a}).
 Functionally, the construction exists in order to express the new event concept which requires the generic\slash unspecific reading of the noun.
 Thus, the noun has the properties typical of nouns that are subject to incorporation of the lexical compounding type.
-In contrast with the factors that prevent univerbation and make N+V units reluctabt compounds, this is a factor that we assume to facilitate their univerbation.
+In contrast with the factors that prevent univerbation and make N+V units reluctant compounds, this is a factor that we assume to facilitate their univerbation.
 
 In the next section, we will summarise the factors that influence the tendency of N+V units to undergo univerbation.
 These factors will then be analysed in the empirical work to be reported in Sections~\ref{sec:corpusbasedanalysisoftheusageofnvunits} and~\ref{sec:elicitedproductionofnounverbunitsinwrittenlanguage}.

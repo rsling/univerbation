@@ -9,24 +9,9 @@ opts_knit$set(self.contained=FALSE)
 For participles as mixed categories, see \citet{BorikGehrke2019}.
 
 
-% Warum keine Fugen im Experiment? – Nicht kontrollierbar wegen Probandenzahl.
-%
 % Rückbildungsmuster (evt. bei Fugen-Komposita), vgl. Hüning.
 % Zwangsernähren als Beispiel, dass es möglich ist inkl. finiter Formen
 %
-% S. 23, (iv) Example is 2g not 2h
-%
-% S. 15 reluctabt
-%
-% half-werfon => halswerfon, "turn"
-%
-% S. 13: 10a and 10b are sxx. only for oblique, add argument
-%
-% S. 11 "are are"
-%
-% Fn 13 "Auto fahren" => "Fahrrad fahren"
-
-
 %
 % Kontext und Relation sind die relevanten Faktoren für Univerbierungstendenz in beiden Datenquellen.
 %

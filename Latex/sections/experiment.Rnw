@@ -16,17 +16,7 @@ Section~\ref{sub:resultsexperiment} reports the results descriptively and in the
 The goal of the experiment was to corroborate the findings from the corpus study and to test whether writers' behaviour under controlled experimental conditions is similar to the behaviour of writers under uncontrolled circumstances as found in corpora.
 We used pre-recorded auditory stimuli in order to elicit spellings of given N+V units.
 The stimuli were chosen based on theoretically motivated criteria and the information about item-specific tendencies obtained from the exploratory part of the corpus study in Section~\ref{sub:results2associationastrengths}.
-We constructed eight sentences instantiating the four contexts described in Section~\ref{sub:results1multilevelmodel}.
-For each of the four contexts, we chose one N+V unit with a high and one with a low attraction strength according to the analysis of the usage data.%
-\footnote{Given the overall constraints on the choice of the items, ``low'' and ``high'' had to be interpreted as quite relative terms.
-However, we made sure that all low attractions scores are lower than zero and all high attraction scores are greater than zero.
-Also, for each context, the low and the high attraction score differ by at least 0.05.
-In the statistical analysis of the experimental data, we used the actual attraction strength as a covariate instead of a binary factor, which compensates for problems in the choice of stimuli.}
-The sentences were constructed in a ways such that all N+V units were the predicate of a subordinate clause.
-This consistently ensured verb-last constituent order and avoided interfering verb-second effects, which are typical of independent sentences in German.
-The stimui with full glosses are given in Appendix~\ref{sec:sentencesusedintheexperiment}.
-An overview of the item design is shown in Table~\ref{tab:designtable}, where each line represents the features of one of the eight items.
-Since the relation follows the high\slash low attraction dichotomy perfectly, we specify it in the table, but we did not include it in the statistical analysis to stay clear of problems with collinearity.
+We constructed eight sentences instantiating the four morphosyntactic contexts crossed with the two semantic relations described in Section~\ref{sub:results1multilevelmodel}.
 
 <<experimentdesign, results="asis">>=
 
@@ -43,6 +33,9 @@ colnames(designtable) <- c("Context", "N+V unit", "Attr. score", "Bin. attr.", "
 
 designtable <- designtable[, c("Context", "Relation", "N+V unit", "Attr. score")]
 
+# Order by context alphabetically.
+designtable <- designtable[order(as.character(designtable$Context)),]
+
 designtable.ctx <- xtable(designtable, digits = 3,
                           caption = "Items from the experiment, chosen by context and relation, with control for lexical attraction scores.",
                           label = "tab:designtable")
@@ -55,12 +48,23 @@ print(designtable.ctx,
       sanitize.text.function = function(x){x}
 )
 
-
+attr.dist <- function(context) {
+  round(designtable[which(designtable$Context==context & designtable$Relation=="Oblique"), "Attr. score"] -
+    designtable[which(designtable$Context==context & designtable$Relation=="Argument"), "Attr. score"], 3)
+}
 @
 
+An overview of the item design is shown in Table~\ref{tab:designtable}, where each line represents the features of one of the eight items.
+In order to control for differences in lexical preferences, the concrete pairs of N+V units used in each context were chosen such that the contrast in lexical preference (see Section~\ref{sub:results2associationastrengths}) for and against univerbation was as substantial as possible.
+As expected, units with an argument relation have negative attraction scores, and ones with an object relation have positive scores (see column ``Attr. score'' in Table~\ref{tab:designtable}).
+For each context, we selected pairs where the difference between the scores was larger than $0.05$.
+Except for the infinitive context (difference \Sexpr{attr.dist("Infinitive")}), we managed to find pairs for which the difference is actually above $0.1$ (NP: \Sexpr{attr.dist("NP")}, Participle: \Sexpr{attr.dist("Participle")}, Progressive: \Sexpr{attr.dist("Progressive")}).
 
-We added 32 fillers, resulting in a total of forty sentences being read to the participants.%
-\footnote{Of the forty fillers, six were actually items from an unrelated experiment.}
+The sentences were constructed in a way such that all N+V units were the predicate of a subordinate clause.
+This consistently ensured verb-last constituent order and avoided interfering verb-second effects, which are typical of independent sentences in German.
+The stimui with full glosses are given in Appendix~\ref{sec:sentencesusedintheexperiment}.
+Furthermore, we added 32 fillers, resulting in a total of forty sentences being read to the participants.%
+\footnote{Of the forty fillers, six were actually target items from an unrelated experiment.}
 Of the forty sentences, twenty (including the target items) had to be written down by the participants.
 The order of the target items was randomised, but it was ensured that there were at least three sentences in between two target stimuli.
 There were nine distractors in the form of yes-no questions related to random sentences previously heard by the participants.
@@ -74,7 +78,6 @@ There were two separate groups (\Sexpr{nrow(exp.w1)} and \Sexpr{nrow(exp.w2)} pa
 \label{sub:resultsexperiment}
 
 In this section, we report the parameter estimates of a GLMM with additional control for individual participants in the form of a random effect.
-Instead of using a grouping variable for the N+V units, we included their association strengths directly in the model.
 The model specification in R notation is given in (\ref{eq:expglmmformula}).
 Appendix~\ref{sec:specifictionoftheexperimentglmm} provides the specification mathematical notation.
 The coefficient estimates for the GLMM are reported in Table~\ref{tab:experimentglmm}.
@@ -96,8 +99,6 @@ experiment.fixefs <- fixef(experiment.glmm)
 experiment.confints <- confint(experiment.glmm)
 experiment.glmm.r2 <- r.squaredGLMM(experiment.glmm)
 @
-
-
 
 
 <<experimentglmmreport, results="asis">>=
@@ -125,11 +126,10 @@ print(experiment.ctx,
 
 @
 
-There is some variation between writers as captured in the standard deviation of the conditional modes ($\Sexpr{nice.float(ranef.participant$sd)}$), but the small difference between the marginal $R^2$ ($\Sexpr{nice.float(experiment.glmm.r2[1,1])}$) and the conditional $R^2$ ($\Sexpr{nice.float(experiment.glmm.r2[1,2])}$) suggests that speaker variation does not explain much of the variance in the the data.
+There is some variation between writers as captured in the standard deviation of the conditional modes ($\Sexpr{nice.float(ranef.participant$sd)}$), but the small difference between the marginal $R^2_m$ ($\Sexpr{nice.float(experiment.glmm.r2[1,1])}$) and the conditional $R^2_c$ ($\Sexpr{nice.float(experiment.glmm.r2[1,2])}$) suggests that speaker variation does not explain much of the variance in the the data.
 This corroborates our assumption from Section~\ref{sec:introduction} that the phenomenon is not about individuals mastering the norm to different degrees or having different preferences when it comes to univerbation.
 Instead, the major deciding factors are the ones predicted by our theoretical model.
 
-% The coefficients indicate that the attraction strength derived from the corpus is positively correlated with the participants' tendency to univerbate ($\Sexpr{nice.float(experiment.ct["Attraction", "Estimate"])}$).
 There seems to be no evidence that the participle has a different effect than the infinitive (which is on the intercept) given the large confidence interval ($[\Sexpr{nice.float(experiment.ct["ContextParticiple", "CI low"])}..\Sexpr{nice.float(experiment.ct["ContextParticiple", "CI high"])}]$).
 On the other hand, progressives ($\Sexpr{nice.float(experiment.ct["ContextProgressive", "Estimate"])}$) and NPs ($\Sexpr{nice.float(experiment.ct["ContextNP", "Estimate"])}$) clearly have a much more positive effect on the probability of univerbation.
 Again, we do not see evidence for a any difference between NP and progressive contexts given the large and overlapping confidence intervals.
@@ -147,7 +147,7 @@ experiment.glmm.fx.context <- plot(experiment.glmm.fx.context.fx, rug=F, colors 
 experiment.glmm.fx.relation <- plot(effect("Relation", experiment.glmm, KR = T), rug=F, colors = c("black", "black"),
                                     main="",
                                     ylab="Probability of univerbation",
-                                    xlab="Relation"
+                                    xlab="Lexical relation"
 )
 grid.arrange(experiment.glmm.fx.context, experiment.glmm.fx.relation, ncol=2)
 
@@ -156,7 +156,7 @@ grid.arrange(experiment.glmm.fx.context, experiment.glmm.fx.relation, ncol=2)
 The effect plots in Figure~\ref{fig:experimentfx} (left panel) provides a visual interpretation of the coefficient table.
 The prototypically verbal contexts are associated with low probabilities of univerbation, the two prototypically nominal ones with high probabilities of univerbation.
 Judging by the large and mostly overlapping confidence intervals, there is no support for assuming a substantial difference between participles and infinitives on the one hand and progressives and NPs on the other hand.
-The attraction scores are neatly correlated with the probability of univerbation (right panel of Figure~\ref{fig:experimentfx}).
+The two semantic relation are correlated with the probability of univerbation as expected (right panel of Figure~\ref{fig:experimentfx}).
 
 In sum, the experiment supports our theoretically motivated hypotheses, and it corroborates the results from the corpus study.
 We proceed to a final analysis of the phenomenon at in the light of our findings in Section~\ref{sec:explainingnounverbuniverbation}.
