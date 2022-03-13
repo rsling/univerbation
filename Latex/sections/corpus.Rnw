@@ -270,7 +270,7 @@ corpus.glmm.fx.relation <- plot(ef.rel,
                                 rug=F, colors = c("black", "black"),
                                 main="",
                                 ylab="Probability of univerbation",
-                                xlab="Lexical relation"
+                                xlab="Semantic relation"
 )
 grid.arrange(corpus.glmm.fx.context, corpus.glmm.fx.relation, ncol=2)
 @

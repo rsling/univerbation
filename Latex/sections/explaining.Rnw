@@ -18,7 +18,7 @@ For participles as mixed categories, see \citet{BorikGehrke2019}.}
 The same goes for the \textit{am}-progressive, which in our data behaves exactly like any other nominal construction.
 If it really is an emerging verbal syntagma \citep{AnthonissenEa2016}, this has no consequences for the NP status of the nominal element contained in it: it still behaves like a full NP in the context of the copula, at least in our data.
 
-<<verbtendencies, results="asis", fig.showtext=TRUE, fig.pos="htbp", fig.height=4, fig.cap="Attraction scores for N+V units with four different lexical verbs (\\textit{machen} `to make\\slash do', \\textit{laufen} `to run\\slash walk', \\textit{schießen} `to shoot', \\textit{springen} `to jump'); $n$ is the number of N+V units with the respective V head">>=
+<<verbtendencies, results="asis", fig.showtext=TRUE, fig.pos="htbp", fig.height=4, fig.cap="Distribution of attraction scores for N+V units with four different lexical verbs (\\textit{machen} `to make\\slash do', \\textit{laufen} `to run\\slash walk', \\textit{schießen} `to shoot', \\textit{springen} `to jump'); $n$ is the number of N+V units with the respective V head in our corpus data">>=
 par(mfrow=c(2,2), mar=c(2,2,2,2))
 hist.machen <- hist(na.omit(concordance[which(concordance$Verb=="machen"), "all.assocs"]),
                     xlim=c(-0.15,0.1), ylab="",

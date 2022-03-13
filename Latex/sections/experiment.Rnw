@@ -148,7 +148,7 @@ experiment.glmm.fx.context <- plot(experiment.glmm.fx.context.fx, rug=F, colors 
 experiment.glmm.fx.relation <- plot(effect("Relation", experiment.glmm, KR = T), rug=F, colors = c("black", "black"),
                                     main="",
                                     ylab="Probability of univerbation",
-                                    xlab="Lexical relation"
+                                    xlab="Semantic relation"
 )
 grid.arrange(experiment.glmm.fx.context, experiment.glmm.fx.relation, ncol=2)
 
