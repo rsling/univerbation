@@ -50,12 +50,13 @@ The order of the sentences corresponds to Table~\ref{tab:designtable}.
 \label{sec:fullspecificationofthemodels}
 
 In Section~\ref{sub:results1multilevelmodel}, the specification of the model was given in R notation as (\ref{eq:corpusglmmr}), repeated here as (\ref{eq:corpusglmmr2}).
-Another model was specified in Section~\ref{sub:resultsexperiment} as (\ref{eq:expglmmformula}) and repeated here as (\ref{eq:expglmmformula2}).
 
 \begin{equation}
   \mathtt{Univerbation\sim (1|NVUnit)+Context+Relation}
   \label{eq:corpusglmmr2}
 \end{equation}
+
+Another structurally identical generalized linear mixed model was specified in Section~\ref{sub:resultsexperiment} as (\ref{eq:expglmmformula}) and repeated here as (\ref{eq:expglmmformula2}).
 
 \begin{equation}
   \mathtt{Univerbation\sim (1|Participant)+Context+Relation}

@@ -6,20 +6,17 @@ opts_knit$set(self.contained=FALSE)
 \section{Explaining noun-verb univerbation}
 \label{sec:explainingnounverbuniverbation}
 
-% Kontext und Relation sind die relevanten Faktoren für Univerbierungstendenz in beiden Datenquellen.
-% Progressiv: Verhält sich wie eine NP mit Kopula. Steht sowieso immer nominal mit Kopula.
-% Der Kopula-Kontext ist stark nominal. Kopula ist kein sonstwie geartetets HV in diesem Kontext.
-% For participles as mixed categories, see \citet{BorikGehrke2019}.
+We have shown convincing evidence from corpora and controlled production experiments that the morphosyntactic context and the semantic relation are the crucial influencing factors on the graphemic univerbation of N+V units in German.
+Prototypically verbal contexts (infinitives and participles) disfavour univerbation, while prototypically nominal contexts (normal NPs and the so-called progressive, which contains a normal NP) favour univerbation.
+As we have argued, the nominal contexts enable the interpretation of the N+V unit as a proper compound (a morphological construction), while the verbal contexts are linked to a syntactic\slash phrasal interpretation.
+The results are fully compatible with such an analysis.
+Furthermore, an argument relation between the V and the N within the N+V units disfavours univerbation because the N+V unit is closer to the regular syntactic construction than its counterpart with an oblique relation.
+For the oblique relation, a syntactic construction is barely accessible because it would normally require a preposition to mark the relation.
 
-One aspect we have not yet discussed is the influence of the semantics of the verb.
-Figure~\ref{fig:verbtendencies} shows the distribution of N+V units with four selected head verbs.%
-\footnote{These plots are much like the one in Figure~\ref{fig:associationsall}.
-However, the lower number of data points makes it infeasible to estimate a density curve.
-Instead, histograms were plotted.}
-The verb \textit{machen} `to make\slash do' clearly creates N+V units with weaker tendencies towards univerbation, while \textit{laufen} `to run\slash walk' and \textit{werfen} `to throw' do not show a clear tendency, and \textit{springen} `to jump' has a tendency towards univerbation.
-This might be an indication that semantically weak verbs like \textit{machen} resist univerbation.
-However, the number of N+V units for each verb is too low to make any sound inferences, and an analysis in terms of verb types would be necessary.
-Given the difficulty of determining the appropriate semantic verb classes, we save this for future work.
+The fact that we could not find evidence for a difference in tendencies between the infinitive and participle speaks against a mixed verbal\slash nominal status of the participle in this specific construction, which does not preclude such a mixed status in other contexts.\footnote{%
+For participles as mixed categories, see \citet{BorikGehrke2019}.}
+The same goes for the \textit{am}-progressive, which in our data behaves exactly like any other nominal construction.
+If it really is an emerging verbal syntagma \citep{AnthonissenEa2016}, this has no consequences for the NP status of the nominal element contained in it: it still behaves like a full NP in the context of the copula, at least in our data.
 
 <<verbtendencies, results="asis", fig.showtext=TRUE, fig.pos="htbp", fig.height=4, fig.cap="Attraction scores for N+V units with four different lexical verbs (\\textit{machen} `to make\\slash do', \\textit{laufen} `to run\\slash walk', \\textit{schießen} `to shoot', \\textit{springen} `to jump'); $n$ is the number of N+V units with the respective V head">>=
 par(mfrow=c(2,2), mar=c(2,2,2,2))
@@ -42,25 +39,54 @@ hist.springen <- hist(na.omit(concordance[which(concordance$Verb=="springen"), "
 par(mfrow=c(1,1))
 @
 
-% How productive is the N+V incorporation? Further studies required.
-% Oblique relation is not productive, argument
-% In diesem Zusammenhang (Produktivität): Sind das teilweise Rückbildungen?
-% Rückbildungsmuster (evt. bei Fugen-Komposita), vgl. Hüning.
-% Zwangsernähren als Beispiel, dass es möglich ist inkl. finiter Formen
+One aspect we have not yet discussed is the influence of the semantics of the verb.
+As a form of preliminary exploratory analysis, Figure~\ref{fig:verbtendencies} shows the distribution of N+V units with four selected head verbs.%
+\footnote{These plots are much like the one in Figure~\ref{fig:associationsall}.
+However, the lower number of data points makes it infeasible to estimate a density curve.
+Instead, histograms were plotted.}
+The verb \textit{machen} `to make\slash do' clearly creates N+V units with weaker tendencies towards univerbation, while \textit{laufen} `to run\slash walk' and \textit{werfen} `to throw' do not show a clear tendency, and \textit{springen} `to jump' has a tendency towards univerbation.
+This might be an indication that semantically weak verbs like \textit{machen} resist univerbation.
+However, the number of N+V units for each verb is too low to make any sound inferences, and an analysis in terms of (semantic) verb \textit{classes} would be necessary.
+Given the difficulty of determining the appropriate verb classes, we save this for future work.
 
-% Does not work with prepositional objects. *vorurteilsgelitten
-% Not very productive with adjuncts. *brückengestanden
-% Mention difference: object is related to argument structure of the verb, adjunct is not.
-% Hüning: Was ist der Unterschied zwischen AN-Komp und Phrase. Beim Komp gibt es einen Namen (=Denotat), bei der PHrase eine Deskription
+Another point that needs further examination is the productivity of the N+V construction.
+Intuitively and from looking at the data, it appears that the units with an oblique relation are formed much more productively compared to the ones with an oblique relation.
+If the ones with an oblique relation are formed less productively, they should be more strongly lexicalised, which might be a reason for their stronger tendency to univerbate.
+Related to the question of productivity, we might ask whether some of the N+V units are actually the result of back formation processes.
+For example, the verb \textit{zwangsernähren} `to force feed' is likely a back formation of the N+N compound \textit{Zwangsernährung} `force feeding' (with \textit{Ernährung} `feeding' being derived from \textit{ernähren} `to feed'), and it now appears as a N+V unit with the full array of finite and infinite verb forms.
+It is difficult to quantify the effect of such back formations on the present study.
+Clearly, further diachronic and synchronic research is required.
 
-% As a clear indicator of full conversion of the verb to a noun and thus a clear indicator of compounding is the presence of a linking element in between the two parts of the N+V unit, such as in \textit{Leistungsschießen} `(high) performance shooting\slash competitive shooting' (or \textit{leistungsgeschossen} in the participle, etc.).
-% Such linking elements are otherwise exclusive to N+N compounds (see Section~\ref{sub:nncompounds}) and should thus indicate full nominalisation of V.
-% The fact that such linking elements also occur in clearly verbal forms of N+V units (such as \textit{leistungsgeschossen}) is perplexing.
-% These cases are rare, however, and we suspect that they are the result of some type of back-formation, where a fully nominalised N+V unit is re-analysed as a verbal N+V unit.
-% The infrequency of the phenomenon makes it hard to assess in the present study, and we do not go into more detail.
+A final point we have not discussed prominently is the presence of so-called linking elements.
+They normally only appear between the nouns in N+N compounds, and while many of them look like plural markers of the first noun (\textit{Tontaubenschießen} `clay pigeon shooting' analysed as \textit{Tontaube-n-schießen}, argument relation), others do not even look like inflectional forms of the first noun (\textit{Leistungsschießen} `(high) performance shooting\slash competitive shooting' analysed as \textit{Leistung-s-schießen}, oblique relation).
+Interestingly, these linking elements occur in some N+V units, but only in a minority.
+Table~\ref{tab:linkers} shows which linking elements we found in our sample, and in how many of the units they occurred.
 
-% mögliche Weiterführung: Wortakzentuntersuchung. Ist Kompositionsakzent da?
-% ZB Diktatexperiment mit Kompositionsexperiment.
-% Aber Achtung: "Ich habe TORE geschossen" kann auch komntrastiver Fokus sein.
+\begin{table}[!htbp]
+\centering
+  \begin{tabular}{llr}
+    \toprule
+    Linking element & Plural-like & N+V units \\
+    \midrule
+    (None) & No  & \Sexpr{table(concordance$Linking)["0"]} \\
+    -s     & No  & \Sexpr{table(concordance$Linking)["s"]} \\
+    \midrule
+    -(e)n  & Yes & \Sexpr{table(concordance$Linking)["en"]+table(concordance$Linking)["n"]} \\
+    -e     & Yes & \Sexpr{table(concordance$Linking)["e"]+table(concordance$Linking)["~e"]} \\
+    -er    & Yes & \Sexpr{table(concordance$Linking)["er"]+table(concordance$Linking)["~er"]} \\
+    \bottomrule
+  \end{tabular}
+  \caption{Linking elements and the number of N+V units they occur in}
+  \label{tab:linkers}
+\end{table}
 
+In principle, the linking element should be a very clear indicator of a fully nominal status and favour univerbation.
+However, they occur readily at least in infinite verb forms like \textit{leistungsgeschossen} (participle), which means the linking element is adopted outside of its primary domain (nominal compounds), \ie in verb forms.
+This might be yet another indication that we are dealing with back formation processes in some of these cases.
+In most of the cases with linking elements, a direct interpretation as a plural is also conceivable, and clearly, further research could shed light on this question.
 
+In closing, we would like to posit that the kind of data that we find with respect to N+V units can only be explained satisfyingly within a usage-based probabilistic framework.
+It is clearly the function of the space in German writing to separate syntactic words, and hence univerbation is best explained as corresponding to the loss of syntactic independence and a crossing over to morphology.
+As the effect is clearly gradual (both diachronically and in the grammar of present-day writers), a probabilistic approach to grammar and the grammar-graphemics interface is required.
+The fact that we can name the influencing factors and provide a statistical model of their \textit{systematic} (albeit non-categorical) strengths is very strong evidence for the alternation being encoded in cognitive grammars and not a processing effect or mere ``performance''.
+We are confident that future work will uncover many more probabilistic graphemics-grammar mappings like the one we discuss in this paper.

@@ -49,7 +49,7 @@ See \citet{Berg2016} for a compatible fundamental argument independent of a conc
 
 \subsection{Introducing N+V units in German}
 
-The alternation we are going to explore affects units containing a verb and a noun, and these units alternate between a syntactic manifestation (where the noun combines with the verb via a syntactic relation) and a morphological one (where the noun is incorporated into the verb).
+The alternation we are going to explore affects units containing a verb and a noun, and these units alternate between a syntactic manifestation (where the noun combines with the verb via a syntactic mechanism) and a morphological one (where the noun is incorporated into the verb).
 We will argue that alternations in spelling provide evidence for the grammatical status of the instances of the construction.
 Simple examples not showing the alternation are given in (\ref{ex:introexamples}).
 
