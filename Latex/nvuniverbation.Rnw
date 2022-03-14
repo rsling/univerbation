@@ -107,8 +107,12 @@
   }
 }
 
-\addbibresource{rs.bib}
-% \addbibresource{nvuniverbation.bib} % Generate using: biber nvuniverbation --output_format bibtex
+% \addbibresource{rs.bib}
+\addbibresource{nvuniverbation_biber.bib} % Generate using: biber nvuniverbation --output_format bibtex
+
+% Fix non-breaking DOIs.
+\setcounter{biburllcpenalty}{7000}
+\setcounter{biburlucpenalty}{8000}
 
 \begin{document}
 
@@ -203,11 +207,17 @@ nice.int <- function(n) formatC(n, format="d", big.mark=",")
 \maketitle
 
 \begin{abstract}
-  \ldots
+  The principles of usage-based grammar are rarely applied to graphemic phenomena.
+  We argue that graphemic variation---at least in some writing systems---can be analysed in terms of grammatical variation Given a usage-based probabilistic view of the grammar-graphemics interface.
+  Concretely, we examine a type of noun + verb units in German which can be written as one word or two words.
+  We argue that the variation in writing is rooted in the units' ambiguous status in between morphology (one word) and syntax (two words).
+  The major influencing factors are shown to be the semantic relation between the noun and the verb (argument or oblique relation) and the morphological context.
+  In prototypically nominal contexts, a re-interpretation as a noun + noun compound is facilitated, which favours spelling as one word, while in prototypically verbal contexts, a syntagmatic realisation and consequently spelling as two words is preferred.
+  We report the results of a large-scale corpus study and a controlled production experiment to corroborate our analysis.
 \end{abstract}
 
 \begin{keywords}
-  univerbation, prototypes, corpus data, experiments, German
+  univerbation, usage-based theory, prototypes, corpus data, experiments, German
 \end{keywords}
 
 \rmfamily

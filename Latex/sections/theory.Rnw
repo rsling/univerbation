@@ -28,9 +28,9 @@ Unlike in English, compound spelling of syntactic words comprising more than one
 However, there is a heterogeneous group of multi-word constructions for which only a tendency towards compound spelling can be observed (\citealt[95]{Szczepaniak2009}, \citealt[335]{Wurzel1998}).
 As opposed to N+N compounds, these constructions typically consist of words with different parts of speech, such as \textit{mithilfe} (\textit{von}) (`with the help (of)') from \textit{mit der Hilfe} (\textit{von}) or \textit{zuhause} (`at home') from \textit{zu} \textit{Hause}.%
 \footnote{Normative approaches as well as individuals display a lot of variation with respect to at least some of those constructions (cf.\ below).}
-For such cases, \citet[2]{Lehmann2021} posits a ``downgrading of a syntactic to a morphological boundary'' between the two words.
+For such cases, \citet[206]{Lehmann2020} posits a ``downgrading of a syntactic to a morphological boundary'' between the two words.
 When writers use compound spelling in these cases, they choose to encode the construction as a single word with a morphological boundary instead of a sequence of words with a syntactic boundary.
-If many speakers consistently make this choice over a significant period of time, the unit might become lexicalised  as a single word \parencite[7]{Lehmann2021}.
+If many speakers consistently make this choice over a significant period of time, the unit might become lexicalised  as a single word \parencite[212]{Lehmann2020}.
 Until such a diachronic process is complete and one of the spellings has become clearly dominant, lexicalisation does not provide a very strong input to writers, and the item alternates between a syntactic and a morphological realisation.
 For many of these constructions, this is the case both in non-standard as well as standard written German, albeit to different degrees.%
 \footnote{We are not aware of any published research systematically comparing the alternation tendencies in standard and non-standard written German.}
@@ -63,7 +63,7 @@ We sum up our arguments and derive our hypotheses for the empirical studies in S
 \subsubsection{N+N compounds}
 \label{sub:nncompounds}
 
-For an N+V unit to undergo graphemic univerbation (\ie a downgrading of a syntactic to a morphological construction in the sense of \citealt[2]{Lehmann2021}) systematically, it must resemble one or more established morphological constructions closely enough to be classified as an instance of such constructions itself.%
+For an N+V unit to undergo graphemic univerbation (\ie a downgrading of a syntactic to a morphological construction in the sense of \citealt[206]{Lehmann2020}) systematically, it must resemble one or more established morphological constructions closely enough to be classified as an instance of such constructions itself.%
 \footnote{Random isolated univerbations like \textit{zuhause} `at home' from \textit{zu Hause} are not systematic in this sense.
 They are merely the result of idiosyncratic diachronic developments.}
 We posit that this follows from the assumed underlying learning mechanisms under a usage-based perspective.

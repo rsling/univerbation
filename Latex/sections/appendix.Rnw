@@ -40,12 +40,6 @@ The order of the sentences corresponds to Table~\ref{tab:designtable}.
 \end{exe}
 
 
-
-
-
-
-
-
 \section{Full specifications of the models}
 \label{sec:fullspecificationofthemodels}
 

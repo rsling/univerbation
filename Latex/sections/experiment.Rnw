@@ -79,7 +79,7 @@ There were two separate groups (\Sexpr{nrow(exp.w1)} and \Sexpr{nrow(exp.w2)} pa
 
 In this section, we report the parameter estimates of a GLMM modelling the behaviour of the participants in our experiment.
 The model specification in R notation is given in (\ref{eq:expglmmformula}).%
-\footnote{Appendix~\ref{sec:specifictionoftheexperimentglmm} provides the specification mathematical notation.}
+\footnote{Appendix~\ref{sec:fullspecificationofthemodels} provides the specification mathematical notation.}
 The coefficient estimates for the GLMM are reported in Table~\ref{tab:experimentglmm}.
 
 \begin{equation}

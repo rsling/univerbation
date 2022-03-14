@@ -15,9 +15,9 @@ We embrace all three assumptions and apply them to a graphemic alternation pheno
 UBG is rarely extended to graphemics in such a way, but we view graphemics as a component of the language faculty on a par with components such as phonetics and phonology, and we consequently believe that graphemics should be viewed under the usage-based umbrella.%
 \footnote{The huge body of work in different strains of linguistics based on popular corpora of written language has an intrinsic graphemic component, simply because written data are used.
 While it might not be problematic for most studies that this is rarely acknowledged, we consider it important to focus on this component as well.}
-While the phono-component comprises regularities of how grammar is encoded in speech sounds, graphemics comprises similar regularities of how grammar is encoded in written symbols.\roland{REFERENCE?}
-Whether and how strongly the phono-component and the graphemics component are intertwined is determined by the type of script and the specific language, where ideograph-based writing systems like early cuneiform Sumerian (virtually complete separation) and phonographic writing systems like German (substantial overlap) represent extremes on a continuous scale.\roland{REFERENCE?}
-For writing systems like German, the mappings to be learned include sounds to letters, parts of speech to spellings (\egg capitalisation), syntactic categories to spaces and punctuation marks, etc.\roland{REFERENCE?}\roland{REFERENCE FOR FN?}%
+While the phono-component comprises regularities of how grammar is encoded in speech sounds, graphemics comprises similar regularities of how grammar is encoded in written symbols.
+Whether and how strongly the phono-component and the graphemics component are intertwined is determined by the type of script and the specific language, where ideograph-based writing systems like early cuneiform Sumerian (virtually complete separation) and phonographic writing systems like German (substantial overlap) represent extremes on a continuous scale (see \citealt{Coulmas1996} for an overview).
+For writing systems like German, the mappings to be learned include sounds to letters, parts of speech to spellings (\egg capitalisation), syntactic categories to spaces and punctuation marks, etc. \parencite{Primus2010}.%
 \footnote{Notice that a probabilistic view does not necessarily imply that there are no discrete or virtually discrete mappings like the one-to-one mapping of consonantal segments to letters in German.
 Cases of discreteness can always be seen as extremes in a probabilistic system.}
 
@@ -136,14 +136,14 @@ The compound with the nominalised infinitive in (\ref{ex:compoundspelling7}) is 
 
 We call cases where a multi-stem unit is spelled as two words such as in (\ref{ex:disjunctspelling}) `disjunct spellings' and cases where a unit is spelled as one word as in (\ref{ex:compoundspelling}) `compound spelling'.
 We see that N+V units potentially undergo graphemic \textit{univerbation} in the form of compound spelling.
-\citet[2]{Lehmann2021} calls univerbation ``the union of two syntagmatically adjacent word forms in one''.
+\citet[206]{Lehmann2020} calls univerbation ``the union of two syntagmatically adjacent word forms in one''.
 We follow this terminology and assume univerbation to be the directly observable phenomenon, \ie compound spelling of adjacent words that could potentially also be used in disjunct spelling or were historically used in disjunct spelling.
 Historically, univerbation is a gradual process, and it can thus be a strongly probabilistic phenomenon due to the slowly changing grammatical and lexical system.
 However, univerbation per se is not necessarily the result of a regular grammatical pattern or process.%
 \footnote{
 For \citet[294]{Gallmann1999} univerbation is a diachronic process wherein a complex syntactic unit is reanalysed as a simplex syntactic unit.
 \citet[107]{Jacobs2005} regards graphemic univerbation as not rooted in a morphological process as they are not paradigmatic (no \textit{Reihenbildung}).
-\citet[4]{Lehmann2021} is closest to our position as he regards ``univerbation as a gradient process which displays phases of weaker and stronger univerbation''.
+\citet[209]{Lehmann2020} is closest to our position as he regards ``univerbation as a gradient process which displays phases of weaker and stronger univerbation''.
 According to him, it marked by the loss of morphological boundaries and phonological fusion.}
 Thus, a major aim of this paper is to show whether and how the univerbation of N+V units in German is based on an established morphological prototype construction wherein a noun is incorporated into a verb, forming a new verb expressing a new event concept.
 

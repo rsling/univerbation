@@ -18,11 +18,11 @@ As a first step, we adopted a data-driven approach in order to find close to all
 In a second step, we counted their occurrences in compound and disjunct spelling in the relevant morphosyntactic contexts enumerated in Section~\ref{sub:hypothesesfortheempiricalstudies}: fully nominalised as the heads of noun phrases, in \textit{am} progressives, as participles in analytical verb forms, and as infinitives in a range of verbal constructions.
 
 Clearly, a large corpus with rich morphological and morphosyntactic annotations containing texts written in a broad variety of registers and styles (including ones written under low normative pressure) was required.
-We chose the DECOW16B corpus \parencite{SchaeferBildhauer2012} because it fulfils all the aforementioned criteria.%
+We chose the DECOW16B corpus \parencite{SchaeferBildhauer2012a} because it fulfils all the aforementioned criteria.%
 \footnote{\url{https://www.webcorpora.org}}
 Much like the SketchEngine corpora \parencite{KilgarriffEa2014}, the COW corpora contain web documents from recent years.
 However, the German DECOW (containing 20.5 billion tokens in 808 million sentences and 17.1 million documents) offers a much wider range of annotations compared to SketchEngine corpora, including morphological annotations and several levels of syntactic annotation (dependencies and topological parses).
-For our purpose, the fully internal analysis of nominal compounds described in \textcite{SchaeferPankratz2018} was particularly of interest.
+For our purpose, the fully internal analysis of nominal compounds described in \citet{SchaeferPankratz2018} was particularly of interest.
 It allows for corpus searches of roots within nominal compounds.
 For example, we could query compounds with a deverbal head such as \textit{Zeitnehmen} (`time taking').
 
@@ -182,7 +182,7 @@ As there is a huge number of \Sexpr{nrow(concordance)} N+V units, the lexical in
 We specified a generalised linear mixed model with the N+V unit variable as a random effect.
 The variable encoding the internal relation is nested inside the levels of the random effect, and its is therefore treated as a second-level fixed effect in a multilevel model.
 In R notation, the specification is shown in (\ref{eq:corpusglmmr}).%
-\footnote{See Appendix~\ref{sec:specifictionofthecorpusglmm} for a precise specification in mathematical notation.}
+\footnote{See Appendix~\ref{sec:fullspecificationofthemodels} for a precise specification in mathematical notation.}
 
 \begin{equation}
   \mathtt{Univerbation\sim (1|NVUnit)+Context+Relation} \label{eq:corpusglmmr}

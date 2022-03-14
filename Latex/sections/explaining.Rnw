@@ -50,8 +50,8 @@ However, the number of N+V units for each verb is too low to make any sound infe
 Given the difficulty of determining the appropriate verb classes, we save this for future work.
 
 Another point that needs further examination is the productivity of the N+V construction.
-Intuitively and from looking at the data, it appears that the units with an oblique relation are formed much more productively compared to the ones with an oblique relation.
-If the ones with an oblique relation are formed less productively, they should be more strongly lexicalised, which might be a reason for their stronger tendency to univerbate.
+Intuitively and from looking at the data, it appears that the units with an argument relation are formed much more productively compared to the ones with an oblique relation.
+If the ones with an oblique relation are formed less productively, they should have a tendency to be more strongly lexicalised, which might be a reason for their stronger tendency to univerbate.
 Related to the question of productivity, we might ask whether some of the N+V units are actually the result of back formation processes.
 For example, the verb \textit{zwangsernähren} `to force feed' is likely a back formation of the N+N compound \textit{Zwangsernährung} `force feeding' (with \textit{Ernährung} `feeding' being derived from \textit{ernähren} `to feed'), and it now appears as a N+V unit with the full array of finite and infinite verb forms.
 It is difficult to quantify the effect of such back formations on the present study.
