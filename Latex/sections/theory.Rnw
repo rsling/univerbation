@@ -174,7 +174,7 @@ However, this does not make them syntactically or semantically unacceptable.}
     \ex\gll Kim will {(*eine} {Tasse)} teetrinken.\\
     Kim wants {(a} {cup)} {tea drink}\\
     \trans Kim wants to drink tea.
-    \ex\gll Kim will(eine Tasse) Tee trinken.\\
+    \ex\gll Kim will (eine Tasse) Tee trinken.\\
     Kim wants {(a} {cup)} tea drink\\
     \trans Kim wants to drink (a cup of) tea.
   \end{xlist}

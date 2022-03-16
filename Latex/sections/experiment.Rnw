@@ -111,7 +111,7 @@ experiment.r2.txt <- paste0("Nakagawa \\& Schielzeth's \\CM{R^2_m=", nice.float(
 exp.ranef.txt <- paste0("Random effect for participant: \\CM{Intercept=", nice.float(ranef.participant$Intercept), "}, \\CM{sd=", nice.float(ranef.participant$sd),
                         "}")
 experiment.ctx <- xtable(experiment.ct, digits = 3,
-                         caption = paste0("Coefficient table for the GLMM  modelling the experiment data with 95\\% confidence intervals.", experiment.r2.txt, exp.ranef.txt, " The intercept models the fixed effect Context~=~Infinitive as well as Relation~=~Argument"),
+                         caption = paste0("Coefficient table for the GLMM  modelling the experiment data with 95\\% confidence intervals. ", experiment.r2.txt, exp.ranef.txt, " The intercept models the fixed effect Context~=~Infinitive as well as Relation~=~Argument"),
                          label = "tab:experimentglmm")
 
 # Print the table.
