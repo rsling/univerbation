@@ -82,13 +82,10 @@
 \newcommand{\Ni}{N\Sub{1}}
 \newcommand{\Nii}{N\Sub{2}}
 
-%\newcommand{\selfcitet}[1]{\textsc{self-references omitted}}
-\newcommand{\selfcitet}[1]{\textcolor{red}{\textbf{!}}\citet{#1}}
-%\newcommand{\selfcitealt}[1]{\textsc{self-references omitted}}
-\newcommand{\selfcitealt}[1]{\textcolor{red}{\textbf{!}}\citealt{#1}}
+\newcommand{\concealed}[1]{\textcolor{red}{\textbf{![}}{#1}\textcolor{red}{\textbf{]}}}
 
 \pdfauthor{Roland Schaefer and Ulrike Sayatz}
-\pdftitle{Between syntax and morphology: German noun-verb units as reluctant compounds}
+\pdftitle{Between syntax and morphology: German noun+verb units as reluctant compounds}
 \pdfkeywords{probabilistic grammar, graphemics, univerbation, corpus data, elicitation, German}
 
 \title[Between syntax and morphology: German noun-verb units as reluctant compounds]{Between syntax and morphology:\\German noun-verb units\\as reluctant compounds}
@@ -107,8 +104,8 @@
   }
 }
 
-% \addbibresource{rs.bib}
-\addbibresource{nvuniverbation_biber.bib} % Generate using: biber nvuniverbation --output_format bibtex
+\addbibresource{rs.bib}
+% \addbibresource{nvuniverbation_biber.bib} % Generate using: biber nvuniverbation --output_format bibtex
 
 % Fix non-breaking DOIs.
 \setcounter{biburllcpenalty}{7000}
@@ -207,9 +204,8 @@ nice.int <- function(n) formatC(n, format="d", big.mark=",")
 \maketitle
 
 \begin{abstract}
-  The principles of usage-based grammar are rarely applied to graphemic phenomena.
-  We argue that graphemic variation---at least in some writing systems---can be analysed in terms of grammatical variation given a usage-based probabilistic view of the grammar-graphemics interface.
-  Concretely, we examine a type of noun + verb unit in German, which can be written as one word or two words.
+  We show that graphemic variation---at least in some writing sys\-tems---can be analysed in terms of grammatical variation given a usage-based probabilistic view of the grammar-graphemics interface.
+  Concretely, we examine a type of noun + verb unit in German, which can be written as one word or two.
   We argue that the variation in writing is rooted in the units' ambiguous status in between morphology (one word) and syntax (two words).
   The major influencing factors are shown to be the semantic relation between the noun and the verb (argument or oblique relation) and the morphosyntactic context.
   In prototypically nominal contexts, a re-interpretation of the unit as a noun + noun compound is facilitated, which favours spelling as one word, while in prototypically verbal contexts, a syntagmatic realisation and consequently spelling as two words is preferred.

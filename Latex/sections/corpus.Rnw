@@ -3,7 +3,7 @@
 opts_knit$set(self.contained=FALSE)
 @
 
-\section{Analysing the usage of noun-verb units}
+\section{Analysing the usage of noun+verb units}
 \label{sec:corpusbasedanalysisoftheusageofnvunits}
 
 In this section, we apply two quantitative methods to analyse the univerbation of N+V units using corpus data.
@@ -64,7 +64,7 @@ Second, in Section~\ref{sub:results1multilevelmodel} we report a full statistica
 In this section, we report an analysis of the item-specific affinities of N+V units towards univerbation.
 The method we use is similar to collocation analysis (\citealt{Evert2008} for an overview) and stems from Collostructional Analysis \parencite{StefanowitschGries2003}.
 More specifically, the method is called \textit{collexeme analysis} \parencite{StefanowitschGries2009}.%
-\footnote{See also \selfcitet{SchaeferPankratz2018} and \selfcitet{Schaefer2019a} for similar uses.}
+\footnote{See also \concealed{\citet{SchaeferPankratz2018}} and \concealed{\citet{Schaefer2019a}} for similar uses.}
 
 Our goal was to quantify how strongly each N+V unit tends towards univerbation vis-a-vis all other N+V units.
 Thus, we need to compare the counts of cases with and without univerbation of the unit in question with the total counts for all other N+V units.
@@ -133,7 +133,7 @@ These results will be corroborated by the analysis in Section~\ref{sub:results1m
 \label{sub:results1multilevelmodel}
 
 In this section, we present the parameter estimates (and predictions of conditional modes) for a binomial multilevel model (or generalised linear mixed model, GLMM) which models the relevant factors influencing writers' choice of the compound and the separate spelling.%
-\footnote{See \selfcitet{Schaefer2020a} for an overview of the method and our philosophy in modelling.}
+\footnote{See \concealed{\citet{Schaefer2020a}} for an overview of the method and our philosophy in modelling.}
 The results of the method used in Section~\ref{sub:results2associationastrengths} and the GLMM presented here converge.
 However, the GLMM has a more standard interpretation and allows for finer-grained data analysis.
 Also, it has long been accepted that combining several methods strengthens the analysis when the results converge (\egg \citealt{ArppeJaervikivi2007}).
@@ -178,7 +178,7 @@ Including NPs in this specific form along with this emerging progressive constru
 To summarize, we expect N+V units in infinitives and participles (prototypically verbal) to have a weak tendency and N+V units in full NPs (prototypically nominal) to have a strong tendency towards univerbation in line with the argumentation from Section~\ref{sec:thestatusofnounverbunitsingerman}.
 We have no prediction for the progressive as we are unsure whether it has truly developed into a verbal construction.
 
-As there is a huge number of \Sexpr{nrow(concordance)} N+V units, the lexical indicator variable for the individual N+V unit should not be used as a fixed effect (\citealt[244--247]{GelmanHill2006}, \selfcitealt{Schaefer2020a}).
+As there is a huge number of \Sexpr{nrow(concordance)} N+V units, the lexical indicator variable for the individual N+V unit should not be used as a fixed effect (\citealt[244--247]{GelmanHill2006}, \concealed{\citealt{Schaefer2020a}}).
 We specified a generalised linear mixed model with the N+V unit variable as a random effect.
 The variable encoding the internal relation is nested inside the levels of the random effect, and its is therefore treated as a second-level fixed effect in a multilevel model.
 In R notation, the specification is shown in (\ref{eq:corpusglmmr}).%
