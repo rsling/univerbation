@@ -37,7 +37,7 @@ designtable <- designtable[, c("Context", "Relation", "N+V unit", "Attr. score")
 designtable <- designtable[order(as.character(designtable$Context)),]
 
 designtable.ctx <- xtable(designtable, digits = 3,
-                          caption = "Items from the experiment, chosen by context and relation, with control for lexical attraction scores.",
+                          caption = "Items from the experiment, chosen by context and relation, with control for lexical attraction scores",
                           label = "tab:designtable")
 print(designtable.ctx,
       include.rownames=F,
@@ -55,31 +55,34 @@ attr.dist <- function(context) {
 @
 
 An overview of the item design is shown in Table~\ref{tab:designtable}, where each line represents the features of one of the eight items.
+The low number of eight target items will be motivated below (see Footnote~\ref{fno:eightitems}).
 In order to control for differences in lexical preferences, the concrete pairs of N+V units used in each context were chosen such that the contrast in lexical preference (see Section~\ref{sub:results2associationastrengths}) for and against univerbation was as substantial as possible.
-As expected, units with an argument relation have negative attraction scores, and ones with an object relation have positive scores (see column ``Attr. score'' in Table~\ref{tab:designtable}).
+As expected, units with an argument relation have negative attraction scores, and ones with an oblique relation have positive scores (see column ``Attr. score'' in Table~\ref{tab:designtable}).
 For each context, we selected pairs where the difference between the scores was larger than $0.05$.
-Except for the infinitive context (difference \Sexpr{attr.dist("Infinitive")}), we managed to find pairs for which the difference is actually above $0.1$ (NP: \Sexpr{attr.dist("NP")}, Participle: \Sexpr{attr.dist("Participle")}, Progressive: \Sexpr{attr.dist("Progressive")}).
+Except for the infinitive context (difference $\Sexpr{attr.dist("Infinitive")}$), we managed to find pairs for which the difference is actually above $0.1$ (NP: $\Sexpr{attr.dist("NP")}$, Participle: $\Sexpr{attr.dist("Participle")}$, Progressive: $\Sexpr{attr.dist("Progressive")}$).
 
 The sentences were constructed in a way such that all N+V units were the predicate of a subordinate clause.
 This consistently ensured verb-last constituent order and avoided interfering verb-second effects, which are typical of independent sentences in German.
-The stimui with full glosses are given in Appendix~\ref{sec:sentencesusedintheexperiment}.
+The stimuli with full glosses are given in Appendix~\ref{sec:sentencesusedintheexperiment}.
 Furthermore, we added 32 fillers, resulting in a total of forty sentences being read to the participants.%
 \footnote{Of the fillers, six were actually target items from an unrelated experiment.}
 Of the forty sentences, twenty (including the target items) had to be written down by the participants.
 The order of the target items was randomised, but it was ensured that there were at least three sentences in between two target stimuli.
-There were nine distractors in the form of yes-no questions related to random sentences previously heard by the participants.
+There were nine distractors in the form of yes--no questions related to random sentences previously heard by the participants.
 
-In total, \Sexpr{length(levels(as.factor(exp.cases$Participant)))} participants took part in the experiment.
+In total, $\Sexpr{length(levels(as.factor(exp.cases$Participant)))}$ participants took part in the experiment.
 All of them were first-semester students of German Language and Literature at Freie Universität Berlin.
-They were between \Sexpr{summary(as.integer(exp.cases$Age))[1]} and \Sexpr{summary(as.integer(exp.cases$Age))[6]} years old with a median age of \Sexpr{summary(as.integer(exp.cases$Age))[3]} years.
-There were two separate groups (\Sexpr{nrow(exp.w1)} and \Sexpr{nrow(exp.w2)} participants, respectively), and the randomisation of the order of stimuli was different between the two groups.
+They were between $\Sexpr{summary(as.integer(exp.cases$Age))[1]}$ and $\Sexpr{summary(as.integer(exp.cases$Age))[6]}$ years old with a median age of $\Sexpr{summary(as.integer(exp.cases$Age))[3]}$ years.
+There were two separate groups (of $\Sexpr{nrow(exp.w1)}$ and $\Sexpr{nrow(exp.w2)}$ participants), and the randomisation of the order of stimuli was different between the two groups.%
+\footnote{The relatively low number of eight target items was due to the fact that we could not have inter-participant randomisation within each of the two large groups of participants (see below).
+For each of the two runs of the experiment, we had thirty minutes with the respective group as a whole in a lecture hall.
+However, without inter-participant randomisation and in the given time frame, a higher number of target items would have increased the chance of revealing the goal of the experiment to at least some participants.\label{fno:eightitems}}
 
 \subsection{Results}
 \label{sub:resultsexperiment}
 
 In this section, we report the parameter estimates of a GLMM modelling the behaviour of the participants in our experiment.
-The model specification in R notation is given in (\ref{eq:expglmmformula}).%
-\footnote{Appendix~\ref{sec:fullspecificationofthemodels} provides the specification mathematical notation.}
+The model specification in lme4 notation is given in (\ref{eq:expglmmformula}).
 The coefficient estimates for the GLMM are reported in Table~\ref{tab:experimentglmm}.
 
 \begin{equation}
@@ -130,9 +133,9 @@ There is some variation between writers as captured in the standard deviation of
 This corroborates our assumption from Section~\ref{sec:introduction} that the phenomenon is not about individuals mastering the norm to different degrees or having different preferences when it comes to univerbation.
 Instead, the major deciding factors are the ones predicted by our theoretical model.
 
-There seems to be no evidence that the participle has a different effect than the infinitive (which is on the intercept) given the large confidence interval ($[\Sexpr{nice.float(experiment.ct["ContextParticiple", "CI low"])}..\Sexpr{nice.float(experiment.ct["ContextParticiple", "CI high"])}]$).
+There seems to be no evidence that the participle has a different effect than the infinitive (which is on the intercept) given the large confidence interval ($[\Sexpr{nice.float(experiment.ct["ContextParticiple", "CI low"])}, \Sexpr{nice.float(experiment.ct["ContextParticiple", "CI high"])}]$).
 On the other hand, progressives ($\Sexpr{nice.float(experiment.ct["ContextProgressive", "Estimate"])}$) and NPs ($\Sexpr{nice.float(experiment.ct["ContextNP", "Estimate"])}$) clearly have a much more positive effect on the probability of univerbation.
-Again, we do not see evidence for a any difference between NP and progressive contexts given the large and overlapping confidence intervals.
+Again, we do not see evidence for any difference between NP and progressive contexts given the large and overlapping confidence intervals.
 The oblique relation favours univerbation as predicted ($\Sexpr{nice.float(experiment.ct["RelationOblique", "Estimate"])}$) compared to the argument relation (which is modelled by the intercept), and despite a quite large confidence interval ($[\Sexpr{nice.float(experiment.ct["RelationOblique", "CI low"])}..\Sexpr{nice.float(experiment.ct["RelationOblique", "CI high"])}]$), the effect is clearly positive.
 
 <<experimentfx, results="asis", fig.height=4, fig.showtext=TRUE, fig.pos="htbp", fig.height=4, fig.cap="Effect plots for the regressor encoding the morphosyntactic context and the attraction strength as calculated from the corpus in the GLMM modelling the experimental data">>=
@@ -154,11 +157,11 @@ grid.arrange(experiment.glmm.fx.context, experiment.glmm.fx.relation, ncol=2)
 
 @
 
-The effect plots in Figure~\ref{fig:experimentfx} (left panel) provides a visual interpretation of the coefficient table.
+The effect plots in Figure~\ref{fig:experimentfx} (left panel) provide a visual interpretation of the coefficient table.
 The prototypically verbal contexts are associated with low probabilities of univerbation, the two prototypically nominal ones with high probabilities of univerbation.
 Judging by the large and mostly overlapping confidence intervals, there is no support for assuming a substantial difference between participles and infinitives on the one hand and progressives and NPs on the other hand.
-The two semantic relation are correlated with the probability of univerbation as expected (right panel of Figure~\ref{fig:experimentfx}).
+The two semantic relations are correlated with the probability of univerbation as expected (right panel of Figure~\ref{fig:experimentfx}).
 
 In sum, the experiment supports our theoretically motivated hypotheses, and it corroborates the results from the corpus study.
-We proceed to a final analysis of the phenomenon at in the light of our findings in Section~\ref{sec:explainingnounverbuniverbation}.
+We proceed to a final analysis of the phenomenon in light of our findings in Section~\ref{sec:explainingnounverbuniverbation}.
 

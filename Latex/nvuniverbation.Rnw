@@ -104,8 +104,8 @@
   }
 }
 
-\addbibresource{rs.bib}
-% \addbibresource{nvuniverbation_biber.bib} % Generate using: biber nvuniverbation --output_format bibtex
+% \addbibresource{rs.bib}
+\addbibresource{nvuniverbation_biber.bib} % Generate using: biber nvuniverbation --output_format bibtex
 
 % Fix non-breaking DOIs.
 \setcounter{biburllcpenalty}{7000}
@@ -239,6 +239,7 @@ nice.int <- function(n) formatC(n, format="d", big.mark=",")
 
 \section*{Acknowledgments}
 
+We are indebted to Elizabeth Pankratz for discussion, feedback, and extremely thorough proofreading of earlier versions of this paper.
 We thank Luise Rissmann for her help annotating and cleaning the corpus data as well as conducting most of the experiments.
 
 \printbibliography

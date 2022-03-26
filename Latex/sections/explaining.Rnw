@@ -3,11 +3,11 @@
 opts_knit$set(self.contained=FALSE)
 @
 
-\section{Explaining noun-verb univerbation}
+\section{Explaining noun+verb univerbation}
 \label{sec:explainingnounverbuniverbation}
 
 We have shown convincing evidence from corpora and controlled production experiments that the morphosyntactic context and the semantic relation are the crucial influencing factors on the graphemic univerbation of N+V units in German.
-Prototypically verbal contexts (infinitives and participles) disfavour univerbation, while prototypically nominal contexts (normal NPs and the so-called progressive, which contains a normal NP) favour univerbation.
+Prototypically verbal contexts (infinitives and participles) disfavour univerbation, while prototypically nominal contexts (normal NPs and the so-called \textit{am}-progressive, which contains a normal NP) favour univerbation.
 As we have argued, the nominal contexts enable the interpretation of the N+V unit as a proper compound (a morphological construction), while the verbal contexts are linked to a syntactic\slash phrasal interpretation.
 The difference in morphosyntactic status is mirrored in the different tendencies in writing.
 Furthermore, an argument relation between the V and the N within the N+V units disfavours univerbation because the N+V unit is closer to the regular syntactic construction than its counterpart with an oblique relation.
@@ -50,11 +50,11 @@ However, the number of N+V units for each verb is too low to make any sound infe
 Given the difficulty of determining the appropriate verb classes, we save this for future work.
 
 Another point that needs further examination in the future is the productivity of the N+V construction.
-Intuitively and from looking at the data, it appears that the units with an argument relation are formed much more productively compared to the ones with an oblique relation.
+Intuitively, and from looking at the data, it appears that the units with an argument relation are formed much more productively compared to the ones with an oblique relation.
 If the ones with an oblique relation are formed less productively, they should have a tendency to be more strongly lexicalised, which might be a reason for their stronger tendency to univerbate.
-Related to the question of productivity, we might ask whether some of the N+V units are actually the result of back formation processes.
-For example, the verb \textit{zwangsernähren} `to force feed' is likely a back formation of the N+N compound \textit{Zwangsernährung} `force feeding' (with \textit{Ernährung} `feeding' being derived from \textit{ernähren} `to feed'), and it now appears as a N+V unit with the full array of finite and infinite verb forms.
-It is difficult to quantify the effect of such back formations on the present study.
+Related to the question of productivity, we might ask whether some of the N+V units are actually the result of backformation processes.
+For example, the verb \textit{zwangsernähren} `to force feed' is likely a backformation of the N+N compound \textit{Zwangsernährung} `force feeding' (with \textit{Ernährung} `feeding' being derived from \textit{ernähren} `to feed'), and it now appears as a N+V unit with the full array of finite and infinite verb forms.
+It is difficult to quantify the effect of such backformations on the present study.
 Clearly, further diachronic and synchronic research is required.
 
 A final point we have not discussed prominently is the presence of so-called linking elements.
@@ -82,11 +82,11 @@ Table~\ref{tab:linkers} shows which linking elements we found in our sample, and
 
 In principle, the linking element should be a very clear indicator of a fully nominal status and favour univerbation.
 However, they occur readily at least in infinite verb forms like \textit{leistungsgeschossen} (participle), which means the linking element is adopted outside of its primary domain (nominal compounds), \ie in verb forms.
-This might be yet another indication that we are dealing with back formation processes in some of these cases.
+This might be yet another indication that we are dealing with backformation processes in some of these cases.
 In most of the cases with linking elements, a direct interpretation as a plural is also conceivable, and clearly, further research could shed light on this question.
 
 In closing, we would like to posit that the kind of data that we find with respect to N+V units can only be explained satisfyingly within a usage-based probabilistic framework.
-It is clearly the function of the space in German writing to separate syntactic words, and hence univerbation is best explained as corresponding to the loss of syntactic independence and a crossing over to morphology.
+It is the primary function of the space in German writing to separate syntactic words, and hence univerbation is best explained as corresponding to the loss of syntactic independence and a crossing over to morphology.
 As the effect is clearly gradual (both diachronically and in the grammar of present-day writers), a probabilistic approach to grammar and the grammar-graphemics interface is required.
-The fact that we can name the influencing factors and provide a statistical model of their \textit{systematic} (albeit non-categorical) strengths is very strong evidence for the alternation being encoded in cognitive grammars and not a processing effect or mere ``performance''.
-We are confident that future work will uncover many more probabilistic graphemics-grammar mappings like the one we discuss in this paper.
+The fact that we can name the influencing factors and provide a statistical model of their \textit{systematic} (albeit non-categorical) influences is very strong evidence for the alternation being encoded in cognitive grammars and not a processing effect or mere artefact of ``performance''.
+We are confident that future work will uncover many more probabilistic graphemics--grammar mappings.
