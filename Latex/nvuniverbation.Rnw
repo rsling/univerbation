@@ -82,7 +82,7 @@
 \newcommand{\Ni}{N\Sub{1}}
 \newcommand{\Nii}{N\Sub{2}}
 
-\newcommand{\concealed}[1]{\textcolor{red}{\textbf{![}}{#1}\textcolor{red}{\textbf{]}}}
+\newcommand{\concealed}[1]{\textcolor{red}{\textbf{[}}{#1}\textcolor{red}{\textbf{]}}}
 
 \pdfauthor{Roland Schaefer and Ulrike Sayatz}
 \pdftitle{Between syntax and morphology: German noun+verb units as reluctant compounds}
@@ -208,8 +208,8 @@ nice.int <- function(n) formatC(n, format="d", big.mark=",")
   Concretely, we examine a type of noun+verb unit in German, which can be written as one word or two.
   We argue that the variation in writing is rooted in the units' ambiguous status in between morphology (one word) and syntax (two words).
   The major influencing factors are shown to be the semantic relation between the noun and the verb (argument or oblique relation) and the morphosyntactic context.
-  In prototypically nominal contexts, a re-interpretation of the unit as a noun+noun compound is facilitated, which favours spelling as one word, while in prototypically verbal contexts, a syntagmatic realisation and consequently spelling as two words is preferred.
-  We report the results of a large-scale corpus study and a controlled production experiment to corroborate our analysis.
+  In prototypically nominal contexts, a re-interpretation of the unit as a noun+noun compound is facilitated, which favours spelling as one word, while in prototypically verbal contexts, a syntactic realisation and consequently spelling as two words is preferred.
+  We report the results of two large-scale corpus studies and a controlled production experiment to corroborate our analysis.
 \end{abstract}
 
 \begin{keywords}
@@ -239,8 +239,8 @@ nice.int <- function(n) formatC(n, format="d", big.mark=",")
 
 \section*{Acknowledgments}
 
-We are indebted to Elizabeth Pankratz for discussion, feedback, and extremely thorough proofreading of earlier versions of this paper.
-We thank Luise Rissmann for her help annotating and cleaning the corpus data as well as conducting most of the experiments.
+We are indebted to \concealed{Elizabeth Pankratz} for discussion, feedback, and extremely thorough proofreading of earlier versions of this paper.
+We thank \concealed{Luise Rissmann} for her help annotating and cleaning the corpus data as well as conducting most of the experiments.
 
 \printbibliography
 

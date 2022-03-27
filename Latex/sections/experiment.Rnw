@@ -57,21 +57,21 @@ attr.dist <- function(context) {
 An overview of the item design is shown in Table~\ref{tab:designtable}, where each line represents the features of one of the eight items.
 The low number of eight target items will be motivated below (see Footnote~\ref{fno:eightitems}).
 In order to control for differences in lexical preferences, the concrete pairs of N+V units used in each context were chosen such that the contrast in lexical preference (see Section~\ref{sub:results2associationastrengths}) for and against univerbation was as substantial as possible.
-As expected, units with an argument relation have negative attraction scores, and ones with an oblique relation have positive scores (see column ``Attr. score'' in Table~\ref{tab:designtable}).
+As expected, units with an argument relation have negative attraction scores, and ones with an oblique relation have positive scores (see column `Attr. score' in Table~\ref{tab:designtable}).
 For each context, we selected pairs where the difference between the scores was larger than $0.05$.
 Except for the infinitive context (difference $\Sexpr{attr.dist("Infinitive")}$), we managed to find pairs for which the difference is actually above $0.1$ (NP: $\Sexpr{attr.dist("NP")}$, Participle: $\Sexpr{attr.dist("Participle")}$, Progressive: $\Sexpr{attr.dist("Progressive")}$).
 
 The sentences were constructed in a way such that all N+V units were the predicate of a subordinate clause.
 This consistently ensured verb-last constituent order and avoided interfering verb-second effects, which are typical of independent sentences in German.
 The stimuli with full glosses are given in Appendix~\ref{sec:sentencesusedintheexperiment}.
-Furthermore, we added 32 fillers, resulting in a total of forty sentences being read to the participants.%
-\footnote{Of the fillers, six were actually target items from an unrelated experiment.}
+Furthermore, we added 32 fillers, resulting in a total of forty sentences being read to the participants.
+%\footnote{Of the fillers, six were actually target items from an unrelated experiment.}
 Of the forty sentences, twenty (including the target items) had to be written down by the participants.
 The order of the target items was randomised, but it was ensured that there were at least three sentences in between two target stimuli.
 There were nine distractors in the form of yes--no questions related to random sentences previously heard by the participants.
 
 In total, $\Sexpr{length(levels(as.factor(exp.cases$Participant)))}$ participants took part in the experiment.
-All of them were first-semester students of German Language and Literature at Freie Universität Berlin.
+All of them were first-semester students of German Language and Literature at \concealed{Freie Universität Berlin}.
 They were between $\Sexpr{summary(as.integer(exp.cases$Age))[1]}$ and $\Sexpr{summary(as.integer(exp.cases$Age))[6]}$ years old with a median age of $\Sexpr{summary(as.integer(exp.cases$Age))[3]}$ years.
 There were two separate groups (of $\Sexpr{nrow(exp.w1)}$ and $\Sexpr{nrow(exp.w2)}$ participants), and the randomisation of the order of stimuli was different between the two groups.%
 \footnote{The relatively low number of eight target items was due to the fact that we could not have inter-participant randomisation within each of the two large groups of participants (see below).
@@ -124,6 +124,7 @@ print(experiment.ctx,
       table.placement = 'h!',
       booktabs = T,
       scalebox = 1,
+      hline.after = c(-1,0,1,4,5),
       sanitize.text.function = lme4.pretty
 )
 

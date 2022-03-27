@@ -30,7 +30,7 @@ In this construction, there is a noun N occurring in its bare form, which either
 However, there is a class of lexicalised light verb constructions where a bare noun occurs with a light verb, such as \textit{Anklage erheben} `indict', literally `to raise indictment'.
 Like idiomatic expressions such as \textit{Leine ziehen} `get lost', literally `to pull leash', they do not instantiate a productive pattern (\citealt[76]{HentschelWeydt2003}, \citealt[198]{Stumpf2015}).
 Consequently, we do not discuss them further.}
-As \textit{eislaufen} is highly lexicalised, (\ref{ex:ontheice}) is no longer a proper paraphrase of (\ref{ex:introexamples2}), and it has the more general meaning of just `walking on the ice', which includes `ice-sakting'.
+As \textit{eislaufen} is highly lexicalised, (\ref{ex:ontheice}) is no longer a proper paraphrase of (\ref{ex:introexamples2}), and it has the more general meaning of just `walking on the ice', which includes `ice-skating'.
 However, many other V+N units are far less lexicalised, and they can all be transparently related to a paraphrase with a PP (see below).
 
 We use the terms `argument relation' and `oblique relation' to refer to the semantic relations between the noun and the verb in the former and the latter case, respectively, following \citet[20]{GaetaZeldes2017}.

@@ -26,7 +26,7 @@ For our purpose, the complete internal analysis of nominal compounds described i
 This level of analysis allows for corpus searches of roots within nominal compounds.
 
 The list of actually occurring N+V units was obtained by querying for compounds with a nominal non-head and a deverbal head.%
-\footnote{See the scripts available under the following DOI for concrete queries and further details: \concealed{Not ready yet.}.}
+\footnote{See the scripts available under the following DOI for concrete queries and further details: \concealed{DOI}.}
 The rationale behind this approach is that any N+V unit of interest should occur at least once in compound spelling as a fully nominalised compound.
 Since this step relied on automatic annotation already available in the corpus, the results contained erroneous hits which we removed manually.
 The resulting list contained $\Sexpr{nrow(concordance)}$ N+V units.%
@@ -38,51 +38,26 @@ In total, $\Sexpr{nice.int(35*nrow(concordance))}$ queries were executed to crea
 The queries retrieved $\Sexpr{nice.int(sum(concordance$Joint))}$ compound spellings and $\Sexpr{nice.int(sum(concordance$Separate))}$ separate spellings, which results in a total sample size of $\Sexpr{nice.int(sum(concordance$Joint)+sum(concordance$Separate))}$ tokens.
 
 For each N+V unit in the sample, the following variables were annotated automatically: (i) the verb lemma, (ii) the noun lemma, and (iii) the overall frequency in the corpus.
+The morphosyntactic contexts could be annotated semi-automatically, because separate queries were executed for each context anyway.
 Additionally, we manually coded all $\Sexpr{nrow(concordance)}$ N+V units for the relation that holds between the verb and the noun.
-The codes used in clear-cut cases were \textit{Argument}and \textit{Oblique}.
+The codes used in clear-cut cases were \textit{Argument} and \textit{Oblique}.
 For $\Sexpr{length(which(concordance$Relation=="Undetermined"))}$ units, both relations were conceivable, and those cases were coded as \textit{Undetermined}.
-This class is illustrated by \textit{Daumenlutschen} (``thumb sucking''), which could correspond to either the paraphrase in (\ref{ex:daumenlutschen-a}) or the one in (\ref{ex:daumenlutschen-b}).
-
-\begin{exe}
-  \ex\begin{xlist}
-    \ex\gll [den Daumen]\Sub{NP_{Acc}} lutschen \\
-    the thumb suck\\\label{ex:daumenlutschen-a}
-    \ex\gll [am Daumen]\Sub{PP} lutschen\\
-    {on the} thumb suck\\\label{ex:daumenlutschen-b}
-  \end{xlist}\label{ex:daumenlutschen}
-\end{exe}
-
-Finally, we annotated the morphosyntactic contexts semi-automatically, using only four types of contexts:
-
-\vspace{\baselineskip}
-
-\renewcommand{\theenumi}{\roman{enumi}}
-\begin{enumerate}
-  \item{\label{continf}  adjunct \textit{zu} infinitives, see (\ref{ex:disjunctspelling4}),}
-  \item{\label{contpart} participles as complements of auxiliaries, see (\ref{ex:disjunctspelling3}),}
-  \item{\label{contprog} the so-called \textit{am} progressive, see (\ref{ex:disjunctspelling5}),}
-  \item{\label{contnp}   full NPs, see (\ref{ex:disjunctspelling6}).}
-\end{enumerate}
-
-\vspace{\baselineskip}
-
-The constructions with the infinitive (\ref{continf}) and the participle (\ref{contpart}) represent two prototypically syntactic constructions, since the verb from the N+V is part of a verbal syntagma.
-The NP context (\ref{contnp}) is most prototypically nominal, especially since we only used NPs with a determiner.
-More precisely, we only used NPs with definite determiners cliticised to a preposition (\textit{beim} `at the', \textit{zum} `to the', etc.).
-This decision was made in order to allow for a comparison of these full nominalisations and the so-called \textit{am} progressive (\ref{contprog}).
-The progressive is formed with the copula\slash auxiliary \textit{sein} `to be', the variant of the preposition \textit{an} with the cliticised definite article \textit{am} `at the' and the infinitive.
-While it developed out of a construction with a copula and a plain NP within a PP, and it is formally identical to cases with the normal NPs in (\ref{contnp}), it is often assumed to be a verbal construction expressing progressive meaning.%
-\footnote{The literature on the \textit{am} progressive is rich.
-See \citet{AnthonissenEa2016} for an overview of the literature and a corpus-based assessment of its functions.}
-Including NPs in this specific form along with this emerging progressive construction allows us to assess whether the hypothesised verbal semantics of the progressive makes the construction more verbal, leading to a weaker tendency towards univerbations compared to regular NPs.
-To summarize, we expect N+V units in infinitives and participles (prototypically verbal) to have a weak tendency and N+V units in full NPs (prototypically nominal) to have a strong tendency towards univerbation in line with the argumentation from Section~\ref{sec:thestatusofnounverbunitsingerman}.
-We have no prediction for the progressive as we are unsure whether it has truly developed into a verbal construction.
+% This class is illustrated by \textit{Daumenlutschen} (``thumb sucking''), which could correspond to either the paraphrase in % (\ref{ex:daumenlutschen-a}) or the one in (\ref{ex:daumenlutschen-b}).
+%
+% \begin{exe}
+%   \ex\begin{xlist}
+%     \ex\gll [den Daumen]\Sub{NP_{Acc}} lutschen \\
+%     the thumb suck\\\label{ex:daumenlutschen-a}
+%     \ex\gll [am Daumen]\Sub{PP} lutschen\\
+%     {on the} thumb suck\\\label{ex:daumenlutschen-b}
+%   \end{xlist}\label{ex:daumenlutschen}
+% \end{exe}
 
 The data thus obtained were analysed in two ways.
 First, we report the results of a collexeme analysis in Section~\ref{sub:results2associationastrengths}, which quantifies how strongly individual N+V units tend to be written as one word or two words.
 Second, in Section~\ref{sub:results1multilevelmodel} we report a full statistical model of the alternation.
 
-\subsection{Results 1: Association strengths}
+\subsection{Study 1: Association strengths}
 \label{sub:results2associationastrengths}
 
 In this section, we report an analysis of the item-specific affinities of N+V units towards univerbation.
@@ -157,10 +132,10 @@ An example with a strong tendency against univerbation is \textit{Fehlermachen} 
 Finally, \textit{Haareschneiden} (`hair cut', argument relation) shows no clear tendency towards or against univerbation, having an attraction score of $\Sexpr{nice.float(concordance[which(concordance$Compound=="Haareschneiden"), "all.assocs"])}$.
 The results of the association analysis will be corroborated by the subsequent analysis in Section~\ref{sub:results1multilevelmodel}, and we will use the attraction scores to control for item-specific tendencies in the experiment in Section~\ref{sec:elicitedproductionofnounverbunitsinwrittenlanguage}.
 
-\subsection{Results 2: Multilevel model}
+\subsection{Study 2: Multilevel model}
 \label{sub:results1multilevelmodel}
 
-In this section, we present the parameter estimates and predictions of conditional modes for a binomial multilevel model (or generalised linear mixed model, GLMM) which models the relevant factors influencing writers' choice of the compound and the disjunct spelling.%
+In this section, we present the parameter estimates for a binomial multilevel model (or generalised linear mixed model, GLMM) which models the relevant factors influencing writers' choice of the compound and the disjunct spelling.%
 \footnote{See \concealed{\citet{Schaefer2020a}} for an overview of the method and our philosophy in modelling.}
 The results of the method used in Section~\ref{sub:results2associationastrengths} and the GLMM presented here converge.
 However, the GLMM has a more standard interpretation and allows for finer-grained data analysis.

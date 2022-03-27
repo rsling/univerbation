@@ -85,7 +85,7 @@ Before the significant reform of the orthographic norm in 1996, both \textit{rad
 After the reform, both units were supposed to be written as two words (\textit{Eis laufen} and \textit{Rad fahren}).
 After a revision of the reform in 2006, \textit{eislaufen} was again supposed to be spelled as one word, whereas \textit{Fahrrad fahren} was supposed to be spelled as two words exclusively (\citealt[32]{Primus2010}, \citealt[356]{Eisenberg2020a}).
 From experience, we know that the norm is often not adhered to, and the data presented in Sections~\ref{sec:corpusbasedanalysisoftheusageofnvunits} and~\ref{sec:elicitedproductionofnounverbunitsinwrittenlanguage} strongly corroborate this experience.}
-This indeterminacy means that speakers have both the syntagmatic realisation (disjunct spelling) and the morphological realisation (compound spelling) in their graphemic input, which subsequently leaves them with quite a free choice to be made based on how a concrete item is classified according to their individual grammar.
+This indeterminacy means that speakers have both the syntactic realisation (disjunct spelling) and the morphological realisation (compound spelling) in their graphemic input, which subsequently leaves them with quite a free choice to be made based on how a concrete item is classified according to their individual grammar.
 It is the task of usage-based probabilistic graphemics to uncover factors influencing such decisions and decode the principles at work in speakers' internal grammar by analysing their writing habits (see \concealed{\citealt{SchaeferSayatz2016}}).
 
 
@@ -299,11 +299,35 @@ Thus, when the unit occurs in a strongly nominal syntagma (\egg when the head is
 However, when the unit is embedded in an unambiguously verbal syntagma (\egg when the V head is an infinitive dependent on a modal verb or a participle dependent on an auxiliary), we expect a low tendency towards univerbation.%
 \footnote{Notice that a finite V head would also create a prototypically verbal context.
 However, in these cases, the N and the V are always realised discontinuously, and univerbation is not an option.}
+For the in-depth corpus analysis using a Generalised Linear Model as well as for the experiment, we focussed on four specific contexts:
+
+\vspace{\baselineskip}
+
+\renewcommand{\theenumi}{\roman{enumi}}
+\begin{enumerate}
+  \item{\label{continf}  adjunct \textit{zu} infinitives, see (\ref{ex:disjunctspelling4}),}
+  \item{\label{contpart} participles as complements of auxiliaries, see (\ref{ex:disjunctspelling3}),}
+  \item{\label{contprog} the so-called \textit{am} progressive, see (\ref{ex:disjunctspelling5}),}
+  \item{\label{contnp}   full NPs, see (\ref{ex:disjunctspelling6}).}
+\end{enumerate}
+
+\vspace{\baselineskip}
+
+The constructions with the infinitive (\ref{continf}) and the participle (\ref{contpart}) represent two prototypically syntactic constructions, since the verb from the N+V is part of a verbal syntagma.
+The NP context (\ref{contnp}) is most prototypically nominal, especially since we only used NPs with a determiner.
+More precisely, we only used NPs with definite determiners cliticised to a preposition (\textit{beim} `at the', \textit{zum} `to the', etc.).
+This decision was made in order to allow for a comparison of these full nominalisations and the so-called \textit{am} progressive (\ref{contprog}).
+The progressive is formed with the copula\slash auxiliary \textit{sein} `to be', the variant of the preposition \textit{an} with the cliticised definite article \textit{am} `at the' and the infinitive.
+While it developed out of a construction with a copula and a plain NP within a PP, and it is formally identical to cases with the normal NPs in (\ref{contnp}), it is often assumed to be a verbal construction expressing progressive meaning.%
+\footnote{See \citet{AnthonissenEa2016} for an overview of the literature and a corpus-based assessment of its functions.}
+Including NPs in this specific form along with this emerging progressive construction allows us to assess whether the hypothesised verbal semantics of the progressive makes the construction more verbal, leading to a weaker tendency towards univerbations compared to regular NPs.
+We expect N+V units in infinitives and participles (prototypically verbal) to have a weak tendency and N+V units in full NPs (prototypically nominal) to have a strong tendency towards univerbation.
+We have no prediction for the progressive as we are unsure whether it has truly developed into a verbal construction.
 
 The second important cue is the internal semantic relation.
 N+V units with an oblique relation stand in weaker competition with a syntactic realisation compared with those that have an argument relation.
 N+V units with an oblique relation would need more explicit marking with a preposition in the alternative (unambiguously syntactic) realisation.
-%Also, for N+V units with an argument relation, there is the productive and functionally similar type of government compound of the form N\Sub{1}+N\Sub{2} where N\Sub{2} is obvtained from a verb by morphological derivation (\egg \textit{Problemlösung} `problem solving' where \textit{Lösung} is derived from the verb \textit{lösen} `solve' with \textit{-ung} forming an action noun).
+%Also, for N+V units with an argument relation, there is the productive and functionally similar type of government compound of the form N\Sub{1}+N\Sub{2} where N\Sub{2} is obtained from a verb by morphological derivation (\egg \textit{Problemlösung} `problem solving' where \textit{Lösung} is derived from the verb \textit{lösen} `solve' with \textit{-ung} forming an action noun).
 %However, there is no similar morphological pattern for units with an oblique relation.
 %Hence, we expect a stronger tendency towards univerbation with oblique relations because they have a more accessible interpretation as a morphological unit (a compound) and at least a similar productive model construction in government compounds.
 
