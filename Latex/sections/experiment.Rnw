@@ -3,7 +3,7 @@
 opts_knit$set(self.contained=FALSE)
 @
 
-\section{Elicited production of noun-verb units}
+\section{Elicited production of noun+verb units}
 \label{sec:elicitedproductionofnounverbunitsinwrittenlanguage}
 
 In this section, we corroborate the findings from Section~\ref{sec:corpusbasedanalysisoftheusageofnvunits} in a controlled experiment.
@@ -130,7 +130,7 @@ print(experiment.ctx,
 @
 
 There is some variation between writers as captured in the standard deviation of the conditional modes ($\Sexpr{nice.float(ranef.participant$sd)}$), but the small difference between the marginal $R^2_m$ ($\Sexpr{nice.float(experiment.glmm.r2[1,1])}$) and the conditional $R^2_c$ ($\Sexpr{nice.float(experiment.glmm.r2[1,2])}$) suggests that speaker variation does not explain much of the variance in the the data.
-This corroborates our assumption from Section~\ref{sec:introduction} that the phenomenon is not about individuals mastering the norm to different degrees or having different preferences when it comes to univerbation.
+This demonstrates that the phenomenon cannot be reduced to individuals mastering the norm to different degrees or having different preferences when it comes to univerbation.
 Instead, the major deciding factors are the ones predicted by our theoretical model.
 
 There seems to be no evidence that the participle has a different effect than the infinitive (which is on the intercept) given the large confidence interval ($[\Sexpr{nice.float(experiment.ct["ContextParticiple", "CI low"])}, \Sexpr{nice.float(experiment.ct["ContextParticiple", "CI high"])}]$).

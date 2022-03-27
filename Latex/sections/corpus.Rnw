@@ -246,7 +246,10 @@ print(corpus.ctxt,
 The estimated parameters of the model are given in Table~\ref{tab:corpusglmm}.
 Additionally, effect plots for \textit{Context} and \textit{Relation} are given in Figure~\ref{fig:corpuseffects}.%
 \footnote{Effect plots for binomial GLM(M)s \parencite{FoxWeisberg2018} plot the probability of the outcome across values of a regressor assuming default values for all other regressors.
-While model coefficients in binomial (and other) models have no direct interpretation in terms of probability, effect plots allow a more intuitive interpretation in terms of changes in probability.}
+While model coefficients in binomial (and other) models have no direct interpretation in terms of probability, effect plots allow a more intuitive interpretation in terms of changes in probability.
+For better interpretability, the y-axis in effect plots is plotted on the scale of the linear predictor (logits in a GLMM), with labels added on the scale of the response (probabilities derived via the inverse logit link function in GLMMs).
+See \citealt[14]{FoxWeisberg2018} for an illustrative example.
+This is why the labels of the y axes are never aligned across plots.}
 As expected, the prototypically verbal contexts (infinitives and participles) are associated with a low probability of compound spelling (the infinitive is on the intercept, which is estimated at $\Sexpr{nice.float(corpus.ct["(Intercept)","Estimate"])}$, and participles have a coefficient of $\Sexpr{nice.float(corpus.ct["ContextParticiple","Estimate"])}$).
 NPs and progressives as prototypically nominal contexts clearly favour compound spelling (coefficients of $\Sexpr{nice.float(corpus.ct["ContextNP","Estimate"])}$ and $\Sexpr{nice.float(corpus.ct["ContextProgressive","Estimate"])}$, respectively).
 Both the coefficients and the effect plot (right panel in Figure~\ref{fig:corpuseffects}) show a low probability of compound spelling when an argument relation holds between the verb and the noun (on the intercept), and a high probability when the relation is oblique (coefficient $\Sexpr{nice.float(corpus.ct["RelationAdjunct","Estimate"])}$).
@@ -261,7 +264,10 @@ corpus.glmm.fx.context <- plot(ef.context,
                               colors = c("black", "black"),
                               main = "",
                               ylab = "Probability of univerbation",
-                              xlab = "Morphosyntactic context")
+                              xlab = "Morphosyntactic context"
+                              #,ylim = c(0,1)
+                              #,rescale.axis = F
+                              )
 
 ef.rel <- effect("Relation", corpus.glmm, KR = T)
 ef.rel$variables$Relation$levels <- c("Argument", "Undetermined", "Oblique")
@@ -271,7 +277,9 @@ corpus.glmm.fx.relation <- plot(ef.rel,
                                 main="",
                                 ylab="Probability of univerbation",
                                 xlab="Semantic relation"
-)
+                                #,ylim = c(0,1)
+                                #,rescale.axis = F
+                                )
 grid.arrange(corpus.glmm.fx.context, corpus.glmm.fx.relation, ncol=2)
 @
 
