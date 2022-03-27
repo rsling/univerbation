@@ -88,5 +88,5 @@ In most of the cases with linking elements, a direct interpretation as a plural 
 In closing, we would like to posit that the kind of data that we find with respect to N+V units can only be explained satisfyingly within a usage-based probabilistic framework.
 It is the primary function of the space in German writing to separate syntactic words, and hence univerbation is best explained as corresponding to the loss of syntactic independence and a crossing over to morphology.
 As the effect is clearly gradual (both diachronically and in the grammar of present-day writers), a probabilistic approach to grammar and the grammar-graphemics interface is required.
-The fact that we can name the influencing factors and provide a statistical model of their \textit{systematic} (albeit non-categorical) influences is very strong evidence for the alternation being encoded in cognitive grammars and not a processing effect or mere artefact of ``performance''.
+The fact that we can name the influencing factors and provide a statistical model of their \textit{systematic} (albeit non-categorical) influences is very strong evidence for the alternation being encoded in cognitive grammars and not a processing effect or mere artefact of performance.
 We are confident that future work will uncover many more probabilistic graphemics--grammar mappings.
