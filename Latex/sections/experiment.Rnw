@@ -111,11 +111,10 @@ experiment.glmm.r2 <- r.squaredGLMM(experiment.glmm)
 experiment.ct <- cbind(experiment.fixefs, experiment.confints[2:6,])
 colnames(experiment.ct) <- c("Estimate", "CI low", "CI high")
 ranef.participant <- format.ranef(experiment.glmm, "Participant")
-experiment.r2.txt <- paste0("Nakagawa \\& Schielzeth's \\CM{R^2_m=", nice.float(experiment.glmm.r2[1,1]), "} and \\CM{R^2_c=", nice.float(experiment.glmm.r2[1,2]), "}. ")
-exp.ranef.txt <- paste0("Random effect for participant: \\CM{Intercept=", nice.float(ranef.participant$Intercept), "}, \\CM{sd=", nice.float(ranef.participant$sd),
-                        "}")
+experiment.r2.txt <- paste0("Nakagawa \\& Schielzeth's \\CM{R^2_m=", nice.float(experiment.glmm.r2[1,1]), "} and \\CM{R^2_c=", nice.float(experiment.glmm.r2[1,2]), "}")
+exp.ranef.txt <- paste0("Random effect for participant: \\CM{Intercept=", nice.float(ranef.participant$Intercept), "}, \\CM{sd=", nice.float(ranef.participant$sd), "}. ")
 experiment.ctx <- xtable(experiment.ct, digits = 3,
-                         caption = paste0("Coefficient table for the GLMM  modelling the experiment data with 95\\% confidence intervals. ", experiment.r2.txt, exp.ranef.txt, " The intercept models the fixed effect Context~=~Infinitive as well as Relation~=~Argument"),
+                         caption = paste0("Coefficient table for the GLMM  modelling the experiment data with 95\\% profile likelihood ratio confidence intervals. The intercept models the levels Context~=~Infinitive and Relation~=~Argument. ", exp.ranef.txt, experiment.r2.txt),
                          label = "tab:experimentglmm")
 
 # Print the table.
@@ -141,7 +140,7 @@ On the other hand, progressives ($\Sexpr{nice.float(experiment.ct["ContextProgre
 Again, we do not see evidence for any difference between NP and progressive contexts given the large and overlapping confidence intervals.
 The oblique relation favours univerbation as predicted ($\Sexpr{nice.float(experiment.ct["RelationOblique", "Estimate"])}$) compared to the argument relation (which is modelled by the intercept), and despite a quite large confidence interval ($[\Sexpr{nice.float(experiment.ct["RelationOblique", "CI low"])}..\Sexpr{nice.float(experiment.ct["RelationOblique", "CI high"])}]$), the effect is clearly positive.
 
-<<experimentfx, results="asis", fig.height=4, fig.showtext=TRUE, fig.pos="htbp", fig.height=4, fig.cap="Effect plots for the regressor encoding the morphosyntactic context and the attraction strength as calculated from the corpus in the GLMM modelling the experimental data">>=
+<<experimentfx, results="asis", fig.height=4, fig.showtext=TRUE, fig.pos="htbp", fig.height=4, fig.cap="Effect plots for the regressor encoding the morphosyntactic context of the N+V unit and the regressor encoding the syntactic relation within the N+V unit in the GLMM modelling the experimental data">>=
 
 experiment.glmm.fx.context.fx <- effect("Context", experiment.glmm, KR = T)
 experiment.glmm.fx.context.fx$variables$Context$levels <- c("Inf.", "Part.", "NP", "Prog.")

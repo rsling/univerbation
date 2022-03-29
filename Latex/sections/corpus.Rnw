@@ -57,7 +57,7 @@ The data thus obtained were analysed in two ways.
 First, we report the results of a collexeme analysis in Section~\ref{sub:results2associationastrengths}, which quantifies how strongly individual N+V units tend to be written as one word or two words.
 Second, in Section~\ref{sub:results1multilevelmodel} we report a full statistical model of the alternation.
 
-\subsection{Study 1: Association strengths}
+\subsection{Results: association strengths}
 \label{sub:results2associationastrengths}
 
 In this section, we report an analysis of the item-specific affinities of N+V units towards univerbation.
@@ -132,7 +132,7 @@ An example with a strong tendency against univerbation is \textit{Fehlermachen} 
 Finally, \textit{Haareschneiden} (`hair cut', argument relation) shows no clear tendency towards or against univerbation, having an attraction score of $\Sexpr{nice.float(concordance[which(concordance$Compound=="Haareschneiden"), "all.assocs"])}$.
 The results of the association analysis will be corroborated by the subsequent analysis in Section~\ref{sub:results1multilevelmodel}, and we will use the attraction scores to control for item-specific tendencies in the experiment in Section~\ref{sec:elicitedproductionofnounverbunitsinwrittenlanguage}.
 
-\subsection{Study 2: Full statistical model}
+\subsection{Results: full statistical model}
 \label{sub:results1multilevelmodel}
 
 In this section, we present the parameter estimates for a binomial multilevel model (or generalised linear mixed model, GLMM) which models the relevant factors influencing writers' choice of the compound and the disjunct spelling.%
@@ -194,9 +194,9 @@ colnames(corpus.ct) <- c("Estimate", "CI low", "CI high")
 ranef.nv <- format.ranef(corpus.glmm, "Compound")
 corpus.r2.txt <- paste0("Nakagawa \\& Schielzeth's \\CM{R^2_m=", nice.float(corpus.glmm.r2[1,1]), "} and \\CM{R^2_c=", nice.float(corpus.glmm.r2[1,2]), "}")
 ranef.txt <- paste0("Random effect for N+V lemma: \\CM{Intercept=", nice.float(ranef.nv$Intercept), "}, \\CM{sd=", nice.float(ranef.nv$sd),
-                    "}")
+                    "}. ")
 corpus.ctxt <- xtable(corpus.ct, digits = 3,
-                    caption = paste0("Coefficient table for the binomial GLMM modelling the corpus data with 95\\% profile likelihood ratio confidence intervals. Weighting was used to account for the bias in models on proportion data. ", ranef.txt, ". The intercept models the levels Context~=~Infinitive and Relation~=~Argument. " , corpus.r2.txt),
+                    caption = paste0("Coefficient table for the binomial GLMM modelling the corpus data with 95\\% profile likelihood ratio confidence intervals. Weighting was used to account for the bias in models on proportion data. The intercept models the levels Context~=~Infinitive and Relation~=~Argument. ", ranef.txt, corpus.r2.txt),
                     label = "tab:corpusglmm")
 
 # Experimental function to fix variable names.
@@ -226,7 +226,7 @@ Additionally, effect plots for \textit{Context} and \textit{Relation} are given 
 \footnote{Effect plots for binomial GLM(M)s \parencite{FoxWeisberg2018} plot the probability of the outcome across values of a regressor assuming default values for all other regressors.
 While model coefficients in binomial (and other) models have no direct interpretation in terms of probability, effect plots allow a more intuitive interpretation in terms of changes in probability.
 For better interpretability, the y-axis in effect plots is plotted on the scale of the linear predictor (logits in a GLMM), with labels added on the scale of the response (probabilities derived via the inverse logit link function in GLMMs).
-See \citealt[14]{FoxWeisberg2018} for an illustrative example.
+See \citet[14]{FoxWeisberg2018} for an illustrative example.
 This is why the labels of the y axes are never aligned across plots.}
 As expected, the prototypically verbal contexts (infinitives and participles) are associated with a low probability of compound spelling (the infinitive is on the intercept, which is estimated at $\Sexpr{nice.float(corpus.ct["(Intercept)","Estimate"])}$, and participles have a coefficient of $\Sexpr{nice.float(corpus.ct["ContextParticiple","Estimate"])}$).
 NPs and progressives as prototypically nominal contexts clearly favour compound spelling (coefficients of $\Sexpr{nice.float(corpus.ct["ContextNP","Estimate"])}$ and $\Sexpr{nice.float(corpus.ct["ContextProgressive","Estimate"])}$, respectively).
