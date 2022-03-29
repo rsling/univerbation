@@ -125,12 +125,13 @@ print(experiment.ctx,
       booktabs = T,
       scalebox = 1,
       hline.after = c(-1,0,1,4,5),
+      math.style.negative = T,
       sanitize.text.function = lme4.pretty
 )
 
 @
 
-There is some variation between writers as captured in the standard deviation of the conditional modes ($\Sexpr{nice.float(ranef.participant$sd)}$), but the small difference between the marginal $R^2_m$ ($\Sexpr{nice.float(experiment.glmm.r2[1,1])}$) and the conditional $R^2_c$ ($\Sexpr{nice.float(experiment.glmm.r2[1,2])}$) suggests that speaker variation does not explain much of the variance in the the data.
+There is some variation between writers as captured in the standard deviation of the conditional modes ($\Sexpr{nice.float(ranef.participant$sd)}$), but the small difference between the marginal $R^2_m$ ($\Sexpr{nice.float(experiment.glmm.r2[1,1])}$) and the conditional $R^2_c$ ($\Sexpr{nice.float(experiment.glmm.r2[1,2])}$) suggests that speaker variation does not explain much of the variance in the data.
 This demonstrates that the phenomenon cannot be reduced to individuals mastering the norm to different degrees or having different preferences when it comes to univerbation.
 Instead, the major deciding factors are the ones predicted by our theoretical model.
 

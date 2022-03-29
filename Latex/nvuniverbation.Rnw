@@ -44,7 +44,7 @@
 
 \newcommand{\exhl}[1]{\textbf{#1}}
 
-\usepackage[firstpage, scale=0.25]{draftwatermark}
+\usepackage[firstpage, scale=0.15]{draftwatermark}
 \SetWatermarkLightness{0.75}
 \SetWatermarkText{Draft of \today}
 
@@ -91,16 +91,16 @@
 \title[Between syntax and morphology: German noun+verb units as reluctant compounds]{Between syntax and morphology:\\German noun+verb units\\as reluctant compounds}
 
 \author{
-  \spauthor{Roland Schäfer\\
-  \institute{\small Deutsche Sprache und Linguistik,\\Humboldt-Universität zu Berlin}\\
-  \small{Dorotheenstraße 24, 10117 Berlin\\
-  roland.schaefer@hu-berlin.de}
+  \spauthor{\concealed{Roland Schäfer}\\
+  \institute{\concealed{\small Deutsche Sprache und Linguistik,\\Humboldt-Universität zu Berlin}\\
+  \concealed{\small{Dorotheenstraße 24, 10117 Berlin}}\\
+  \concealed{\small{roland.schaefer@hu-berlin.de}}}
   }
   \AND
-  \spauthor{Ulrike Sayatz\\
-  \institute{\small Deutsche und niederl.\ Philologie,\\Freie Universität Berlin}\\
-  \small{Habelschwerdter Allee 45, 14195 Berlin\\
-  ulrike.sayatz@fu-berlin.de}
+  \spauthor{\concealed{Ulrike Sayatz}\\
+  \institute{\concealed{\small Deutsche und niederl.\ Philologie,\\Freie Universität Berlin}\\
+  \concealed{\small{Habelschwerdter Allee 45, 14195 Berlin}}\\
+  \concealed{\small{ulrike.sayatz@fu-berlin.de}}}
   }
 }
 

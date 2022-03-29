@@ -6,7 +6,7 @@ opts_knit$set(self.contained=FALSE)
 \section{Theoretical and descriptive background}
 \label{sec:theoreticalbackground}
 
-In this section, we discuss our fundamental theoretical assumptions, review existing analyses of the phenomenon, and derive hypotheses for out empirical studies.
+In this section, we discuss our fundamental theoretical assumptions, review existing analyses of the phenomenon, and derive hypotheses for our empirical studies.
 First, we introduce the overall theoretical framework in Section~\ref{sub:grammargraphemicsandusage}.
 Second, we clarify the status of spaces as syntactic boundaries in German in Section~\ref{sub:spaceswordsanduniverbation}.
 Third, we discuss previous analyses of N+V units and their spelling, followed by the formulation of our predictions for the empirical studies, in Section~\ref{sec:thestatusofnounverbunitsingerman}.
@@ -20,7 +20,7 @@ Since the input is always rife with variation, which is intrinsically probabilis
 We embrace all three assumptions and apply them to a graphemic alternation phenomenon.
 UBG is rarely extended to graphemics in such a way, but we view graphemics as a component of the language faculty on a par with components such as phonetics and phonology, and we consequently believe that graphemics should be viewed under the usage-based umbrella.%
 \footnote{There is an intrinsic graphemic component in the huge body of work throughout linguistics based on popular corpora of written language.
-Although this is rarely acknowledged, We consider it important to focus on this component as well.}
+Although this is rarely acknowledged, we consider it important to focus on this component as well.}
 Much like the phono-component comprises regularities about how grammar is encoded in speech sounds, graphemics comprises  regularities about how grammar is encoded in written symbols.
 %Whether and how strongly the phono-component and the graphemics component are intertwined is determined by the type of script and the specific language.
 %Ideograph-based writing systems like early cuneiform Sumerian (virtually complete separation) and phonographic writing systems like German (substantial overlap) represent extremes on a continuous scale (see \citealt{Coulmas1996} for an overview).
@@ -83,7 +83,7 @@ N+V units with different affinities towards compound spelling like \textit{Rad f
 \footnote{The orthographic norm is notoriously unstable with respect to N+V units, which contributes to their unclear status.
 Before the significant reform of the orthographic norm in 1996, both \textit{radfahren} and \textit{eislaufen} were supposed to be spelled as one word.
 After the reform, both units were supposed to be written as two words (\textit{Eis laufen} and \textit{Rad fahren}).
-After a revision of the reform in 2006, \textit{eislaufen} was again supposed to be spelled as one word, whereas \textit{Fahrrad fahren} was supposed to be spelled as two words exclusively (\citealt[32]{Primus2010}, \citealt[356]{Eisenberg2020a}).
+After a revision of the reform in 2006, \textit{eislaufen} was again supposed to be spelled as one word, whereas \textit{Rad fahren} was supposed to be spelled as two words exclusively (\citealt[32]{Primus2010}, \citealt[356]{Eisenberg2020a}).
 From experience, we know that the norm is often not adhered to, and the data presented in Sections~\ref{sec:corpusbasedanalysisoftheusageofnvunits} and~\ref{sec:elicitedproductionofnounverbunitsinwrittenlanguage} strongly corroborate this experience.}
 This indeterminacy means that speakers have both the syntactic realisation (disjunct spelling) and the morphological realisation (compound spelling) in their graphemic input, which subsequently leaves them with quite a free choice to be made based on how a concrete item is classified according to their individual grammar.
 It is the task of usage-based probabilistic graphemics to uncover factors influencing such decisions and decode the principles at work in speakers' internal grammar by analysing their writing habits (see \concealed{\citealt{SchaeferSayatz2016}}).
@@ -269,7 +269,7 @@ This is true for both compound and disjunct spelling.
   \trans Friedel knows how to ride a bike. \label{ex:noreference}
 \end{exe}
 
-As a result of the semantic degradation of the noun, it looses its modifiability (also regardless of spelling), as illustrated in (\ref{ex:nomodifier}).
+As a result of the semantic degradation of the noun, it loses its modifiability (also regardless of spelling), as illustrated in (\ref{ex:nomodifier}).
 
 \begin{exe}
   \ex[*]{\gll Friedel kann schnelles Rad fahren.\\
@@ -299,7 +299,7 @@ Thus, when the unit occurs in a strongly nominal syntagma (\egg when the head is
 However, when the unit is embedded in an unambiguously verbal syntagma (\egg when the V head is an infinitive dependent on a modal verb or a participle dependent on an auxiliary), we expect a low tendency towards univerbation.%
 \footnote{Notice that a finite V head would also create a prototypically verbal context.
 However, in these cases, the N and the V are always realised discontinuously, and univerbation is not an option.}
-For the in-depth corpus analysis using a Generalised Linear Model as well as for the experiment, we focussed on four specific contexts:
+For the in-depth corpus analysis using a generalised linear model as well as for the experiment, we focussed on four specific contexts:
 
 \vspace{\baselineskip}
 

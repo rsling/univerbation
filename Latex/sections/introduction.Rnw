@@ -108,7 +108,7 @@ However, univerbation per se is not necessarily the result of a regular grammati
 %\citet[107]{Jacobs2005} regards graphemic univerbation as not rooted in a morphological process as they are not paradigmatic (no \textit{Reihenbildung}).
 %\citet[209]{Lehmann2020} is closest to our position, as he regards ``univerbation as a gradient process which displays phases of weaker and stronger univerbation''.
 %According to him, it marked by the loss of morphological boundaries and by phonological fusion.}
-Thus, a major aim of this paper is to show whether and how the univerbation of N+V units in German is based on an established morphological prototype construction wherein a noun is incorporated into a verb, forming a new verb expressing a new event concept.
+Thus, a major aim of this paper is to show whether and how the univerbation of N+V units in German is based on an established morphological prototype construction in which a noun is incorporated into a verb, forming a new verb expressing a new event concept.
 
 We will argue that such a morphological construction exists, but that the alternative syntactic construction remains available to speakers because N+V units have properties of both morphological as well as syntactic prototypes.
 In Section~\ref{sec:theoreticalbackground}, we lay the theoretical and descriptive foundations.
