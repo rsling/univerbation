@@ -45,6 +45,7 @@ print(designtable.ctx,
       table.placement = 'h!',
       booktabs = T,
       scalebox = 1,
+      math.style.negative = T,
       sanitize.text.function = function(x){x}
 )
 
