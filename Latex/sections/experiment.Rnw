@@ -61,6 +61,8 @@ In order to control for differences in lexical preferences, the concrete pairs o
 As expected, units with an argument relation have negative attraction scores, and ones with an oblique relation have positive scores (see column `Attr. score' in Table~\ref{tab:designtable}).
 For each context, we selected pairs where the difference between the scores was larger than $0.05$.
 Except for the infinitive context (difference $\Sexpr{attr.dist("Infinitive")}$), we managed to find pairs for which the difference is actually above $0.1$ (NP: $\Sexpr{attr.dist("NP")}$, Participle: $\Sexpr{attr.dist("Participle")}$, Progressive: $\Sexpr{attr.dist("Progressive")}$).
+It should be kept in mind that the v scores have no interpretation independently of their specific distribution.
+They were merely used here to maximise the differences between the corresponding N+V units with argument and oblique relation.
 
 The sentences were constructed in a way such that all N+V units were the predicate of a subordinate clause.
 This consistently ensured verb-last constituent order and avoided interfering verb-second effects, which are typical of independent sentences in German.
@@ -112,7 +114,7 @@ experiment.ct <- cbind(experiment.fixefs, experiment.confints[2:6,])
 colnames(experiment.ct) <- c("Estimate", "CI low", "CI high")
 ranef.participant <- format.ranef(experiment.glmm, "Participant")
 experiment.r2.txt <- paste0("Nakagawa \\& Schielzeth's \\CM{R^2_m=", nice.float(experiment.glmm.r2[1,1]), "} and \\CM{R^2_c=", nice.float(experiment.glmm.r2[1,2]), "}")
-exp.ranef.txt <- paste0("Random effect for participant: \\CM{Intercept=", nice.float(ranef.participant$Intercept), "}, \\CM{sd=", nice.float(ranef.participant$sd), "}. ")
+exp.ranef.txt <- paste0("Random effect for participant: \\CM{sd=", nice.float(ranef.participant$sd), "}. ")
 experiment.ctx <- xtable(experiment.ct, digits = 3,
                          caption = paste0("Coefficient table for the GLMM  modelling the experiment data with 95\\% profile likelihood ratio confidence intervals. The intercept models the levels Context~=~Infinitive and Relation~=~Argument. ", exp.ranef.txt, experiment.r2.txt),
                          label = "tab:experimentglmm")
@@ -135,9 +137,9 @@ There is some variation between writers as captured in the standard deviation of
 This demonstrates that the phenomenon cannot be reduced to individuals mastering the norm to different degrees or having different preferences when it comes to univerbation.
 Instead, the major deciding factors are the ones predicted by our theoretical model.
 
-There seems to be no evidence that the participle has a different effect than the infinitive (which is on the intercept) given the large confidence interval ($[\Sexpr{nice.float(experiment.ct["ContextParticiple", "CI low"])}, \Sexpr{nice.float(experiment.ct["ContextParticiple", "CI high"])}]$).
+There seems to be only weak evidence that the participle has a different effect than the infinitive (which is on the intercept) given the large confidence interval ($[\Sexpr{nice.float(experiment.ct["ContextParticiple", "CI low"])}, \Sexpr{nice.float(experiment.ct["ContextParticiple", "CI high"])}]$).
 On the other hand, progressives ($\Sexpr{nice.float(experiment.ct["ContextProgressive", "Estimate"])}$) and NPs ($\Sexpr{nice.float(experiment.ct["ContextNP", "Estimate"])}$) clearly have a much more positive effect on the probability of univerbation.
-Again, we do not see evidence for any difference between NP and progressive contexts given the large and overlapping confidence intervals.
+We do not see evidence for any difference between NP and progressive contexts given the large and overlapping confidence intervals.
 The oblique relation favours univerbation as predicted ($\Sexpr{nice.float(experiment.ct["RelationOblique", "Estimate"])}$) compared to the argument relation (which is modelled by the intercept), and despite a quite large confidence interval ($[\Sexpr{nice.float(experiment.ct["RelationOblique", "CI low"])}..\Sexpr{nice.float(experiment.ct["RelationOblique", "CI high"])}]$), the effect is clearly positive.
 
 <<experimentfx, results="asis", fig.height=4, fig.showtext=TRUE, fig.pos="htbp", fig.height=4, fig.cap="Effect plots for the regressor encoding the morphosyntactic context of the N+V unit and the regressor encoding the syntactic relation within the N+V unit in the GLMM modelling the experimental data">>=
@@ -161,7 +163,8 @@ grid.arrange(experiment.glmm.fx.context, experiment.glmm.fx.relation, ncol=2)
 
 The effect plots in Figure~\ref{fig:experimentfx} (left panel) provide a visual interpretation of the coefficient table.
 The prototypically verbal contexts are associated with low probabilities of univerbation, the two prototypically nominal ones with high probabilities of univerbation.
-Judging by the large and mostly overlapping confidence intervals, there is no support for assuming a substantial difference between participles and infinitives on the one hand and progressives and NPs on the other hand.
+Judging by the large and overlapping confidence intervals, there is no support for assuming a substantial difference between infinitives and participles.
+The same can be assumed for NPs and progressives.
 The two semantic relations are correlated with the probability of univerbation as expected (right panel of Figure~\ref{fig:experimentfx}).
 
 In sum, the experiment supports our theoretically motivated hypotheses, and it corroborates the results from the corpus study.

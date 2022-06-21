@@ -29,7 +29,7 @@ For writing systems like German, the mappings to be learned include sounds to le
 Cases of discreteness can always be seen as extremes in a probabilistic system.}
 
 In UBG, corpus data (\ie production data) are often used as evidence, sometimes cross-validated in behavioural experiments (see, for example, \citealt{ArppeJaervikivi2007,BresnanEa2007,Dabrowska2014,Divjak2016a,DivjakEa2016a,FordBresnan2013,PankratzVantiel2021}; \concealed{\citealt{Schaefer2018,SchaeferPankratz2018}}).
-This is justified because the probabilistic usage-based nature of the acquisition process should be reflected in the grammars of competent adult speakers\slash writers and not just in the acquisition process itself.
+This is justified because the usage-based (hence probabilistic) nature of the acquisition process should be reflected in the output of competent adult speakers\slash writers as captured in corpora, and not just in the acquisition process itself.
 Consequently, it should also be reflected in production data obtained from competent adults, and we should be able to uncover the probabilistic mappings of lexical-grammatical categories to written forms from such data.
 We consequently use corpus data as well as data elicited in controlled experiments, both being forms of production data.
 However, there is a difference between using production data as evidence and assuming that they \textit{directly} mirror cognitive reality.
@@ -48,7 +48,7 @@ Grammatical prototypes are mapped onto graphemic realisations (\egg spellings), 
 
 One caveat that is specific to graphemics needs to be mentioned before we proceed to the description of the concrete phenomena.
 The acquisition of the writing system involves explicit instruction and is thus more strongly imposed by prescriptive norms.
-However, we expect writers to learn grammar-graphemics mappings primarily from their realisations in the input, especially whenever the norm is unspecific or unclear, a situation which provides ideal test cases for our view of graphemics.
+However, we expect writers to learn grammar-graphemics mappings primarily from their realisations in the input, especially whenever the norm is unspecific or unclear (especially as it has changed back and forth over the past three decades), a situation which provides ideal test cases for our view of graphemics.
 Variation and alternations in the written input shape the acquired probability distribution, and conditioning factors are acquired to the degree that they can be retrieved from the type and the frequency of the input.%
 \footnote{We have previously used a similar approach in, for example, \concealed{\citet{SchaeferSayatz2014,SchaeferSayatz2016}}.}
 We are convinced that graphemics is a field in its own right which deserves attention in any grammatical\slash linguistic framework.
@@ -65,7 +65,7 @@ German writing uses an alphabetic script with a strong correlation between under
 A common fundamental principle of such scripts is the separation of syntactic words by spaces \parencite[22]{Jacobs2005}.
 Also, stems and their affixes are never separated from one another, which reinforces the status of the space as a demarcation of syntactic words.%
 \footnote{There is a class of verbal particles which does not follow this principle.
-Verbs like \textit{aufessen} (`eat up') formed from a verb stem (\textit{essen}) and a prefixed particle (\textit{auf}) are spelled as one word when they are adjacent in verb-last order, but they are separated in verb-second order where the verb is moved to sentence-second position and the particle remains in sentence-last position through obligatory long-distance movement (see \citealt{Hoberg1981} for an account of German clausal and sentential syntax).}
+Verbs like \textit{aufessen} (`eat up') formed from a verb stem (\textit{essen}) and a prefixed particle (\textit{auf}) are spelled as one word when they are adjacent in verb-last order, but they are separated in verb-second order where the verb is moved to sentence-second position and the particle remains in sentence-last position through obligatory movement (see \citealt{Hoberg1981} for an account of German clausal and sentential syntax).}
 These factors facilitate the reader's ability to decode the sequence of syntactic words, and they constitute a crucial principle in the encoding and conventionalisation of meanings associated with word forms \parencite[22]{Jacobs2005}.
 
 Unlike in English, German has regular compound spelling of syntactic words comprising more than one stem, especially for the case of the highly productive noun+noun (N+N) compound pattern (\citealt[182]{Fuhrhop2007}, \citealt[34]{Jacobs2005}), for which compound spelling is the dominant graphemic realisation.
@@ -251,7 +251,7 @@ We still have to show why and under which conditions true compounding and subseq
 As already mentioned, the morphological realisation of N+V units is a type of noun incorporation.
 N+V units are usually seen as the only cases of potential incorporation in Modern German \parencite[245]{Eisenberg2020a}.
 %, which is why we argued above that argument and oblique relations are prototypically realised syntactically in the form of objects and adjuncts.
-According to \citet[848]{Mithun1984}, incorporation is ``a particular type of a compounding in which a V an N combine to form a new V''.%
+According to \citet[848]{Mithun1984}, incorporation is ``a particular type of a compounding in which a V and an N combine to form a new V''.%
 \footnote{From Mithun's types of noun incorporation, German N+V units clearly represent type 1 \textit{lexical compounding}.
 %Since this is highly straightforward and homogeneous, we do not discuss the literature on the typological classification of incorporation further.
 %Also, we do not take up the typological discussion on whether noun incorporation is a syntactic or a morphological process (\egg \citealt[414--421]{Haugen2015}, \citealt[923--925]{Mithun2000}).
@@ -296,9 +296,9 @@ In this section, we summarise and describe the concrete effects that we expect t
 In general, greater similarity to the N+N compound prototype and reduced competition from the full syntactic realisation are expected to favour univerbation.
 An important cue for this prototype is a strongly nominal morphosyntactic context.
 Thus, when the unit occurs in a strongly nominal syntagma (\egg when the head is a fully nominalised head of an NP with a determiner), we expect a high tendency towards univerbation due to an accessible interpretation as an N+N compound.
-However, when the unit is embedded in an unambiguously verbal syntagma (\egg when the V head is an infinitive dependent on a modal verb or a participle dependent on an auxiliary), we expect a low tendency towards univerbation.%
-\footnote{Notice that a finite V head would also create a prototypically verbal context.
-However, in these cases, the N and the V are always realised discontinuously, and univerbation is not an option.}
+However, when the unit is embedded in an unambiguously verbal syntagma (\egg when the V head is an infinitive dependent on a modal verb or a participle dependent on an auxiliary), we expect a low tendency towards univerbation.
+%\footnote{Notice that a finite V head would also create a prototypically verbal context.
+%However, in these cases, the N and the V are always realised discontinuously, and univerbation is not an option.}
 For the in-depth corpus analysis using a generalised linear model as well as for the experiment, we focussed on four specific contexts:
 
 \vspace{\baselineskip}
@@ -327,6 +327,7 @@ We have no prediction for the progressive as we are unsure whether it has truly 
 The second important cue is the internal semantic relation.
 N+V units with an oblique relation stand in weaker competition with a syntactic realisation compared with those that have an argument relation.
 N+V units with an oblique relation would need more explicit marking with a preposition in the alternative (unambiguously syntactic) realisation.
+We thus expect N+V units with an oblique relation to undergo univerbation more frequently.
 %Also, for N+V units with an argument relation, there is the productive and functionally similar type of government compound of the form N\Sub{1}+N\Sub{2} where N\Sub{2} is obtained from a verb by morphological derivation (\egg \textit{Problemlösung} `problem solving' where \textit{Lösung} is derived from the verb \textit{lösen} `solve' with \textit{-ung} forming an action noun).
 %However, there is no similar morphological pattern for units with an oblique relation.
 %Hence, we expect a stronger tendency towards univerbation with oblique relations because they have a more accessible interpretation as a morphological unit (a compound) and at least a similar productive model construction in government compounds.
@@ -334,8 +335,8 @@ N+V units with an oblique relation would need more explicit marking with a prepo
 The univerbation of individual N+V units also involves very long-term diachronic processes of lexicalisation.
 While the individual lexicalisations are likely driven by the prototypicality effects described here, individual units might have progressed farther than others on the lexicalisation path.
 Furthermore, when the compositional meaning of individual N+V units becomes less accessible, univerbation might be favoured as the semantics of the unit becomes more holistic.
-Since philological investigations into the fate and semantics of each individual N+V unit are not feasible due to their sheer number, we will capture such individual tendencies numerically by comparing the frequencies of the units with or without univerbation in current usage (collexeme analysis).
-%The results of this analysis will be used to control for such effects in the experiment reported in Section~\ref{sec:elicitedproductionofnounverbunitsinwrittenlanguage}.
+Since philological investigations into the fate and semantics of each individual N+V unit are not feasible due to their sheer number, we will capture such individual tendencies numerically by comparing the frequencies of the units with or without univerbation in current usage (collexeme analysis) in a pre-study (Section~\ref{sub:results2associationastrengths}).
+In the full statistical model reported in Section~\ref{sub:results1multilevelmodel}, a random effect for N+V units accounts for such individual tendencies.
 
 Finally, different speakers should be expected to have individual tendencies due to the variance in their input and in their compliance with normative advice.
 While individual variation can rarely be controlled in corpus studies due to the lack of metadata identifying individual writers, it should be controlled and\slash or analysed in behavioural experiments.

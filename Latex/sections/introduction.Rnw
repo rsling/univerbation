@@ -8,33 +8,57 @@
 
 The alternation we are going to explore affects units containing a noun and a verb, and these units alternate between a syntactic manifestation (where the noun combines with the verb via a syntactic mechanism) and a morphological one (where the noun is incorporated into the verb).
 We will argue that alternations in spelling provide evidence for the grammatical status of the instances of the construction.
-Simple examples not showing the alternation are given in (\ref{ex:introexamples}).
+A simple example of the alternation is provided in (\ref{ex:introexamples1}) and (\ref{ex:introexamples2}), where in the (a) examples the unit is spelled as two words (syntactic combination), whereas it is spelled as one word (morphological combination) in the (b) examples.
 
 \begin{exe}
-  \ex\label{ex:introexamples}
+  \ex\label{ex:introexamples1}
   \begin{xlist}
-    \ex\gll Remy fährt Rad.\\
-    Remy rides\Sub{V} bike\Sub{N}\\
-    \trans Remy is riding\slash rides a bike.\label{ex:introexamples1}
-    \ex\gll Remy läuft Eis.\\
-    Remy runs\Sub{V} ice\Sub{N}\\
-    \trans Remy is ice-skating\slash ice-skates.\label{ex:introexamples2}
+    \ex[ ]{\gll Yael weiß, dass Remy \exhl{Rad} \exhl{fährt}.\\
+    Yael knows that Remy bike rides\\
+    \trans Yael knows that Remy is riding a bike.\label{ex:introexamples1a}}
+    \ex[ ]{Yael weiß, dass Remy \exhl{radfährt}.\label{ex:introexampleb1b}}
   \end{xlist}
-  \ex\gll Remy läuft auf dem Eis.\\
-    Remy runs on the ice\Sub{N}\\
-    \trans Remy is running on the ice\slash is ice-skating.\label{ex:ontheice}
+  \ex\label{ex:introexamples2}
+  \begin{xlist}
+    \ex[ ]{\gll Yael weiß, dass Remy \exhl{Eis} \exhl{läuft}.\\
+    Yael knows that Remy ice runs\\
+    \trans Yael knows that Remy is ice-sakting\label{ex:introexamples2a}}
+    \ex[ ]{Yael weiß, dass Remy \exhl{eisläuft}.\label{ex:introexampleb2b}}
+  \end{xlist}
 \end{exe}
+
+% Due to the intricacies of German syntax, the noun and the verb can also occur out of sequence, in which case spelling as one word is not an option.
+% Examples are given in (\ref{ex:introexamples3}).
+%
+% \begin{exe}
+%   \ex\label{ex:introexamples3}
+%   \begin{xlist}
+%     \ex\gll Remy fährt Rad.\\
+%     Remy rides bike\\
+%     \trans Remy is riding\slash rides a bike.
+%     \ex\gll Remy läuft Eis.\\
+%     Remy runs ice\\
+%     \trans Remy is ice-skating\slash ice-skates.
+%   \end{xlist}
+% \end{exe}
 
 In this construction, there is a noun N occurring in its bare form, which either corresponds to an argument of the verb V (normally in the accusative case) as in (\ref{ex:introexamples1}) or to an adjunct of the verb V as in (\ref{ex:introexamples2}), which would normally take the form of a prepositional phrase as in (\ref{ex:ontheice}).%
 \footnote{Whereas singular indefinite mass nouns typically occur without an article in German \citep[471]{Vogel2000}, this is the only frequent construction in German in which bare count nouns occur.
 However, there is a class of lexicalised light verb constructions where a bare noun occurs with a light verb, such as \textit{Anklage erheben} `indict', literally `to raise indictment'.
 Like idiomatic expressions such as \textit{Leine ziehen} `get lost', literally `to pull leash', they do not instantiate a productive pattern (\citealt[76]{HentschelWeydt2003}, \citealt[198]{Stumpf2015}).
 Consequently, we do not discuss them further.}
+
+\begin{exe}
+  \ex\gll Remy läuft auf dem Eis.\\
+    Remy runs on the ice\\
+    \trans Remy is running on the ice\slash is ice-skating.\label{ex:ontheice}
+\end{exe}
+
 As \textit{eislaufen} is highly lexicalised, (\ref{ex:ontheice}) is no longer a proper paraphrase of (\ref{ex:introexamples2}), and it has the more general meaning of just `walking on the ice', which includes `ice-skating'.
 However, many other V+N units are far less lexicalised, and they can all be transparently related to a paraphrase with a PP (see below).
 
-We use the terms `argument relation' and `oblique relation' to refer to the semantic relations between the noun and the verb in the former and the latter case, respectively, following \citet[20]{GaetaZeldes2017}.
-Oblique nouns occur without their usual preposition, and since the accusative case is only morphologically encoded on determiners (if at all) in German, the relation between the noun and the verb is never formally encoded in either case.
+We use the terms `argument relation' (corresponding to a syntactic object as in \textit{Rad fahren}) and `oblique relation' (corresponding to a PP as in \textit{Eis laufen}) to refer to the semantic relations between the noun and the verb, following \citet[20]{GaetaZeldes2017}.
+Oblique nouns occur without their usual preposition, and since the accusative case is only morphologically encoded on pre-nominal elements (if at all) in German, the relation between the noun and the verb is never formally encoded in either case.
 Furthermore, the noun always acquires an unspecific generic reading:
 in examples such as (\ref{ex:introexamples1}), \textit{Rad fahren} (`to ride bike') refers to the concept of riding any bike, and the unspecific reading of \textit{Rad} is obligatory, which is not the case for the English translations with the indefinite article.
 
@@ -47,18 +71,18 @@ German clausal syntax creates the conditions for the actual spelling alternation
     \ex[ ]{\gll Remy \exhl{fährt} gerade \exhl{Rad}.\\
     Remy rides\Sub{\textsc{Pres}} {right.now} bike\\
     \trans Remy is riding a bike right now.\label{ex:disjunctspelling1}}
-    \ex[ ]{\gll Yael weiß, dass Remy \exhl{Rad} \exhl{fährt}.\\
-    Yael knows that Remy bike rides\Sub{\textsc{Pres}}\\
-    \trans Yael knows that Remy is riding a bike.\label{ex:disjunctspelling2}}
     \ex[ ]{\gll Remy ist gestern \exhl{Rad} \exhl{gefahren}.\\
     Remy is yesterday bike ridden\Sub{\textsc{Part}}\\
     \trans Remy rode a bike yesterday.\label{ex:disjunctspelling3}}
-    \ex[ ]{\gll Remy will \exhl{Rad} \exhl{fahren}.\\
-    Remy wants bike ride\Sub{\textsc{Inf}}\\
-    \trans Remy wants to ride a bike.\label{ex:disjunctspelling34}}
     \ex[ ]{\gll Remy hat keine Lust, \exhl{Rad} \exhl{zu} \exhl{fahren}.\\
     Remy has no motivation bike to ride\Sub{\textsc{Inf}}\\
     \trans Remy doesn't feel like riding a bike.\label{ex:disjunctspelling4}}
+    \ex[ ]{\gll Yael weiß, dass Remy \exhl{Rad} \exhl{fährt}.\\
+    Yael knows that Remy bike rides\Sub{\textsc{Pres}}\\
+    \trans Yael knows that Remy is riding a bike.\label{ex:disjunctspelling2}}
+    \ex[ ]{\gll Remy will \exhl{Rad} \exhl{fahren}.\\
+    Remy wants bike ride\Sub{\textsc{Inf}}\\
+    \trans Remy wants to ride a bike.\label{ex:disjunctspelling34}}
     \ex[ ]{\gll Remy ist am \exhl{Rad} \exhl{fahren}.\\
     Remy is {at.the} bike ride\Sub{\textsc{Inf\slash Noun}}\\
     \trans Remy is riding a bike.\label{ex:disjunctspelling5}}
@@ -71,7 +95,14 @@ German clausal syntax creates the conditions for the actual spelling alternation
   \end{xlist}
 \end{exe}
 
-Such N+V units occur flexibly in all types of syntactic contexts: with finite verbs in verb-second order (\ref{ex:disjunctspelling1}), with finite verbs in verb-last order (\ref{ex:disjunctspelling2}), in the analytical perfect where the lexical verb takes the form of a participle (\ref{ex:disjunctspelling3}), in bare infinitives (\ref{ex:disjunctspelling34}), in infinitives with the particle \textit{zu} (\ref{ex:disjunctspelling4}), in a progressive-like construction with the preposition \textit{an} fusioned with the dative singular article \textit{dem} to \textit{am} where the infinitive is potentially nominalised (\ref{ex:disjunctspelling5}), and in regular prepositional phrases (\ref{ex:disjunctspelling6}).
+Such N+V units occur flexibly in all types of syntactic contexts:
+with finite verbs in verb-second order (\ref{ex:disjunctspelling1}),
+in the analytical perfect where the lexical verb takes the form of a participle (\ref{ex:disjunctspelling3}),
+in infinitives with the particle \textit{zu} (\ref{ex:disjunctspelling4}),
+with finite verbs in verb-last order (\ref{ex:disjunctspelling2}),
+in bare infinitives (\ref{ex:disjunctspelling34}),
+in a progressive-like construction with the preposition \textit{an} fusioned with the dative singular article \textit{dem} to \textit{am} where the infinitive is potentially nominalised (\ref{ex:disjunctspelling5}),
+and in regular prepositional phrases (\ref{ex:disjunctspelling6}).
 In (\ref{ex:disjunctspelling7}), the spelling of the N+V unit as two words is impossible, hence the asterisk.
 In this case, we can assume that the noun and a fully nominalised infinitive form a regular nominal compound.%
 \footnote{Infinitives in German can be routinely nominalised as an action noun (\citealt[224]{Gaeta2010}, \citealt[67]{DammelKempf2018}, \citealt[172--174]{WernerEa2020}).}

@@ -44,9 +44,9 @@
 
 \newcommand{\exhl}[1]{\textbf{#1}}
 
-\usepackage[firstpage, scale=0.15]{draftwatermark}
-\SetWatermarkLightness{0.75}
-\SetWatermarkText{Draft of \today}
+% \usepackage[firstpage, scale=0.15]{draftwatermark}
+% \SetWatermarkLightness{0.75}
+% \SetWatermarkText{Draft of \today}
 
 \newcommand{\stylepath}{./langsci/styles/}
 \usepackage{langsci/styles/langsci-gb4e}
@@ -83,7 +83,7 @@
 \newcommand{\Nii}{N\Sub{2}}
 
 % \newcommand{\concealed}[1]{\textcolor{red}{\textbf{[}}{#1}\textcolor{red}{\textbf{]}}}
-\newcommand{\concealed}[1]{\textcolor{gray}{\textsc{redacted}}}
+\newcommand{\concealed}[1]{\textcolor{gray}{\textsc{Redacted}}}
 
 \pdfauthor{Roland Schaefer and Ulrike Sayatz}
 \pdftitle{Between syntax and morphology: German noun+verb units as reluctant compounds}
@@ -242,7 +242,8 @@ nice.int <- function(n) formatC(n, format="d", big.mark=",")
 
 \section*{Acknowledgments}
 
-We are indebted to \concealed{Elizabeth Pankratz} for discussion, feedback, and extremely thorough proofreading of earlier versions of this paper.
+We are indebted to \concealed{Felix Bildhauer}, \concealed{Marc Felfe}, and \concealed{Elizabeth Pankratz} for in-depth discussions and feedback.
+We thank \concealed{Elizabeth} also for her thorough proofreading of an earlier version of this paper.
 We thank \concealed{Luise Rissmann} for her help annotating and cleaning the corpus data as well as conducting most of the experiments.
 
 \printbibliography
