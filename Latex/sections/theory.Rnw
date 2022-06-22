@@ -305,10 +305,10 @@ For the in-depth corpus analysis using a generalised linear model as well as for
 
 \renewcommand{\theenumi}{\roman{enumi}}
 \begin{enumerate}
-  \item{\label{continf}  adjunct \textit{zu} infinitives, see (\ref{ex:disjunctspelling4}),}
-  \item{\label{contpart} participles as complements of auxiliaries, see (\ref{ex:disjunctspelling3}),}
-  \item{\label{contprog} the so-called \textit{am} progressive, see (\ref{ex:disjunctspelling5}),}
-  \item{\label{contnp}   full NPs, see (\ref{ex:disjunctspelling6}).}
+  \item{\label{contpart} participles as complements of auxiliaries, see (\ref{ex:disjunctspelling3}) and (\ref{ex:compoundspelling3}),}
+  \item{\label{continf}  infinitives with \textit{zu}, see (\ref{ex:disjunctspelling4}) and (\ref{ex:compoundspelling4}),}
+  \item{\label{contprog} the so-called \textit{am} progressive, see (\ref{ex:disjunctspelling5}) and (\ref{ex:compoundspelling5}),}
+  \item{\label{contnp}   full NPs, see (\ref{ex:disjunctspelling6}) and (\ref{ex:compoundspelling6}).}
 \end{enumerate}
 
 \vspace{\baselineskip}

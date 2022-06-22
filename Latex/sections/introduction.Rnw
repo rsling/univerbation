@@ -110,23 +110,23 @@ The spelling as two words for (\ref{ex:disjunctspelling5}) and (\ref{ex:disjunct
 
 In the examples (\ref{ex:disjunctspelling3}) through (\ref{ex:disjunctspelling7}), the noun and the verb occur in sequence without intervening material.
 In these cases, the noun and the verb alternate between the spelling as multiple words seen in (\ref{ex:disjunctspelling}) and spellings as one word shown in (\ref{ex:compoundspelling}).
+In (\ref{ex:compoundspelling5}) and (\ref{ex:compoundspelling6}), additional variation is introduced in the form of upper-case and lower-case initials.%
+\footnote{In German, all nouns are capitalised anywhere in a sentence \parencite[1]{PaulyNottbusch2020}.}
+The compound with the nominalised infinitive in (\ref{ex:compoundspelling7}) is \textit{only} acceptable if spelled as one word.
 
 \begin{exe}
   \ex\label{ex:compoundspelling}
   \begin{xlist}
-    \setcounter{xnumii}{2}
+    \setcounter{xnumii}{1}
     \ex[ ]{Remy ist gestern \exhl{radgefahren}.\label{ex:compoundspelling3}}
-    \ex[ ]{Remy will \exhl{radfahren}.\label{ex:compoundspelling34}}
     \ex[ ]{Remy hat keine Lust, \exhl{radzufahren}.\label{ex:compoundspelling4}}
+    \ex[ ]{Yael weiß, dass Remy \exhl{radfährt}.\label{ex:compoundspelling2}}
+    \ex[ ]{Remy will \exhl{radfahren}.\label{ex:compoundspelling34}}
     \ex[ ]{Remy ist am \exhl{Radfahren\slash radfahren}.\label{ex:compoundspelling5}}
     \ex[ ]{Remy singt beim \exhl{Radfahren\slash radfahren}.\label{ex:compoundspelling6}}
     \ex[ ]{Remy lobt das \exhl{Radfahren}.\label{ex:compoundspelling7}}
   \end{xlist}
 \end{exe}
-
-In (\ref{ex:compoundspelling5}) and (\ref{ex:compoundspelling6}), additional variation is introduced in the form of upper-case and lower-case initials.%
-\footnote{In German, all nouns are capitalised anywhere in a sentence \parencite[1]{PaulyNottbusch2020}.}
-The compound with the nominalised infinitive in (\ref{ex:compoundspelling7}) is fine if spelled as one word.
 
 We call cases where a multi-stem unit is spelled as two words such as in (\ref{ex:disjunctspelling}) the `disjunct spelling' and cases where a unit is spelled as one word as in (\ref{ex:compoundspelling}) the `compound spelling'.
 We see that N+V units potentially undergo graphemic \textit{univerbation} in the form of compound spelling.
