@@ -258,6 +258,10 @@ All data were stored on offline media and fully anonymised immediately after eac
 At the time of the experiment (14 and 21 June 2017), \concealed{Freie Universität Berlin} did explicitly not require an ethics approval and had no ethics committee to formally approve of experiments.
 An ethics committee was only instated on 15 October 2019.\footnote{\concealed{\url{https://www.fu-berlin.de/forschung/service/ethik/_media/2022-05-17_ZEA-Geschaeftsordnung_DE_final.pdf}}}
 
+\section{Funding}
+
+Roland Schäfer's work on this paper was funded in part by the Deutsche Forschungsgemeinschaft (DFG, German Research Foundation) -- SFB 1412, 416591334.
+
 \printbibliography
 
 \end{document}
