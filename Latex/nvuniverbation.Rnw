@@ -37,8 +37,8 @@
 \usepackage{rotating}
 \usepackage{bbding}
 \usepackage{soul}
-\usepackage[textsize=tiny,backgroundcolor=yellow!50]{todonotes}
 
+\usepackage[textsize=tiny,backgroundcolor=yellow!50]{todonotes}
 \newcommand{\ulrike}[1]{\todo{#1}}
 \newcommand{\roland}[1]{\todo[backgroundcolor=blue!20]{#1}}
 
@@ -81,6 +81,8 @@
 \newcommand{\CM}[1]{\ensuremath{\mathsf{#1}}}
 \newcommand{\Ni}{N\Sub{1}}
 \newcommand{\Nii}{N\Sub{2}}
+\newcommand{\Up}[1]{\ensuremath{^{\text{#1}}}}
+
 
 % \newcommand{\concealed}[1]{\textcolor{red}{\textbf{[}}{#1}\textcolor{red}{\textbf{]}}}
 % \newcommand{\concealed}[1]{#1}
@@ -94,7 +96,7 @@
     right=0pt,
     top=0pt,
     bottom=0pt,
-    colback=yellow!70,
+    colback=yellow,
     colframe=white,
 %    width=\dimexpr\textwidth\relax,
 %    enlarge left by=0mm,
@@ -103,10 +105,10 @@
     }
 
 \pdfauthor{Roland Schaefer and Ulrike Sayatz}
-\pdftitle{Between syntax and morphology: German noun+verb units as reluctant compounds}
+\pdftitle{Between syntax and morphology: German noun+verb units}
 \pdfkeywords{probabilistic grammar, graphemics, univerbation, corpus data, elicitation, German}
 
-\title[Between syntax and morphology: German noun+verb units as reluctant compounds]{Between syntax and morphology:\\German noun+verb units\\as reluctant compounds}
+\title[Between syntax and morphology: German noun+verb units]{Between syntax and morphology:\\German noun+verb units}
 
 \author{
   \concealed{
