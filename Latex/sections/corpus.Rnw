@@ -87,7 +87,11 @@ With these counts, we are able to quantify how strongly the proportions in the f
 For example, one could use odds ratios or effects strengths from frequentist statistical tests.%
 \footnote{P-values from frequentist statistical tests are measures of evidence, not effect strength, and therefore are not appropriate in such situations \parencite{SchmidKuechenhoff2013,KuechenhoffSchmid2015}, although they were used in early Collostructional Analysis.
 However, even Collostructional Analysis is now often used with measures of effect strength \parencite{Gries2015b}.}
-We chose Cramér's $v$ derived from standard $\chi^2$ scores ($v=\sqrt{\chi^2/n}$).
+We chose Cramér's $v$ derived from standard $\chi^2$ scores ($v=\sqrt{\chi^2/n}$).%
+\footnote{One reviewer pointed out -- citing \citet{Gries2022} -- that log odds ratios could be used instead of Cramér's $v$ for the reason that Cramér's $v$ does in many situations not go up to 1 and might have some other undesirable mathematical properties.
+We agree that this can be a problem in theory, but that it only matters under certain extreme conditions.
+However, since the analysis is purely exploratory and only interpreted globally, we do not expect a problem.
+As we have verified, using log odds ratios indeed produces a very similar distribution of values under the two conditions.}
 The $v$ measure quantifies for each individual N+V unit how strongly its observed counts (cells $c_{11}$ and $c_{21}$) deviate from the counts that we would expect if there were no difference between this unit and all other N+V units (cells $c_{21}$ and $c_{22}$) with respect to their tendency to univerbate.
 Since Cramér's $v$ normalises the $\chi^2$ scores to the range between 0 and 1, it allows us to compare analyses where the sample sizes differ.
 In itself, $v$ does not tell us whether the deviation is negative (for a N+V unit with fewer than average compound spellings) or positive (for a N+V unit with more than average compound spellings).
@@ -156,7 +160,8 @@ In the case at hand, such a model on proportion data is also a convenient way of
 
 The two important fixed effects in the model are the morphosyntactic context and the internal relation (see Section~\ref{sub:choiceofcorpussamplingandannotation}).
 With $\Sexpr{nrow(concordance)}$ N+V units, the lexical indicator variable for the individual N+V unit should not be used as a fixed effect, because there would be too many levels (\citealt[244--247]{GelmanHill2006}; \concealed{\citealt{Schaefer2020a}}).
-Thus, we specified a generalised linear mixed model with the N+V unit variable as a random effect.
+Thus, we specified a generalised linear mixed model with the N+V unit variable as a random effect.%
+\footnote{This is the maximal random effect structure that converges and results in a healthy variance-covariance matrix, see \citet{Schaefer2020a}.}
 In lme4 notation, the specification is shown in (\ref{eq:corpusglmmr}).
 
 \begin{equation}

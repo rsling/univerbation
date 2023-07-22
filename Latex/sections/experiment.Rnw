@@ -86,7 +86,8 @@ However, without inter-participant randomisation and in the given time frame, a 
 
 In this section, we report the parameter estimates of a GLMM modelling the behaviour of the participants in our experiment.
 The model specification in lme4 notation is given in (\ref{eq:expglmmformula}).
-The coefficient estimates for the GLMM are reported in Table~\ref{tab:experimentglmm}.
+The coefficient estimates for the GLMM are reported in Table~\ref{tab:experimentglmm}.%
+\footnote{This is the maximal random effect structure that converges and results in a healthy variance-covariance matrix, see \citet{Schaefer2020a}.}
 
 \begin{equation}
   \mathtt{Univerbation\sim (1|Participant)+Context+Relation}

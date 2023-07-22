@@ -103,6 +103,14 @@ While we opt for a prototype description, Hüning's view is still based on the s
 To this end, we will shed some light on the productive N+N compound construction in Section~\ref{sub:nncompounds} before turning to N+V units as reluctant compounds in Section~\ref{sub:nvunitsasreluctantcompounds}.
 We sum up our arguments and derive our hypotheses for the empirical studies in Section~\ref{sub:hypothesesfortheempiricalstudies}.
 
+\begin{tcolorbox}
+\subsubsection{Particle verbs}
+\label{sub:particleverbs}
+
+A careful discussion of Wurzel.
+
+\end{tcolorbox}
+
 \subsubsection{N+N compounds}
 \label{sub:nncompounds}
 

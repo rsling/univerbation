@@ -1,6 +1,6 @@
 ### Calculate linguistic association measures.
 
-assoc <- function(f1, f2, cs1, cs2, min.count=5, smooth=1, method="Cramer") {
+assoc <- function(f1, f2, cs1, cs2, min.count=5, smooth=1, method="Odds") {
   if (f1+f2 < min.count) r <- NaN
   else {
     r <- 0
@@ -16,12 +16,10 @@ assoc <- function(f1, f2, cs1, cs2, min.count=5, smooth=1, method="Cramer") {
       .r <- as.numeric(sqrt(.x2$statistic/(cs1+cs2))) * -sign(.x2$expected-.x2$observed)[1,1]
     } else if (method=="Fisher") {
       .f <- fisher.test(matrix(c(f1,f2,cs1-f1,cs2-f2), nrow = 2))
-      .x2 <- chisq.test(matrix(c(f1,f2,cs1-f1,cs2-f2), nrow = 2), correct = T)
       .r <- as.numeric(.f$p.value) * -sign(.x2$expected-.x2$observed)[1,1]
     } else if (method=="Odds") {
-      .f <- fisher.test(matrix(c(f1,f2,cs1-f1,cs2-f2), nrow = 2))
-      .x2 <- chisq.test(matrix(c(f1,f2,cs1-f1,cs2-f2), nrow = 2), correct = T)
-      .r <- as.numeric(.f$estimate) * -sign(.x2$expected-.x2$observed)[1,1]
+      .t <- matrix(c(f1,f2,cs1-f1,cs2-f2), nrow = 2)
+      .r <- log((.t[1,1]/.t[1,2])/(.t[2,1]/.t[2,2]))
     }
     .r
   }
