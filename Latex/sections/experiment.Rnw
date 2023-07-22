@@ -13,7 +13,7 @@ Section~\ref{sub:resultsexperiment} reports the results descriptively and in the
 \subsection{Design and participants}
 \label{sub:designandparticipants}
 
-The goal of the experiment was to replicate the findings from the corpus study in another empirical paradigm and to test whether writers' behaviour under controlled experimental conditions is similar to the behaviour of writers under uncontrolled circumstances as found in corpora.
+The goal of the experiment was to replicate the findings from the corpus study in another empirical paradigm and to test whether writers' behaviour under controlled experimental conditions is similar to the behaviour of writers under circumstances without experimental control as found in corpora.
 We used pre-recorded auditory stimuli in order to elicit spellings of given N+V units.
 The stimuli were chosen based on theoretically motivated criteria and the information about item-specific tendencies obtained from the exploratory part of the corpus study in Section~\ref{sub:results2associationastrengths}.
 We constructed eight sentences instantiating the four morphosyntactic contexts described in Section~\ref{sub:results1multilevelmodel} crossed with the two semantic relations.
@@ -61,8 +61,9 @@ In order to control for differences in lexical preferences, the concrete pairs o
 As expected, units with an argument relation have negative attraction scores, and ones with an oblique relation have positive scores (see column `Attr. score' in Table~\ref{tab:designtable}).
 For each context, we selected pairs where the difference between the scores was larger than $0.05$.
 Except for the infinitive context (difference $\Sexpr{attr.dist("Infinitive")}$), we managed to find pairs for which the difference is actually above $0.1$ (NP: $\Sexpr{attr.dist("NP")}$, Participle: $\Sexpr{attr.dist("Participle")}$, Progressive: $\Sexpr{attr.dist("Progressive")}$).
-It should be kept in mind that the v scores have no interpretation independently of their specific distribution.
+\hl{In the spirit of Footnote~\mbox{\ref{fn:cramer}}, i}t should be kept in mind that the $v$ scores have no interpretation independently of their specific distribution.
 They were merely used here to maximise the differences between the corresponding N+V units with argument and oblique relation.
+\hl{They are merely an exploratory tool, and nothing substantial in the design of this experiment hinges on their concrete numerical values.}
 
 The sentences were constructed in a way such that all N+V units were the predicate of a subordinate clause.
 This consistently ensured verb-last constituent order and avoided interfering verb-second effects, which are typical of independent sentences in German.
@@ -87,7 +88,7 @@ However, without inter-participant randomisation and in the given time frame, a 
 In this section, we report the parameter estimates of a GLMM modelling the behaviour of the participants in our experiment.
 The model specification in lme4 notation is given in (\ref{eq:expglmmformula}).
 The coefficient estimates for the GLMM are reported in Table~\ref{tab:experimentglmm}.%
-\footnote{\hl{This is the maximal random effect structure that converges and results in a healthy variance-covariance matrix, see \mbox{\citet{Schaefer2020a}}.}}
+\footnote{\hl{This is the maximal random effect structure that converges and results in a healthy variance-covariance matrix, see \mbox{\concealed{\citet{Schaefer2020a}}}.}}
 
 \begin{equation}
   \mathtt{Univerbation\sim (1|Participant)+Context+Relation}
