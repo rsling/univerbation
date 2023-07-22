@@ -321,7 +321,7 @@ Including NPs in this specific form along with this emerging progressive constru
 We expect N+V units in infinitives and participles (prototypically verbal) to have a weak tendency and N+V units in full NPs (prototypically nominal) to have a strong tendency towards univerbation.
 We have no prediction for the progressive as we are unsure whether it has truly developed into a verbal construction.
 
-The other important cue is the internal semantic relation (Section~{sub:incorporation}).
+The other important cue is the internal semantic relation (Section~\ref{sub:incorporation}).
 N+V units with an oblique relation stand in weaker competition with a syntactic realisation compared with those that have an argument relation.
 N+V units with an oblique relation would need more explicit marking with a preposition in the unambiguously syntactic realisation, and incorporation is the better option than a syntactic structure.
 We thus expect N+V units with an oblique relation to undergo univerbation more frequently.
