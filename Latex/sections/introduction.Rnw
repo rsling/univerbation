@@ -3,7 +3,7 @@
   opts_knit$set(self.contained=FALSE)
 @
 
-\section{German N+V units and their spelling}
+\section{German noun+verb units and their spelling}
 \label{sec:introduction}
 
 The alternation we are going to explore affects units containing a noun and a verb, and these units alternate between a syntactic manifestation (where the noun combines with the verb via a syntactic mechanism) and a morphological one (where the noun is incorporated into the verb).
@@ -139,9 +139,9 @@ However, univerbation per se is not necessarily the result of a regular grammati
 %\citet[107]{Jacobs2005} regards graphemic univerbation as not rooted in a morphological process as they are not paradigmatic (no \textit{Reihenbildung}).
 %\citet[209]{Lehmann2020} is closest to our position, as he regards ``univerbation as a gradient process which displays phases of weaker and stronger univerbation''.
 %According to him, it marked by the loss of morphological boundaries and by phonological fusion.}
-Thus, a major aim of this paper is to show whether and how the univerbation of N+V units in German is based on \hl{established morphological prototypes} in which a noun is incorporated into a verb, forming a new verb expressing a new event concept.
+Thus, a major aim of this paper is to show whether and how the univerbation of N+V units in German is based on established morphological prototypes in which a noun is incorporated into a verb, forming a new verb expressing a new event concept.
 
-We will argue that such \hl{morphological constructions exist}, but that the alternative\hl{, syntactically construed variant of the N+V unit} remains available to speakers because N+V units have properties of both morphological as well as syntactic prototypes.
+We will argue that such morphological constructions exist, but that the alternative, syntactically construed variant of the N+V unit remains available to speakers because N+V units have properties of both morphological as well as syntactic prototypes.
 In Section~\ref{sec:theoreticalbackground}, we lay the theoretical and descriptive foundations.
 We then present a large-scale corpus study and an elicitation experiment in Sections~\ref{sec:corpusbasedanalysisoftheusageofnvunits} and~\ref{sec:elicitedproductionofnounverbunitsinwrittenlanguage}, exploring our particular hypotheses about N+V units.
 We conclude with a summary, further interpretation and discussion in Section~\ref{sec:explainingnounverbuniverbation}.

@@ -8,9 +8,9 @@ opts_knit$set(self.contained=FALSE)
 
 We have shown convincing evidence from corpora and controlled production experiments that the morphosyntactic context and the semantic relation are the crucial influencing factors on the graphemic univerbation of N+V units in German.
 Prototypically verbal contexts (infinitives and participles) disfavour univerbation, while prototypically nominal contexts (normal NPs and the so-called \textit{am}-progressive, which contains a normal NP) favour univerbation.
-As we have argued, the nominal contexts \hl{favour} the interpretation of the N+V unit as a \hl{N+N} compound, while the verbal contexts are \ul{at least more strongly} linked to a syntactic\slash phrasal interpretation.
+As we have argued, the nominal contexts favour the interpretation of the N+V unit as a N+N compound, while the verbal contexts are \ul{at least more strongly} linked to a syntactic\slash phrasal interpretation.
 The difference in morphosyntactic status is mirrored in the different tendencies in writing.
-Furthermore, an argument relation between the V and the N within the N+V units disfavours \hl{incorporation and thus} univerbation because the N+V unit is closer to the regular syntactic construction than its counterpart with an oblique relation\hl{, allowing the unit to avoid full incorporation}.
+Furthermore, an argument relation between the V and the N within the N+V units disfavours incorporation and thus univerbation because the N+V unit is closer to the regular syntactic construction than its counterpart with an oblique relation, allowing the unit to avoid full incorporation.
 For the oblique relation, a syntactic construction is barely accessible because it would normally require a preposition to mark the relation.
 
 The fact that we could not find evidence for a difference in tendencies between the infinitive and participle speaks against a mixed verbal\slash nominal status of the participle in this specific construction, which does not preclude such a mixed status in other contexts.\footnote{%
@@ -49,15 +49,15 @@ This might be an indication that semantically weaker verbs like \textit{machen} 
 However, the number of N+V units for each verb is too low to make any sound inferences, and an analysis in terms of (semantic) verb \textit{classes} would be necessary.
 Given the difficulty of determining the appropriate verb classes, we save this for future work.
 
-Another \hl{potential factor to be examined in the future} is the productivity of the N+V construction.
+Another potential factor to be examined in the future is the productivity of the N+V construction.
 Intuitively, and from looking at the data, it appears that the units with an argument relation are formed much more productively compared to the ones with an oblique relation.
 If the ones with an oblique relation are formed less productively, they should have a tendency to be more strongly lexicalised, which might be a reason for their stronger tendency to univerbate.
-Related to the question of productivity, we might \hl{return to the question of which N+V units are the result of back-formation \mbox{\parencite{Wurzel1998}}}.
+Related to the question of productivity, we might return to the question of which N+V units are the result of back-formation \mbox{\parencite{Wurzel1998}}.
 For example, the verb \textit{zwangsernähren} `to force feed' is likely a back-formation of the N+N compound \textit{Zwangsernährung} `force feeding' (with \textit{Ernährung} `feeding' being derived from \textit{ernähren} `to feed'), and it now appears as a N+V unit with the full array of finite and infinite verb forms.
-\hl{As pointed out in Section~\mbox{\ref{sub:particleverbs}}, i}t is difficult to quantify the effect of such back-formations on the present study.
-\hl{The internal semantic relation combined with numerical data-driven analyses of the units' productivity might help to avoid difficult operationalisations of back-formation status while delivering the same explanatory power.}
+As pointed out in Section~\mbox{\ref{sub:particleverbs}}, it is difficult to quantify the effect of such back-formations on the present study.
+The internal semantic relation combined with numerical data-driven analyses of the units' productivity might help to avoid difficult operationalisations of back-formation status while delivering the same explanatory power.
 
-A final point we have not discussed prominently\hl{, and which is related to the question of back-formation,} is the presence of so-called linking elements.
+A final point we have not discussed prominently, and which is related to the question of back-formation, is the presence of so-called linking elements.
 They normally only appear between the nouns in N+N compounds, and while many of them look like plural markers of the first noun (\textit{Tontaubenschießen} `clay pigeon shooting' analysed as \textit{Tontaube-n-schießen}, argument relation), others do not even look like inflectional forms of the first noun (\textit{Leistungsschießen} `(high) performance shooting\slash competitive shooting' analysed as \textit{Leistung-s-schießen}, oblique relation).
 These linking elements occur in some N+V units, but only in a minority.
 Table~\ref{tab:linkers} shows which linking elements we found in our sample, and in how many of the units they occurred.
@@ -82,16 +82,16 @@ Table~\ref{tab:linkers} shows which linking elements we found in our sample, and
 
 In principle, the linking element should be a very clear indicator of a fully nominal status and favour univerbation.
 However, they occur readily at least in infinite verb forms like \textit{leistungsgeschossen} (participle), which means the linking element is adopted outside of its primary domain (nominal compounds), \ie in verb forms.
-\hl{Interestingly, a clear majority of the linking elements occurring in our study are plural-like linking elements.
+Interestingly, a clear majority of the linking elements occurring in our study are plural-like linking elements.
 This is not at all the distribution found in all N+N compounds.
 In a large study, \mbox{\citet[339]{SchaeferPankratz2018}} showed (in line with earlier studies) that 23.69 \% of all N+N compound types have an \textit{-s} linking element, but only 15.07 \% have one of the plural-like elements seen in Table~\mbox{\ref{tab:linkers}}.
 The picture is thus not as simple as maybe \mbox{\citet{Wurzel1998}} would suggest.
-Linking elements in N+V units cannot straightforwardly be the result of random back-formation processes, because if they were, we would expect them to be distributed much more like in the N+N data described in \mbox{\citet{SchaeferPankratz2018}}.
+Linking elements in N+V units cannot straightforwardly be the result of random back-formation processes, because if they were, we would expect them to be distributed much more like in the N+N compound data described in \mbox{\citet{SchaeferPankratz2018}}.
 Rather, it seems as if only plural-like linking elements were strongly admissible in N+V units.
 \mbox{\citet{SchaeferPankratz2018}} also found that plural-like linking elements can indeed have a plural interpretation.
 Therefore, a plausible interpretation for our linking element data is that the linking elements in N+V units are indeed interpreted as plural markers, allowing the regular semantic relation to be established, but with a plural interpretation.
 This also opens up the theoretical option that such N+V units with plural-like linking elements could be formed directly without back-formation.
-Clearly, further careful empirical work is required.}
+Clearly, further careful empirical work is required.
 
 In closing, we would like to posit that the kind of data that we find with respect to N+V units can only be explained satisfyingly within a usage-based probabilistic framework.
 It is the primary function of the space in German writing to separate syntactic words, and hence univerbation is best explained as corresponding to the loss of syntactic independence and a crossing over to morphology.

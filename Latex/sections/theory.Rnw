@@ -28,7 +28,7 @@ For writing systems like German, the mappings to be learned include sounds to le
 \footnote{Notice that a probabilistic view does not necessarily imply that there are no discrete or virtually discrete mappings like the one-to-one mapping of consonantal segments to letters in German.
 Cases of discreteness can always be seen as extremes in a probabilistic system.}
 
-In UBG, corpus data (\ie production data) are often used as evidence, sometimes cross-validated in behavioural experiments (see, for example, \citealt{ArppeJaervikivi2007,BresnanEa2007,Dabrowska2014,Divjak2016a,DivjakEa2016a,FordBresnan2013,PankratzVantiel2021}; \concealed{\citealt{Schaefer2018,SchaeferPankratz2018}}).
+In UBG, corpus data (\ie production data) are often used as evidence, sometimes cross-validated in behavioural experiments (see, for example, \citealt{ArppeJaervikivi2007,BresnanEa2007,Dabrowska2014,Divjak2016a,DivjakEa2016a,FordBresnan2013,PankratzVantiel2021}; \citealt{Schaefer2018,SchaeferPankratz2018}).
 This is justified because the usage-based (hence probabilistic) nature of the acquisition process should be reflected in the output of competent adult speakers\slash writers as captured in corpora, and not just in the acquisition process itself.
 Consequently, it should also be reflected in production data obtained from competent adults, and we should be able to uncover the probabilistic mappings of lexical-grammatical categories to written forms from such data.
 We consequently use corpus data as well as data elicited in controlled experiments, both being forms of production data.
@@ -39,7 +39,7 @@ What we hope to recover from corpus data are major abstractions learned by a maj
 A convenient framework to formulate such abstractions is Prototype Theory (\citealt{Rosch1973,Rosch1978}).
 As a cognitive theory of classification, it is compatible with probabilistic views since it allows for fuzzy category membership (\egg \citealt{Sutcliffe1993}; \citealt[11--16]{Murphy2002}).
 Grammatical units can thus be modelled as belonging to multiple categories to different degrees or---in our case to be introduced immediately below---as alternating between a morphological and a syntactic realisation.%
-\footnote{For applications of Prototype Theory in linguistics see, among many others, \citet{DivjakArppe2013,Dobric2015,Gilquin2006,Gries2003}; \concealed{\citet{Schaefer2019a}}.
+\footnote{For applications of Prototype Theory in linguistics see, among many others, \citet{DivjakArppe2013,Dobric2015,Gilquin2006,Gries2003}; \citet{Schaefer2019a}.
 See \citet{Taylor2003,Taylor2008} for introductory overviews.}
 Prototype Theory is also intrinsically compatible with UBG as it assumes just a very general mechanism of classification whereby newly encountered objects are classified by similarity to a prototypical exemplar.
 In most versions of Prototype Theory, these prototypes are identified by (weighted) features or \textit{cues}, and unseen exemplars are categorised depending on how many of those features they share with the prototype.
@@ -50,7 +50,7 @@ One caveat that is specific to graphemics needs to be mentioned before we procee
 The acquisition of the writing system involves explicit instruction and is thus more strongly imposed by prescriptive norms.
 However, we expect writers to learn grammar-graphemics mappings primarily from their realisations in the input, especially whenever the norm is unspecific or unclear (especially as it has changed back and forth over the past three decades), a situation which provides ideal test cases for our view of graphemics.
 Variation and alternations in the written input shape the acquired probability distribution, and conditioning factors are acquired to the degree that they can be retrieved from the type and the frequency of the input.%
-\footnote{We have previously used a similar approach in, for example, \concealed{\citet{SchaeferSayatz2014,SchaeferSayatz2016}}.}
+\footnote{We have previously used a similar approach in, for example, \citet{SchaeferSayatz2014,SchaeferSayatz2016}.}
 We are convinced that graphemics is a field in its own right which deserves attention in any grammatical\slash linguistic framework.
 See \citet{Berg2016} for a compatible fundamental argument independent of a concrete grammatical framework.
 
@@ -79,14 +79,14 @@ Until such a diachronic process is complete and one of the spellings has become 
 For many of these constructions, this is the case both in non-standard as well as standard written German, albeit to different degrees.
 %\footnote{We are not aware of any published research systematically comparing the alternation tendencies in standard and non-standard written German.}
 
-N+V units with different affinities towards compound spelling like \textit{Rad fahren} (`bike riding', often also spelled \textit{radfahren}) and \textit{eislaufen} (`ice skating', infrequently also spelled \textit{Eis laufen}) \hl{often} represent different levels of diachronic re-conventionalisation as single words.%
+N+V units with different affinities towards compound spelling like \textit{Rad fahren} (`bike riding', often also spelled \textit{radfahren}) and \textit{eislaufen} (`ice skating', infrequently also spelled \textit{Eis laufen}) often represent different levels of diachronic re-conventionalisation as single words.%
 \footnote{The orthographic norm is notoriously unstable with respect to N+V units, which contributes to their unclear status.
 Before the significant reform of the orthographic norm in 1996, both \textit{radfahren} and \textit{eislaufen} were supposed to be spelled as one word.
 After the reform, both units were supposed to be written as two words (\textit{Eis laufen} and \textit{Rad fahren}).
 After a revision of the reform in 2006, \textit{eislaufen} was again supposed to be spelled as one word, whereas \textit{Rad fahren} was supposed to be spelled as two words exclusively (\citealt[32]{Primus2010}, \citealt[356]{Eisenberg2020a}).
 From experience, we know that the norm is often not adhered to, and the data presented in Sections~\ref{sec:corpusbasedanalysisoftheusageofnvunits} and~\ref{sec:elicitedproductionofnounverbunitsinwrittenlanguage} strongly corroborate this experience.}
 This indeterminacy means that speakers have both the syntactic realisation (disjunct spelling) and the morphological realisation (compound spelling) in their graphemic input, which subsequently leaves them with quite a free choice to be made based on how a concrete item is classified according to their individual grammar.
-It is the task of usage-based probabilistic graphemics to uncover factors influencing such decisions and decode the principles at work in speakers' internal grammar by analysing their writing habits (see \concealed{\citealt{SchaeferSayatz2016}}).
+It is the task of usage-based probabilistic graphemics to uncover factors influencing such decisions and decode the principles at work in speakers' internal grammar by analysing their writing habits (see \citealt{SchaeferSayatz2016}).
 
 
 \subsection{The status of noun+verb units in German}
@@ -100,10 +100,10 @@ These patterns are shown to have prototypical properties which are matched more 
 He, too, argues that the respective constructions alternate between a syntactic and a morphological realisation, and he uses analogy to existing categories to explain the alternation.
 While we opt for a prototype description, Hüning's view is still based on the same underlying assumptions as ours.}
 %The hypotheses put forward here are then evaluated empirically in Sections~\ref{sec:corpusbasedanalysisoftheusageofnvunits} and \ref{sec:elicitedproductionofnounverbunitsinwrittenlanguage}.
-To this end, we will shed some light \hl{on particle verbs as a target class for N+V units in Section~\mbox{\ref{sub:particleverbs}}}, \hl{on N+V units as structures involving incorporation in Section~\mbox{\ref{sub:incorporation}}}, \hl{before turning to N+V units as reluctant compounds in Section~\mbox{\ref{sub:nncompounds}}}.
+To this end, we will shed some light on particle verbs as a target class for N+V units in Section~\mbox{\ref{sub:particleverbs}}, on N+V units as structures involving incorporation in Section~\mbox{\ref{sub:incorporation}}, before turning to N+V units as reluctant compounds in Section~\mbox{\ref{sub:nncompounds}}.
 We sum up our arguments and derive our hypotheses for the empirical studies in Section~\ref{sub:hypothesesfortheempiricalstudies}.
 
-\subsubsection{\hl{Particle verbs}}
+\subsubsection{Particle verbs}
 \label{sub:particleverbs}
 
 For an N+V unit to systematically undergo graphemic univerbation (\ie a downgrading from a syntactic to a morphological construction in the sense of \citealt[206]{Lehmann2020}), it must resemble one or more established prototypical morphological constructions closely enough to be classified as an instance of such constructions itself.%
@@ -146,7 +146,7 @@ We find that this classification -- derived from Wurzel's own intuitions and old
 Furthermore, we do not see how the classification would affect any of our predictions, methods, or inferences.}
 For the present purpose, we therefore used a different variable, which most likely is even more cognitively relevant than derivation via back-formation (and which encompasses at least the major split in Wurzel's diachronic classification): the internal semantic relation between the noun and the verb, to which we turn in Section~\ref{sub:incorporation}.
 
-\subsubsection{\hl{Incorporation and the internal semantic relation}}
+\subsubsection{Incorporation and the internal semantic relation}
 \label{sub:incorporation}
 
 The morphological realisation of N+V units (i.\,e., their usage as one word) is a type of noun incorporation.
@@ -215,7 +215,7 @@ Since German requires no marker of structural argument status on nouns, the comp
 On the other hand, \textit{probefahren} -- even spelled as \textit{Probe fahren} -- does not have a syntactic interpretation at all due to the lack of the preposition that normally marks the oblique relation, and hence full incorporation is a much more plausible interpretation.
 Therefore, we predict that N+V units with an oblique relation have a stronger tendency to incorporate, consequently undergo univerbation more easily, and are more often used with compound spelling.
 
-\subsubsection{\hl{N+N compounds}}
+\subsubsection{Noun+noun compounds}
 \label{sub:nncompounds}
 \label{sub:nvunitsasreluctantcompounds}
 
@@ -256,7 +256,7 @@ As opposed to compounding with proper nominal heads, compounding with verbal hea
 \footnote{\citet{Guenther1997} counts roughly 400 lexicalised N+V compounds in \citet{Muthmann1988} (see also \citealt[245]{Eisenberg2020a}).}
 A major difference between N+N compounds and N+V units is that N+V units are usually separable.
 There can be intervening material in between the noun and the verb in some contexts, namely the infinitival particle \textit{zu}.
-This particle is, however, virtually part of the verbal word form and does by no means prevent univerbation (see example \ref{ex:compoundspelling4}, where \textit{rad\-zu\-fahren} is spelled as one word instead of \textit{rad zu fahren}).
+This particle is, however, generally considered to be part of the verbal word form \citep[211]{Eisenberg2020a} and does by no means prevent univerbation (see example \ref{ex:compoundspelling4}, where \textit{rad\-zu\-fahren} is spelled as one word instead of \textit{rad zu fahren}).
 Furthermore, in a verb-second sentence, the noun may remain at the end of the sentence in a structure reminiscent of particle verbs \parencite[603]{Fortmann2015}, see (\ref{ex:disjunctspelling1}).
 
 Another major difference between N+N compounds and N+V units is that the morphological N+V construction is not recursive.
@@ -264,7 +264,8 @@ Nominalised N+V units marginally occur as \Ni\ in \Ni+\Nii\ compounds (contrary 
 \footnote{The examples in (\ref{ex:notfuhrhop}) are attested and taken from the DECOW16B web corpus (see Section~\ref{sub:choiceofcorpussamplingandannotation}).
 Their document frequencies are 218 for \textit{Energiesparmesse}, 416 for \textit{Endlagersuchgesetz}, and 414 for \textit{Feuerlöschboot} in a corpus of 17.1 million documents.
 The document frequency is the number of documents the lemma occurs in, not counting multiple occurrences within each document.}
-However, an N+V unit does no function as the verbal head in another N+V unit under normal circumstances (\ie a [N+[N+V]] structure) as illustrated in (\ref{ex:nnv}).
+However, an N+V unit cannot function as the verbal head in another N+V unit (\ie a [N+[N+V]] structure) under normal circumstances as illustrated in (\ref{ex:nnv}).
+While such a compound is (maybe marginally) acceptable when used as a noun as in  (\ref{ex:nnva}), the absurd infinitive with \textit{zu} in (\ref{ex:nnvb}) clearly shows that it cannot be a recursively formed true [N+[N+V]] unit.
 
 \begin{exe}
   \ex\label{ex:notfuhrhop}\begin{xlist}
@@ -278,9 +279,14 @@ However, an N+V unit does no function as the verbal head in another N+V unit und
     [[fire.extinguish].boat]\\
     \trans fire-fighting boat
   \end{xlist}
-  \ex[*]{\gll Rad.fahr.mach-en\\
-  {[[bike.ride].make-\textsc{Inf}]}\\
-  \trans make bike riding\label{ex:nnv}}
+  \ex\label{ex:nnv}
+    \begin{xlist}
+      \ex[ ]{\gll Ich gehe zum Auto.probe.fahren.\\
+      I go {to.the} {[[car].[test.drive]]}\\
+      \trans I'm off to a car test drive.}\label{ex:nnva}
+      \ex[*]{\gll Ich habe keine Lust autozuprobefahren.\\
+      {I have no interest [car.to.[test.drive]]}\\}\label{ex:nnvb}
+    \end{xlist}
 \end{exe}
 
 It appears as if the N+N compound is not an ideal prototype for N+V units.
@@ -289,7 +295,7 @@ As the noun phrase requires a nominal head, the verb is forced into nominalisati
 In other words, the syntactic realisation is dispreffered strongly as it has no matching productive prototype pattern.
 Should we observe different tendencies to undergo univerbation in verbal and nominal contexts, we posit that this process explains for them.
 
-\subsubsection{\hl{Conclusions for the empirical studies}}
+\subsubsection{Conclusions for the empirical studies}
 \label{sub:hypothesesfortheempiricalstudies}
 
 In this section, we summarise and describe the concrete effects that we expect to see in written production data based on our overall usage-based framework and our theoretical assessment of N+V units.

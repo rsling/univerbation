@@ -83,11 +83,6 @@
 \newcommand{\Nii}{N\Sub{2}}
 \newcommand{\Up}[1]{\ensuremath{^{\text{#1}}}}
 
-
-% \newcommand{\concealed}[1]{\textcolor{red}{\textbf{[}}{#1}\textcolor{red}{\textbf{]}}}
-% \newcommand{\concealed}[1]{#1}
-\newcommand{\concealed}[1]{\textcolor{gray}{\textsc{Redacted}}}
-
 \usepackage[most]{tcolorbox}
 \tcbset{
 %    frame code={}
@@ -111,18 +106,16 @@
 \title[Between syntax and morphology: German noun+verb units]{Between syntax and morphology:\\German noun+verb units}
 
 \author{
-  \concealed{
-    \spauthor{Roland Schäfer\\
-    \institute{\small Germanistische Sprachwissenschaft,\\Friedrich-Schiller-Universität Jena\\
-    \small{Fürstengraben 30, 07743 Jena}\\
-    \small{roland.schaefer@uni-jena.de}}
-    }
-    \AND
-    \spauthor{Ulrike Sayatz\\
-    \institute{\small Deutsche und niederl.\ Philologie,\\Freie Universität Berlin\\
-    \small{Habelschwerdter Allee 45, 14195 Berlin}\\
-    \small{ulrike.sayatz@fu-berlin.de}}
-    }
+  \spauthor{Roland Schäfer\\
+  \institute{\small Germanistische Sprachwissenschaft,\\Friedrich-Schiller-Universität Jena\\
+  \small{Fürstengraben 30, 07743 Jena}\\
+  \small{roland.schaefer@uni-jena.de}}
+  }
+  \AND
+  \spauthor{Ulrike Sayatz\\
+  \institute{\small Deutsche und niederl.\ Philologie,\\Freie Universität Berlin\\
+  \small{Habelschwerdter Allee 45, 14195 Berlin}\\
+  \small{ulrike.sayatz@fu-berlin.de}}
   }
 }
 
@@ -263,18 +256,18 @@ setwd(path.knitr)
 
 \section*{Acknowledgments}
 
-We are indebted to \concealed{Felix Bildhauer}, \concealed{Marc Felfe}, and \concealed{Elizabeth Pankratz} for in-depth discussions and feedback.
-We thank \concealed{Elizabeth} also for her thorough proofreading of an earlier version of this paper.
-We thank \concealed{Luise Rissmann} for her help annotating and cleaning the corpus data as well as conducting most of the experiments.
+We are indebted to Felix Bildhauer, Marc Felfe, and Elizabeth Pankratz for in-depth discussions and feedback.
+We thank Elizabeth also for her thorough proofreading of an earlier version of this paper.
+We thank Luise Rissmann for her help annotating and cleaning the corpus data as well as conducting most of the experiments.
 
 \section{Ethics and Consent}
 \label{sec:ethicsandconsent}
 
-The experiment was conducted in accordance with the Declaration of Helsinki (seventh revision).
+The experiment was conducted in accordance with the Declaration of Hel\-sinki (seventh revision).
 The exclusively adult participants of the experiment gave consent and were informed extensively about the nature of the experiment beforehand, and they were given the opportunity to revoke their consent after their participation.
 All data were stored on offline media and fully anonymised immediately after each participation.
-At the time of the experiment (14 and 21 June 2017), \concealed{Freie Universität Berlin} did explicitly not require an ethics approval and had no ethics committee to formally approve of experiments.
-An ethics committee was only instated on 15 October 2019.\footnote{\concealed{\url{https://www.fu-berlin.de/forschung/service/ethik/_media/2022-05-17_ZEA-Geschaeftsordnung_DE_final.pdf}}}
+At the time of the experiment (14 and 21 June 2017), Freie Universität Berlin did explicitly not require an ethics approval and had no ethics committee to formally approve of experiments such as ours.
+An ethics committee was only instated on 15 October 2019.\footnote{\url{https://www.fu-berlin.de/forschung/service/ethik/_media/2022-05-17_ZEA-Geschaeftsordnung_DE_final.pdf}}
 
 \section{Funding}
 
