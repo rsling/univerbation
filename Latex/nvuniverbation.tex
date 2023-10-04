@@ -1,0 +1,1252 @@
+\documentclass[biblatex, charis, linguex]{glossa}\usepackage{knitr}
+
+\usepackage{sectsty}
+\allsectionsfont{\normalfont\sffamily\bfseries}
+\subsectionfont{\normalfont\sffamily\bfseries\itshape}
+\let\B\relax
+\let\T\relax
+\usepackage[linguistics]{forest}
+
+\usepackage{amsmath}
+
+\definecolor{lsLightBlue}{cmyk}{0.6,0.05,0.05,0}
+\definecolor{lsMidBlue}{cmyk}{0.75,0.15,0,0}
+\definecolor{lsMidDarkBlue}{cmyk}{0.9,0.4,0.05,0}
+\definecolor{lsDarkBlue}{cmyk}{0.9,0.5,0.15,0.3}
+\definecolor{lsNightBlue}{cmyk}{1,0.47,0.22,0.68}
+\definecolor{lsYellow}{cmyk}{0,0.25,1,0}
+\definecolor{lsLightOrange}{cmyk}{0,0.50,1,0}
+\definecolor{lsMidOrange}{cmyk}{0,0.64,1,0}
+\definecolor{lsDarkOrange}{cmyk}{0,0.78,1,0}
+\definecolor{lsRed}{cmyk}{0.05,1,0.8,0}
+\definecolor{lsLightWine}{cmyk}{0.3,1,0.6,0}
+\definecolor{lsMidWine}{cmyk}{0.54,1,0.65,0.1}
+\definecolor{lsDarkWine}{cmyk}{0.58,1,0.70,0.35}
+\definecolor{lsSoftGreen}{cmyk}{0.32,0.02,0.72,0}
+\definecolor{lsLightGreen}{cmyk}{0.4,0,1,0}
+\definecolor{lsMidGreen}{cmyk}{0.55,0,0.9,0.1}
+\definecolor{lsRichGreen}{cmyk}{0.6,0,0.9,0.35}
+\definecolor{lsDarkGreenOne}{cmyk}{0.85,0.02,0.95,0.38}
+\definecolor{lsDarkGreenTwo}{cmyk}{0.85,0.05,1,0.5}
+\definecolor{lsNightGreen}{cmyk}{0.88,0.15,1,0.66}
+\definecolor{lsLightGray}{cmyk}{0,0,0,0.17}
+\definecolor{lsGuidelinesGray}{cmyk}{0,0.04,0,0.45}
+
+\usepackage{listings}
+\usepackage{booktabs}
+\usepackage{rotating}
+\usepackage{bbding}
+\usepackage{soul}
+
+\usepackage[textsize=tiny,backgroundcolor=yellow!50]{todonotes}
+\newcommand{\ulrike}[1]{\todo{#1}}
+\newcommand{\roland}[1]{\todo[backgroundcolor=blue!20]{#1}}
+
+\newcommand{\exhl}[1]{\textbf{#1}}
+
+% \usepackage[firstpage, scale=0.15]{draftwatermark}
+% \SetWatermarkLightness{0.75}
+% \SetWatermarkText{Draft of \today}
+
+\newcommand{\stylepath}{./langsci/styles/}
+\usepackage{langsci/styles/langsci-gb4e}
+
+% Set listing style. knitr uses RStyle style. Which you have to know...
+\definecolor{listingbackground}{gray}{0.95}
+\lstdefinestyle{RStyle}{
+  language=R,
+  basicstyle=\ttfamily\footnotesize,
+  keywordstyle=\ttfamily\color{lsDarkOrange},
+  stringstyle=\ttfamily\color{lsDarkBlue},
+  identifierstyle=\ttfamily\color{lsDarkGreenOne},
+  commentstyle=\ttfamily\color{lsLightBlue},
+  upquote=true,
+  breaklines=true,
+  backgroundcolor=\color{listingbackground},
+  framesep=5mm,
+  frame=trlb,
+  framerule=0pt,
+  linewidth=\dimexpr\textwidth-5mm,
+  xleftmargin=5mm
+  }
+\lstset{style=Rstyle}
+
+\newcommand{\ie}{i.\,e.,\ }
+\newcommand{\Ie}{I.\,e.,\ }
+\newcommand{\Eg}{E.\,g.,\ }
+\newcommand{\eG}{e.\,g.}
+\newcommand{\egg}{e.\,g.,\ }
+\newcommand{\Sub}[1]{\ensuremath{\mathrm{_{#1}}}}
+\newcommand{\Sup}[1]{\ensuremath{\mathrm{^{#1}}}}
+\newcommand{\CM}[1]{\ensuremath{\mathsf{#1}}}
+\newcommand{\Ni}{N\Sub{1}}
+\newcommand{\Nii}{N\Sub{2}}
+\newcommand{\Up}[1]{\ensuremath{^{\text{#1}}}}
+
+\usepackage[most]{tcolorbox}
+\tcbset{
+%    frame code={}
+%    center title,
+    left=0pt,
+    right=0pt,
+    top=0pt,
+    bottom=0pt,
+    colback=yellow,
+    colframe=white,
+%    width=\dimexpr\textwidth\relax,
+%    enlarge left by=0mm,
+%    boxsep=5pt,
+    arc=0pt,outer arc=0pt,
+    }
+
+\pdfauthor{Roland Schaefer and Ulrike Sayatz}
+\pdftitle{Between syntax and morphology: German noun+verb units}
+\pdfkeywords{probabilistic grammar, graphemics, univerbation, corpus data, elicitation, German}
+
+\title[Between syntax and morphology: German noun+verb units]{Between syntax and morphology:\\German noun+verb units}
+
+\author{
+  \spauthor{Roland Schäfer\\
+  \institute{\small Germanistische Sprachwissenschaft,\\Friedrich-Schiller-Universität Jena\\
+  \small{Fürstengraben 30, 07743 Jena}\\
+  \small{roland.schaefer@uni-jena.de}}
+  }
+  \AND
+  \spauthor{Ulrike Sayatz\\
+  \institute{\small Deutsche und niederl.\ Philologie,\\Freie Universität Berlin\\
+  \small{Habelschwerdter Allee 45, 14195 Berlin}\\
+  \small{ulrike.sayatz@fu-berlin.de}}
+  }
+}
+
+% \addbibresource{rs.bib}
+\addbibresource{nvuniverbation_biber.bib} % Generate using: biber nvuniverbation --output_format bibtex
+
+% Fix non-breaking DOIs.
+\setcounter{biburllcpenalty}{7000}
+\setcounter{biburlucpenalty}{8000}
+
+\begin{document}
+
+
+
+
+
+
+
+% !Rnw root = ../nvuniverbation.Rnw
+
+
+
+
+
+
+
+% !Rnw root = ../nvuniverbation.Rnw
+
+
+
+
+
+% !Rnw root = ../nvuniverbation.Rnw
+
+
+
+
+
+
+\thispagestyle{empty}
+\sffamily
+\maketitle
+
+\begin{abstract}
+  We show that graphemic variation---at least in some writing sys\-tems---can be analysed in terms of grammatical variation given a usage-based probabilistic view of the grammar-graphemics interface.
+  Concretely, we examine a type of noun+verb unit in German, which can be written as one word or two.
+  We argue that the variation in writing is rooted in the units' ambiguous status in between morphology (one word) and syntax (two words).
+  The major influencing factors are shown to be the semantic relation between the noun and the verb (argument or oblique relation) and the morphosyntactic context.
+  In prototypically nominal contexts, a re-interpretation of the unit as a noun+noun compound is facilitated, which favours spelling as one word, while in prototypically verbal contexts, a syntactic realisation and consequently spelling as two words is preferred.
+  We report the results of two large-scale corpus studies and a controlled production experiment to corroborate our analysis.
+\end{abstract}
+
+\begin{keywords}
+  univerbation, usage-based theory, prototypes, corpus data, experiments, German
+\end{keywords}
+
+\rmfamily
+
+
+
+% !Rnw root = ../nvuniverbation.Rnw
+
+
+\section{German noun+verb units and their spelling}
+\label{sec:introduction}
+
+The alternation we are going to explore affects units containing a noun and a verb, and these units alternate between a syntactic manifestation (where the noun combines with the verb via a syntactic mechanism) and a morphological one (where the noun is incorporated into the verb).
+We will argue that alternations in spelling provide evidence for the grammatical status of the instances of the construction.
+A simple example of the alternation is provided in (\ref{ex:introexamples1}) and (\ref{ex:introexamples2}), where in the (a) examples the unit is spelled as two words (syntactic combination), whereas it is spelled as one word (morphological combination) in the (b) examples.
+
+\begin{exe}
+  \ex\label{ex:introexamples1}
+  \begin{xlist}
+    \ex[ ]{\gll Yael weiß, dass Remy \exhl{Rad} \exhl{fährt}.\\
+    Yael knows that Remy bike rides\\
+    \trans Yael knows that Remy is riding a bike.\label{ex:introexamples1a}}
+    \ex[ ]{Yael weiß, dass Remy \exhl{radfährt}.\label{ex:introexampleb1b}}
+  \end{xlist}
+  \ex\label{ex:introexamples2}
+  \begin{xlist}
+    \ex[ ]{\gll Yael weiß, dass Remy \exhl{Eis} \exhl{läuft}.\\
+    Yael knows that Remy ice runs\\
+    \trans Yael knows that Remy is ice-sakting\label{ex:introexamples2a}}
+    \ex[ ]{Yael weiß, dass Remy \exhl{eisläuft}.\label{ex:introexampleb2b}}
+  \end{xlist}
+\end{exe}
+
+% Due to the intricacies of German syntax, the noun and the verb can also occur out of sequence, in which case spelling as one word is not an option.
+% Examples are given in (\ref{ex:introexamples3}).
+%
+% \begin{exe}
+%   \ex\label{ex:introexamples3}
+%   \begin{xlist}
+%     \ex\gll Remy fährt Rad.\\
+%     Remy rides bike\\
+%     \trans Remy is riding\slash rides a bike.
+%     \ex\gll Remy läuft Eis.\\
+%     Remy runs ice\\
+%     \trans Remy is ice-skating\slash ice-skates.
+%   \end{xlist}
+% \end{exe}
+
+In this construction, there is a noun N occurring in its bare form, which either corresponds to an argument of the verb V (normally in the accusative case) as in (\ref{ex:introexamples1}) or to an adjunct of the verb V as in (\ref{ex:introexamples2}), which would normally take the form of a prepositional phrase as in (\ref{ex:ontheice}).%
+\footnote{Whereas singular indefinite mass nouns typically occur without an article in German \citep[471]{Vogel2000}, this is the only frequent construction in German in which bare count nouns occur.
+However, there is a class of lexicalised light verb constructions where a bare noun occurs with a light verb, such as \textit{Anklage erheben} `indict', literally `to raise indictment'.
+Like idiomatic expressions such as \textit{Leine ziehen} `get lost', literally `to pull leash', they do not instantiate a productive pattern (\citealt[76]{HentschelWeydt2003}, \citealt[198]{Stumpf2015}).
+Consequently, we do not discuss them further.}
+
+\begin{exe}
+  \ex\gll Remy läuft auf dem Eis.\\
+    Remy runs on the ice\\
+    \trans Remy is running on the ice\slash is ice-skating.\label{ex:ontheice}
+\end{exe}
+
+As \textit{eislaufen} is highly lexicalised, (\ref{ex:ontheice}) is no longer a proper paraphrase of (\ref{ex:introexamples2}), and it has the more general meaning of just `walking on the ice', which includes `ice-skating'.
+However, many other V+N units are far less lexicalised, and they can all be transparently related to a paraphrase with a PP (see below).
+
+We use the terms `argument relation' (corresponding to a syntactic object as in \textit{Rad fahren}) and `oblique relation' (corresponding to a PP as in \textit{Eis laufen}) to refer to the semantic relations between the noun and the verb, following \citet[20]{GaetaZeldes2017}.
+Oblique nouns occur without their usual preposition, and since the accusative case is only morphologically encoded on pre-nominal elements (if at all) in German, the relation between the noun and the verb is never formally encoded in either case.
+Furthermore, the noun always acquires an unspecific generic reading:
+in examples such as (\ref{ex:introexamples1}), \textit{Rad fahren} (`to ride bike') refers to the concept of riding any bike, and the unspecific reading of \textit{Rad} is obligatory, which is not the case for the English translations with the indefinite article.
+
+German clausal syntax creates the conditions for the actual spelling alternation to occur; see (\ref{ex:disjunctspelling}).%
+\footnote{Further spelling variants for (\ref{ex:disjunctspelling3}) through (\ref{ex:disjunctspelling7}) will be discussed immediately below.}
+
+\begin{exe}
+  \ex\label{ex:disjunctspelling}
+  \begin{xlist}
+    \ex[ ]{\gll Remy \exhl{fährt} gerade \exhl{Rad}.\\
+    Remy rides\Sub{\textsc{Pres}} {right.now} bike\\
+    \trans Remy is riding a bike right now.\label{ex:disjunctspelling1}}
+    \ex[ ]{\gll Remy ist gestern \exhl{Rad} \exhl{gefahren}.\\
+    Remy is yesterday bike ridden\Sub{\textsc{Part}}\\
+    \trans Remy rode a bike yesterday.\label{ex:disjunctspelling3}}
+    \ex[ ]{\gll Remy hat keine Lust, \exhl{Rad} \exhl{zu} \exhl{fahren}.\\
+    Remy has no motivation bike to ride\Sub{\textsc{Inf}}\\
+    \trans Remy doesn't feel like riding a bike.\label{ex:disjunctspelling4}}
+    \ex[ ]{\gll Yael weiß, dass Remy \exhl{Rad} \exhl{fährt}.\\
+    Yael knows that Remy bike rides\Sub{\textsc{Pres}}\\
+    \trans Yael knows that Remy is riding a bike.\label{ex:disjunctspelling2}}
+    \ex[ ]{\gll Remy will \exhl{Rad} \exhl{fahren}.\\
+    Remy wants bike ride\Sub{\textsc{Inf}}\\
+    \trans Remy wants to ride a bike.\label{ex:disjunctspelling34}}
+    \ex[ ]{\gll Remy ist am \exhl{Rad} \exhl{fahren}.\\
+    Remy is {at.the} bike ride\Sub{\textsc{Inf\slash Noun}}\\
+    \trans Remy is riding a bike.\label{ex:disjunctspelling5}}
+    \ex[ ]{\gll Remy singt beim \exhl{Rad} \exhl{fahren}.\\
+    Remy sings {upon.the} bike ride\Sub{\textsc{Inf\slash Noun}}\\
+    \trans Remy is singing while riding a bike.\label{ex:disjunctspelling6}}
+    \ex[*]{\gll Remy lobt das \exhl{Rad} \exhl{fahren}.\\
+    Remy praises the bike riding\Sub{\textsc{Noun}}\\
+    \trans Remy praises the riding of bikes.\label{ex:disjunctspelling7}}
+  \end{xlist}
+\end{exe}
+
+Such N+V units occur flexibly in all types of syntactic contexts:
+with finite verbs in verb-second order (\ref{ex:disjunctspelling1}),
+in the analytical perfect where the lexical verb takes the form of a participle (\ref{ex:disjunctspelling3}),
+in infinitives with the particle \textit{zu} (\ref{ex:disjunctspelling4}),
+with finite verbs in verb-last order (\ref{ex:disjunctspelling2}),
+in bare infinitives (\ref{ex:disjunctspelling34}),
+in a progressive-like construction with the preposition \textit{an} fusioned with the dative singular article \textit{dem} to \textit{am} where the infinitive is potentially nominalised (\ref{ex:disjunctspelling5}),
+and in regular prepositional phrases (\ref{ex:disjunctspelling6}).
+In (\ref{ex:disjunctspelling7}), the spelling of the N+V unit as two words is impossible, hence the asterisk.
+In this case, we can assume that the noun and a fully nominalised infinitive form a regular nominal compound.%
+\footnote{Infinitives in German can be routinely nominalised as an action noun (\citealt[224]{Gaeta2010}, \citealt[67]{DammelKempf2018}, \citealt[172--174]{WernerEa2020}).}
+The spelling as two words for (\ref{ex:disjunctspelling5}) and (\ref{ex:disjunctspelling6}) is not accepted by all native speakers.
+
+In the examples (\ref{ex:disjunctspelling3}) through (\ref{ex:disjunctspelling7}), the noun and the verb occur in sequence without intervening material.
+In these cases, the noun and the verb alternate between the spelling as multiple words seen in (\ref{ex:disjunctspelling}) and spellings as one word shown in (\ref{ex:compoundspelling}).
+In (\ref{ex:compoundspelling5}) and (\ref{ex:compoundspelling6}), additional variation is introduced in the form of upper-case and lower-case initials.%
+\footnote{In German, all nouns are capitalised anywhere in a sentence \parencite[1]{PaulyNottbusch2020}.}
+The compound with the nominalised infinitive in (\ref{ex:compoundspelling7}) is \textit{only} acceptable if spelled as one word.
+
+\begin{exe}
+  \ex\label{ex:compoundspelling}
+  \begin{xlist}
+    \setcounter{xnumii}{1}
+    \ex[ ]{Remy ist gestern \exhl{radgefahren}.\label{ex:compoundspelling3}}
+    \ex[ ]{Remy hat keine Lust, \exhl{radzufahren}.\label{ex:compoundspelling4}}
+    \ex[ ]{Yael weiß, dass Remy \exhl{radfährt}.\label{ex:compoundspelling2}}
+    \ex[ ]{Remy will \exhl{radfahren}.\label{ex:compoundspelling34}}
+    \ex[ ]{Remy ist am \exhl{Radfahren\slash radfahren}.\label{ex:compoundspelling5}}
+    \ex[ ]{Remy singt beim \exhl{Radfahren\slash radfahren}.\label{ex:compoundspelling6}}
+    \ex[ ]{Remy lobt das \exhl{Radfahren}.\label{ex:compoundspelling7}}
+  \end{xlist}
+\end{exe}
+
+We call cases where a multi-stem unit is spelled as two words such as in (\ref{ex:disjunctspelling}) the `disjunct spelling' and cases where a unit is spelled as one word as in (\ref{ex:compoundspelling}) the `compound spelling'.
+We see that N+V units potentially undergo graphemic \textit{univerbation} in the form of compound spelling.
+\citet[206]{Lehmann2020} calls univerbation ``the union of two syntagmatically adjacent word forms in one''.
+We follow this terminology and assume univerbation to be the directly observable phenomenon, \ie compound spelling of adjacent words that could potentially also be used in disjunct spelling or were historically used in disjunct spelling.
+Historically, univerbation is a gradual process, and it can thus be a strongly probabilistic phenomenon due to the slowly changing grammatical and lexical system.
+However, univerbation per se is not necessarily the result of a regular grammatical pattern or process.
+%\footnote{
+%For \citet[294]{Gallmann1999}, univerbation is a diachronic process wherein a complex syntactic unit is reanalysed as a simplex syntactic unit.
+%\citet[107]{Jacobs2005} regards graphemic univerbation as not rooted in a morphological process as they are not paradigmatic (no \textit{Reihenbildung}).
+%\citet[209]{Lehmann2020} is closest to our position, as he regards ``univerbation as a gradient process which displays phases of weaker and stronger univerbation''.
+%According to him, it marked by the loss of morphological boundaries and by phonological fusion.}
+Thus, a major aim of this paper is to show whether and how the univerbation of N+V units in German is based on established morphological prototypes in which a noun is incorporated into a verb, forming a new verb expressing a new event concept.
+
+We will argue that such morphological constructions exist, but that the alternative, syntactically construed variant of the N+V unit remains available to speakers because N+V units have properties of both morphological as well as syntactic prototypes.
+In Section~\ref{sec:theoreticalbackground}, we lay the theoretical and descriptive foundations.
+We then present a large-scale corpus study and an elicitation experiment in Sections~\ref{sec:corpusbasedanalysisoftheusageofnvunits} and~\ref{sec:elicitedproductionofnounverbunitsinwrittenlanguage}, exploring our particular hypotheses about N+V units.
+We conclude with a summary, further interpretation and discussion in Section~\ref{sec:explainingnounverbuniverbation}.
+
+
+% !Rnw root = ../nvuniverbation.Rnw
+
+
+\section{Theoretical and descriptive background}
+\label{sec:theoreticalbackground}
+
+In this section, we discuss our fundamental theoretical assumptions, review existing analyses of the phenomenon, and derive hypotheses for our empirical studies.
+First, we introduce the overall theoretical framework in Section~\ref{sub:grammargraphemicsandusage}.
+Second, we clarify the status of spaces as syntactic boundaries in German in Section~\ref{sub:spaceswordsanduniverbation}.
+Third, we discuss previous analyses of N+V units and their spelling, followed by the formulation of our predictions for the empirical studies, in Section~\ref{sec:thestatusofnounverbunitsingerman}.
+
+\subsection{Grammar, graphemics, and usage}
+\label{sub:grammargraphemicsandusage}
+
+In this paper, we apply usage-based grammar to a graphemic alternation phenomenon in German, arguing that properties of a probabilistic grammatical system can be inferred by examining written usage, \ie from a graphemic perspective.
+Usage-based Grammar (UBG; \egg \citealt{BybeeBeckner2009,Kapatsinski2014,Tomasello2003}) is based on two core assumptions: (i) grammar is acquired using only general cognitive devices, (ii) grammar is determined only by general cognitive constraints and by the input.
+Since the input is always rife with variation, which is intrinsically probabilistic, a third assumption is crucial to some researchers: (iii) grammars are learned as probability distributions over possible forms, meanings, and form-meaning pairs.
+We embrace all three assumptions and apply them to a graphemic alternation phenomenon.
+UBG is rarely extended to graphemics in such a way, but we view graphemics as a component of the language faculty on a par with components such as phonetics and phonology, and we consequently believe that graphemics should be viewed under the usage-based umbrella.%
+\footnote{There is an intrinsic graphemic component in the huge body of work throughout linguistics based on popular corpora of written language.
+Although this is rarely acknowledged, we consider it important to focus on this component as well.}
+Much like the phono-component comprises regularities about how grammar is encoded in speech sounds, graphemics comprises  regularities about how grammar is encoded in written symbols.
+%Whether and how strongly the phono-component and the graphemics component are intertwined is determined by the type of script and the specific language.
+%Ideograph-based writing systems like early cuneiform Sumerian (virtually complete separation) and phonographic writing systems like German (substantial overlap) represent extremes on a continuous scale (see \citealt{Coulmas1996} for an overview).
+For writing systems like German, the mappings to be learned include sounds to letters, parts of speech to spellings (\egg capitalisation of nouns), syntactic categories to spaces and punctuation marks, etc. \parencite{Primus2010}.%
+\footnote{Notice that a probabilistic view does not necessarily imply that there are no discrete or virtually discrete mappings like the one-to-one mapping of consonantal segments to letters in German.
+Cases of discreteness can always be seen as extremes in a probabilistic system.}
+
+In UBG, corpus data (\ie production data) are often used as evidence, sometimes cross-validated in behavioural experiments (see, for example, \citealt{ArppeJaervikivi2007,BresnanEa2007,Dabrowska2014,Divjak2016a,DivjakEa2016a,FordBresnan2013,PankratzVantiel2021}; \citealt{Schaefer2018,SchaeferPankratz2018}).
+This is justified because the usage-based (hence probabilistic) nature of the acquisition process should be reflected in the output of competent adult speakers\slash writers as captured in corpora, and not just in the acquisition process itself.
+Consequently, it should also be reflected in production data obtained from competent adults, and we should be able to uncover the probabilistic mappings of lexical-grammatical categories to written forms from such data.
+We consequently use corpus data as well as data elicited in controlled experiments, both being forms of production data.
+However, there is a difference between using production data as evidence and assuming that they \textit{directly} mirror cognitive reality.
+While it is generally assumed that corpora represent a valid source of data in cognitively oriented linguistics (\egg \citealt{Newman2011}), it is also known that there is no straightforward correspondence between corpus data and cognitive reality (\egg \citealt{Gries2003,Dabrowska2016}).
+What we hope to recover from corpus data are major abstractions learned by a majority of speakers, uncovering general cognitive principles that ideally go far beyond individual acquisition careers and idiosyncrasies of single languages.
+
+A convenient framework to formulate such abstractions is Prototype Theory (\citealt{Rosch1973,Rosch1978}).
+As a cognitive theory of classification, it is compatible with probabilistic views since it allows for fuzzy category membership (\egg \citealt{Sutcliffe1993}; \citealt[11--16]{Murphy2002}).
+Grammatical units can thus be modelled as belonging to multiple categories to different degrees or---in our case to be introduced immediately below---as alternating between a morphological and a syntactic realisation.%
+\footnote{For applications of Prototype Theory in linguistics see, among many others, \citet{DivjakArppe2013,Dobric2015,Gilquin2006,Gries2003}; \citet{Schaefer2019a}.
+See \citet{Taylor2003,Taylor2008} for introductory overviews.}
+Prototype Theory is also intrinsically compatible with UBG as it assumes just a very general mechanism of classification whereby newly encountered objects are classified by similarity to a prototypical exemplar.
+In most versions of Prototype Theory, these prototypes are identified by (weighted) features or \textit{cues}, and unseen exemplars are categorised depending on how many of those features they share with the prototype.
+We use Prototype Theory as a suitable framework in our analysis.
+Grammatical prototypes are mapped onto graphemic realisations (\egg spellings), and the more strongly a unit matches the prototype, the more likely it is to be realised as the variant mapped to that prototype.
+
+One caveat that is specific to graphemics needs to be mentioned before we proceed to the description of the concrete phenomena.
+The acquisition of the writing system involves explicit instruction and is thus more strongly imposed by prescriptive norms.
+However, we expect writers to learn grammar-graphemics mappings primarily from their realisations in the input, especially whenever the norm is unspecific or unclear (especially as it has changed back and forth over the past three decades), a situation which provides ideal test cases for our view of graphemics.
+Variation and alternations in the written input shape the acquired probability distribution, and conditioning factors are acquired to the degree that they can be retrieved from the type and the frequency of the input.%
+\footnote{We have previously used a similar approach in, for example, \citet{SchaeferSayatz2014,SchaeferSayatz2016}.}
+We are convinced that graphemics is a field in its own right which deserves attention in any grammatical\slash linguistic framework.
+See \citet{Berg2016} for a compatible fundamental argument independent of a concrete grammatical framework.
+
+\subsection{Spaces, words, and univerbation}
+\label{sub:spaceswordsanduniverbation}
+
+As explained in Section~\ref{sub:grammargraphemicsandusage}, we use graphemic evidence from corpora and controlled experiments, and we argue that it indirectly allows us to draw conclusions about writers' cognitive grammars.
+More specifically, we assume that compound spellings of N+V units indicate that writers conceive of those units as single syntactic words, whereas disjunct spelling indicates that they conceive of the unit as two syntactic words.
+Therefore, we briefly introduce the status of the space in German writing and how it pertains to N+V units.
+
+German writing uses an alphabetic script with a strong correlation between underlying phonological forms (the phonemic level) and characters (graphemes).
+A common fundamental principle of such scripts is the separation of syntactic words by spaces \parencite[22]{Jacobs2005}.
+Also, stems and their affixes are never separated from one another, which reinforces the status of the space as a demarcation of syntactic words.%
+\footnote{There is a class of verbal particles which does not follow this principle.
+Verbs like \textit{aufessen} (`eat up') formed from a verb stem (\textit{essen}) and a prefixed particle (\textit{auf}) are spelled as one word when they are adjacent in verb-last order, but they are separated in verb-second order where the verb is moved to sentence-second position and the particle remains in sentence-last position through obligatory movement (see \citealt{Hoberg1981} for an account of German clausal and sentential syntax).}
+These factors facilitate the reader's ability to decode the sequence of syntactic words, and they constitute a crucial principle in the encoding and conventionalisation of meanings associated with word forms \parencite[22]{Jacobs2005}.
+
+Unlike in English, German has regular compound spelling of syntactic words comprising more than one stem, especially for the case of the highly productive noun+noun (N+N) compound pattern (\citealt[182]{Fuhrhop2007}, \citealt[34]{Jacobs2005}), for which compound spelling is the dominant graphemic realisation.
+However, there is a heterogeneous group of multi-word constructions for which only tendencies towards compound spelling can be observed (\citealt[95]{Szczepaniak2009}, \citealt[335]{Wurzel1998}).
+As opposed to N+N compounds, these constructions typically consist of words with different parts of speech, such as \textit{mithilfe} (\textit{von}) (`with the help (of)') from \textit{mit der Hilfe} (\textit{von}) or \textit{zuhause} (`at home') from \textit{zu} \textit{Hause}.
+%\footnote{Normative approaches as well as individuals display a lot of variation with respect to at least some of those constructions (cf.\ below).}
+For such cases, \citet[206]{Lehmann2020} posits a ``downgrading of a syntactic to a morphological boundary'' between the two words.
+When writers use compound spelling in these cases, they choose to encode the construction as a single word with a morphological boundary instead of a sequence of words with a syntactic boundary.
+If many speakers consistently make this choice over a significant period of time, the unit might become lexicalised  as a single word \parencite[212]{Lehmann2020}.
+Until such a diachronic process is complete and one of the spellings has become clearly dominant, the item alternates between a syntactic and a morphological realisation.
+For many of these constructions, this is the case both in non-standard as well as standard written German, albeit to different degrees.
+%\footnote{We are not aware of any published research systematically comparing the alternation tendencies in standard and non-standard written German.}
+
+N+V units with different affinities towards compound spelling like \textit{Rad fahren} (`bike riding', often also spelled \textit{radfahren}) and \textit{eislaufen} (`ice skating', infrequently also spelled \textit{Eis laufen}) often represent different levels of diachronic re-conventionalisation as single words.%
+\footnote{The orthographic norm is notoriously unstable with respect to N+V units, which contributes to their unclear status.
+Before the significant reform of the orthographic norm in 1996, both \textit{radfahren} and \textit{eislaufen} were supposed to be spelled as one word.
+After the reform, both units were supposed to be written as two words (\textit{Eis laufen} and \textit{Rad fahren}).
+After a revision of the reform in 2006, \textit{eislaufen} was again supposed to be spelled as one word, whereas \textit{Rad fahren} was supposed to be spelled as two words exclusively (\citealt[32]{Primus2010}, \citealt[356]{Eisenberg2020a}).
+From experience, we know that the norm is often not adhered to, and the data presented in Sections~\ref{sec:corpusbasedanalysisoftheusageofnvunits} and~\ref{sec:elicitedproductionofnounverbunitsinwrittenlanguage} strongly corroborate this experience.}
+This indeterminacy means that speakers have both the syntactic realisation (disjunct spelling) and the morphological realisation (compound spelling) in their graphemic input, which subsequently leaves them with quite a free choice to be made based on how a concrete item is classified according to their individual grammar.
+It is the task of usage-based probabilistic graphemics to uncover factors influencing such decisions and decode the principles at work in speakers' internal grammar by analysing their writing habits (see \citealt{SchaeferSayatz2016}).
+
+
+\subsection{The status of noun+verb units in German}
+\label{sec:thestatusofnounverbunitsingerman}
+
+% In Section~\ref{sec:introduction}, we showed that N+V units alternate between compound spelling and disjunct spelling when they occur in sequence.
+In this section, we explain why the existence of this alternation is not surprising considering the morphosyntactic system of German.
+Furthermore, we argue that in each concrete case where an N+V unit is written, the strength of the tendency towards either compound or disjunct spelling can be derived from the overall syntactic and morphological patterns available in present-day German.
+These patterns are shown to have prototypical properties which are matched more or less well by individual N+V units and their syntactic contexts, which leads to either compound or disjunct spelling being the preferred realisation.%
+\footnote{\citet{Huening2010} describes a similar alternation of Adjective + Noun constructions in Dutch and German.
+He, too, argues that the respective constructions alternate between a syntactic and a morphological realisation, and he uses analogy to existing categories to explain the alternation.
+While we opt for a prototype description, Hüning's view is still based on the same underlying assumptions as ours.}
+%The hypotheses put forward here are then evaluated empirically in Sections~\ref{sec:corpusbasedanalysisoftheusageofnvunits} and \ref{sec:elicitedproductionofnounverbunitsinwrittenlanguage}.
+To this end, we will shed some light on particle verbs as a target class for N+V units in Section~\mbox{\ref{sub:particleverbs}}, on N+V units as structures involving incorporation in Section~\mbox{\ref{sub:incorporation}}, before turning to N+V units as reluctant compounds in Section~\mbox{\ref{sub:nncompounds}}.
+We sum up our arguments and derive our hypotheses for the empirical studies in Section~\ref{sub:hypothesesfortheempiricalstudies}.
+
+\subsubsection{Particle verbs}
+\label{sub:particleverbs}
+
+For an N+V unit to systematically undergo graphemic univerbation (\ie a downgrading from a syntactic to a morphological construction in the sense of \citealt[206]{Lehmann2020}), it must resemble one or more established prototypical morphological constructions closely enough to be classified as an instance of such constructions itself.%
+\footnote{Random isolated univerbations like \textit{zuhause} `at home' from \textit{zu Hause} are not systematic in this sense.
+They are merely the result of idiosyncratic diachronic developments.}
+German has a class of verbs with separable prefixes called \textit{particle verbs} (distinct from verbs with non-separable prefixes called \textit{prefix verbs}), which obviously serves as such a prototype for N+V units.
+These verbs display a very similar behaviour, except that the particle is not (at least not synchronically in a transparent way) a noun.
+See the examples in (\ref{ex:pvs}).
+
+\begin{exe}
+  \ex\label{ex:pvs}
+  \begin{xlist}
+    \ex[ ]{\gll Er \exhl{hebt} den Fünfer \exhl{auf}.\\
+    he picks the fiver up\\
+    \trans He picks up the fiver.}
+    \ex[ ]{\gll Wir wissen, dass er den Fünfer \exhl{aufhebt}.\\
+    we know that he the fiver {up.picks}\\
+    \trans We know that he picks up the fiver.}
+    \ex[ ]{\gll Er hat den Fünfer \exhl{aufgehoben}.\\
+    he has the fiver {up.\textsc{Part}.picked}\\
+    \trans He picked up\slash has picked up the fiver.}
+    \ex[*]{Er hat den Fünfer \exhl{auf gehoben}.}\label{ex:pvsno}
+  \end{xlist}
+\end{exe}
+
+The relation between N+V units and particle verbs was discussed in \citet{Wurzel1998}.
+He views particle verbs as providing a pattern towards which N+V units gravitate when they turn into single words.
+While this is highly plausible, note the unavailability of disjunct spelling in (\ref{ex:pvsno}).
+While N+V units are not always used with compound spelling (see examples \ref{ex:disjunctspelling} in Section~\ref{sec:introduction}), particle verbs are.
+Hence, we will introduce another factor influencing compound spelling in Section~\ref{sub:nncompounds} below.
+
+Furthermore, Wurzel proposes a number of historic sources of N+V units, some involving back-formation, some involving direct incorporation.
+While back-formation might indeed be a factor influencing (or furthering) univerbation, it is virtually impossible to decide for all N+V units currently in use (over 800 in our study, see Section~\ref{sub:choiceofcorpussamplingandannotation}) with good certainty whether they are derived via back-formation or not.%
+\footnote{The rare presence of a linking element might be a more salient indicator of a derivation via back-formation.
+However, we are not aware of any work examining the status of such linking elements in N+V units with respect to speakers' cognitive grammars.
+See Section~\ref{sec:explainingnounverbuniverbation} for a further brief discussion and additional evidence that linking elements in N+V units are not at all an unproblematic marker of back-formation.%
+}\Up{,}\footnote{%
+As a reviewer pointed out, \citet{Wurzel1998} also discusses a synchronic classification of N+V units, mainly differentiating between N+V units with defective and non-defective finite paradigms.
+We find that this classification -- derived from Wurzel's own intuitions and older normative dictionaries and grammars -- is not supported empirically, as many of the allegedly non-existing forms can be found in corpora and even dictionaries and online databases.
+Furthermore, we do not see how the classification would affect any of our predictions, methods, or inferences.}
+For the present purpose, we therefore used a different variable, which most likely is even more cognitively relevant than derivation via back-formation (and which encompasses at least the major split in Wurzel's diachronic classification): the internal semantic relation between the noun and the verb, to which we turn in Section~\ref{sub:incorporation}.
+
+\subsubsection{Incorporation and the internal semantic relation}
+\label{sub:incorporation}
+
+The morphological realisation of N+V units (i.\,e., their usage as one word) is a type of noun incorporation.
+N+V units are usually seen as the only cases of incorporation in Modern German \parencite[245]{Eisenberg2020a}.
+According to \citet[848]{Mithun1984}, incorporation is ``a particular type of a compounding in which a V and an N combine to form a new V''.%
+\footnote{From Mithun's types of noun incorporation, German N+V units clearly represent type 1 \textit{lexical compounding}.}
+As \citet[848--849]{Mithun1984} points out, incorporation happens when the verb denotes a new and independent event concept in combination with the incorporated noun, and the semantics of the event is determined by the previous syntactic relation between the noun and the verb.
+Typically, the noun loses its referential autonomy as well as its specificity, and it acquires a generic reading, which is indeed the case for N+V units.
+In sentences like (\ref{ex:noreference}), no specific bike is referenced, and \textit{radfahren} refers to the whole concept of riding any bike.
+This is true for both compound and disjunct spelling.
+
+\begin{exe}
+  \ex\gll Friedel kann {radfahren\slash Rad fahren.}\\
+  Friedel can bike.ride\\
+  \trans Friedel knows how to ride a bike. \label{ex:noreference}
+\end{exe}
+
+As a result of the semantic degradation of the noun, it loses its modifiability (also regardless of spelling), as illustrated in (\ref{ex:nomodifier}).
+
+\begin{exe}
+  \ex[*]{\gll Friedel kann schnelles Rad fahren.\\
+  Friedel can quick bike ride\\
+  \trans Friedel knows how to ride a quick bike.\label{ex:nomodifier}}
+\end{exe}
+
+Such losses of referential autonomy and syntactic combinatorics are referred to as `noun stripping' by \citet[287]{Gallmann1999}.
+The loss of specificity and referential autonomy as well as the acquisition of a generic reading are part of the semantics of the N+V construction (see also \citealt[287]{Gallmann1999}, \citealt[108]{BredelGuenther2000}, \citealt[354]{Eisenberg2020a}).
+Functionally, the construction exists in order to express the new event concept which requires the generic\slash unspecific reading of the noun.
+Thus, the noun has the properties typical of nouns that are subject to incorporation of the lexical compounding type.
+
+Importantly, the semantic relation within N+V units is always either an argument relation, as in (\ref{ex:paraphrase-arg}), or an oblique relation, as in (\ref{ex:paraphrase-obl}).
+
+\begin{exe}
+  \ex\label{ex:paraphrase-arg}
+  \begin{xlist}
+    \ex\gll Kim will {(*eine} {Tasse)} teetrinken.\\
+    Kim wants {(a} {cup)} {tea drink}\\
+    \trans Kim wants to drink tea.
+    \ex\gll Kim will (eine Tasse) Tee trinken.\\
+    Kim wants {(a} {cup)} tea drink\\
+    \trans Kim wants to drink (a cup of) tea.
+  \end{xlist}
+  \ex\label{ex:paraphrase-obl}
+  \begin{xlist}
+    \ex\gll Kim will die Corvette probefahren.\\
+    Kim wants the Corvette test.drive\\
+    \trans Kim wants to test-drive the Corvette.
+    \ex\gll Kim will die Corvette zur Probe fahren.\\
+    Kim wants the Corvette {to the} test drive.\\
+    \trans Kim wants to test-drive the Corvette.
+  \end{xlist}
+\end{exe}
+
+These relations are determined by the verb's argument structure, and we now argue that the oblique relation facilitates incorporation and consequently univerbation.
+The examples show that there is almost always a syntactic paraphrase for N+V units.
+For units with an oblique relation, the paraphrase involves the noun in a prepositional phrase that is an adjunct to the verb.%
+\footnote{Pragmatically, these paraphrases might often be subject to blocking because of the availability of the N+V construction.
+However, this does not make them syntactically or semantically unacceptable.}
+Cases where no paraphrase is available are those which have been lexicalised so fully that their meaning has changed significantly.
+This means that the morphological construction marked by graphemic univerbation remains in competition with a syntactic construction with distinct syntactic words separated by spaces in writing.
+This competition between a morphological construction and a syntactic construction was pointed out with varying terminology by---among others---\citet[12]{FleischerBartz2012}, \citet[13]{Schluecker2012}, and \citet[88]{Morcinek2013}.
+However, since the oblique relation requires an additional marker (a preposition) when the N+V unit is realised in syntax, the variant with full incorporation has no direct (approximately verbatim) syntactic competitor.
+In other words, \textit{kaffeetrinken} spelled as \textit{Kaffee trinken} could be a verb phrase with an argument NP, and full incoporation can in many such cases not even be detected in spoken language.%
+\footnote{This is especially true if the noun is a singular mass noun occurring without a determiner by default.}
+Since German requires no marker of structural argument status on nouns, the competition between a syntactic realisation and a morphological realisation (incorporation) is quite strong.
+On the other hand, \textit{probefahren} -- even spelled as \textit{Probe fahren} -- does not have a syntactic interpretation at all due to the lack of the preposition that normally marks the oblique relation, and hence full incorporation is a much more plausible interpretation.
+Therefore, we predict that N+V units with an oblique relation have a stronger tendency to incorporate, consequently undergo univerbation more easily, and are more often used with compound spelling.
+
+\subsubsection{Noun+noun compounds}
+\label{sub:nncompounds}
+\label{sub:nvunitsasreluctantcompounds}
+
+We have argued that the prototype of particle verbs provides a target for N+V units, and that and oblique semantic relation within the N+V unit facilitates incorporation and thus univerbation.
+While particle verbs clearly are a target pattern to which N+V units are assimilated, particle verbs are virtually always (even in non-standard writing) written as one word when they appear in sequence.
+See example (\ref{ex:pvsno}) in Section~\ref{sub:particleverbs}.
+Thus, assimilation to this pattern alone does not suffice to explain differences in tendencies to undergo graphemic univerbation more or less likely depending on nominal vs.\ verbal contexts.
+Hence, we propose that there is an additional prototype that attracts N+V units, namely N+N compounds, at least under strong syntactic pressure.
+
+Arguably the only fully productive morphological construction combining more than one stem in German is noun+noun (N+N) compounding.%
+\footnote{Adjectives also enter compounds as the head, such as in \textit{feuerrot} `red like fire', literally `fire red'.
+However, this pattern is much less productive than N+N compounding, and we do not discuss it here.
+See \citet[136]{Simunic2018} on the productivity of N+A compounds.}
+Syntactically, nothing can intervene in between the two stems of the compound, and they cannot be reorderd.
+With minor exceptions (often exaggerated in normative discussions), they are also inseparable graphemically, \ie they are always written as one word \parencite[57--60]{Scherer2012}.
+Furthermore, they are always head-final, mostly determinative, and they allow recursive formation wherein an N+N compound enters into another N+N compound, resulting in [[N+N]+N] or [N+[N+N]] structures (\citealt[13]{FleischerBartz2012}, \citealt[504]{Wurzel1994}).
+Some examples are given in (\ref{ex:nncompoundsa}) and (\ref{ex:nncompoundsb}), the latter being recursively formed from the former.%
+\footnote{If necessary, we present compound spelling with a minimal analysis of the morphological structure.
+Affixes are separated from stems by hyphens, and lexical stems are separated from each other by a period.
+Within compounds containing more than two stems, structure is shown using square brackets.}
+
+\begin{exe}
+  \ex\gll Haus.tür\\
+  house.door\\
+  \trans front door\label{ex:nncompoundsa}
+  \ex\gll Haus.tür.schlüssel\\
+  [[house.door].key]\\
+  \trans key to the front door\label{ex:nncompoundsb}
+\end{exe}
+
+The semantic relation between the first noun (\Ni) and the second noun (\Nii) is highly unspecific, rendering many compounds semantically ambiguous unless they are strongly lexicalised \parencite[252]{Klos2011}.
+\Ni\ and \Nii\ are just concatenated as bare stems in most cases, but there are also so-called linking elements, which are sometimes positioned in between the stems.%
+\footnote{A recent large-scale study \parencite[339]{SchaeferPankratz2018} showed that 60\% of all N+N compound types have no linking element, whereas 40\% have one of several possible linking elements.
+Diachronically, linking elements arise from diverse sources, but the overall pattern of inserting them is related to the former morphological marking in prenominal genitives \parencite[55--57]{NueblingEa2017}.}
+
+Prima facie, N+V units do not seem to share many of the properties of N+N compounds mentioned above.
+As opposed to compounding with proper nominal heads, compounding with verbal heads is generally not a productive pattern in German.%
+\footnote{\citet{Guenther1997} counts roughly 400 lexicalised N+V compounds in \citet{Muthmann1988} (see also \citealt[245]{Eisenberg2020a}).}
+A major difference between N+N compounds and N+V units is that N+V units are usually separable.
+There can be intervening material in between the noun and the verb in some contexts, namely the infinitival particle \textit{zu}.
+This particle is, however, generally considered to be part of the verbal word form \citep[211]{Eisenberg2020a} and does by no means prevent univerbation (see example \ref{ex:compoundspelling4}, where \textit{rad\-zu\-fahren} is spelled as one word instead of \textit{rad zu fahren}).
+Furthermore, in a verb-second sentence, the noun may remain at the end of the sentence in a structure reminiscent of particle verbs \parencite[603]{Fortmann2015}, see (\ref{ex:disjunctspelling1}).
+
+Another major difference between N+N compounds and N+V units is that the morphological N+V construction is not recursive.
+Nominalised N+V units marginally occur as \Ni\ in \Ni+\Nii\ compounds (contrary to claims by \citealt[54]{Fuhrhop2007}), as in (\ref{ex:notfuhrhop}).%
+\footnote{The examples in (\ref{ex:notfuhrhop}) are attested and taken from the DECOW16B web corpus (see Section~\ref{sub:choiceofcorpussamplingandannotation}).
+Their document frequencies are 218 for \textit{Energiesparmesse}, 416 for \textit{Endlagersuchgesetz}, and 414 for \textit{Feuerlöschboot} in a corpus of 17.1 million documents.
+The document frequency is the number of documents the lemma occurs in, not counting multiple occurrences within each document.}
+However, an N+V unit cannot function as the verbal head in another N+V unit (\ie a [N+[N+V]] structure) under normal circumstances as illustrated in (\ref{ex:nnv}).
+While such a compound is (maybe marginally) acceptable when used as a noun as in  (\ref{ex:nnva}), the absurd infinitive with \textit{zu} in (\ref{ex:nnvb}) clearly shows that it cannot be a recursively formed true [N+[N+V]] unit.
+
+\begin{exe}
+  \ex\label{ex:notfuhrhop}\begin{xlist}
+    \ex\gll Energie.spar.messe\\
+    [[energy.save].fair]\\
+    \trans trade fair for products useful in saving energy
+    \ex\gll {Endlager.such.gesetz}\\
+    {[[final~storage.search].law]}\\
+    \trans law about the search for a permanent repository for nuclear waste
+    \ex\gll Feuer.lösch.boot\\
+    [[fire.extinguish].boat]\\
+    \trans fire-fighting boat
+  \end{xlist}
+  \ex\label{ex:nnv}
+    \begin{xlist}
+      \ex[ ]{\gll Ich gehe zum Auto.probe.fahren.\\
+      I go {to.the} {[[car].[test.drive]]}\\
+      \trans I'm off to a car test drive.}\label{ex:nnva}
+      \ex[*]{\gll Ich habe keine Lust autozuprobefahren.\\
+      {I have no interest [car.to.[test.drive]]}\\}\label{ex:nnvb}
+    \end{xlist}
+\end{exe}
+
+It appears as if the N+N compound is not an ideal prototype for N+V units.
+However, in strongly nominal contexts, for example when the units forms the head of an NP clearly marked by a determiner (\textit{das Kaffeetrinken}), we expect the unit to be coerced to assume N+N status.
+As the noun phrase requires a nominal head, the verb is forced into nominalisation, and graphemic univerbation becomes the preferred spelling variant because two bare nouns in sequence with an argument or an oblique relation holding between them can only be interpreted as a compound.
+In other words, the syntactic realisation is dispreffered strongly as it has no matching productive prototype pattern.
+Should we observe different tendencies to undergo univerbation in verbal and nominal contexts, we posit that this process explains for them.
+
+\subsubsection{Conclusions for the empirical studies}
+\label{sub:hypothesesfortheempiricalstudies}
+
+In this section, we summarise and describe the concrete effects that we expect to see in written production data based on our overall usage-based framework and our theoretical assessment of N+V units.
+
+First, when the unit occurs in a strongly nominal syntagma (\egg when the head is a fully nominalised head of an NP with a determiner), we expect a high tendency towards univerbation due to a highly accessible N+N compound prototype (Section~\ref{sub:nncompounds}).
+However, when the unit is embedded in an unambiguously verbal syntagma (\egg when the V head is an infinitive dependent on a modal verb or a participle dependent on an auxiliary), we expect a low tendency towards univerbation because the N+V unit -- not sharing too many properties with N+N compounds -- resists turning into one.
+For the in-depth corpus analysis using a generalised linear model as well as for the experiment, we focussed on four specific contexts:
+
+\vspace{\baselineskip}
+
+\renewcommand{\theenumi}{\roman{enumi}}
+\begin{enumerate}
+  \item{\label{contpart} participles as complements of auxiliaries, see (\ref{ex:disjunctspelling3}) and (\ref{ex:compoundspelling3}),}
+  \item{\label{continf}  infinitives with \textit{zu}, see (\ref{ex:disjunctspelling4}) and (\ref{ex:compoundspelling4}),}
+  \item{\label{contprog} the so-called \textit{am} progressive, see (\ref{ex:disjunctspelling5}) and (\ref{ex:compoundspelling5}),}
+  \item{\label{contnp}   full NPs, see (\ref{ex:disjunctspelling6}) and (\ref{ex:compoundspelling6}).}
+\end{enumerate}
+
+\vspace{\baselineskip}
+
+The constructions with the infinitive (\ref{continf}) and the participle (\ref{contpart}) represent two prototypically syntactic constructions, since the verb from the N+V is part of a verbal syntagma.
+The NP context (\ref{contnp}) is most prototypically nominal, especially since we only used NPs with a determiner.
+More precisely, we only used NPs with definite determiners cliticised to a preposition (\textit{beim} `at the', \textit{zum} `to the', etc.).
+This decision was made in order to allow for a comparison of these full nominalisations and the so-called \textit{am} progressive (\ref{contprog}).
+The progressive is formed with the copula\slash auxiliary \textit{sein} `to be', the variant of the preposition \textit{an} with the cliticised definite article \textit{am} `at the' and the infinitive.
+While it developed out of a construction with a copula and a plain NP within a PP, and it is formally identical to cases with the normal NPs in (\ref{contnp}), it is often assumed to be a verbal construction expressing progressive meaning.%
+\footnote{See \citet{AnthonissenEa2016} for an overview of the literature and a corpus-based assessment of its functions.}
+Including NPs in this specific form along with this emerging progressive construction allows us to assess whether the hypothesised verbal semantics of the progressive makes the construction more verbal, leading to a weaker tendency towards univerbations compared to regular NPs.
+We expect N+V units in infinitives and participles (prototypically verbal) to have a weak tendency and N+V units in full NPs (prototypically nominal) to have a strong tendency towards univerbation.
+We have no prediction for the progressive as we are unsure whether it has truly developed into a verbal construction.
+
+The other important cue is the internal semantic relation (Section~\ref{sub:incorporation}).
+N+V units with an oblique relation stand in weaker competition with a syntactic realisation compared with those that have an argument relation.
+N+V units with an oblique relation would need more explicit marking with a preposition in the unambiguously syntactic realisation, and incorporation is the better option than a syntactic realisation.
+We thus expect N+V units with an oblique relation to undergo univerbation more frequently.
+
+The univerbation of individual N+V units also involves very long-term diachronic processes of lexicalisation.
+For any number of reasons, individual units might have progressed farther than others on the lexicalisation path.
+Furthermore, when the compositional meaning of individual N+V units becomes less accessible, univerbation might be favoured as the semantics of the unit becomes more holistic.
+Since philological investigations into the fate and semantics of each individual N+V unit are not feasible due to their sheer number, we will capture such individual tendencies numerically by comparing the frequencies of the units with or without univerbation in current usage (collexeme analysis) in a pre-study (Section~\ref{sub:results2associationastrengths}).
+In the full statistical model reported in Section~\ref{sub:results1multilevelmodel}, a random effect for N+V units accounts for such individual tendencies.
+
+Finally, different speakers should be expected to have individual tendencies due to the variance in their input and in their compliance with normative advice.
+While individual variation can rarely be controlled in corpus studies due to the lack of metadata identifying individual writers, it should be controlled and\slash or analysed in behavioural experiments.
+
+At any rate, under a probabilistic usage-based view of language, all these factors are expected to influence univerbation non-deterministically.
+Even in cases where all factors favour a realisation with univerbation, writers might sometimes spell it without univerbation and vice versa.
+However, we expect such cases to be rarely found in usage data if the hypotheses put forward here correctly describe reality.
+Our statistical models will be chosen appropriately for this assumption.
+
+
+% !Rnw root = ../nvuniverbation.Rnw
+
+
+\section{Analysing the usage of noun+verb units}
+\label{sec:corpusbasedanalysisoftheusageofnvunits}
+
+In this section, we apply two quantitative methods to analyse the univerbation of N+V units using corpus data.
+We motivate our choice of corpus and describe the sampling and annotation procedure in Section~\ref{sub:choiceofcorpussamplingandannotation}.
+We perform exploratory analysis using association measures in Section~\ref{sub:results2associationastrengths} in order to gauge the individual tendencies of N+V units to undergo univerbation in written language usage.
+Finally, the results of estimating the parameters of a generalised linear mixed model explaining the variation in the univerbation of N+V units are reported in Section~\ref{sub:results1multilevelmodel}.
+
+\subsection{Choice of corpus, sampling, and annotation}
+\label{sub:choiceofcorpussamplingandannotation}
+
+As a first step, we adopted a data-driven approach in order to find nearly all N+V units in contemporary written usage.
+In a second step, we counted their occurrences in compound and disjunct spelling in four relevant morphosyntactic contexts: fully nominalised as the heads of noun phrases, in \textit{am} progressives, as participles in analytical verb forms, and as infinitives in a range of verbal constructions).
+
+Clearly, we required a large corpus with rich morphological and morphosyntactic annotations containing texts written in a broad variety of registers and styles (including ones written under low normative pressure).
+We chose the DECOW16B corpus \parencite{SchaeferBildhauer2012a} because it fulfils all the aforementioned criteria.%
+\footnote{\url{https://www.webcorpora.org}}
+Much like the SketchEngine corpora \parencite{KilgarriffEa2014}, the COW corpora contain web documents from recent years.
+However, the German DECOW (containing 20.5 billion tokens in 808 million sentences and 17.1 million documents) offers a much wider range of annotations compared to SketchEngine corpora, including morphological annotations and several levels of syntactic annotation (dependencies and topological parses).
+For our purpose, the complete internal analysis of nominal compounds described in \citet{SchaeferPankratz2018} was particularly of interest.
+This level of analysis allows for corpus searches of roots within nominal compounds.
+
+The list of actually occurring N+V units was obtained by querying for compounds with a nominal non-head and a deverbal head.%
+\footnote{See the scripts available under the following DOI for concrete queries and further details: \hl{DOI}.}
+The rationale behind this approach is that any N+V unit of interest should occur at least once in compound spelling as a fully nominalised compound.
+Since this step relied on automatic annotation already available in the corpus, the results contained erroneous hits which we removed manually.
+The resulting list contained $819$ N+V units.%
+\footnote{Three highly frequent N+V units were excluded because they could be considered outliers, as they have fully undergone lexicalisation and are virtually always used in compound spelling.
+They are \textit{Teilnehmen} `to take part', \textit{Maßnehmen} `take measure', and \textit{Teilhaben} `have part' (meaning `to participate').}
+
+In the second step, we created lists of all relevant inflectional forms of the verb in each N+V unit and used these to query all possible compound and disjunct spellings (including variance in capitalisation) of each of the $819$ N+V unit types.
+In total, $28,665$ queries were executed to create the final data set used here, a number which clearly demonstrates the necessity of script-based corpus access in data-driven methods.
+The queries retrieved $958,118$ compound spellings and $1,288,768$ separate spellings, which results in a total sample size of $2,246,886$ tokens.
+
+For each N+V unit in the sample, the following variables were annotated automatically: (i) the verb lemma, (ii) the noun lemma, and (iii) the overall frequency in the corpus.
+The morphosyntactic contexts could be annotated semi-automatically, because separate queries were executed for each context anyway.
+Additionally, we manually coded all $819$ N+V units for the relation that holds between the verb and the noun.
+The codes used in clear-cut cases were \textit{Argument} ($441$ N+V units) and \textit{Oblique} ($286$ N+V units).
+For $92$ units, both relations were conceivable, and those cases were coded as \textit{Undetermined}.
+% This class is illustrated by \textit{Daumenlutschen} (``thumb sucking''), which could correspond to either the paraphrase in % (\ref{ex:daumenlutschen-a}) or the one in (\ref{ex:daumenlutschen-b}).
+%
+% \begin{exe}
+%   \ex\begin{xlist}
+%     \ex\gll [den Daumen]\Sub{NP_{Acc}} lutschen \\
+%     the thumb suck\\\label{ex:daumenlutschen-a}
+%     \ex\gll [am Daumen]\Sub{PP} lutschen\\
+%     {on the} thumb suck\\\label{ex:daumenlutschen-b}
+%   \end{xlist}\label{ex:daumenlutschen}
+% \end{exe}
+
+The data thus obtained were analysed in two ways.
+First, we report the results of a collexeme analysis in Section~\ref{sub:results2associationastrengths}, which quantifies how strongly individual N+V units tend to be written as one word or two words.
+Second, in Section~\ref{sub:results1multilevelmodel} we report a full statistical model of the alternation.
+
+\subsection{Results: association strengths}
+\label{sub:results2associationastrengths}
+
+In this section, we report an analysis of the item-specific affinities of N+V units towards univerbation.
+The method we use is similar to collocation analysis (see \citealt{Evert2008} for an overview) and derives from Collostructional Analysis \parencite{StefanowitschGries2003}.
+More specifically, the method is called \textit{distinctive collexeme analysis} \parencite{StefanowitschGries2009}.%
+\footnote{See also \citet{SchaeferPankratz2018} and \citet{Schaefer2019a} for similar uses of this method.}
+
+Our goal was to quantify how strongly each N+V unit tends towards univerbation vis-a-vis all other N+V units.
+Thus, we need to compare the counts of cases with and without univerbation of the unit in question with the total counts for all other N+V units.
+Such comparisons must be made relative to the overall number of the specific N+V unit as well as the number of all other N+V units.
+The counts needed for each N+V unit are nicely summarised in a 2$\times$2 contingency table as shown in Table~\ref{tab:associationsexplained}.
+
+\begin{table}[!htbp]
+  \begin{tabular}{lcc}
+  \toprule
+  & Compound spelling & Disjunct spelling \\
+  \midrule
+  Specific N+V unit   & $c_{11}$ & $c_{21}$ \\
+  All other N+V units & $c_{21}$ & $c_{22}$ \\
+  \bottomrule
+  \end{tabular}
+  \caption{2\CM{\times}2 contingency table as used in the calculation of the strengths of the associations of N+V units with univerbation}
+  \label{tab:associationsexplained}
+\end{table}
+
+With these counts, we are able to quantify how strongly the proportions in the first row differ from those in the second row, and there is a range of statistical measures that assess the magnitude of this difference.
+For example, one could use odds ratios or effects strengths from frequentist statistical tests.%
+\footnote{P-values from frequentist statistical tests are measures of evidence, not effect strength, and therefore are not appropriate in such situations \parencite{SchmidKuechenhoff2013,KuechenhoffSchmid2015}, although they were used in early Collostructional Analysis.
+However, even Collostructional Analysis is now often used with measures of effect strength \parencite{Gries2015b}.}
+We chose Cramér's $v$ derived from standard $\chi^2$ scores ($v=\sqrt{\chi^2/n}$).%
+\footnote{\label{fn:cramer}One reviewer pointed out -- citing \mbox{\citet{Gries2022}} -- that log odds ratios could be used instead of Cramér's $v$ for the reason that Cramér's $v$ does in many situations not go up to 1 and might have some other undesirable mathematical properties.
+We agree that this can be a problem in theory, but that it only matters under certain extreme conditions.
+However, since the analysis is purely exploratory and only interpreted globally, we do not expect a problem.
+As we have verified, using log odds ratios indeed produces a very similar distribution of values under the two conditions.}
+Cramér's $v$ (also called $\phi$ in the case of two-by-two tables) measure quantifies for each individual N+V unit how strongly its observed counts (cells $c_{11}$ and $c_{21}$) deviate from the counts that we would expect if there were no difference between this unit and all other N+V units (cells $c_{21}$ and $c_{22}$) with respect to their tendency to univerbate.
+Since Cramér's $v$ normalises the $\chi^2$ scores to the range between 0 and 1, it allows us to compare analyses where the sample sizes differ.
+In itself, $v$ does not tell us whether the deviation is negative (for a N+V unit with fewer than average compound spellings) or positive (for a N+V unit with more than average compound spellings).
+The information about the direction of the deviation is added by multiplying $v$ with the sign of the upper left cell of the residual table of the $\chi^2$ test.
+Thus, the signed Cramér's $v$ measures how strongly individual N+V units are attracted or repelled by univerbation (positive and negative values, respectively).
+Measures with such properties are often called `attraction strengths' or `association scores'.
+
+\begin{figure}[htbp]
+
+{\centering \includegraphics[width=\maxwidth]{figures/associationsall-1} 
+
+}
+
+\caption[Density estimate of the distributions of the association scores, separately for the two semantic relations]{Density estimate of the distributions of the association scores, separately for the two semantic relations; the x-axis was truncated at -0.05 and 0.05 where the curves are essentially flat}\label{fig:associationsall}
+\end{figure}
+
+
+We calculated the signed $v$ for each of the $819$ N+V units.
+The distribution of these scores is plotted in the form of a density estimate in Figure~\ref{fig:associationsall}.%
+\footnote{As expected, it approximates a scaled symmetric $\chi^2$ distribution with $df=1$ squashed between $-1$ and $1$.}
+The graph shows the distribution of the attraction strengths for N+V units with argument and oblique relations separately.
+While there is variation in both directions in both cases, the argument relation tends more towards disjunct spelling (lower\slash more negative scores), and the oblique relation favours compound spelling more (higher\slash more positive scores).
+The number of units close to $0$ (\ie without a clear tendency) is notable with the argument relation.
+For example, a N+V unit strongly attracted by univerbation is \textit{Zeitreisen} (`time travel', oblique relation) with an attraction score of $0.125$.
+An example with a strong tendency against univerbation is \textit{Fehlermachen} (`mistake make', argument relation) with an attraction score of $-0.088$.
+Finally, \textit{Haareschneiden} (`hair cut', argument relation) shows no clear tendency towards or against univerbation, having an attraction score of $-0.007$.
+The results of the association analysis will be corroborated by the subsequent analysis in Section~\ref{sub:results1multilevelmodel}, and we will use the attraction scores to control for item-specific tendencies in the experiment in Section~\ref{sec:elicitedproductionofnounverbunitsinwrittenlanguage}.
+
+\subsection{Results: full statistical model}
+\label{sub:results1multilevelmodel}
+
+In this section, we present the parameter estimates for a binomial multilevel model (or generalised linear mixed model, GLMM) which models the relevant factors influencing writers' choice of the compound and the disjunct spelling.%
+\footnote{See \citet{Schaefer2020a} for an overview of the method and our philosophy in modelling.}
+The results of the method used in Section~\ref{sub:results2associationastrengths} and the GLMM presented here converge.
+However, the GLMM has a more standard interpretation and allows for finer-grained data analysis.
+Also, it has long been accepted that combining several methods strengthens the analysis when the results converge (\egg \citealt{ArppeJaervikivi2007}).
+
+Given the grand total of $2,246,886$ observations in the sample (see Section~\ref{sub:choiceofcorpussamplingandannotation}), we will completely refrain from an interpretation of the GLMM in terms of frequentist inferential statistics.
+For samples of such magnitude in data-driven approaches, frequentist significance tests are the wrong tool, because it is so easy to achieve significance with such large sample sizes that conclusions based on this criterion become practically meaningless.
+Therefore, we provide standard likelihood ratio confidence intervals for parameter estimates and prediction intervals for conditional modes as an approximate measure quantifying the precision of the parameter estimates and predictions.
+The models we specify reflect theoretically motivated decisions, and we therefore reject all types of model selection by means of step-up or step-down procedures.
+
+As argued in Section~\ref{sec:thestatusofnounverbunitsingerman}, we expect the probability of the univerbation of N+V units to depend on the morphosyntactic context, the relation holding between the verb and the noun, and on the specific N+V unit (a lexical tendency).
+Accordingly, the response variable was chosen to be the proportion of compound spellings among all the spellings of the N+V unit.
+In the input data provided to the estimator, the response variable was thus a vector of $819$ proportions, one for each N+V unit.%
+\footnote{Binomial models can be specified in this manner \parencite[245--260]{ZuurEa2009}.
+In the estimation of such models, the influence of each proportion is weighted according to the number of cases observed to calculate it.
+Without the weighting, highly frequent observed proportions would have too small an influence on the estimation, and infrequent ones would have an inappropriately high influence.
+In the case at hand, such a model on proportion data is also a convenient way of getting around the practical difficulties of estimating a model on the raw $2,246,886$ observations.}
+
+The two important fixed effects in the model are the morphosyntactic context and the internal relation (see Section~\ref{sub:choiceofcorpussamplingandannotation}).
+With $819$ N+V units, the lexical indicator variable for the individual N+V unit should not be used as a fixed effect, because there would be too many levels (\citealt[244--247]{GelmanHill2006}; \citealt{Schaefer2020a}).
+Thus, we specified a generalised linear mixed model with the N+V unit variable as a random effect.%
+\footnote{This is the maximal random effect structure that converges and results in a healthy variance-covariance matrix, see \mbox{\citet{Schaefer2020a}}.
+We would also like to point out that large web corpora do not allow tracking of individual writers, and there is only a very slim chance of obtaining more than one hit by a single writer anyway.
+Hence, there cannot be a random intercept for writer.}
+In lme4 notation, the specification is shown in (\ref{eq:corpusglmmr}).
+
+\begin{equation}
+  \mathtt{Univerbation\sim (1|NVUnit)+Context+Relation} \label{eq:corpusglmmr}
+\end{equation}
+
+
+
+% latex table generated in R 4.1.2 by xtable 1.8-4 package
+% Tue Jun 21 22:33:54 2022
+\begin{table}[!htbp]
+\centering
+\scalebox{1}{
+\begin{tabular}{rrrr}
+  \toprule
+ & Estimate & CI low & CI high \\ 
+  \midrule
+(Context = Infinitive, Relation = Argument) & $-$4.685 & $-$4.895 & $-$4.474 \\ 
+   \midrule
+Context = Participle & 1.054 & 0.975 & 1.133 \\ 
+  Context = NP & 3.886 & 3.815 & 3.959 \\ 
+  Context = Progressive & 4.907 & 4.801 & 5.015 \\ 
+   \midrule
+Relation = Undetermined & 1.344 & 0.866 & 1.822 \\ 
+  Relation = Oblique & 3.085 & 2.764 & 3.407 \\ 
+   \bottomrule
+\end{tabular}
+}
+\caption{Coefficient table for the binomial GLMM modelling the corpus data with 95\% profile likelihood ratio confidence intervals. Weighting was used to account for the bias in models on proportion data. The intercept models the levels Context~=~Infinitive and Relation~=~Argument. Random effect for N+V lemma: \CM{sd=2.108}. Nakagawa \& Schielzeth's \CM{R^2_m=0.576} and \CM{R^2_c=0.999}} 
+\label{tab:corpusglmm}
+\end{table}
+
+
+The estimated parameters of the model are given in Table~\ref{tab:corpusglmm}.
+Additionally, effect plots for \textit{Context} and \textit{Relation} are given in Figure~\ref{fig:corpuseffects}.%
+\footnote{Effect plots for binomial GLM(M)s \parencite{FoxWeisberg2018} plot the probability of the outcome across values of a regressor assuming default values for all other regressors.
+While model coefficients in binomial (and other) models have no direct interpretation in terms of probability, effect plots allow a more intuitive interpretation in terms of changes in probability.
+For better interpretability, the y-axis in effect plots is plotted on the scale of the linear predictor (logits in a GLMM), with labels added on the scale of the response (probabilities derived via the inverse logit link function in GLMMs).
+See \citet[14]{FoxWeisberg2018} for an illustrative example.
+This is why the labels of the y axes are never aligned across plots.}
+As expected, the prototypically verbal contexts (infinitives and participles) are associated with a low probability of compound spelling (the infinitive is on the intercept, which is estimated at $-4.685$, and participles have a coefficient of $1.054$).
+NPs and progressives as prototypically nominal contexts clearly favour compound spelling (coefficients of $3.886$ and $4.907$, respectively).
+Both the coefficients and the effect plot (right panel in Figure~\ref{fig:corpuseffects}) show a low probability of compound spelling when an argument relation holds between the verb and the noun (on the intercept), and a high probability when the relation is oblique (coefficient $3.085$).
+The undetermined cases are in between the two clear-cut cases (coefficient $1.344$).
+
+\begin{figure}[!htbp]
+
+{\centering \includegraphics[width=\maxwidth]{figures/corpuseffects-1} 
+
+}
+
+\caption[Effect plots for the regressor encoding the morphosyntactic context of the N+V unit and the regressor encoding the syntactic relation within the N+V unit in the GLMM modelling the corpus data]{Effect plots for the regressor encoding the morphosyntactic context of the N+V unit and the regressor encoding the syntactic relation within the N+V unit in the GLMM modelling the corpus data}\label{fig:corpuseffects}
+\end{figure}
+
+
+
+
+
+Given the narrow confidence intervals and the high marginal measure of determination $R^2_m=0.576$, we consider the hypotheses regarding fixed effects to be well corroborated by the data.
+The differences between specific N+V units already shown in Section~\ref{sub:results2associationastrengths} show up in the model as the residual variance in the random effects (in the form of the conditional modes).
+The conditional modes have a standard deviation of $2.108$.
+The relatively high standard deviation is a sign that there is considerable variation across the individual N+V units.
+Furthermore, the conditional $R^2_c$ is as high as $0.999$.
+This is commonly interpreted as saying that the fixed effects and the idiosyncratic effect of concrete N+V units almost fully explain the variance in the data.
+A random selection of $20$ conditional modes, which illustrates the relevance of lexical idiosyncrasies through obvious differences with mostly very narrow prediction intervals, is shown in Figure~\ref{fig:corpusranefs}.
+The individual N+V unit thus plays a major role in writers' tendency to univerbate N+V units, which matches the results from Section~\ref{sub:results2associationastrengths}.
+
+\begin{figure}[!htbp]
+
+{\centering \includegraphics[width=\maxwidth]{figures/corpusranefs-1} 
+
+}
+
+\caption[A random selection of conditional modes with 95\% prediction intervals for the levels of the random effect in the GLMM modelling the corpus data]{A random selection of conditional modes with 95\% prediction intervals for the levels of the random effect in the GLMM modelling the corpus data}\label{fig:corpusranefs}
+\end{figure}
+
+
+
+
+% !Rnw root = ../nvuniverbation.Rnw
+
+
+\section{Elicited production of noun+verb units}
+\label{sec:elicitedproductionofnounverbunitsinwrittenlanguage}
+
+In this section, we corroborate the findings from Section~\ref{sec:corpusbasedanalysisoftheusageofnvunits} in a controlled experiment.
+We describe the rationale behind the experiment, the methods used, the design, and the group of participants in Section~\ref{sub:designandparticipants}.
+Section~\ref{sub:resultsexperiment} reports the results descriptively and in the form of a generalised linear mixed model.
+
+\subsection{Design and participants}
+\label{sub:designandparticipants}
+
+The goal of the experiment was to replicate the findings from the corpus study in another empirical paradigm and to test whether writers' behaviour under controlled experimental conditions is similar to the behaviour of writers under circumstances without experimental control as found in corpora.
+We used pre-recorded auditory stimuli in order to elicit spellings of given N+V units.
+The stimuli were chosen based on theoretically motivated criteria and the information about item-specific tendencies obtained from the exploratory part of the corpus study in Section~\ref{sub:results2associationastrengths}.
+We constructed eight sentences instantiating the four morphosyntactic contexts described in Section~\ref{sub:results1multilevelmodel} crossed with the two semantic relations.
+
+% latex table generated in R 4.1.2 by xtable 1.8-4 package
+% Tue Mar 29 19:27:44 2022
+\begin{table}[h!]
+\centering
+\scalebox{1}{
+\begin{tabular}{lllr}
+  \toprule
+Context & Relation & N+V unit & Attr. score \\ 
+  \midrule
+Infinitive & Argument & Platzmachen & $-$0.052 \\ 
+  Infinitive & Oblique & Seilspringen & 0.011 \\ 
+  NP & Argument & Spaßhaben & $-$0.115 \\ 
+  NP & Oblique & Bergsteigen & 0.082 \\ 
+  Participle & Argument & Mutmachen & $-$0.069 \\ 
+  Participle & Oblique & Probehören & 0.055 \\ 
+  Progressive & Argument & Teetrinken & $-$0.037 \\ 
+  Progressive & Oblique & Bogenschießen & 0.087 \\ 
+   \bottomrule
+\end{tabular}
+}
+\caption{Items from the experiment, chosen by context and relation, with control for lexical attraction scores} 
+\label{tab:designtable}
+\end{table}
+
+
+An overview of the item design is shown in Table~\ref{tab:designtable}, where each line represents the features of one of the eight items.
+The low number of eight target items will be motivated below (see Footnote~\ref{fno:eightitems}).
+In order to control for differences in lexical preferences, the concrete pairs of N+V units used in each context were chosen such that the contrast in lexical preference (see Section~\ref{sub:results2associationastrengths}) for and against univerbation was as substantial as possible.
+As expected, units with an argument relation have negative attraction scores, and ones with an oblique relation have positive scores (see column `Attr. score' in Table~\ref{tab:designtable}).
+For each context, we selected pairs where the difference between the scores was larger than $0.05$.
+Except for the infinitive context (difference $0.063$), we managed to find pairs for which the difference is actually above $0.1$ (NP: $0.197$, Participle: $0.124$, Progressive: $0.124$).
+In the spirit of Footnote~\mbox{\ref{fn:cramer}}, it should be kept in mind that the $v$ scores have no interpretation independently of their specific distribution.
+They were merely used here to maximise the differences between the corresponding N+V units with argument and oblique relation.
+They are merely an exploratory tool, and nothing substantial in the design of this experiment hinges on their concrete numerical values.
+
+The sentences were constructed in a way such that all N+V units were the predicate of a subordinate clause.
+This consistently ensured verb-last constituent order and avoided interfering verb-second effects, which are typical of independent sentences in German.
+The stimuli with full glosses are given in Appendix~\ref{sec:sentencesusedintheexperiment}.
+Furthermore, we added 32 fillers, resulting in a total of forty sentences being read to the participants.
+%\footnote{Of the fillers, six were actually target items from an unrelated experiment.}
+Of the forty sentences, twenty (including the target items) had to be written down by the participants.
+The order of the target items was randomised, but it was ensured that there were at least three sentences in between two target stimuli.
+There were nine distractors in the form of yes--no questions related to random sentences previously heard by the participants.
+
+In total, $61$ participants took part in the experiment.
+All of them were first-semester students of German Language and Literature at Freie Universität Berlin.
+They were between $18$ and $44$ years old with a median age of $22$ years.
+There were two separate groups (of $32$ and $29$ participants), and the randomisation of the order of stimuli was different between the two groups.%
+\footnote{The relatively low number of eight target items was due to the fact that we could not have inter-participant randomisation within each of the two large groups of participants (see below).
+For each of the two runs of the experiment, we had thirty minutes with the respective group as a whole in a lecture hall.
+However, without inter-participant randomisation and in the given time frame, a higher number of target items would have increased the chance of revealing the goal of the experiment to at least some participants.\label{fno:eightitems}}
+
+\subsection{Results}
+\label{sub:resultsexperiment}
+
+In this section, we report the parameter estimates of a GLMM modelling the behaviour of the participants in our experiment.
+The model specification in lme4 notation is given in (\ref{eq:expglmmformula}).
+The coefficient estimates for the GLMM are reported in Table~\ref{tab:experimentglmm}.%
+\footnote{This is the maximal random effect structure that converges and results in a healthy variance-covariance matrix, see \mbox{\citet{Schaefer2020a}}.}
+
+\begin{equation}
+  \mathtt{Univerbation\sim (1|Participant)+Context+Relation}
+  \label{eq:expglmmformula}
+\end{equation}
+
+
+
+
+% latex table generated in R 4.1.2 by xtable 1.8-4 package
+% Tue Jun 21 22:40:05 2022
+\begin{table}[h!]
+\centering
+\scalebox{1}{
+\begin{tabular}{rrrr}
+  \toprule
+ & Estimate & CI low & CI high \\ 
+  \midrule
+(Context = Infinitive, Relation = Argument) & $-$10.316 & $-$13.914 & $-$7.839 \\ 
+   \midrule
+Context = Participle & 3.184 & 1.966 & 4.643 \\ 
+  Context = NP & 8.962 & 6.694 & 12.336 \\ 
+  Context = Progressive & 10.667 & 8.134 & 14.283 \\ 
+   \midrule
+Relation = Oblique & 6.951 & 5.054 & 10.078 \\ 
+   \bottomrule
+\end{tabular}
+}
+\caption{Coefficient table for the GLMM  modelling the experiment data with 95\% profile likelihood ratio confidence intervals. The intercept models the levels Context~=~Infinitive and Relation~=~Argument. Random effect for participant: \CM{sd=1.648}. Nakagawa \& Schielzeth's \CM{R^2_m=0.836} and \CM{R^2_c=0.910}} 
+\label{tab:experimentglmm}
+\end{table}
+
+
+There is some variation between writers as captured in the standard deviation of the conditional modes ($1.648$), but the small difference between the marginal $R^2_m$ ($0.836$) and the conditional $R^2_c$ ($0.910$) suggests that speaker variation does not explain much of the variance in the data.
+This demonstrates that the phenomenon cannot be reduced to individuals mastering the norm to different degrees or having different preferences when it comes to univerbation.
+Instead, the major deciding factors are the ones predicted by our theoretical model.
+
+There seems to be only weak evidence that the participle has a different effect than the infinitive (which is on the intercept) given the large confidence interval ($[1.966, 4.643]$).
+On the other hand, progressives ($10.667$) and NPs ($8.962$) clearly have a much more positive effect on the probability of univerbation.
+We do not see evidence for any difference between NP and progressive contexts given the large and overlapping confidence intervals.
+The oblique relation favours univerbation as predicted ($6.951$) compared to the argument relation (which is modelled by the intercept), and despite a quite large confidence interval ($[5.054..10.078]$), the effect is clearly positive.
+
+\begin{figure}[htbp]
+
+{\centering \includegraphics[width=\maxwidth]{figures/experimentfx-1} 
+
+}
+
+\caption[Effect plots for the regressor encoding the morphosyntactic context of the N+V unit and the regressor encoding the syntactic relation within the N+V unit in the GLMM modelling the experimental data]{Effect plots for the regressor encoding the morphosyntactic context of the N+V unit and the regressor encoding the syntactic relation within the N+V unit in the GLMM modelling the experimental data}\label{fig:experimentfx}
+\end{figure}
+
+
+The effect plots in Figure~\ref{fig:experimentfx} (left panel) provide a visual interpretation of the coefficient table.
+The prototypically verbal contexts are associated with low probabilities of univerbation, the two prototypically nominal ones with high probabilities of univerbation.
+Judging by the large and overlapping confidence intervals, there is no support for assuming a substantial difference between infinitives and participles.
+The same can be assumed for NPs and progressives.
+The two semantic relations are correlated with the probability of univerbation as expected (right panel of Figure~\ref{fig:experimentfx}).
+
+In sum, the experiment supports our theoretically motivated hypotheses, and it corroborates the results from the corpus study.
+We proceed to a final analysis of the phenomenon in light of our findings in Section~\ref{sec:explainingnounverbuniverbation}.
+
+
+
+% !Rnw root = ../nvuniverbation.Rnw
+
+
+\section{Explaining noun+verb univerbation}
+\label{sec:explainingnounverbuniverbation}
+
+We have shown convincing evidence from corpora and controlled production experiments that the morphosyntactic context and the semantic relation are the crucial influencing factors on the graphemic univerbation of N+V units in German.
+Prototypically verbal contexts (infinitives and participles) disfavour univerbation, while prototypically nominal contexts (normal NPs and the so-called \textit{am}-progressive, which contains a normal NP) favour univerbation.
+As we have argued, the nominal contexts favour the interpretation of the N+V unit as a N+N compound, while the verbal contexts are \ul{at least more strongly} linked to a syntactic\slash phrasal interpretation.
+The difference in morphosyntactic status is mirrored in the different tendencies in writing.
+Furthermore, an argument relation between the V and the N within the N+V units disfavours incorporation and thus univerbation because the N+V unit is closer to the regular syntactic construction than its counterpart with an oblique relation, allowing the unit to avoid full incorporation.
+For the oblique relation, a syntactic construction is barely accessible because it would normally require a preposition to mark the relation.
+
+The fact that we could not find evidence for a difference in tendencies between the infinitive and participle speaks against a mixed verbal\slash nominal status of the participle in this specific construction, which does not preclude such a mixed status in other contexts.\footnote{%
+For participles as mixed categories, see \citet{BorikGehrke2019}.}
+The same goes for the \textit{am}-progressive, which in our data behaves exactly like any other nominal construction.
+If it really is an emerging verbal syntagma \citep{AnthonissenEa2016}, this has no consequences for the NP status of the nominal element contained in it: it still behaves like a full NP in the context of the copula, at least in our data.
+
+\begin{figure}[htbp]
+
+{\centering \includegraphics[width=\maxwidth]{figures/verbtendencies-1} 
+
+}
+
+\caption[Distribution of attraction scores for N+V units with four different lexical verbs (\textit{machen} `to make\slash do', \textit{laufen} `to run\slash walk', \textit{schießen} `to shoot', \textit{springen} `to jump')]{Distribution of attraction scores for N+V units with four different lexical verbs (\textit{machen} `to make\slash do', \textit{laufen} `to run\slash walk', \textit{schießen} `to shoot', \textit{springen} `to jump'); $n$ is the number of N+V units with the respective V head in our corpus data}\label{fig:verbtendencies}
+\end{figure}
+
+
+One aspect we have not yet discussed is the influence of the semantics of the verb.
+As a form of preliminary exploratory analysis, Figure~\ref{fig:verbtendencies} shows the distribution of N+V units with four selected head verbs.%
+\footnote{These plots are much like the one in Figure~\ref{fig:associationsall}.
+However, the lower number of data points makes it infeasible to estimate a density curve.
+Instead, histograms were plotted.}
+The verb \textit{machen} `to make\slash do' clearly creates N+V units with weaker tendencies towards univerbation, while \textit{laufen} `to run\slash walk' and \textit{werfen} `to throw' do not show a clear tendency, and \textit{springen} `to jump' has a tendency towards univerbation.
+This might be an indication that semantically weaker verbs like \textit{machen} resist univerbation.
+However, the number of N+V units for each verb is too low to make any sound inferences, and an analysis in terms of (semantic) verb \textit{classes} would be necessary.
+Given the difficulty of determining the appropriate verb classes, we save this for future work.
+
+Another potential factor to be examined in the future is the productivity of the N+V construction.
+Intuitively, and from looking at the data, it appears that the units with an argument relation are formed much more productively compared to the ones with an oblique relation.
+If the ones with an oblique relation are formed less productively, they should have a tendency to be more strongly lexicalised, which might be a reason for their stronger tendency to univerbate.
+Related to the question of productivity, we might return to the question of which N+V units are the result of back-formation \mbox{\parencite{Wurzel1998}}.
+For example, the verb \textit{zwangsernähren} `to force feed' is likely a back-formation of the N+N compound \textit{Zwangsernährung} `force feeding' (with \textit{Ernährung} `feeding' being derived from \textit{ernähren} `to feed'), and it now appears as a N+V unit with the full array of finite and infinite verb forms.
+As pointed out in Section~\mbox{\ref{sub:particleverbs}}, it is difficult to quantify the effect of such back-formations on the present study.
+The internal semantic relation combined with numerical data-driven analyses of the units' productivity might help to avoid difficult operationalisations of back-formation status while delivering the same explanatory power.
+
+A final point we have not discussed prominently, and which is related to the question of back-formation, is the presence of so-called linking elements.
+They normally only appear between the nouns in N+N compounds, and while many of them look like plural markers of the first noun (\textit{Tontaubenschießen} `clay pigeon shooting' analysed as \textit{Tontaube-n-schießen}, argument relation), others do not even look like inflectional forms of the first noun (\textit{Leistungsschießen} `(high) performance shooting\slash competitive shooting' analysed as \textit{Leistung-s-schießen}, oblique relation).
+These linking elements occur in some N+V units, but only in a minority.
+Table~\ref{tab:linkers} shows which linking elements we found in our sample, and in how many of the units they occurred.
+
+\begin{table}[!htbp]
+\centering
+  \begin{tabular}{llr}
+    \toprule
+    Linking element & Plural-like & N+V units \\
+    \midrule
+    (None) & No  & 617 \\
+    -s     & No  & 22 \\
+    \midrule
+    -(e)n  & Yes & 118 \\
+    -e     & Yes & 44 \\
+    -er    & Yes & 18 \\
+    \bottomrule
+  \end{tabular}
+  \caption{Linking elements and the number of N+V units they occur in}
+  \label{tab:linkers}
+\end{table}
+
+In principle, the linking element should be a very clear indicator of a fully nominal status and favour univerbation.
+However, they occur readily at least in infinite verb forms like \textit{leistungsgeschossen} (participle), which means the linking element is adopted outside of its primary domain (nominal compounds), \ie in verb forms.
+Interestingly, a clear majority of the linking elements occurring in our study are plural-like linking elements.
+This is not at all the distribution found in all N+N compounds.
+In a large study, \mbox{\citet[339]{SchaeferPankratz2018}} showed (in line with earlier studies) that 23.69 \% of all N+N compound types have an \textit{-s} linking element, but only 15.07 \% have one of the plural-like elements seen in Table~\mbox{\ref{tab:linkers}}.
+The picture is thus not as simple as maybe \mbox{\citet{Wurzel1998}} would suggest.
+Linking elements in N+V units cannot straightforwardly be the result of random back-formation processes, because if they were, we would expect them to be distributed much more like in the N+N compound data described in \mbox{\citet{SchaeferPankratz2018}}.
+Rather, it seems as if only plural-like linking elements were strongly admissible in N+V units.
+\mbox{\citet{SchaeferPankratz2018}} also found that plural-like linking elements can indeed have a plural interpretation.
+Therefore, a plausible interpretation for our linking element data is that the linking elements in N+V units are indeed interpreted as plural markers, allowing the regular semantic relation to be established, but with a plural interpretation.
+This also opens up the theoretical option that such N+V units with plural-like linking elements could be formed directly without back-formation.
+Clearly, further careful empirical work is required.
+
+In closing, we would like to posit that the kind of data that we find with respect to N+V units can only be explained satisfyingly within a usage-based probabilistic framework.
+It is the primary function of the space in German writing to separate syntactic words, and hence univerbation is best explained as corresponding to the loss of syntactic independence and a crossing over to morphology.
+As the effect is clearly gradual (both diachronically and in the grammar of present-day writers), a probabilistic approach to grammar and the grammar-graphemics interface is required.
+The fact that we can name the influencing factors and provide a statistical model of their \textit{systematic} (albeit non-categorical) influences is very strong evidence for the alternation being encoded in cognitive grammars and not a processing effect or mere artefact of performance.
+We are confident that future work will uncover many more probabilistic graphemics--grammar mappings.
+
+
+% !Rnw root = ../nvuniverbation.Rnw
+
+
+\appendix
+
+
+\section{Sentences used in the experiment}
+\label{sec:sentencesusedintheexperiment}
+
+The N+V units are typeset in small caps and spelled as separate words.
+The order of the sentences corresponds to Table~\ref{tab:designtable}.
+
+\begin{exe}
+  \ex\gll Lara trat zur Seite, um \textbf{Platz} zu \textbf{machen}.\\
+  Lara stepped {to.the} side {in order} room to make\\
+  \trans Lara stepped aside to make way.
+  \ex\gll Sarah ging auf den Spielplatz, um \textbf{Seil} zu \textbf{springen}.\\
+  Sarah went onto the playground {in.order} rope to jump\\
+  \trans Sarah went to the playground to do some skipping.
+  \ex\gll Leon konnte nur deshalb gewinnen, weil Johanna ihm \textbf{Mut} \textbf{gemacht} hat.\\
+  Leon could only therefore win because Johanna him courage made has\\
+  \trans Leon could win only because Johanna encouraged him.
+  \ex\gll Maria hat einen Kopfhörer gekauft, nachdem sie ihn \textbf{Probe} \textbf{gehört} hatte.\\
+  Maria has a headphone bought after she it test listened had\\
+  \trans Maria bought a headphone after doing a listening test.
+  \ex\gll Melanie mag Fußball, weil es ein Sport zum \textbf{Spaß} \textbf{haben} ist.\\
+  Melanie likes soccer because it a sport {to.the} fun have is\\
+  \trans Melanie likes soccer because it's a fun sport.
+  \ex\gll Benjamin ruft seinen Freund an, weil er eine Frage zum \textbf{Berg} \textbf{steigen} hat.\\
+  Benjamin calls his friend on because he a quaestion {to.the} mountain climbing has\\
+  \trans Benjamin calls his firend because he has a question about mountain climbing.
+  \ex\gll Kim sah sich das Tennisspiel an, solange sie am \textbf{Tee} \textbf{trinken} war.\\
+  Kim watched herself the {tennis.match} on while she {at.the} tea drink was\\
+  \trans Kim watched the tennis match while drinking some tea.
+  \ex\gll Simone hört ein Hörbuch, während sie am \textbf{Bogen} \textbf{schießen} ist.\\
+  Simone listens an audiobook while she {at.the} bow shoot is\\
+  \trans Simone listened to an audiobook while practicing archery.
+\end{exe}
+
+
+% \section{Full specifications of the models}
+% \label{sec:fullspecificationofthemodels}
+%
+% In Section~\ref{sub:results1multilevelmodel}, the specification of the model was given in R notation as (\ref{eq:corpusglmmr}), repeated here as (\ref{eq:corpusglmmr2}).
+%
+% \begin{equation}
+%   \mathtt{Univerbation\sim (1|NVUnit)+Context+Relation}
+%   \label{eq:corpusglmmr2}
+% \end{equation}
+%
+% Another structurally identical generalized linear mixed model was specified in Section~\ref{sub:resultsexperiment} as (\ref{eq:expglmmformula}) and repeated here as (\ref{eq:expglmmformula2}).
+%
+% \begin{equation}
+%   \mathtt{Univerbation\sim (1|Participant)+Context+Relation}
+%   \label{eq:expglmmformula2}
+% \end{equation}
+%
+% This notation blurs the difference between first-level and second-level fixed effects.
+% The model specification is the crucial step in statistical modelling since it encodes the researchers' commitment to a causal mechanism controlling the phenomenon to be modelled (in this case, writers' mental grammars with respect to the univerbation of N+V units).
+% Model specification thus deserves more attention than R notation has to offer.
+% Since the models are parallel in structure, we provide a precise specification for (\ref{eq:corpusglmmr2}) and then point out the only major difference compared to (\ref{eq:expglmmformula2}).
+%
+% Mathematically and thus more transparently, model (\ref{eq:corpusglmmr2}) is given in (\ref{eq:corpusglmm}).
+% The notation with angled brackets in $\alpha_{NV_j[i]}$ should be read as ``the value of the random effect $\alpha_{NV}$ for the factor level $j$, chosen appropriately for observation $i$.
+%
+% \begin{equation}
+%   Pr(Univ_i=1)=logit^{-1}[
+%   \alpha_0
+%   +\alpha_{NV_j[i]}
+%   +\vec{\beta}_{Cont}\cdot\vec{x}_{Cont_i}
+%   ] \label{eq:corpusglmm}
+% \end{equation}
+%
+% The probability of univerbation $Pr(Univ_i=1)$ is the logit-transformed sum of the overall intercept $\alpha_0$, the random intercept for the $j$-th N+V unit $\alpha_{NV_j[i]}$ (whichever is found in observation $i$) and the dot product of the vector of dummy-coded binary value for the morphosyntactic context $\vec{x}_{Cont_i}$ and the vector of their corresponding regressors $\vec{\beta}_{Cont}$.
+% Since it is a multilevel model, $\alpha_{NV}$ has its own linear model, which is given in (\ref{eq:corpusglmm2}).
+%
+% \begin{equation}
+%   \alpha_{NV_j}=\gamma_{j}
+%   +\vec{\delta}_{Rel}\cdot\vec{x}_{Rel_j}
+%   \label{eq:corpusglmm2}
+% \end{equation}
+%
+% It is also assumed that (\ref{eq:corpusrandomnorm}) holds, \ie that the random intercepts for individual N+V units are normally distributed.
+%
+% \begin{equation}
+%   \alpha_{NV}\sim Norm \label{eq:corpusrandomnorm}
+% \end{equation}
+%
+% The random effects are assumed to be a normally distributed variable $\alpha_{NV}$ which is for each N+V unit $j$ given as the sum of the conditional mode of unit $i$ (often wrongly called the \textit{random effect} per se) and the dot product $\vec{\delta}_{Rel}\cdot\vec{x}_{Rel_j}$ of the vector of binary variables encoding the relation and the vector of their corresponding coefficients.
+%
+% Since we do not have a nesting of the Relation predictor within a second-level effect in the case of (\ref{eq:expglmmformula2}), the Relation predictor becxomes a first-level effect, hence (\ref{eq:expglmm}).
+%
+% \begin{equation}
+%   Pr(Univ_i=1)=logit^{-1}[
+%   \alpha_0
+%   +\alpha_{Part_j[i]}
+%   +\vec{\beta}_{Cont}\cdot\vec{x}_{Cont_i}+\vec{\delta}_{Rel}\cdot\vec{x}_{Rel_j}
+%   ] \label{eq:expglmm}
+% \end{equation}
+%
+% Consequently, the second-level model is nothing more than the second-level intercept $\alpha_{Part_j}$, which is also assumed to be a normally distributed random variable.
+
+\section*{Acknowledgments}
+
+We are indebted to Felix Bildhauer, Marc Felfe, and Elizabeth Pankratz for in-depth discussions and feedback.
+We thank Elizabeth also for her thorough proofreading of an earlier version of this paper.
+We thank Luise Rissmann for her help annotating and cleaning the corpus data as well as conducting most of the experiments.
+
+\section{Ethics and Consent}
+\label{sec:ethicsandconsent}
+
+The experiment was conducted in accordance with the Declaration of Hel\-sinki (seventh revision).
+The exclusively adult participants of the experiment gave consent and were informed extensively about the nature of the experiment beforehand, and they were given the opportunity to revoke their consent after their participation.
+All data were stored on offline media and fully anonymised immediately after each participation.
+At the time of the experiment (14 and 21 June 2017), Freie Universität Berlin did explicitly not require an ethics approval and had no ethics committee to formally approve of experiments such as ours.
+An ethics committee was only instated on 15 October 2019.\footnote{\url{https://www.fu-berlin.de/forschung/service/ethik/_media/2022-05-17_ZEA-Geschaeftsordnung_DE_final.pdf}}
+
+\section{Funding}
+
+Roland Schäfer's work on this paper was funded in part by the Deutsche Forschungsgemeinschaft (DFG, German Research Foundation) -- SFB 1412, 416591334.
+
+\printbibliography
+
+\end{document}
