@@ -34,7 +34,7 @@ The resulting list contained $\Sexpr{nrow(concordance)}$ N+V units.%
 They are \textit{Teilnehmen} `to take part', \textit{Maßnehmen} `take measure', and \textit{Teilhaben} `have part' (meaning `to participate').}
 
 In the second step, we created lists of all relevant inflectional forms of the verb in each N+V unit and used these to query all possible compound and disjunct spellings (including variance in capitalisation) of each of the $\Sexpr{nrow(concordance)}$ N+V unit types.
-In total, $\Sexpr{nice.int(35*nrow(concordance))}$ queries were executed to create the final data set used here, a number which clearly demonstrates the necessity of script-based corpus access in data-driven methods.
+In total, $\Sexpr{nice.int(35*nrow(concordance))}$ queries were executed to create the final data set used here.
 The queries retrieved $\Sexpr{nice.int(sum(concordance$Joint))}$ compound spellings and $\Sexpr{nice.int(sum(concordance$Separate))}$ separate spellings, which results in a total sample size of $\Sexpr{nice.int(sum(concordance$Joint)+sum(concordance$Separate))}$ tokens.
 
 For each N+V unit in the sample, the following variables were annotated automatically: (i) the verb lemma, (ii) the noun lemma, and (iii) the overall frequency in the corpus.

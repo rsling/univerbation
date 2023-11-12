@@ -8,7 +8,7 @@ opts_knit$set(self.contained=FALSE)
 
 We have shown convincing evidence from corpora and controlled production experiments that the morphosyntactic context and the semantic relation are the crucial influencing factors on the graphemic univerbation of N+V units in German.
 Prototypically verbal contexts (infinitives and participles) disfavour univerbation, while prototypically nominal contexts (normal NPs and the so-called \textit{am}-progressive, which contains a normal NP) favour univerbation.
-As we have argued, the nominal contexts favour the interpretation of the N+V unit as a N+N compound, while the verbal contexts are \ul{at least more strongly} linked to a syntactic\slash phrasal interpretation.
+As we have argued, the nominal contexts favour the interpretation of the N+V unit as a N+N compound, while the verbal contexts are more strongly linked to a syntactic\slash phrasal interpretation.
 The difference in morphosyntactic status is mirrored in the different tendencies in writing.
 Furthermore, an argument relation between the V and the N within the N+V units disfavours incorporation and thus univerbation because the N+V unit is closer to the regular syntactic construction than its counterpart with an oblique relation, allowing the unit to avoid full incorporation.
 For the oblique relation, a syntactic construction is barely accessible because it would normally require a preposition to mark the relation.

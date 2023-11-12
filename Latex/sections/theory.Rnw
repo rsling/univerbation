@@ -100,7 +100,7 @@ These patterns are shown to have prototypical properties which are matched more 
 He, too, argues that the respective constructions alternate between a syntactic and a morphological realisation, and he uses analogy to existing categories to explain the alternation.
 While we opt for a prototype description, Hüning's view is still based on the same underlying assumptions as ours.}
 %The hypotheses put forward here are then evaluated empirically in Sections~\ref{sec:corpusbasedanalysisoftheusageofnvunits} and \ref{sec:elicitedproductionofnounverbunitsinwrittenlanguage}.
-To this end, we will shed some light on particle verbs as a target class for N+V units in Section~\mbox{\ref{sub:particleverbs}}, on N+V units as structures involving incorporation in Section~\mbox{\ref{sub:incorporation}}, before turning to N+V units as reluctant compounds in Section~\mbox{\ref{sub:nncompounds}}.
+To this end, we will shed some light on particle verbs as a target class for N+V units in Section~\mbox{\ref{sub:particleverbs}}, on N+V units as structures involving incorporation in Section~\mbox{\ref{sub:incorporation}}, before turning to the influence of nominal compounds (of the N+N type) in Section~\mbox{\ref{sub:nncompounds}}.
 We sum up our arguments and derive our hypotheses for the empirical studies in Section~\ref{sub:hypothesesfortheempiricalstudies}.
 
 \subsubsection{Particle verbs}
@@ -206,7 +206,7 @@ For units with an oblique relation, the paraphrase involves the noun in a prepos
 \footnote{Pragmatically, these paraphrases might often be subject to blocking because of the availability of the N+V construction.
 However, this does not make them syntactically or semantically unacceptable.}
 Cases where no paraphrase is available are those which have been lexicalised so fully that their meaning has changed significantly.
-This means that the morphological construction marked by graphemic univerbation remains in competition with a syntactic construction with distinct syntactic words separated by spaces in writing.
+This means that the morphological construction marked by graphemic univerbation often remains in competition with a syntactic construction with distinct syntactic words separated by spaces in writing.
 This competition between a morphological construction and a syntactic construction was pointed out with varying terminology by---among others---\citet[12]{FleischerBartz2012}, \citet[13]{Schluecker2012}, and \citet[88]{Morcinek2013}.
 However, since the oblique relation requires an additional marker (a preposition) when the N+V unit is realised in syntax, the variant with full incorporation has no direct (approximately verbatim) syntactic competitor.
 In other words, \textit{kaffeetrinken} spelled as \textit{Kaffee trinken} could be a verb phrase with an argument NP, and full incoporation can in many such cases not even be detected in spoken language.%
@@ -292,7 +292,7 @@ While such a compound is (maybe marginally) acceptable when used as a noun as in
 It appears as if the N+N compound is not an ideal prototype for N+V units.
 However, in strongly nominal contexts, for example when the units forms the head of an NP clearly marked by a determiner (\textit{das Kaffeetrinken}), we expect the unit to be coerced to assume N+N status.
 As the noun phrase requires a nominal head, the verb is forced into nominalisation, and graphemic univerbation becomes the preferred spelling variant because two bare nouns in sequence with an argument or an oblique relation holding between them can only be interpreted as a compound.
-In other words, the syntactic realisation is dispreffered strongly as it has no matching productive prototype pattern.
+In other words, the syntactic realisation is disprefered strongly as it has no matching productive prototype pattern in the given context.
 Should we observe different tendencies to undergo univerbation in verbal and nominal contexts, we posit that this process explains for them.
 
 \subsubsection{Conclusions for the empirical studies}
