@@ -26,7 +26,7 @@ For our purpose, the complete internal analysis of nominal compounds described i
 This level of analysis allows for corpus searches of roots within nominal compounds.
 
 The list of actually occurring N+V units was obtained by querying for compounds with a nominal non-head and a deverbal head.%
-\footnote{See the scripts available under the following DOI for concrete queries and further details: \url{http://dx.doi.org/10.5281/zenodo.10116662}}
+\footnote{See the scripts available under the following DOI for concrete queries and further details: \url{http://doi.org/10.5281/zenodo.10116662}}
 The rationale behind this approach is that any N+V unit of interest should occur at least once in compound spelling as a fully nominalised compound.
 Since this step relied on automatic annotation already available in the corpus, the results contained erroneous hits which we removed manually.
 The resulting list contained $\Sexpr{nrow(concordance)}$ N+V units.%
